@@ -1,0 +1,17 @@
+Name      Gold~
+Max       20
+Name      SudokuWins~
+Max       20
+Name      MKills~
+Max       20
+Name      MDeaths~
+Max       20
+Name      PKills~
+Max       20
+Name      PDeaths~
+Max       20
+Name      QCompleted~
+Max       20
+Name      RubiksFinished~
+Max       20
+End

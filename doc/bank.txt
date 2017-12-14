@@ -1,0 +1,28 @@
+This file is going to be a simple document explaining some things about banks in LoP...
+
+Usage: bank <account> delete/balance
+Usage: bank <account> share <name>
+Usage: bank <account> create/deposit/withdraw <amount>/all
+Usage: bank <account> transfer <amount> <account>
+ 
+This allows you to create a bank account and manage it.
+Only ones with access to the account can do things with it.
+
+Anyone may create a bank account.
+There is no limit on how many accounts someone may create.
+Only the creator of the account can set who has access to the gold in the account.
+   (Can be removed from the list the same way they were added).
+   (Only characters with valid pfiles can be added).
+Transactions are saved (Currently only saves the last 20 per account).
+   (Shown when someone looks at the balance in the account).
+Anyone with access to the account can withdraw, and transfer from it.
+Gold may be transfered from an account (that the person has access to) to any other account.
+Intrest is gained on all gold in each account.
+   (Given at the end of every mud month).
+   (Currently .0003 per gold).
+Max gold for each bank account is 10,000,000,000,000,000,000,000 (10 Sextillion).
+When empty the account is closed.
+Only the creator may delete the account.
+   (All money in the account is lost when it is deleted).
+Anyone may deposit gold into any account.
+   (Only someone with access to it sees how much gold is in after the deposit).

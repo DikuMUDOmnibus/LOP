@@ -1,0 +1,37 @@
+Name        Gnome~
+Used        0
+Classes     Paladin Ranger Warrior~
+NStat       11 100 strength~
+NStat       15 100 intelligence~
+NStat       14 100 wisdom~
+NStat       12 100 constitution~
+NStat       12 100 charisma~
+NStat       14 100 luck~
+Hit         100
+Mana        100
+Move        100
+Uses        1
+Affected    detect_magic infrared~
+SLanguage   gnome~
+Align       0
+Min_Align   -1000
+Max_Align   1000
+AC_Plus     0
+MinHeight   75
+MaxHeight   92
+MinWeight   198
+MaxWeight   217
+Hunger_Mod  0
+Thirst_mod  0
+Race_Recall 0
+Skill 'common' 1 100
+Skill 'dwarven' 1 100
+Skill 'elvish' 1 100
+Skill 'gith' 1 100
+Skill 'gnome' 1 100
+Skill 'halfling' 1 100
+Skill 'ogre' 1 100
+Skill 'orcish' 1 100
+Skill 'pixie' 1 100
+Skill 'trollish' 1 100
+End

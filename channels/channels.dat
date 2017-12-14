@@ -1,0 +1,211 @@
+#CHANNEL
+Name       classtalk~
+Color      &[classtalk]~
+Type       classtalk~
+Permission all~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       racetalk~
+Color      &[racetalk]~
+Type       racetalk~
+Permission all~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       counciltalk~
+Color      &[council]~
+Type       council~
+Permission all~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       music~
+Color      &[music]~
+Type       global~
+Permission all~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       quest~
+Color      &[quest]~
+Type       global~
+Permission all~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       immtalk~
+Color      &[purple]~
+Type       global~
+Permission imm~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       clantalk~
+Color      &[clantalk]~
+Type       clan~
+Permission all~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       nationtalk~
+Color      &[nation]~
+Type       nation~
+Permission all~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       chat~
+Color      &[chat]~
+Type       global~
+Permission all~
+MaxHistory 20
+Scramble
+End
+
+#CHANNEL
+Name       wartalk~
+Color      &[wartalk]~
+Type       global~
+Permission all~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       traffic~
+Color      &[traffic]~
+Type       global~
+Permission all~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       yell~
+Color      &[yell]~
+Type       yell~
+Permission all~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       comm~
+Color      &[plain]~
+Type       log~
+Permission imm~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       log~
+Color      &[plain]~
+Type       log~
+Permission imm~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       build~
+Color      &[plain]~
+Type       log~
+Permission imm~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       warn~
+Color      &[plain]~
+Type       log~
+Permission imm~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       monitor~
+Color      &[plain]~
+Type       log~
+Permission imm~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       auth~
+Color      &[plain]~
+Type       log~
+Permission imm~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       imclog~
+Color      &[plain]~
+Type       log~
+Permission imm~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       imcbug~
+Color      &[plain]~
+Type       log~
+Permission imm~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       auction~
+Color      &[auction]~
+Type       log~
+Permission all~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       bug~
+Color      &[plain]~
+Type       log~
+Permission imm~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       highscore~
+Color      &[hscore]~
+Type       log~
+Permission all~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       trivia~
+Color      &[plain]~
+Type       log~
+Permission all~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       fchat~
+Color      &[fchat]~
+Type       fchat~
+Permission all~
+MaxHistory 20
+End
+
+#CHANNEL
+Name       achat~
+Color      &[plain]~
+Type       global~
+Permission all~
+MaxHistory 20
+Adult
+End
+
+#END

@@ -1,0 +1,133 @@
+This was done by Hanaisse on www.smaugmuds.org.
+Just so everyone knows, personally I wouldn't suggest using instazone at all really.
+The reason being is that when you create mobiles and set them up etc.... they might wonder around etc....
+   it also normaly takes more then one day or so to get everything set up and working how you want it, and
+   the best way to do things tend to be doing one room at a time with everything you want in it etc... and
+   then using instaroom to save the resets and all. It is a good little break down of everything though and
+   has been included in the releases from this point on. Provided I'm not asked by Hanaisse one day to remove
+   it from the downloads.
+
+Creating Resets on LoP1.38
+-----------------------------
+
+There are two ways to create resets: INSTAZONE, INSTAROOM. Each will achieve the same end result. Which command to use will become a matter of preference.
+
+To create all the resets in the prototype area all at once, use INSTAZONE.
+To create resets on a room by room basis, use INSTAROOM.
+
+To display, edit, make minor modifications and delete resets, use RESET.
+
+
+Using INSTAZONE
+---------------
+
+1. Make sure your prototype area is finished. Do a final walkthrough from a players perspective or have someone else walkthrough.
+
+   - (Ensure exits are in the right direction.) *move to Installing areas.
+   - (Ensure 2-way exits are really 2-way.)
+
+
+   - Ensure all mobs are in the rooms they are supposed to be in (oinvoke <mob vnum>). Remember, wandering mobs
+     will wander and they will reset in whatever room they happen to be in at the time you use instazone.
+      Tip: If you want mobs to repop in a specific room, place them there and set flag: sentinel. The flag can
+           be removed after resets are added.
+
+   - Ensure all mobs are equipped with objects you want them to load (oinvoke <obj vnum>). Either GIVE the
+     object to the mob if you want it in their inventory, or GIVE and FORCE WEAR if you want them to be wearing
+     the object.
+
+   - Place objects where you want them to load, i.e.; in a container before it is closed and locked, or buried
+     if a player must dig for it. This also includes room objects such as fountains, furniture.
+
+   - Set traps as required.
+
+
+2. Once all rooms, mobs, objects, mudprogs, etc have been completed in the prototype area do a final SAVEAREA.
+
+    Usage: savearea [<area filename>]
+    This command allows you to save a prototype area.
+
+3. Use INSTAZONE.
+
+    Usage: instazone
+    This command will setup the resets for all the rooms in the area assigned to you.
+
+4. Use SAVEAREA again.
+
+5. Do another walkthrough to double check everything. If a reset isn't right or if you add more objs/mobs it can be corrected using INSTAROOM. 
+Caution: Instazone should only ever be used once. If you change just one thing using the reset command DO NOT use instazone again, it will be overwritten.
+
+6. Verify all the resets at a glance with RESET LIST (see below).
+
+7. The area is now ready to be installed (see Installing Areas.txt).
+
+
+
+Using INSTAROOM
+-----------------
+This command can be used any time during the building process whether the area is complete or not.
+(Note: Following these instructions in order is important)
+
+1. Be in the room you want to create resets for.
+
+2. Add the mob (or mobs) you would like to repop in that room during resets. 
+
+3. Equip the mob (or mobs) with any objects you'd like them to load with. Either GIVE the object to the mob if you want it in their inventory, or GIVE and FORCE WEAR if you want them to be wearing the object.
+
+4. Place objects where you want them to load, i.e.; in a container before it is closed and locked. This also includes room objects such as fountains, furniture, buried objects.
+
+5. Ensure doors, gates, 'somewhere' exits, containers - anything that is expected to open and close - are in the position you want them to be in when a reset occurs. If a door or container is to be locked, make sure it is locked.
+
+6. Set traps as required.
+
+7. Use SAVEAREA.
+
+    Usage: savearea [<area filename>]
+    This command allows you to save a prototype area.
+
+8. Use INSTAROOM.
+
+    Usage: instaroom
+    This command will setup the resets for the room you are in.
+
+9. Use SAVEAREA again.
+
+10. Verify the resets at a glance with RESET RLIST (see below).
+
+11. Use INSTAROOM again to save any changes made after the first resets have been created.
+
+
+
+Using RESET
+-------------
+
+    Usage: reset area/room/list/rlist
+           reset random <# directions>
+           reset delete <number>
+           reset hide <objname>
+           reset rchance <number> <chance>
+           reset trap room <type> <charges> [flags]
+           reset trap obj <name> <type> <charges> [flags]
+           This command is used to display, edit, and delete resets for your area.
+            (number being the reset number identified on the reset list)
+
+
+- RESET AREA will reset an entire area.
+- RESET ROOM will reset the room you are in.
+- RESET LIST will list all the resets for the area.
+        Example:  >reset list
+                  Room:[5001]
+                   1) (object) small gray rock (5001) -> Diamond Street Room: 5001 [1] (100) [Reseted]
+                   2) (object) small gray rock (5001) -> Diamond Street Room: 5001 [1] (100) [Reseted]
+    
+- RESET RLIST will list the resets for the room you are in.
+- RESET RANDOM will create random exits in the room you are in during every reset.
+- RESET DELETE will delete the specified reset.
+- RESET HIDE will hide the specified object in the room.
+- RESET RCHANCE will set a % chance of an object loading during resets.
+        Example:  2) (object) small gray rock (5001) -> Diamond Street Room: 5001 [1] (100)
+
+                  >reset rchance 2 50
+                   Reset chance changed.
+
+                  2) (object) small gray rock (5001) -> Diamond Street Room: 5001 [1] (50)

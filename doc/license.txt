@@ -1,0 +1,71 @@
+/*****************************************************************************
+ * DikuMUD (C) 1990, 1991 by:                                                *
+ *   Sebastian Hammer, Michael Seifert, Hans Henrik Staefeldt, Tom Madsen,   *
+ *   and Katja Nyboe.                                                        *
+ *---------------------------------------------------------------------------*
+ * MERC 2.1 (C) 1992, 1993 by:                                               *
+ *   Michael Chastain, Michael Quan, and Mitchell Tse.                       *
+ *---------------------------------------------------------------------------*
+ * SMAUG 1.4 (C) 1994, 1995, 1996, 1998 by: Derek Snider.                    *
+ *   Team: Thoric, Altrag, Blodkai, Narn, Haus, Scryn, Rennard, Swordbearer, *
+ *         gorog, Grishnakh, Nivek, Tricops, and Fireblade.                  *
+ *---------------------------------------------------------------------------*
+ * SMAUG 1.7 FUSS by: Samson and others of the SMAUG community.              *
+ *                    Their contributions are greatly appreciated.           *
+ *---------------------------------------------------------------------------*
+ * LoP (C) 2006, 2007, 2008, 2009, 2010 by: the LoP team.                    *
+ *****************************************************************************/
+
+In order to use LoP, the following minimum conditions must be met:
+
+1. You must comply with the terms of the Smaug, Merc, AND Diku licenses which are
+found in the lop/doc directory.
+
+2. The credits in the initial login screen MUST be left intact. The information
+there is required to comply with the licenses of the codebases LoP is
+derived from. You may add your own credits, ASCII art, or other information,
+but those credits must remain intact AND visible on a standard 24 line, 80
+column telnet display.
+
+3. The "credits" command within the game must contain all of the information
+as shipped with the code. This information may NOT be removed, but you can add
+to it as you see fit.
+
+4. All copyright information MUST remain in any source code and data files
+relating to LoP. You may alter the formatting of this information as you see
+fit, but the information itself must remain intact and unaltered.
+
+5. The use of illegal or unauthorized material, such as areas, code, or other
+data files is strictly prohibited.
+
+6. This codebase may not be distributed, in whole or in part, from any site
+without our express written permission either by postal mail or electronic mail.
+This does not refer to derived works from this codebase, but rather refers to
+redistribution of the unmodified packages as they appear at the website authorized
+to distribute the codebase.
+
+7. You may use portions of this codebase that have not been released as
+snippets provided you give credit where it is due.
+
+8. You may not accept monetary payment of any type in exchange for in-game benefits
+to users or staff. You may not accept hardware donations in exchange for in-game
+benefits to users or staff. You may not use your website as a way to obscure taking
+payments of any kind which result in in-game benefits for users or staff.
+
+In short: This is a non-commercial codebase.
+You may not use it to engage in commercial enterprises.
+
+You MAY however offer merchandise to visitors to your website which relates to your
+game world content such as areas, characters, items, etc. so long as the proceeds from
+such sales are not used to create in-game benefits for users or staff.
+
+Donations are also allowed provided that they are voluntary donations and are not
+required to advance or gain any form of in-game benefit to users or staff.
+
+9. You are permitted to distribute derived works from this codebase provided written
+notification is made to the LoP team prior to doing so. Names such as "AnotherLoP",
+"MyLoP", or anything else using the LoP or Lands of Pabulum name are prohibited. Said
+derivative work may be distributed in any manner you see fit, so long as all of the other
+provisions of this license are followed. All licensing documentation must be included in
+your release. It must be clearly labeled as a derivative of the version of LoP you
+started with.

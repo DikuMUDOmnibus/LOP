@@ -1,0 +1,31 @@
+Filename            General~
+Max_posts           999
+End
+Filename            Immortals~
+Min_read_level      1
+Max_posts           999
+End
+Filename            Clans~
+Max_posts           999
+End
+Filename            Nations~
+Max_posts           999
+End
+Filename            Ideas~
+Max_posts           999
+End
+Filename            Councils~
+Max_posts           999
+End
+Filename            Contact~
+Max_posts           999
+End
+Filename            Announcements~
+Max_posts           999
+End
+Filename            Auction~
+Min_read_level      4
+Min_post_level      4
+Min_remove_level    4
+Max_posts           999
+End

@@ -1,0 +1,913 @@
+1.42
+-----------------
+Added in top_explorer to track explorer rooms.
+Fixed a slight issue with dir_w not being set to 0.
+Made it easier to change the default time it takes for a mud hour to pass.
+   (Also increased it a .50 for the range).
+Made it so resets are checked after all areas are loaded.
+   (Was reporting things as issues when the needed things just hadn't been loaded yet).
+Found that in some cases using MSL instead of MIL on strings you fopen may cause an odd crash in cygwin.
+   (No clue why, but simply changing the MSL to MIL on it stopped the crashing so fixed all I found that used MSL).
+Found and fixed an issue with it closing a descriptor because of the inbuf being full.
+Started adding in some extra stuff that isn't really used yet.
+   (I've still got to figure out the best way to handle area controlled vnums).
+Fixed a couple extra things here and there that I've ran across and just don't remember lol.
+
+1.41
+-----------------
+Removed can_learn_language, show_big_nums, toggle_bexit_flag, parse_bet, can_oedit, smush_tilde, save_all_chistorys, getcolor, show_hash.
+   (These are no longer being used).
+Removed sysdata.ident_retries.
+   (Wasn't being used).
+Modified sysdata.morph_opt.
+   (Use to only save on shutdown, now will work like an autosave while setting morphs).
+Added in so more stuff got renamed when changing names.
+   (Added rename_clan_member, rename_council_member, rename_deity_worshipper, rename_in_banks).
+Added in so names are removed more when the pfile is destroyed, player deletes, pfile cleaner deletes pfile.
+   (Added in a remove_from_everything).
+Made it so notes can be to non pfiles.
+   (Use to allow only "all" or a valid pfile).
+Modified placement of things here and there.
+Fixed two possible leaks from fread_strings.
+   (One in act_comm.c-(fread_phistory) and one in polymorph.c-(fread_morph)).
+Added in more for nations in do_who.
+Modified do_mix to fix it not allowing more then one spell to be mixed.
+   (Now uses "mix <spell> [<spell>] [<spell>]").
+      (First one 100% success, Second 75% success, Third 50% success).
+Added and Modified a few help files.
+Made it so if you try to delete a bank account, you have to specify which account to delete.
+Made it so just typing bank shows all the accounts you have access too.
+Fixed add_phistory so it would actually work like it should.
+Modified damage to handle the magical/non-magical part for ris for weapons.
+   (Stopped the other places from doing it and instead just let damage handle it).
+Made it so you can't createfire or makefire in water sectors.
+Added an ACT_NOSLICE for mobiles so you can set up mobiles you don't want to have corpses that can be sliced.
+Added an ACT_NOBLOOD for mobiles so you can set up mobiles you don't want leaving a pool of blood when they die.
+Added in so you can't run while in the wilderness.
+   (One day should make it so you can).
+Added in an aset <area filename> noload.
+   (Will toggle if the area filename is added in the area list or not).
+Fixed a crashing issue in can_use_channel.
+Made it so it won't let you duplicate names using makehightable.
+Made it so channels only show up if characters are playing.
+   (If you want it to show while your editing etc... you will have to modify it).
+Added in for do_who to show how many different ips have connected since hotboot/reboot.
+Added in for bti to give a quick overview on login to immortals.
+
+1.40
+-----------------
+Added in ITEM_CONTINUOUS_FIRE for objects.
+   (Used so one item can be fired continuously).
+   (Should work for projectiles or any other item they throw).
+   (NPCs also get continuous fire for everything instead of having to use programs to do it).
+      (Don't have to put continuous fire on something for a mobile to utilize it).
+   (The copy object it creates and fires is stripped of continous fire).
+Added in for mmpmload to have a max so it doesn't keep loading mobiles crazily.
+   (This can cause massive lag once 1k+ of the same mobile has been summoned into a room).
+Added in AFLAG_NOSHOW for areas.
+   (Used to keep an area from showing up on area command).
+Took out where money value 0 got set to obj->cost in create_object.
+Stopped it from setting you fighting the supermob when a room/object used mpdamage on you.
+Stopped instaroom and instazone from adding charmed mobiles to the resets.
+   (This was annoying if you had a pet in the room/zone and used instaroom/instazone).
+Modified unfoldarea quite a bit to fix issues.
+   (Use to be able to do like unfoldarea ../player/r/Remcon and make the mud exit).
+   (Use to be able to unfoldarea on areas already loaded).
+   (Duplicated vnums of rooms/mobiles/objects would make the mud exit).
+   (Filename of areas loaded this way was shown as $ in the mud).
+Changed unfoldarea name to loadarea, since loadarea isn't used in LoP.
+   (Not sure why unfoldarea was the name of a command used to load areas).
+      (Other then the fact that loadarea was already taken).
+Added in ACT_AUTOPURGE.
+   (If set on a mobile the mobile will purge it's inventory on death).
+      (Doesn't purge the mobile gold).
+      (Will save the trouble of using a death program to do it).
+Modified enchant code some.
+   (Added in so you can loose all enchantments when enchanting something).
+   (Added in so stats can be affected also (increases and decreases one at a time)).
+   (Fixed in issue in is_ris).
+   (Made it so ris can be higher/lower then 1/-1 (increases and decreases one at a time)).
+Modified spell_energy_drain so it goes by how much damage was done.
+Modified spell_earthquake some to use characters in the room instead of all in mud.
+   (Still uses all in mud to handle the area message).
+      (Easy to stop that though if you want to).
+Added a RubiksFinished highscore table.
+   (Added in for it to work also of course).
+Added in a RIS_ABDAMAGE.
+   (This allows the character to receive/loose hp based on the damage they do to someone).
+   (I would suggest being careful on using it much like over using drain on objects casting it each hit).
+   (If your abdamage is - then you loose additional hp every hit you do, if + you gain hp every hit you do).
+Added in so channels can be set as adult channels.
+   (Also added in an achat (adult chat) channel).
+Added in PCFLAG_ADULT.
+   (So you can flag players as adults so they can access the channels).
+   (Figure this would be handy for swear channels etc...).
+Added in Kayle's MProg Variable Expansion.
+   (Added some more to it and used a switch to limit the number of ifs it compares the string to).
+Added in so mprog_do_ifcheck uses some switch statements to limit the number of ifs it compares the string to.
+Modified dice_parse to use Uppercase letters for victim and lowercase for character.
+   (Got the idea from some snippet I seen, but never downloaded or looked at how they did it).
+Updated some help files.
+Added function echo_to_all_printf.
+Added function interpret_printf.
+Added the fix for sockets.
+Added in so if your using trapset and the room is already trapped you might set it off.
+Added in so you can bury an exit.
+Fixed it showing some exits it shouldn't if they haven't been dug out.
+Added in a base_info for exits that is only changed when setting them.
+   (Always annoying to loose the default way because someone does instaroom and someone had opened a door etc...).
+Stopped handling doors with the reset system.
+   (Well sort of, it uses the reset system to reset all the doors in all the rooms back to the base_info).
+Added in wilderness stuff.
+   (I have tried to cover most the things on this, but I am only human so watch out for possible issues on it).
+   (If you have some ideas on ways to improve it by all means let me know).
+Added in so you can use RESET ADD OBJ/MOB/GIVE/EQUIP <VNUM> [<wearloc>].
+   (EQUIP and GIVE will give/equip the object to the mob above them in the reset list).
+Fixed yell sending mobile yells to the entire mud.
+Fixed quite a few problems here and there that I haven't added in the changes.lst.
+
+1.39 (Revision 1)
+-----------------
+Fixed traps being set using reset to work correctly.
+Reset area will reset the traps.
+Added in some bug messages.
+Added in a default trap (Feel free to set it how you want, can even suggest default stuff for it for next release).
+Made it so all characters can't see an immortal character leave the room when they're sneaking
+Made it so you can't fire ranged weapons in water.
+Changed do order to only stop the use of mp at the begining of the first word.
+Added so you can set age/height/weight using mset.
+Added in so mposet can increase/decrease value0-5 by a specified number.
+Action_desc is set on all corpses now to show who got the kill.
+Skin can be used on npcs and pcs as long as you got the final blow.
+   (Maybe one day add in something to make some use out of the skins).
+Added in a message informing players if they are sparing someone and the other one is out to kill them.
+Made it so you can change MEL (Max_Editor_line) and changing MSL (Max_String_Length) changes editor stuff easier.
+   (The overall max size of a string is MSL so this would probably need increased for the stuff to be bigger).
+   (You are also limited by the MEL on how many lines the string has, increasing it is good for long programs that need more lines).
+Added in so you know how much of the maxes your using while in the editor.
+Added in an ACT_NOKILL so mobiles can be set to fight but not kill.
+Added in an ACT_NODEATH so mobiles can kill and not be killed.
+   (Use ACT_NOKILL and ACT_NODEATH if you want them to fight, but not kill or be killed).
+Added in the fix for move_char allowing people to move when they shouldn't be able to.
+Fixed it so more of the mprog checks can understand !=.
+Fixed up quite a few issues in polymorph.
+   (A memory leak and quite a few other things, probably still a lot more to do on this one).
+   (Made it so it modifies the max hp, mana, move instead of just the current).
+Added in 2010 to the headers for LoP.
+   (Lol, kind of late, but better late then never).
+
+1.39
+-----------------
+Added in some more information displayed by ostat.
+Added more info displayed by show_object.
+Fixed an issue where show_object only showed 2 spells on salves instead of 3.
+Added in a rubik's cube players can play.
+Fixed a crashing issue in mobiles using bribe programs when they get bribed.
+Modified the bribe programs so that location of the program wont matter.
+   (If you have more then 1 bribe program on the mobile etc...).
+Fixed a looping issue in teleport looping if trying to send to the room already in.
+Modified do_get, do_put, do_look, do_empty, do_zap, do_examine, do_fill, do_drink, do_recite,
+   do_pull, do_push, do_apply. (May be a few others that need done sometime, but this covers some of the main ones).
+   (So you can specify room/inventory/worn).
+Included Hanaisse's reset information.
+   (Found in the doc folder).
+Modified drop_coins to fix it allowing gold to go -.
+Modified get_obj to fix it keeping objects hanging around that it couldn't access.
+   (Also added in a check in object_update (since it scans all objects in game) to give a bug message if an object
+      isn't in a room, carried by someone, or in another object).
+Fixed some possible issues in save_pfile_backup.
+Removed index_mobile->position. (This is more or less what defposition is for).
+   Modified the rest of the code to handle the change. (Lets hope I got it all lol).
+   Added in for mstat to show defposition for a mobile if it is different then their current position.
+Made it so when invokeing objects it doesn't set the level to your trust.
+   (Since objects are level based and trust is permission based this was pointless).
+Modified mprog_greet_trigger to do a temporary list. (Seems to work fine this way).
+   (If everything goes good and no bugs are found might need to do something similar in other places).
+   (This was done to fix it so that if your using mpat etc... in a greet program it wouldn't fire the program twice).
+Removed a MWRESET that was left over from testing.
+Fixed in issue in banks that allowed you to create an account with gold you didn't have.
+Made it so trust permission uses name in pfile and god file instead of the number.
+   (Will make it easier for ones who want to add to the permission levels since if using numbers it can get crazy to deal with).
+Added in so commands can be set to a group and the group(s) can be bestowed to who you want to have those commands.
+Added in so commands people have access to (via bestow etc...) should show up in the commands list.
+   (Wonder how long that was missing lol).
+
+1.38 (Revision 2)
+-----------------
+Took out all the NStat 0 stuff in darkhaven.are.
+Added in so it gives index mobiles a default of 13 for perm_stats on loading.
+
+1.38 (Revision 1)
+-----------------
+Changed the Makefile to what it should be.
+   (g++-4 to g++).
+   (CYGWIN = -DCYGWIN to #CYGWIN = -DCYGWIN).
+
+1.38
+-----------------
+Authorize changes:
+   (Removed mpapply and mpapplyb).
+   (Removed not_auth and other stuff to do with auth).
+   (No longer restricted until authorized).
+      (Only restricted if your name has been denied, until you use name to change your name).
+   (Can still be turned off/on using CSET WAITFORAUTH).
+CSet changes:
+   Added in a CSET GROUPLEVELDIFF.
+      (Used to make it easier to change the groupping level difference).
+      (Set it to -1 to turn off grouping).
+   Added in a CSET GROUPALL.
+      (If ON it will make it so pkills can group with peacefuls).
+   Added in a CSET ASHELPS.
+      (Used to auto save help files when something is changed if turned on).
+Gold Changes:
+   Gold on hand max decreased back to 2billion.
+   Gold in bank max increased to 10sextillion.
+Trivia changes:
+   Added in so you actually get glory for trivia.
+   Added in so it tells everyone the correct answer when a trivia question is answered correctly.
+   Changed uncorrectly to incorrectly in trivia.
+Channel changes:
+   Added in so all mortal channels are turned on at creation.
+   Added in so when you use firstimm or immortalize you get all channels turned on.
+Other changes:
+   Made hotbooting only delete oldest log if higher then 1025 instead of deleting them all.
+   Made the mud create backups of pfiles before doing pfile_cleanup. (Puts them in backup directory, only keeps 10 newest pfiles).
+   Fixed it so check_parse_name checks for .., /, \.
+   Added in so lockers will try to load in the room your in instead of the last room.
+   Added in a run code.
+   Modified mpdamages so resistants can be set to be checked.
+   Added in so areas keep list of all characters in them. (Used it for get_char_area).
+   Fixed a bug where affect_join wasn't working right.
+   Fixed it so RESET RANDOM # worked.
+   Added in a way to read notes you haven't read yet. (NOTE UNREAD).
+   Fixed it so look and get won't say corpses are closed.
+   Added in so immortals don't get disconnected for idling.
+   Added in so pcflags can be modified on players using mset.
+   Fixed an issue where npcs less then level 2 couldn't die.
+   Fixed a few other issues that I already forgot.
+   Added and modified some help files.
+   Added/modified a few other things here and there.
+
+1.37
+-----------------
+(Done in 1.36, but not on list)
+   Removed races directory from imc directory.
+   Commented out CYGWIN in the Makefile.
+Added and modified some help files.
+Can now set if a channel will scramble based on what people speak online.
+   (Channels that use the online channels anyways).
+Fixed a slight possible issue in do_dig.
+   (It wasn't using the right if checks but it worked right).
+   (Also made it show what direction you were trying to dig out).
+Tossed in so lodge_projectile will use check_shieldblock.
+Added in dynamic mpdamage's can be created and used online.
+   (Like mpdamage $n fire 50).
+Added in so channel history for each character saves in pfiles.
+   (For yell, say, tell, fchat).
+Added in so lockers can be shared.
+Added in for resistances to be % based.
+   (Removed immune, absorb, susceptible).
+   (If < 0 in a resistant you are susceptible to it).
+   (If > 0 and < 100 in a resistant you are resistant to it).
+   (If 100 in a resistant you are immune to it).
+   (If > 100 in a resistant you will absorb it).
+Added in so skills/spells/etc... can be set as magical or not.
+Added some more stuff to handle_check.
+Added in a SF_CANDOALL so you can do all the stuff with that one.
+   (Same as setting a spell/skill as:).
+      (SF_CANSCRIBE, SF_CANBREW, SF_CANIMBUE, SF_CANCARVE, SF_CANCONCOCT, SF_CANMIX).
+   (Set up a lot of the defensive spells to candoall).
+Removed min_level from skills. (It wasn't saved or set on load etc...).
+Made it so it won't cost as much havoc if someone changes the stat order etc...
+   (Probably takes up more space etc... but a little easier to not have it go nuts if stats are changed).
+Added in so pets/mobiles that have stat changes gets their stats saved.
+Added so immortals can look at others say/tell/yell/fchat/whisper history.
+Added a get_char_area and using it for do_track.
+Added in so skills can have requirements for stats to use.
+   (Can practice it for now but can't use it till you have the stats it requires).
+Found and fixed an issue with spell_sectors.
+   (It was not allowing it when it should have allowed it).
+
+1.36
+-----------------
+Fixed an issue in message sent when following someone.
+Objects with the same extra descriptions can now be groupped.
+Objects with the same affects can now be groupped.
+Fixed an issue with quiver object in game.
+Added hlog and hsearch commands.
+   (Used to look and search host log information).
+Added in for MSSP data to be cleaned up on shutdown.
+Fixed up do_slice and make_corpse.
+   (So slice would work).
+Modified do_cook just a little.
+Modified detect_poison just a little.
+Added do_taste (Skill for tasting food).
+Added do_smell (Skill for checking food).
+Modified auth code just a bit to save over copyover/reboot.
+Modified is_outside check.
+Fixed up a few possible issues.
+Added a HACKED_FILE so it is easier to see hacking attempts.
+Added a way to change a mod_stat on a player.
+   (So if you have a spell or something that isn't set right and
+    increases someone's mod_stat forever).
+Redone track so it gives a good list of the directions instead of just the first one.
+Fixed an issue in stop_summoning.
+Made it so you may sell an item for less then it is worth.
+Fixed up a few issues with parsing descriptions.
+Made get_dir return -1 if it shouldn't return a direction instead of returning 0.
+Added more stuff to get_check.
+Fixed up fread_double so it worked with decimals.
+Fixed it sending Supress to room sometimes.
+   (Two skills had Supress in for miss_room).
+Removed it taking off 1 charisma if not wearing something on arms.
+   (Now it only takes off if nothing on body and legs).
+Added a Features.lst.
+Added in PCFLAG_PRIVATE.
+   (Can turn it on and off with config).
+   (Used to show or not show your msn/email/yahoo/gtalk to everyone).
+Updated some help files.
+Modified exit display to show the keyword on things that use the keyword.
+   (As long as it's not a closed door or a window it will show the direction).
+Modified compass display to show secret exits as long as they are open.
+Modified Darkhaven area some.
+Added trapset skill.
+Fixed an issue in traps.
+   (TRAP_ENTER_ROOM was going off when exiting the room).
+   (Traps that have a v3 of 0 are now seen, since not really set).
+Fixed a possible issue with area status.
+Modified how the lockers are saved some.
+   (Decided to do it more like the corpses).
+      (Less hassle this way and not as annoying as checking all room objects).
+   (If you wish to use old locker files you need to open them up and).
+      (Change the first #OBJECT to #LOCKER).
+
+1.35
+-----------------
+Removed enchant weapon spell.
+Removed enchant armor spell.
+Removed disenchant weapon spell.
+Removed disenchant armor spell.
+Added enchant spell.
+   (Gives random enchantments (Good and Bad)).
+   (Can be cast more then once per object).
+Added disenchant spell.
+   (Removes only enchantments on the object).
+Modified alot of the reset code and other stuff.
+   (To make resets work alot better).
+   (Resets keep a pointer to what ch or obj it resets).
+   (Characters and Objects that are created by reset have a pointer to the reset that created them).
+Added so "reset rlist" shows the resets for the room.
+Added so "reset room" will reset the room your in.
+Added in so descriptions can be parsed to control what it shows.
+   (Have to do a help file for this sometime when I get done with it).
+Added a HASH_LINK and HASH_UNLINK for dealing with hashes a little easier.
+Fixed socials so it keeps the socials where you put them in the list.
+Added in Keberus' mssp snippet.
+Added in hitroll and damroll to useglory.
+Fixed it so adding armor class using useglory doesn't affect enchantments.
+Fixed issues with increase_gold and increase_balance.
+Got rid of some unneeded things here and there.
+Added in fclear and flineclear.
+Added log (logspeech) to fshow.
+
+1.34
+-----------------
+Added a keep alive timer to imc.
+Modified do_arealist (to show free vnums better).
+Added in so races wear locations can be restricted.
+   (Will allow you to disable them from wearing things there).
+Fixed issues in sset.
+Added in get_percent in comm.c.
+Modified fchat history to work sort of like yell history.
+   (Without yell's area based limits).
+Changed killed data to a double linked list.
+   (Uses sysdata.maxkillhistory now).
+Added in fchat color setting.
+Removed areaversion from saving to files.
+   (Not really needed with the area format changes).
+Added in skilltable command.
+   (Like cmdtable only for skills (Doesn't show Personals/Herbs)).
+Updated color themes to 113 (to include fchat color).
+Added and modified some help files.
+Fixed an issue in loading reqskill name for a skill not yet loaded.
+   (It now gets the information and finds the skill after all skills are loaded).
+Updated licenese.txt to include 2009.
+Changed minhit and maxhit to ints.
+Added in for hpmanamove to save and load for pets.
+Modified sudoku a little.
+   (Resets starttime when quit/completed. Doesn't save stuff thats still 0 to pfile).
+Made it so you can advance all of someones classes at once.
+Added in so objects can have descriptions.
+Fixed a possible memory leak in fread_obj.
+Made it so the max amount of auctions each person has can be set online.
+   (Uses sysdata.maxauction now).
+Added and modified help files.
+Modified do_group.
+Modified do_restore.
+Modified show_condition.
+Fixed it so stat_gain doesn't take away hp if your above your max.
+Modified mpxmset.
+Removed a few spells/skills.
+Added Affects:
+   (AFF_NOMOVE: can't move).
+   (AFF_SILENCE: can't cast spells).
+Modified coin handling on drop and going into corpses and get.
+Made it so you can "drop all gold" to drop all gold on hand.
+Modified object 2 and 3 for changes (Limbo.are objects).
+Made it so gold on char and in banks is changed by billions instead of millions.
+Think I finaly got the following around fixed.
+Modified bank code and fixed some issues.
+Made it so you can handle more then 2bil on gold things (drop, give, bank, split, mset).
+   (Max on those things for gold is 2 Quintillion (2,000,000,000,000,000,000).
+
+1.33 Update
+-----------------
+Fixed an issue in timeinfo.c.
+Fixed an issue with sudoku.
+
+1.33
+-----------------
+Fixed in issue in locker code.
+Fixed a memory leak in news code.
+Added in trivia code.
+Fixed an issue in the hunt, hate and fear code.
+Modified how the hunt, hate, fear and summon stuff works.
+Tossed in so calendar auto updates when some things change.
+Added and modified some help files.
+Updated headers in source files to include 2009.
+Modified imc.config to use port 5000 instead of 9000.
+Added in fchat (Friend Chat) channel.
+Modified give program some.
+   (It will now allow use of vnums and more then one item name at a time).
+Fixed an issue with spells affecting stats.
+   (Some would put blindness and invisible on instead).
+Added some variables for programs to use.
+Modified display of affects some in mstat.
+Changed it so instead of slots for weaponspells it uses the names in files.
+Changed version over to sysdata.
+
+1.32
+-----------------
+Fixed an issue in do_bodybag.
+Fixed an issue in do_gift.
+Added in ITEM_NOCONTAINER for items.
+   (Makes it so the item can't be put in a container).
+Added in IFCHECK CONTOBJVNUM and IFCHECK CONTOBJCOUNT.
+Updated help files.
+Modified do_prompt and do_fprompt to show the default prompts.
+Modified do_ostat some.
+Modified do_bamfin and do_bamfout.
+   (Now allows you to place your name where you want in them).
+Modified progbug some.
+   (Changed the order and tossed the mob->description through strip_cr).
+Modified do_destroy some.
+   (It now checks trust levels).
+Fixed an issue in do_rdig.
+Got it to compile clean in 4.3.2 g++
+
+1.31
+-----------------
+Added in for personal spells/skills.
+Fixed a few things in oset.
+Fixed a few things dealing with deleteing spells/skills online.
+Added in so cset can be set to autosave when you change things.
+Added and modified some help files.
+Manged to get a clean compile with -Wwrite-strings on.
+Added in so the highscore tables are included in the download.
+Added in so commands can be set to autosave when you change something.
+Added in so socials can be set to autosave when you change something.
+Added in so spells/skills/etc... can be set to autosave when you change something.
+Added in SF_NOMOUNT (to stop you from doing some spells/skills while mounted).
+Added in so pets can make use of spec_funs.
+Modified do_mstat.
+Modified what gets saved into area files a bit to cut down on size etc...
+Added a count for objects and characters in a room.
+Modified do_look to show a combined list (kind of) for characters if more than 10 in room.
+Modified do_practice so you can see various parts (practice [spell/skill/weapon/tongue/personal]).
+Fixed a possible crashing issue in quest.c (amazing how long some things go unnoticed).
+Changed pc corpses to notake.
+Modified some stuff in build.c.
+Fixed it so you can continue editing if you are reconnecting to your character and were editing.
+  (That is one old stock bug that has been around for ages)
+Added in so you can have a spell/skill affect someone's waitstate.
+Fixed an issue on how it handled hitting in one_hit.
+Tossed in so mobiles can set players race/class in mpmset (for ones that might want to do in-game creation).
+Groups are now done as a list (Could save some time on lots of stuff this way, on a busy mud).
+NPCs can join partys easier and gain levels.
+Pet levels are now saved in pfiles.
+Added random item flag to make it so items can be created with random stats.
+
+1.30
+-----------------
+Modified Claw and Bite.
+Fixed a lot of issues here and there.
+Made it so commands and skills keep their own help data.
+Added and modified some help files.
+Added in an easy way to do multiclassing
+   (Just use 'cset multiclass <#>' to set it for how many classes players can pick on creation)
+   Modified alot of things for this.
+Added in for pcdata to be kept in a double linked list.
+Added in so clans, deities, nations, councils can be deleted on the mud.
+Modified how autogold and autoloot work.
+Modified gain_exp, exp worth, and made adepting spells/skills/etc... give exp.
+Modified how played time is done.
+Modified do_stat and do_statreport some.
+Modified handle_stat.
+Made it so the random number gets updated once in awhile.
+Made it so pushup and situp work for everyone.
+Made it so there is a chance of getting luckier.
+Fixed possible issues in get_damroll and get_hitroll.
+Made it so you can get blood splattered on yourself and equipment.
+Made it so blood on an object at obj_update gets changed to being a blood stain.
+Made it so you can wash blood off yourself and objects.
+Made it so you can get stains off equipment.
+Added in so you can see a count of how many commands and socials are in the mud when using 'memory' command.
+Made it so that instead of "auctioning" being put as the note text it puts "auctioning\r\n".
+Made it so when you look at an auctioned item it sets it as you have read that note.
+Made it so when you die you aren't summoned by what killed you.
+Made it so if your mounted on a pet it saves in pfiles etc...
+Made it so if your mounted and the pet goes to sleep/rest you dismount.
+Added in a pc_regen.
+Fixed olist, mlist, rlist.
+Made Corpses leave objects on the ground when they decay.
+Made Sacrifice give gold for objects inside objects.
+Modified darkhaven.are.
+Modified fish code.
+Added update_ris (used to stop being resistant and susceptible to something at once etc... (Mortals only)).
+Added spell_lookup (used to stop seeing so many "That isn't a spell" when doing like 'cast trollish'.
+Added for some pet info to be shown in score (Hate not knowing where my pet was).
+Added so you can use the log command on a mobile (Sometimes you need to check what a mobile is doing).
+Made it so race languages uses an EXT_BV instead of an int.
+Added in rpcopy (works like mpcopy and opcopy, only for rooms).
+Added in some documentation.
+
+1.22a
+-----------------
+Separated the release from the mud.
+Added in more stock classes and races.
+Added in more stock spells and skills.
+Modified Elevate
+Modified Mset
+Modified QSort
+Modified Setrace
+Cset skipclasses defaults to off (Meaning classes are picked on creation)
+Fixed issues in skills.c
+
+1.22
+-----------------
+Added and modified some help files
+Added absorb stuff
+Added friends list
+Added sysdata.expmulti
+Added grub code
+Made use of first_corpse
+Added in so mob_index_data keeps a list of characters using it
+Added in so obj_index_data keeps a list of objects using it
+Added in PLR_SPARING
+Added in ROOM_EXPLORER
+Added in so explorer rooms give exp when entering (1 time)
+Added in exphistory (To see the rooms people have explored)
+Changed grey to gray (gray is typically used in the US instead of grey (BOREDOM lol))
+Modified bank so if you empty out your account transfering gold it will close the account
+Added aexit command
+Modified victory code
+Added in code_check (This checks to see if some things aren't set correctly)
+Added some spells/skills
+
+1.21
+-----------------
+Added removeshop and removerepairshop commands
+Fixed fletch spell
+Fixed name and pcrename
+Modified authorize to work without programs that use mpapply and mpapplyb
+Fixed a somewhere exit issue
+Modified wizlist
+Fixed do_flee
+Modified help code
+Fixed rd_parse
+Modified do_smoke
+Modified do_equipment
+Fixed leaks in skills
+Modified do_calendar
+Added in so projectiles can get lodged in parts of the body
+Added so you can dislodge projectiles from your body
+Added so you can connect objects together
+Added ITEM_PIECE  ITEM_FURNITURE
+Added ITEM_QUEST  ITEM_LODGED
+Changed where it reset_colors on characters logging in
+Added ROOM_BFS_MARK and fixed an issue in track.c
+Added DAM_MAX
+Removed sysdata.room_halloffallen
+Objects with quest flag save past death traps
+Added in do_throw code
+Fixed do_order issue
+Made it so object affects save different in player files
+Made it so pet's affects are saved in player files
+Added in so stats can be adjusted by spells and objects
+
+1.20
+-----------------
+Added get_eq_location for use in damage function
+Added so skills/spells can have a previous skill/spell requirement
+Modified slot to default to -1
+Fixed all known bugs
+Modified so any room can be set as a storage room
+Modified quest code
+Removed resort_skill_table, to many possible problems in resorting the table
+   as you go with things, Just use hotboot/reboot to make it sort it in correctly
+Added in so you can set a skill type as deleted and it not save which is a good
+   way of having it remove it on reboot/hotboot
+
+1.19
+-----------------
+Modified pfile_cleanup (to clean up lockers)
+Added and modified helpfiles
+Modified quest code
+Modified mapout code
+Modified act_string code
+Added rdig code
+Modified Darkhaven area
+Fixed a bug in the reset code
+Fixed a bug in the pet code
+Added support for more then one pet
+Added sysdata.maxpet so max pet could be set online
+Modified examine code
+Modified it so that a weapon in any wearloc can do damage
+Removed ROOM_PROTOTYPE ROOM_LAWFUL ROOM_CHAOTIC ROOM_NEUTRAL stuff
+Removed home_vnum from CHAR_DATA
+Added in for a restore of hp, mana, movement on level
+Modified check_counter code
+Fixed a bug in adjust_room_light
+Modified highscore code
+Modified score display
+
+1.18
+-----------------
+Added in gemote (Global emote)
+Modified emote
+Modified socials (so it could do Global socials)
+Added some colors
+Modified channels to work with ignore
+Modified permission levels on some channels
+Modified permission levels on some commands
+Updated source headers to include 2008
+Updated skill code to handle correct when adding skills/spells/etc...
+Modified highscore code
+Modified hint code
+Added and updated help files
+Modified cook code
+Modified eat code
+Modified board code
+Modified auction code
+Modified do_areas code
+Modified starting channels
+Fixed a lot of bugs
+Added in lockers
+Modified shop code
+Modified repair code
+Modified help_fix code
+Added un_fix_help code
+Modified help code
+Modified dig code
+Modified pick code
+Modified rlist olist mlist code
+Added vlist code
+Added Darkhaven area (manually)
+(DEFINED) Room vnums can be set using cset
+Added so pkill can be picked on creation
+Modified new_damage_message
+
+1.17
+-----------------
+Added fish code, commands and help files
+Modified act_string in comm.c
+Updated VARIABLES help file
+Added changes.lst (this file) to release
+Changed whats shown when you hold an object in your hands
+Fixed an issue in disenchanting a weapon
+Fixed an issue in the transfer code
+
+1.16
+-----------------
+Alot of minor changes to code format
+Found and fixed various bugs
+Added in transfer code
+Modified color code
+Changed autogold
+Added autosplit
+Updated races
+Added back in picking classes on creation
+Added in cset option so picking classes can be skipped
+Changed URANGE, UMIN, UMAX
+Added max_stats for races
+Added in similar command code
+Made compress a useable command
+Made race wherenames settable online
+Added NOPDELETE code
+Added holiday code
+Removed tamp code
+Updated help files
+
+1.15
+-----------------
+Alot of minor changes to code format
+Found and fixed various bugs
+Updated help files
+Modified skills
+Modified commands
+Modified channels
+Modified consider
+Added smartsac, noinduct code
+Removed findnote code
+Removed rolldie code
+Added corpse retrieve code
+Modified owhere code
+Modified restore code
+Modified ipcompare code
+Modified board code
+Modified triggers
+Modified clan code
+Modified council code
+Modified hint code
+Modified speed code
+Added multiplaying limit code
+Modified damage messages
+Modified deity code
+
+1.14
+-----------------
+Alot of minor changes to code format
+Found and fixed various bugs
+Added groupaffects
+Added hint code
+Added firstimm code
+Removed admin pfile
+Modified gold handling
+Modified bank code
+Modified armor code
+Modified color code
+Modified quest code
+Modified highscore code
+Modified commands
+Modified time data
+Updated help files
+
+1.13
+-----------------
+Alot of minor changes to code format
+Found and fixed various bugs
+Modified gold handling
+Modified bank code
+Added highscore code
+Modified deity code
+Modified pick code
+Modified commands
+Updated help files
+
+1.12
+-----------------
+Alot of minor changes to code format
+Found and fixed various bugs
+Added in so objects can have an owner
+Added in compass, suicide, solo, noassist, noscrap code
+Added locate, claim, call, gift code
+Modified areas
+Removed economy in areas
+Changed auction code to use auction board
+Modified channel code
+Removed hum, dark, evil, lootable on objects
+Added shieldblock, counter code
+Removed mp_deposit, mp_withdrawl code
+Modified mud wide reset code
+Modified hide code
+Modified mud time data to be dynamic
+Added calendar and calendarcheck code
+Modified commands
+Updated help files
+Modified skills
+
+1.11
+-----------------
+Alot of minor changes to code format
+Found and fixed various bugs
+
+1.1
+-----------------
+Alot of minor changes to code format
+Found and fixed various bugs
+Updated help files
+Modified commands
+Removed watch code
+Added quest code
+Added reward code
+Modified auction code
+Removed spec_guard
+Removed spec_executioner
+Added chop code
+Added makefire code
+Modified practice
+Changed how logging a character is handled
+Added msn, yahoo, gtalk, email fields
+Added rchance code for resets
+Changed how commands are coded (Uses CMDF(command))
+Removed project code
+Modified score code
+Modified worth code
+Added mud wide reset code
+Added open and close programs
+Modified hotboot code
+Removed code for orders and guilds
+Modified item code
+Modified channel code
+Modified color code
+Modified source headers
+Removed attacker, thief, killer flags
+Modified area format
+Modified editor code
+Modified board code
+Modified bank and gold code
+Modified ban code
+Removed hell and unhell code
+Removed litterbug code
+Removed balzhur code
+Removed fixchar code
+Removed pardon and mppardon code
+
+1.06
+-----------------
+Alot of minor changes to code format
+Found and fixed various bugs
+Updated help files
+Modified channel code
+Modified commands
+Added speed code
+Added birthday code
+Added marriage code
+Removed absorb code (was like immune/resistant/suscept)
+
+1.05
+-----------------
+Alot of minor changes to code format
+Found and fixed various bugs
+Removed switch code
+Removed nuisance code
+Removed loadarea code
+Removed comments code
+Modified class code
+Modified race code
+Modified council code
+Modified skill code
+Modified mapout code
+Added corpses command
+Added pfile cleanup code
+Added some socials
+Modified commands
+Updated help files
+
+1.04
+-----------------
+Alot of minor changes to code format
+Found and fixed various bugs
+Modified clan code
+Modified nation code
+Updated help files
+Updated commands
+Updated spells/skills
+Updated languages
+
+1.03
+-----------------
+Alot of minor changes to code format
+Removed fixed code
+Found and fixed various bugs
+Removed alot of socials
+Removed services.c
+Removed simple_damage
+Made it so you can't use create spring in a nodrop room
+Made it so you can't use create fire in a nodrop room
+Made it so you can't use create food in a nodrop room
+Changed social indexing
+Modified clan code
+
+1.02
+-----------------
+Alot of minor changes to code format
+Removed planes
+Changed immortal host to just host for everyone
+Modified last command
+Found and fixed various bugs
+
+1.01
+-----------------
+Alot of minor changes to code format
+Added more checks to keep down possible problems
+Found and fixed various bugs
+
+1.0
+-----------------
+Alot of minor changes to code format
+Added in bank code
+Added in nations code
+Modified bug, typo, idea to bti
+Added in sudoku game
+Found and fixed various bugs

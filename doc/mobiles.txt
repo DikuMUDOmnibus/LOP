@@ -1,0 +1,23 @@
+This file is going to be a simple document on how to go about creating a mobile.
+
+MCREATE = This is the command you will use to create a mobile, you can create
+          a completely new one or use a similar existing one to copy and save
+          yourself some typing.
+          EX: mcreate 500 Testing
+              This will create a new mobile called testing using vnum 500.
+          EX: mcreate 500 400 Testing
+              This will create a new mobile called testing and set it up
+              like mobile 400.
+
+   MSET = This is the command you will use to set stuff on mobiles.
+          See HELP MSET
+
+ MPEDIT = This is the command you will use to add programs to mobiles.
+          See HELP MPEDIT
+
+ MPCOPY = This command allows you to copy mobile programs from one mobile to
+          another.
+          See HELP MPCOPY
+
+   To modify a prototype mobile you must have the mobile you are modifying set
+as a prototype.

@@ -1,0 +1,36 @@
+#FISH
+Name       bass~
+MinWeight  1
+MaxWeight  5
+Value      5
+End
+
+#FISH
+Name       catfish~
+MinWeight  1
+MaxWeight  5
+Value      5
+End
+
+#FISH
+Name       gar~
+MinWeight  1
+MaxWeight  5
+Value      5
+End
+
+#FISH
+Name       panfish~
+MinWeight  1
+MaxWeight  5
+Value      5
+End
+
+#FISH
+Name       striper~
+MinWeight  1
+MaxWeight  5
+Value      5
+End
+
+#END

@@ -1,0 +1,223 @@
+Features: (Included but not limited to)
+---------------------------------------
+Features for All:
+-----------------
+- 100 levels total.
+- Permission All (Lowest Permission all the rest are Immortals).
+- Affected - Shows just a quick overview unless you type "AFFECTED BY".
+- AQuest Code - Can be sent to find an object somewhere in the game.
+                - Could be an object in a room, another object, on a mobile.
+              - Can be sent to kill a mobile.
+              - Can use the glory to buy things or get rewards.
+                - The REWARD command takes care of getting rewards.
+                - The USEGLORY command takes care of using glory.
+                  - Used to add or change things on an object.
+- Auction - Uses an auction board.
+          - Allows more then one object at a time to be auctioned.
+- Bank - Can have more then one account.
+       - Can be shared between characters.
+       - Can hold up to 10 Sextillion gold.
+       - Can create, delete, deposit, transfer, check balance, withdraw.
+       - Accounts auto deleted if empty.
+       - Gains interest.
+       - Saves last 20 transactions.
+- Boards - Redone to be global.
+         - Boards: General, Immortals, Clans, Nations, Ideas, Councils,
+           - Contact, Announcements, Auction.
+         - Can do polls. (Allows for voting).
+         - Handles the auctioning.
+- Calander - Shows a nice calander for the mud month.
+- Channels - classtalk, racetalk, music, quest, immtalk, chat, wartalk,
+           - traffic, yell, comm, log, build, warn, monitor, auth, imclog
+           - imcbug, auction, bug, highscore, trivia, fchat
+           - achat (Players flagged as an adult can use achat).
+           - Most channels have a history.
+             - say, tell, fchat, whisper, yell save in pfiles.
+- Clans - Can be inducted into a clan.
+        - Can be outcasted from a clan.
+        - Can quit a clan.
+        - Can be a member of a clan, council and nation at the same time.
+        - Can choose to not allow anyone to induct you with "CONFIG NOINDUCT".
+- Classes - Can use classpercent to change how experience is distributed.
+          - Comes with 7 classes: Cleric, Druid, Mage, Paladin, Ranger, Thief, Warrior, Augurer
+- Compass - Shows the directions in a compass type deal when you look.
+          - Can be turned on and off by "CONFIG COMPASS".
+- Connect - Can connect items together to form new items.
+- Councils - Can be coinducted into a council.
+           - Can be cooutcasted from a council.
+           - Can quit a council.
+           - Can be a member of a clan, council and nation at the same time.
+           - Can choose to not allow anyone to induct you with "CONFIG NOINDUCT".
+- Deities - Can devote to a deity.
+- Delete - Can delete your character anytime you want.
+- Explorer Code - The first time someone enters an explorer room they gain exp.
+- Fishing Code - Allows you to catch fish.
+- Friends - Can keep a list of the friends you have met.
+          - Can see Friend info messages if you and the friend both have on "CONFIG FINFO".
+- GEmote - Used to send global emotes.
+- HighScore Code - Included tables: Gold, SudokuWins, MKills, MDeaths,
+                   - PKills, PDeaths, QCompleted
+- Hint Code - Sends hints to people once in awhile.
+            - Can be turned on and off for each player by "CONFIG HINTS".
+- Homepage, MSN, EMail, Yahoo - Can be set to let others know how to reach you.
+                                - If you have "CONFIG PRIVATE" on it's only shown to immortals.
+                              - Displayed in "WHOIS" command.
+- Locker Code - Allows you to store your items.
+                - Up to 999 pounds can be stored in your locker.
+- Marriage Code - I'm sure more could and should be done with this one.
+- MCCP - Mud Client Compression Protocol
+         - Compressess the data transfered from the mud to the server and the server to the mud.
+- MSSP - Mud Server Status Protocol
+         - Will send some server status information in plain text to what requested the MSSP data.
+- Nations - Just a race based clan.
+          - Can be a member of a clan, council and nation at the same time.
+          - Can be ninducted into a nation.
+          - Can be noutcasted from a nation.
+          - Can quit a nation.
+          - Can choose to not allow anyone to induct you with "CONFIG NOINDUCT".
+- News Code - Can easily see any new news.
+- No Assist Code - Can turn it on and off with "CONFIG NOASSIST".
+                 - Keeps others from assisting you in battle if not in your group.
+- Personals - Can have up to 5 personal spells/skills.
+            - Player Created.
+- Pets - Can party with your pets.
+         - Pets can gain levels.
+- Pfile Pruner - This auto cleans up the pfiles every day.
+               - Doesn't delete immortals.
+               - Doesn't delete anyone flagged nopdelete.
+               - Deletes based on level.
+                 - If your level 5 and don't log on for over 5 days your deleted.
+                 - If your level 50 and don't log on for over 50 days your deleted.
+               - Creates a backup of pfiles before pruning.
+                 - Keeps the 10 newest backups.
+- Races - Comes with 13 races: Drow, Elf, Half-Elf, Half-Ogre, Half-Orc,
+          - Half-Troll, Halfling, Human, Lizardman, Pixie, Sea-Elf, Dwarf,
+          - Gith, Gnome
+- Ranged Attacks - Arrows anywhere in your inventory can be fired.
+                   - Don't have to draw them to fire them.
+                 - Arrows can get lodged in lots of locations.
+                   - Arrows may even pierce equipment in the location.
+                     - Equipment can't be removed.
+                   - Can DISLODGE arrows.
+                     - Pierced equipment can then be removed.
+                 - Can throw weapons.
+- Resistants - Are % based.
+               - Under 0 means your susceptible.
+               - Between 1 and 99 means your resistant.
+               - 100 means your immune.
+               - Above 100 means you will absorb some damage.
+                 - 105% would absorb 5% of the damage.
+- Retrieve Code - Will have a mobile bring you your corpse(s).
+- Rubik Code - Gives you a mixed up rubiks cube to do.
+- Skin Code - Allows you to skin a corpse.
+- Solo - Keeps others from following you.
+- Stats - Strength
+          - Doing pushups can raise your strength.
+          - Using weapons that require all your strength can also raise your strength.
+        - Wisdom
+          - Fighting enemies that are wiser then you are can raise your wisdom.
+        - Intelligence
+          - Fighting ememies that are more intelligent then you are can raise your intelligence.
+        - Dexterity
+          - Moving around can raise your dexterity.
+        - Charisma
+          - Increased if you level and your level is higher then your charisma.
+          - Decreased if you aren't wearing something on your body or your legs.
+          - Decreased if you are wearing equipment that is bloody or stained with blood.
+        - Luck
+          - Randomly increased.
+- Sparing - Can be turned on and off with "CONFIG SPARING".
+          - Allows you to fight with someone without killing them.
+            - Will warn you if your sparing while the other one is out to kill.
+- Sudoku Code - Gives you a 9x9 sudoku puzzle to do.
+- Suicide - Can commit suicide instead of waiting to die.
+          - Can use "CONFIG SUICIDE" to auto suicide once you hit 0 hp.
+- Trivia Code - Allows you to answer questions for glory.
+- Wash - Blood can get on your items and needs washed off.
+         - If left on to long it becomes stained and you will have to use cleaner to remove.
+- Wear Locations - Alot more wear locations have been added.
+- Wilderness - Can enter or leave the wilderness easily.
+
+Immortal Features:
+------------------
+- Permissions: Imm, Builder, Leader, Head, Imp (Permission "All" is for players).
+- Area Files - World readable.
+             - Isn't compitable with SMAUGFUSS areas.
+               - There is a converter that can be downloaded and used to convert
+                 - SMAUGFUSS areas over to LOP.
+- AQuest Code - The REWARD command takes care of getting rewards.
+                - Dynamic and objects that are created and setup to be rewards.
+- Auction - Allows up to "CSET MAXAUCTION" auctions for each player at a time.
+- Authorize Code - Can be turned on or off by "CSET WAITFORAUTH".
+                 - Players can continue to level and all until their name has been denied.
+                   - Can't gain experience until they change their name.
+                 - Can deny names already approved or that weren't approved because WAITFORAUTH was turned off.
+- Boards - Can be created and modified online.
+- Calander - Comes with 7 days, 17 months, 527 Days a year and 0 holidays
+           - Using "TIMESET" command it can be all modified online.
+             - Can easily add, change or remove days, months, holidays.
+             - Can control how many days are in the specified month.
+             - Calander will auto update to make sure it stays right.
+- Channels - Can easily create and modify channels online.
+- Clans - Can create and delete clans online.
+- Classes - MultiClass ready "CSET MULTICLASS".
+          - Can even disable picking classes on creation "CSET SKIPCLASSES".
+- Claim Code - (This command and others are currently set to permission Imm).
+               - Would have to use cedit to set to permission all for everyone to use.
+             - Allows objects to be claimed.
+             - Can call these objects back to you.
+             - Have to use gift to give away an item that has been claimed.
+             - Can use locate to find out where they are at.
+- Councils - Can create and delete councils online.
+- Deities - Can create and delete deities online.
+          - The deity object is what ever object it is set to be suplicated.
+- Experience Multiplier - Can be changed using "CSET EXPMULTI <#>".
+                        - Easily give extra experience etc...
+- Explorer Code - Rooms can be flagged as EXPLORER.
+- Fishing Code - Can create and delete fish online.
+- Helps - Saved in the system directory instead of the area directory.
+        - Helps for spells/skills are saved with the spells/skills.
+        - Helps for commands are saved with the commands.
+- Hint Code - Sends hints to people once in awhile.
+            - Can create/delete online.
+            - Can control when people see different hints.
+              - Based on level, race, class, area.
+- Host Log - Keeps a history of all characters and the ip addresses.
+             - Can use hsearch to see what all characters a host accesses.
+             - Only keeps the last 10 per character for each ip address.
+- Hotboot Code - Doesn't save everything like some hotboots.
+               - Just keeps the descriptors and more or less resets everything else.
+- MultiPlay Limits - Can limit amount of peacefuls "CSET MLPEACEFUL".
+                   - Can limit amount of deadlies "CSET MLDEADLY".
+                   - Can limit amount of connections "CSET MLTOTAL".
+- MWReset - Mud Wide Reset Code
+- Nations - Can create and delete nations online.
+- News Code - Can easily add and modify news online.
+- Pets - Can party with your pets.
+         - Pets can gain levels.
+- Races - Can easily set a race to use blood or mana.
+          - Using "SETRACE <race> USES BLOOD/MANA".
+- Room Description Parsing - Can have a room description change depending on the one looking at it.
+                             - Checks: NAME, HP, STRENGTH, DEXTERITY, WISDOM, INTELLIGENCE, LUCK,
+                               - CONSTITUTION, CHARISMA, GOLD, MANA, MOVE, LEVEL, MHOUR, MWDAY,
+                               - MDAY, MMONTH, MYEAR, EXIT, LIGHT, AFFECTED, SUSCEPTIBLE, RESISTANT,
+                               - WORN, CARRY, OHERE, WIND, PRECIPITATION, TEMPERATURE, IMMUNE,
+                               - ABSORB
+- Spells, Skills, Weapons, Tongues - Comes with 231 total.
+                                   - MAX_SKILL is set at 500.
+                                     - Can go as high as 1000 on MAX_SKILL.
+                                       - Can go higher but would require additional changes.
+                                   - Should be fairly easy to add new ones.
+                                     - Should always remember that after adding a new one online,
+                                       - you should do a copyover/reboot for it to fully get added.
+                                   - Can be given to races and/or classes at the same time.
+                                   - Can be restricted by the sectors they are in.
+                                   - Can be restricted by their stats.
+- Transfer Information - TRANSCHECK allows you to see some information on data transfers.
+- Trivia Code - Can add and modify it all online.
+- Wilderness - When things reset in a wilderness room they go to random cords.
+             - The wilderness map is done in the room description.
+             - Takes at least 1 move when moving in the wilderness.
+               - Based on what character is used it could take more moves.
+               - Can't move to empty spaces.
+             - Can enter or leave the wilderness by typing WILDERNESS.

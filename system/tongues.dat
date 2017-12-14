@@ -1,0 +1,64 @@
+* common elvish dwarven pixie ogre orcish trollish halfling gith gnome
+
+* structure is:
+* #language
+* pre-conversions~
+* alphabet~
+* conversions~
+
+#common
+~
+abcdefghijklmnopqrstuvwxyz~
+~
+
+#default * for any language without a table
+~
+ekjrugtlohfqbxyvndwmaczsip~
+~
+
+#halfling
+~
+epcdalbhojcrnmigqfsbuvvxyz~
+~
+
+#elvish
+~
+iqqdakvtujfwghepcrslybszoz~
+~
+
+#dwarven
+~
+ubkdukggagkrzrypkdztibmzgo~
+~
+
+#ogre
+~
+ufkdubrgugzpnmugkgztabtzom~
+~
+
+#trollish
+~
+moztbatzgkgumnpzgugrbudkfu~
+~
+
+#orcish
+~
+oktpabkhugzpnmuxrgztebyzow~
+~
+
+#gith
+~
+ybazfvxcdwuephsftkgoqirlmjn~
+~
+
+#gnome
+~
+njmlriqogktfshpeuwdcxvfzaby~
+~
+
+#pixie
+~
+jdhsidulyywfmieopaexoqybac~
+~
+
+#end

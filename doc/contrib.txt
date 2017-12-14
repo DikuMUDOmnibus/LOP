@@ -1,0 +1,33 @@
+ ****************************************************************************
+ * [S]imulated [M]edieval [A]dventure multi[U]ser [G]ame      |   \\._.//   *
+ * -----------------------------------------------------------|   (0...0)   *
+ * SMAUG 1.4 (C) 1994, 1995, 1996, 1998  by Derek Snider      |    ).:.(    *
+ * -----------------------------------------------------------|    {o o}    *
+ * SMAUG code team: Thoric, Altrag, Blodkai, Narn, Haus,      |   / ' ' \   *
+ * Scryn, Rennard, Swordbearer, Gorog, Grishnakh, Nivek,      |~'~.VxvxV.~'~*
+ * Tricops and Fireblade                                      |             *
+ ****************************************************************************
+
+SMAUG is based on Merc 2.1 code, with MobPrograms patched in, (which have
+been expanded into "MudPrograms").  All original versions of Merc MUD may be
+obtained from: ftp://ftp.game.org/pub/mud/diku/merc/
+
+Merc 2.1 is based on the Copper2 code, which is in turn based on the
+Sequent code, which is based on the original DikuMUD Gamma 0.0 code.
+All of these code bases are available from ftp://ftp.game.org/pub/mud/diku/
+
+The original mobprograms were written by J Murphy, N'Atas-Ha of ThePrincedom,
+murph@cs.cmu.edu.  (Look in the mudprogs subdirectory for the original
+distribution).
+
+The Free Software Foundation and DJ Delorie wrote our development tools, and
+distribute them for free, with source.  You can ftp them from prep.ai.mit.edu
+and grape.ecs.clarkson.edu.
+
+The automated auction code, and the "FOR" command came from Erwin S.
+Andreasen, erwin@pip.dknet.dk.  He has many code snippets available from:
+http://pip.dknet.dk/~pip1773/ and ftp://ftp.game.org/pub/mud/snippets/Erwin/
+
+Coders Altrag, Swordbearer and Tricops have their roots in "The Abyss",
+and likely some of their contributions/ideas have come from their work on
+there.

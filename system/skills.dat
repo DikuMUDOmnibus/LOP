@@ -1,0 +1,3914 @@
+#SKILL
+Name         acetum primus~
+Type         Spell
+SDamage      acid~
+SAction      create~
+SClass       death~
+SPower       minor~
+Target       offensive~
+Minpos       fighting~
+Slot         94
+Mana         15
+Rounds       8
+Code         spell_smaug
+Dammsg       Acetum Primus~
+Dice         (2*L*(1R4)+7)~
+HText        Usage: cast 'acetum primus' <victim>
+
+This spell inflicts damage on the victim.
+~
+End
+
+#SKILL
+Name         acid breath~
+Type         Spell
+SDamage      acid~
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       defensive~
+Slot         1
+Mana         20
+Rounds       4
+Code         spell_smaug
+Dammsg       blast of acid~
+Dice         ((H/16+1)R(H/8))~
+HText        Usage: cast 'acid breath' <victim>
+
+This spell damages the victim.
+~
+End
+
+#SKILL
+Name         acid fog~
+Type         Spell
+SDamage      acid~
+SAction      create~
+SClass       death~
+Flags        area~
+Minpos       fighting~
+Slot         69
+Rounds       12
+Code         spell_smaug
+Dammsg       acid fog~
+Dice         20d50~
+HText        Usage: cast 'acid fog'
+This spell will inflict damage on everyone possible in the room that it hits.
+~
+End
+
+#SKILL
+Name         acidball~
+Type         Spell
+SDamage      acid~
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       fighting~
+Slot         87
+Rounds       12
+Code         spell_smaug
+Dammsg       acidball~
+Dice         2d(l/2)~
+HText        Usage: cast acidball <target>
+This spell will inflict damage on the target when it hits.
+~
+End
+
+#SKILL
+Name         acidmist~
+Type         Spell
+SPower       major~
+Flags        candoall~
+Target       self~
+Minpos       standing~
+Slot         2
+Mana         70
+Rounds       15
+Code         spell_smaug
+Wearoff      The cloud of acidic mist around you dissipates away.~
+Hitchar      A vaporous cloud of acidic mist forms around you.~
+Hitvict      A vaporous cloud of acidic mist forms around you.~
+Hitroom      A vaporous cloud of acidic mist forms around $N.~
+Missvict     You fail to conjure the acidic vapors.~
+HText        Usage: cast acidmist
+ 
+This spell allows you to use a shield of acid to protect yourself.
+~
+Affect       '(l*4)+8' 'affected' 0 'acidmist' 'acidmist'
+End
+
+#SKILL
+Name         acidshot~
+Type         Spell
+SDamage      acid~
+SAction      create~
+SClass       death~
+SPower       greater~
+Target       offensive~
+Minpos       fighting~
+Slot         3
+Mana         15
+Rounds       12
+Code         spell_smaug
+Dammsg       droplet of acid~
+Hitchar      $N is burned by your acidmist!~
+Hitvict      You are burned by droplets of acid from $n's acidmist!~
+Hitroom      Droplets of acid from $n's acidmist horribly burn $N!~
+Diechar      $N's body dissolves under the onslaught of acid!~
+Dievict      The acid overwhelms you and dissolves you into goo!~
+Dieroom      $N's body dissolves under the onslaught of $n's acidmist!&z~
+Dice         l/2+30~
+HText        This spell is used by the code to inflict damage on your opponents, if you are
+affected by acidmist and your opponent isn't.
+~
+End
+
+#SKILL
+Name         alertness~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       evasive~
+Slot         95
+Mana         60
+Rounds       15
+Code         spell_smaug
+Wearoff      You are suddenly less alert.~
+Hitvict      You suddenly feel alert.~
+Hitroom      $N's eyes dart about the room in an alert manner.~
+HText        Usage: cast alertness [<target>]
+ 
+This spell renders the target resistant to sleep affects.
+~
+Affect       'l*15' 'resistant' 0 '1' 'sleep'
+End
+
+#SKILL
+Name         animate dead~
+Type         Spell
+Minpos       defensive~
+Slot         4
+Mana         220
+Rounds       12
+Code         spell_animate_dead
+HText        Usage: cast 'animate dead' <target>
+ 
+This spell allows you to reanimate the corpse of a recently deceased mobile.
+The mob will be under your control for a short period of time.
+~
+End
+
+#SKILL
+Name         antimagic shell~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       evasive~
+Slot         89
+Mana         40
+Rounds       12
+Code         spell_smaug
+Wearoff      The shimmering shell and its protection from magic fade away...~
+Hitchar      A shimmering translucent shell forms about $N.~
+Hitvict      A shimmering translucent shell forms about you.~
+Hitroom      A shimmering translucent shell forms about $N.~
+HText        Usage: cast 'antimagic shell' [<target>]
+ 
+This spell makes the target more resistant to all types of magic.
+~
+Affect       'l*23' 'resistant' 0 '1' 'magic'
+End
+
+#SKILL
+Name         aqua breath~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       standing~
+Slot         5
+Mana         50
+Rounds       12
+Code         spell_smaug
+Wearoff      Your lungs revert to their original state.~
+Hitchar      $N's lungs take on the ability to breathe water...~
+Hitvict      Your lungs take on the ability to breathe water...~
+Hitroom      $N's lungs take on the ability to breathe water...~
+HText        Usage: cast 'aqua breath' <target>
+ 
+This spell allows the target to breath in water areas and underwater where they
+would normally drown.
+~
+Affect       'l*23' 'affected' 0 'aqua_breath' 'aqua_breath'
+End
+
+#SKILL
+Name         armor~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       evasive~
+Slot         90
+Code         spell_smaug
+Wearoff      Your armor returns to its mundane value.~
+Hitchar      $N's armor begins to glow softly as it is enhanced by a cantrip.~
+Hitvict      Your armor begins to glow softly as it is enhanced by a cantrip.~
+Hitroom      $N's armor begins to glow softly as it is enhanced by a cantrip.~
+HText        Usage: cast armor <target>
+ 
+This spell increases the armor of the target by 20.
+~
+Affect       'l*10' 'armor' 0 '20' '-1'
+End
+
+#SKILL
+Name         astral walk~
+Type         Spell
+Minpos       standing~
+Slot         6
+Mana         60
+Rounds       12
+Code         spell_astral_walk
+HText        Usage: cast 'astral walk' <victim>
+
+This spell can instantaneously moves you to the victim's location.
+~
+End
+
+#SKILL
+Name         beautify~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       evasive~
+Slot         91
+Mana         14
+Rounds       12
+Code         spell_smaug
+Wearoff      You feel less charismatic as your beauty fades.~
+Hitchar      $N's features grow more attractive and $S voice takes on a musical aspect.~
+Hitvict      Your features grow more attractive and your voice takes on a musical aspect.~
+Hitroom      $N's features grow more attractive and $S voice takes on a musical aspect.~
+HText        Usage: cast beautify <target>
+ 
+This spell increases the charisma of the target.
+~
+Affect       '1+(l/17)' 'stat' 0 'l*24' 'charisma'
+End
+
+#SKILL
+Name         benediction~
+Type         Spell
+Flags        group candoall~
+Target       defensive~
+Minpos       defensive~
+Slot         96
+Mana         15
+Rounds       15
+Code         spell_smaug
+Wearoff      Your time in the protection of the high gods is over.~
+Hitvict      The protection of the high gods is temporarily given to you.~
+Hitroom      The protection of the high gods is temporarily given to $N.~
+HText        Usage: cast benediction
+ 
+This spell puts protect on all members of the casters group for a short period
+of time.
+~
+Affect       'l' 'affected' 0 'protect' 'protect'
+End
+
+#SKILL
+Name         black lightning~
+Type         Spell
+SDamage      energy~
+SAction      create~
+SClass       death~
+SPower       minor~
+Target       offensive~
+Minpos       fighting~
+Slot         7
+Mana         15
+Rounds       8
+Code         spell_smaug
+Dammsg       Black Lightning~
+Dice         2*(L/10)*(2R50)+100~
+HText        Usage: cast 'black lightning' <target>
+
+This spell calls electricity from the Ethereal Plane.
+~
+End
+
+#SKILL
+Name         blazebane~
+Type         Spell
+Flags        candoall~
+Target       offensive~
+Minpos       defensive~
+Slot         97
+Mana         70
+Rounds       15
+Code         spell_smaug
+Wearoff      Your flesh grows less susceptible to fire.~
+Hitchar      You place a fear of flames in $n's mind...~
+Hitvict      Your flesh grows more susceptible to fire.~
+Hitroom      $N begins to mutter about a fear of flames.~
+HText        Usage: cast blazebane <victim>
+ 
+This spell makes the victim more susceptible to fire.
+~
+Affect       'l*23' 'resistant' 0 '-1' 'fire'
+End
+
+#SKILL
+Name         blazeward~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       standing~
+Slot         92
+Mana         70
+Rounds       15
+Code         spell_smaug
+Wearoff      The ward of flames ceases to protect you.~
+Hitchar      $N begins to radiate a yellow light which repels intense heat.~
+Hitvict      A yellow glow surrounds you, protecting you from intense heat.~
+Hitroom      $N begins to radiate a yellow light which repels intense heat.~
+HText        Usage: cast blazeward [<target>]
+ 
+This spell makes the target more resistant to fire.
+~
+Affect       'l*23' 'resistant' 0 '1' 'fire'
+End
+
+#SKILL
+Name         bless~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       fighting~
+Slot         98
+Mana         5
+Rounds       12
+Code         spell_smaug
+Wearoff      The blessing fades away.~
+Hitvict      A powerful blessing is laid upon you.~
+Hitroom      $N beams as a powerful blessing is laid upon $M.~
+HText        Usage: cast bless <target>
+ 
+This spell increases the hitroll of the target.
+~
+Affect       'l*23' 'hitroll' 0 'l/8' '-1'
+End
+
+#SKILL
+Name         blindness~
+Type         Spell
+Target       offensive~
+Minpos       berserk~
+Slot         8
+Mana         5
+Rounds       12
+Code         spell_smaug
+Wearoff      You can see again.~
+Hitchar      You weave a spell of blindness around $N.~
+Hitvict      You have been blinded by $n!~
+Hitroom      $n weaves a spell of blindness about $N.~
+HText        Usage: cast blindness <target>
+ 
+This spell renders the target character blind.
+~
+Affect       '1+l*3' 'affected' 0 'blind' 'blind'
+End
+
+#SKILL
+Name         call lightning~
+Type         Spell
+SDamage      electricity~
+Minpos       fighting~
+Slot         9
+Mana         15
+Rounds       12
+Code         spell_call_lightning
+Dammsg       lightning bolt~
+HText        Usage: cast 'call lightning'
+
+This spell works only outside during bad weather.
+It calls down lightning bolts that does damage on all mobiles in the room.
+~
+End
+
+#SKILL
+Name         cancellation~
+Type         Spell
+Flags        candoall~
+Target       self~
+Minpos       fighting~
+Slot         10
+Mana         15
+Rounds       12
+Code         spell_dispel_magic
+HText        Usage: cast cancellation
+ 
+This spell may be used to completely remove all dispellable magical affects.
+~
+End
+
+#SKILL
+Name         cause critical~
+Type         Spell
+SDamage      energy~
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       fighting~
+Slot         11
+Mana         20
+Rounds       12
+Code         spell_smaug
+Dammsg       spell~
+Dice         3d8+(L-6)~
+HText        Usage: cast 'cause critical' <target>
+ 
+This spell will do a large amount of damage on the target.
+~
+End
+
+#SKILL
+Name         cause light~
+Type         Spell
+SDamage      energy~
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       defensive~
+Slot         12
+Mana         15
+Rounds       12
+Code         spell_smaug
+Dammsg       spell~
+Dice         1d8+(L/3)~
+HText        Usage: cast 'cause light' <target>
+ 
+This spell will do a small amount of damage on the target.
+~
+End
+
+#SKILL
+Name         cause serious~
+Type         Spell
+SDamage      energy~
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       aggressive~
+Slot         13
+Mana         17
+Rounds       12
+Code         spell_smaug
+Dammsg       spell~
+Dice         2D8+(L/2)~
+HText        Usage: cast 'cause serious' <target>
+ 
+This spell will do a medium amount of damage on the target.
+~
+End
+
+#SKILL
+Name         charged beacon~
+Type         Spell
+Target       offensive~
+Minpos       defensive~
+Slot         99
+Mana         65
+Rounds       15
+Code         spell_smaug
+Wearoff      You no longer attract electricity.~
+Hitvict      You are now attractive to the powers of electricity.~
+Hitroom      $N is now susceptible to the powers of electricity.~
+HText        Usage: cast 'charged beacon' <target>
+ 
+This spell makes the target susceptible to energy attacks.
+~
+Affect       'l*17' 'resistant' 0 '-1' 'energy'
+End
+
+#SKILL
+Name         charm person~
+Type         Spell
+Target       offensive~
+Minpos       evasive~
+Slot         14
+Mana         5
+Rounds       12
+Code         spell_charm_person
+Wearoff      You feel more self-confident.~
+HText        Usage: cast 'charm person' <target>
+
+This spell allows you to charm a mobile and bend it to your will.
+~
+End
+
+#SKILL
+Name         continual light~
+Type         Spell
+SAction      create~
+SPower       minor~
+Flags        object candoall~
+Minpos       evasive~
+Slot         15
+Mana         7
+Rounds       12
+Code         spell_smaug
+Hitchar      Shards of iridescent light collide to form a dazzling ball...~
+Hitroom      Shards of iridescent light collide to form a dazzling ball...~
+Dice         0~
+Value        21
+HText        Usage: cast 'continual light'
+ 
+This spell creates a ball of light that you wear as a light source.
+~
+End
+
+#SKILL
+Name         control weather~
+Type         Spell
+Minpos       standing~
+Slot         16
+Mana         25
+Rounds       12
+Code         spell_control_weather
+HText        Usage:  cast 'control weather' <warmer/colder/wetter/drier/windier/calmer>
+ 
+This spell allows you to change the temperature, precipitation, and wind.
+You must be outside to control the weather.
+~
+End
+
+#SKILL
+Name         create fire~
+Type         Spell
+Flags        candoall~
+Minpos       evasive~
+Slot         17
+Mana         10
+Rounds       12
+Code         spell_create_fire
+HText        Usage: cast 'create fire'
+ 
+This spell creates a magical fire in the room.
+Fires are useful for cooking and lighting things as well as providing light so
+you can see.
+~
+End
+
+#SKILL
+Name         create food~
+Type         Spell
+SAction      create~
+SPower       minor~
+Flags        candoall~
+Minpos       evasive~
+Slot         18
+Mana         5
+Rounds       12
+Code         spell_create_food
+Hitchar      A magic mushroom appears in your hands.~
+Hitroom      A magic mushroom appears in $n's hands.~
+Dice         0~
+Value        20
+HText        Usage: cast 'create food'
+ 
+This spell creates a magical mushroom for you or someone else to eat.
+~
+End
+
+#SKILL
+Name         create spring~
+Type         Spell
+Flags        candoall~
+Minpos       fighting~
+Slot         19
+Mana         20
+Rounds       12
+Code         spell_create_spring
+HText        Usage: cast 'create spring'
+ 
+This spell creates a magical spring that may be drank from.
+~
+End
+
+#SKILL
+Name         create water~
+Type         Spell
+Target       objinv~
+Minpos       evasive~
+Slot         20
+Mana         5
+Rounds       12
+Code         spell_create_water
+HText        Usage: cast 'create water' <drinkcon>
+ 
+This spell replenishes a drink container with water.
+~
+End
+
+#SKILL
+Name         cure blindness~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       fighting~
+Slot         21
+Mana         5
+Rounds       12
+Code         spell_smaug
+Hitchar      You work your cure, restoring vision.~
+Hitvict      Your vision returns!~
+HText        Usage: cast 'cure blindness' <target>
+
+This spell cures blindness on someone that is blinded.
+~
+Affect       '0' 'stripsn' 0 '8' '-1'
+End
+
+#SKILL
+Name         cure critical~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       fighting~
+Slot         22
+Mana         20
+Rounds       12
+Code         spell_smaug
+Hitchar      You cure $N's critical wounds.~
+Hitvict      Your critical wounds close and your pain ebbs away.~
+HText        Usage: cast 'cure critical' <target>
+ 
+This spell will heal a large amount of hitpoints on the target.
+~
+Affect       '0' 'hit' 0 '3d8+(l-6)' '-1'
+End
+
+#SKILL
+Name         cure light~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       defensive~
+Slot         23
+Mana         10
+Rounds       12
+Code         spell_smaug
+Hitchar      You cure $N's light wounds.~
+Hitvict      Your light wounds mend and your pain ebbs slightly.~
+HText        Usage: cast 'cure light' <target>
+ 
+This spell will heal a small amount of hitpoints on the target.
+~
+Affect       '0' 'hit' 0 '1d8+(l/3)' '-1'
+End
+
+#SKILL
+Name         cure poison~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       defensive~
+Slot         24
+Mana         5
+Rounds       12
+Code         spell_smaug
+Hitchar      You lift the poison from $N's body.~
+Hitvict      A warm feeling runs through your body.~
+Hitroom      A flush of health washes over $N.~
+HText        Usage: cast 'cure poison' [<target>]
+ 
+This spell cures the poison affecting someone.
+~
+Affect       '0' 'stripsn' 0 '66' '-1'
+End
+
+#SKILL
+Name         cure serious~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       defensive~
+Slot         25
+Mana         15
+Rounds       12
+Code         spell_smaug
+Hitchar      You cure $N's serious wounds.~
+Hitvict      Your serious wounds mend and your pain ebbs away.~
+HText        Usage: cast 'cure serious' <target>
+ 
+This spell will heal a medium amount of hitpoints on the target.
+~
+Affect       '0' 'hit' 0 '2d8+(l/2)' '-1'
+End
+
+#SKILL
+Name         curse~
+Type         Spell
+Target       offensive~
+Minpos       aggressive~
+Slot         26
+Mana         20
+Rounds       12
+Code         spell_smaug
+Dammsg       curse~
+Wearoff      The curse wears off.~
+Hitchar      You utter a curse upon $N.~
+Hitvict      You feel unclean.~
+Hitroom      $n utters a curse upon $N.~
+HText        Usage: cast 'curse' <target>
+
+This spell renders the character unable to recall.
+~
+Affect       '4*l' 'affected' 0 'curse' 'curse'
+End
+
+#SKILL
+Name         demonskin~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       evasive~
+Slot         100
+Mana         55
+Rounds       25
+Code         spell_smaug
+Wearoff      Your leathery skin grows thinner as your spell wanes.~
+Hitvict      Your skin becomes thick and leathery, similar to that of a demon.~
+Hitroom      $N's skin becomes thick and leathery, similar to that of a demon.~
+HText        Usage: cast demonskin [<target>]
+ 
+This spell makes the target resistant to slashing attacks.
+~
+Affect       'l*23' 'resistant' 0 '1' 'slash'
+End
+
+#SKILL
+Name         detect evil~
+Type         Spell
+Flags        candoall~
+Target       self~
+Minpos       defensive~
+Slot         27
+Mana         5
+Rounds       12
+Code         spell_smaug
+Wearoff      The red outlines fade from your vision.~
+Hitvict      Traces of red outline all evil in plain sight.~
+Hitroom      A tint of red appears in $N's eyes, mirroring his own vision.~
+HText        Usage: cast 'detect evil'
+ 
+This spell allows you to see how evil someone is while you are just walking or
+looking around.
+~
+Affect       'l*23' 'affected' 0 'detect_evil' 'detect_evil'
+End
+
+#SKILL
+Name         detect hidden~
+Type         Spell
+Flags        candoall~
+Target       self~
+Minpos       standing~
+Slot         28
+Mana         5
+Rounds       12
+Code         spell_smaug
+Wearoff      You feel less aware of your surroundings.~
+Hitvict      Your senses are heightened to those of an animal.~
+Hitroom      $N's senses are heightened to those of an animal.~
+HText        Usage: cast 'detect hidden'
+ 
+This spell allows you to see hidden characters.
+~
+Affect       'l*24' 'affected' 0 'detect_hidden' 'detect_hidden'
+End
+
+#SKILL
+Name         detect invis~
+Type         Spell
+Flags        candoall~
+Target       self~
+Minpos       berserk~
+Slot         29
+Mana         5
+Rounds       12
+Code         spell_smaug
+Wearoff      You no longer see invisible objects.~
+Hitvict      Your eyes fixate as they gain the ability to see the unseen.~
+Hitroom      $N's eyes fixate as they gain the ability to see the unseen.~
+HText        Usage: cast 'detect invis'
+ 
+This spell allows you to see invisible objects and characters.
+~
+Affect       'l*24' 'affected' 0 'detect_invis' 'detect_invis'
+End
+
+#SKILL
+Name         detect magic~
+Type         Spell
+Flags        candoall~
+Target       self~
+Minpos       evasive~
+Slot         30
+Mana         5
+Rounds       12
+Code         spell_smaug
+Wearoff      The blue outlines disappear from your vision.~
+Hitvict      Traces of blue outline the magical objects in your field of vision.~
+Hitroom      A tint of blue in $N's eyes mirrors $S own perception.~
+HText        Usage: cast 'detect magic'
+ 
+This spell allows you to detect the presence of magic on objects.
+~
+Affect       'l*24' 'affected' 0 'detect_magic' 'detect_magic'
+End
+
+#SKILL
+Name         detect poison~
+Type         Spell
+Flags        candoall~
+Target       objinv~
+Minpos       standing~
+Slot         31
+Mana         5
+Rounds       12
+Code         spell_detect_poison
+HText        Usage: cast 'detect poison' <object>
+ 
+This spell allows you to detect the presence of poison in food or drink.
+~
+End
+
+#SKILL
+Name         detect traps~
+Type         Spell
+Flags        candoall~
+Target       self~
+Minpos       standing~
+Slot         32
+Mana         15
+Rounds       12
+Code         spell_smaug
+Wearoff      You feel less aware of the dangers about you.~
+Hitvict      You suddenly grow aware of the dangers about you.~
+Hitroom      $N peers about the room, intent on finding all manner of danger.~
+HText        Usage: cast 'detect traps'
+
+This spell makes you magically aware of dangerous traps for awhile.
+~
+Affect       'l*24' 'affected' 0 'detect_traps' 'detect_traps'
+End
+
+#SKILL
+Name         disenchant~
+Type         Spell
+Target       objinv~
+Minpos       standing~
+Slot         93
+Mana         100
+Rounds       24
+Code         spell_disenchant
+HText        Usage: cast 'disenchant weapon' <object>
+ 
+This spell removes all things added from enchant
+Requirements:
+  An enchanted weapon or armor.
+~
+End
+
+#SKILL
+Name         dispel evil~
+Type         Spell
+Target       offensive~
+Minpos       aggressive~
+Slot         33
+Mana         15
+Rounds       12
+Code         spell_dispel_evil
+Dammsg       dispel evil~
+HText        Usage: cast 'dispel evil' <victim>
+ 
+This spell damages the victim if they are evil.
+~
+End
+
+#SKILL
+Name         dispel magic~
+Type         Spell
+Target       offensive~
+Minpos       fighting~
+Slot         34
+Mana         15
+Rounds       12
+Code         spell_dispel_magic
+HText        Usage: cast 'dispel magic' <target>
+
+This spell dispels magical affects on the target.
+It may be used to remove an enemy's magical advantages, or to completely remove
+your own magical affects.
+~
+End
+
+#SKILL
+Name         dragon wit~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       evasive~
+Slot         102
+Mana         20
+Rounds       12
+Code         spell_smaug
+Wearoff      The wit of the dragon withdraws from your mind.~
+Hitchar      $N's eyes glimmer with the wit of the dragon.~
+Hitvict      Your mind awakens in reception to the dragon's wit.~
+Hitroom      $N's eyes glimmer with the wit of the dragon.~
+HText        Usage: cast 'dragon wit' [<target>]
+ 
+This spell makes the target more intelligent.
+~
+Affect       'l*24' 'stat' 0 '1+(l/17)' 'intelligence'
+End
+
+#SKILL
+Name         dragonskin~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       evasive~
+Slot         103
+Mana         45
+Rounds       14
+Code         spell_smaug
+Wearoff      Your flesh sheds its draconian aspects.~
+Hitvict      Your flesh changes to emulate the scaly skin of a dragon.~
+Hitroom      $N's flesh assumes a draconian form...~
+HText        Usage: cast dragonskin [<target>]
+ 
+This spell makes the target resistant to piercing attacks.
+~
+Affect       'l*23' 'resistant' 0 '1' 'pierce'
+End
+
+#SKILL
+Name         dream~
+Type         Spell
+Minpos       standing~
+Slot         36
+Mana         5
+Rounds       12
+Code         spell_dream
+HText        Usage: cast dream <target> <message>
+ 
+This spell enables you to send a message to someone who is sleeping in the
+room.
+~
+End
+
+#SKILL
+Name         earthquake~
+Type         Spell
+Minpos       fighting~
+Slot         37
+Mana         15
+Rounds       12
+Code         spell_earthquake
+Dammsg       earthquake~
+HText        Usage: cast earthquake
+ 
+This spell inflicts damage on everyone (possible) in the room.
+~
+End
+
+#SKILL
+Name         eldritch sphere~
+Type         Spell
+Flags        candoall~
+Target       self~
+Minpos       evasive~
+Slot         104
+Mana         70
+Rounds       20
+Code         spell_smaug
+Wearoff      The eldritch sphere about you winks from existence.~
+Hitvict      A magical eldritch sphere forms about you.~
+Hitroom      A shimmering eldritch sphere forms about $N.~
+HText        Usage: cast 'eldritch sphere' <target>
+ 
+This spell will make the target resistant to magic and nonmagic attacks.
+~
+Affect       '(l*3)+25' 'resistant' 0 '1' 'magic'
+Affect       '(l*3)+25' 'resistant' 0 '1' 'nonmagic'
+End
+
+#SKILL
+Name         elven beauty~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       evasive~
+Slot         105
+Mana         14
+Rounds       12
+Code         spell_smaug
+Wearoff      Your elven features wane and you feel less charismatic.~
+Hitvict      Your face is blessed with elven features as you grow more attractive.~
+Hitroom      $N's ears grow pointed and $S voice takes on a musical aspect.~
+HText        Usage: cast 'elven beauty' <target>
+ 
+This spell will increase the charisma of the target.
+~
+Affect       'l*24' 'stat' 0 '1+(l/17)' 'charisma'
+End
+
+#SKILL
+Name         enchant~
+Type         Spell
+Target       objinv~
+Minpos       standing~
+Slot         38
+Mana         100
+Rounds       24
+Code         spell_enchant
+HText        Usage: cast 'enchant weapon' <object>
+ 
+This spell adds random affects to weapons and armors.
+Requirements:
+  A non-magical weapon or armor that isn't already enchanted.
+~
+End
+
+#SKILL
+Name         energy drain~
+Type         Spell
+SDamage      energy~
+Target       offensive~
+Minpos       fighting~
+Slot         39
+Mana         35
+Rounds       12
+Code         spell_energy_drain
+Dammsg       energy drain~
+HText        Usage: cast 'energy drain' <target>
+ 
+This spell saps the mana and movement as well as inflicts damage on the target.
+You receive some hitpoints depending on the damage done.
+~
+End
+
+#SKILL
+Name         ethereal funnel~
+Type         Spell
+Target       offensive~
+Minpos       defensive~
+Slot         107
+Mana         75
+Rounds       22
+Code         spell_smaug
+Wearoff      The ethereal funnel about you ceases to exist.~
+Hitvict      An aura surrounds you, channeling violent energies in your direction!~
+Hitroom      An ethereal funnel forms about $N.~
+HText        Usage: cast 'ethereal funnel' <target>
+This spell will make the target susceptible to energy.
+~
+Affect       'l*23' 'resistant' 0 '-1' 'energy'
+End
+
+#SKILL
+Name         ethereal shield~
+Type         Spell
+Flags        candoall~
+Target       self~
+Minpos       evasive~
+Slot         108
+Mana         75
+Rounds       22
+Code         spell_smaug
+Wearoff      You are returned to the mundane energy continuum.~
+Hitvict      You fade from the mundane energy continuum.~
+Hitroom      An ethereal shield divides $N from the mundane energy continuum.~
+HText        Usage: cast 'ethereal shield'
+This spell will make the caster resistant to energy.
+~
+Affect       'l*23' 'resistant' 0 '1' 'energy'
+End
+
+#SKILL
+Name         extradimensional portal~
+Type         Spell
+SAction      create~
+SPower       major~
+Flags        object candoall~
+Minpos       evasive~
+Slot         40
+Mana         40
+Rounds       24
+Code         spell_smaug
+Value        63
+HText        Usage: cast 'extradimensional portal'
+ 
+This spell creates a container for you to put your items in.
+~
+End
+
+#SKILL
+Name         faerie fire~
+Type         Spell
+Target       offensive~
+Minpos       fighting~
+Slot         41
+Mana         5
+Rounds       12
+Code         spell_faerie_fire
+Dammsg       faerie fire~
+Wearoff      The pink aura around you fades away.~
+HText        Usage: cast 'faerie fire' <target>
+ 
+This spell decreases the armor class of the target.
+~
+End
+
+#SKILL
+Name         faerie fog~
+Type         Spell
+Minpos       standing~
+Slot         42
+Mana         12
+Rounds       12
+Code         spell_faerie_fog
+Dammsg       faerie fog~
+HText        Usage: cast 'faerie fog'
+ 
+This spell reveals all invisible, hidden, and sneaking characters/mobiles in
+the same room as you.
+~
+End
+
+#SKILL
+Name         farsight~
+Type         Spell
+Minpos       standing~
+Slot         43
+Mana         15
+Rounds       12
+Code         spell_farsight
+HText        Usage: cast farsight <victim>
+ 
+This spell can allow you to see the room in which the victim stands.
+~
+End
+
+#SKILL
+Name         fatigue~
+Type         Spell
+Target       offensive~
+Minpos       fighting~
+Slot         109
+Mana         60
+Rounds       15
+Code         spell_smaug
+Wearoff      You no longer feel so sleepy.~
+Hitvict      You suddenly grow very tired and drowsy.~
+Hitroom      $N suddenly appears very tired and drowsy.~
+HText        Usage: cast fatigue <target>
+ 
+This spell will make the target susceptible to sleep.
+~
+Affect       'l*15' 'resistant' 0 '-1' 'sleep'
+End
+
+#SKILL
+Name         fire breath~
+Type         Spell
+SDamage      fire~
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       fighting~
+Slot         44
+Mana         15
+Rounds       4
+Code         spell_smaug
+Dammsg       blast of flame~
+Dice         (H/16+1)R(H/8)~
+HText        Usage: cast 'fire breath' <victim>
+
+This spell damages the victim.
+~
+End
+
+#SKILL
+Name         fireball~
+Type         Spell
+SDamage      fire~
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       fighting~
+Slot         45
+Mana         15
+Rounds       12
+Code         spell_smaug
+Dammsg       fireball~
+Dice         ((L*2)R(L*3))~
+HText        Usage: cast fireball <target>
+
+This spell will inflict damage on the target when it hits.
+~
+End
+
+#SKILL
+Name         fireshield~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       evasive~
+Slot         46
+Mana         85
+Rounds       12
+Code         spell_smaug
+Wearoff      The mystical flames are quelled by a sudden rush of air.~
+Hitchar      Mystical flames rise to enshroud $N.~
+Hitvict      Mystical flames rise to enshroud you.~
+Hitroom      Mystical flames rise to enshroud $N.~
+HText        Usage: cast fireshield [<target>]
+ 
+This spell allows you to use a shield of fire to protect the target.
+~
+Affect       '(l*4)+8' 'affected' 0 'fireshield' 'fireshield'
+End
+
+#SKILL
+Name         flare~
+Type         Spell
+SDamage      fire~
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       defensive~
+Slot         47
+Mana         15
+Rounds       12
+Code         spell_smaug
+Dammsg       shield of flame~
+Dice         ((L*2)R(L*3))~
+HText        This spell is used by the code to inflict damage on your opponents, if you are
+affected by fireshield and your opponent isn't.
+~
+End
+
+#SKILL
+Name         fletch~
+Type         Spell
+SAction      create~
+Flags        object~
+Minpos       fighting~
+Slot         48
+Mana         30
+Rounds       10
+Code         spell_smaug
+Hitchar      You fashion an arrow from a crude piece of flint.~
+Hitroom      $n creates an arrow from a piece of flint.~
+Misschar     You attempt to make an arrow, but fail miserably.~
+Value        21035
+Components   v21046~
+HText        Usage: cast fletch
+ 
+This spell allows you to transform a flint in your inventory into an arrow.
+~
+End
+
+#SKILL
+Name         float~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       fighting~
+Slot         49
+Mana         8
+Rounds       18
+Code         spell_smaug
+Wearoff      Your feet float slowly to the surface.~
+Hitchar      $N begins to float in mid-air...~
+Hitvict      You begin to float in mid-air...~
+Hitroom      $N begins to float in mid-air...~
+HText        Usage: cast float <target>
+ 
+This spell allows the target to float above the ground to save movement points
+and keeps you from being damaged in the event you fall from the air.
+~
+Affect       'l*24' 'affected' 0 'floating' 'floating'
+End
+
+#SKILL
+Name         fly~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       fighting~
+Slot         50
+Mana         10
+Rounds       18
+Code         spell_smaug
+Wearoff      You slowly float to the ground.~
+Hitchar      $N rises into the currents of air...~
+Hitvict      You rise into the currents of air...~
+Hitroom      $N rises into the currents of air...~
+HText        Usage: cast fly <target>
+ 
+This spell allows the target to fly above the ground to save movement points
+and can keep you from falling when in the air.
+~
+Affect       'l*24' 'affected' 0 'flying' 'flying'
+End
+
+#SKILL
+Name         fortify~
+Type         Spell
+Flags        group candoall~
+Target       defensive~
+Minpos       fighting~
+Slot         110
+Mana         40
+Rounds       18
+Code         spell_smaug
+Hitvict      Your group's wounds close and mend.~
+HText        Usage: cast fortify <target>
+This spell will heal the target some.
+~
+Affect       '0' 'hit' 0 '3d8+(l-6)' '-1'
+End
+
+#SKILL
+Name         frost breath~
+Type         Spell
+SDamage      cold~
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       defensive~
+Slot         51
+Mana         95
+Rounds       4
+Code         spell_smaug
+Dammsg       blast of frost~
+Dice         (H/16+1)R(H/8)~
+HText        Usage: cast 'frost breath' <victim>
+
+This spell damages the victim.
+~
+End
+
+#SKILL
+Name         gas breath~
+Type         Spell
+SDamage      poison~
+SAction      create~
+SClass       death~
+Flags        area~
+Minpos       fighting~
+Slot         52
+Mana         15
+Rounds       4
+Code         spell_smaug
+Dammsg       blast of gas~
+Dice         ((H/20+1)R(H/15+1))~
+HText        Usage: cast 'gas breath'
+
+This spell damages everything in the room.
+~
+End
+
+#SKILL
+Name         gate~
+Type         Spell
+Target       defensive~
+Minpos       fighting~
+Slot         53
+Mana         50
+Rounds       12
+Code         spell_gate
+HText        Usage: cast gate
+
+This spell gates in a guardian vampire.
+~
+End
+
+#SKILL
+Name         grounding~
+Type         Spell
+Flags        candoall~
+Target       self~
+Minpos       evasive~
+Slot         111
+Mana         60
+Rounds       15
+Code         spell_smaug
+Wearoff      You are no longer able to ground electricity.~
+Hitvict      You gain the ability to ground electricity.~
+Hitroom      $N gains the ability to ground electricity.~
+HText        Usage: cast grounding <target>
+ 
+This spell will make the target resistant to electrical attacks.
+~
+Affect       'l*17' 'resistant' 0 '1' 'electricity'
+End
+
+#SKILL
+Name         heal~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       aggressive~
+Slot         54
+Mana         50
+Rounds       12
+Code         spell_smaug
+Hitchar      You lay a hand of healing upon $N.~
+Hitvict      A warm feeling fills your body.~
+HText        Usage: cast heal [<target>]
+ 
+This spell will heal the target by 100 hitpoints.
+~
+Affect       '0' 'hit' 0 '100' '-1'
+End
+
+#SKILL
+Name         iceshard~
+Type         Spell
+SDamage      cold~
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       defensive~
+Slot         55
+Mana         15
+Rounds       12
+Code         spell_smaug
+Dammsg       hail of ice~
+Dice         ((L/2)R(L*2))~
+HText        This spell is used by the code to inflict damage on your opponents, if you are
+affected by iceshield and your opponent isn't.
+~
+End
+
+#SKILL
+Name         iceshield~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       standing~
+Slot         56
+Mana         85
+Rounds       12
+Code         spell_smaug
+Wearoff      The hail of ice rapidly melts and evaporates into nothingness.~
+Hitchar      A glistening hail of ice encompasses $N.~
+Hitvict      A glistening hail of ice encompasses you.~
+Hitroom      A glistening hail of ice encompasses $N.~
+HText        Usage: cast iceshield [<target>]
+ 
+This spell allows you to use a shield of ice to protect the target.
+~
+Affect       '(l*4)+8' 'affected' 0 'iceshield' 'iceshield'
+End
+
+#SKILL
+Name         identify~
+Type         Spell
+Minpos       evasive~
+Slot         57
+Mana         12
+Rounds       24
+Code         spell_identify
+HText        Usage: cast identify <target>
+ 
+You may identify a character or object to see information on the target.
+~
+End
+
+#SKILL
+Name         indignation~
+Type         Spell
+Flags        group candoall~
+Target       defensive~
+Minpos       evasive~
+Slot         112
+Mana         90
+Rounds       15
+Code         spell_smaug
+Wearoff      The fury of the high gods seeps from your veins, leaving you drained.~
+Hitvict      The fury of the high gods is temporarily given to you.~
+HText        Usage: cast indignation
+This spell will increase the hitroll and damroll of of the caster's party.
+~
+Affect       'l/2' 'hitroll' 0 '1+(l/17)' '-1'
+Affect       'l/2' 'damroll' 0 '1+(l/17)' '-1'
+End
+
+#SKILL
+Name         infravision~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       fighting~
+Slot         58
+Mana         5
+Rounds       18
+Code         spell_smaug
+Wearoff      You no longer see in the dark.~
+Hitchar      $N's eyes dart about as they grow accustomed to infravision.~
+Hitvict      Heat appears red through your eyes.~
+Hitroom      $N's eyes dart about as they grow accustomed to infravision.~
+HText        Usage: cast infravision [<target>]
+ 
+This spell allows you to see characters in the room when it is dark.
+~
+Affect       'l*24' 'affected' 0 'infrared' 'infrared'
+End
+
+#SKILL
+Name         inner warmth~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       evasive~
+Slot         113
+Mana         65
+Rounds       8
+Code         spell_smaug
+Wearoff      The magical warmth within you subsides.~
+Hitvict      A comforting warmth spreads through your frame.~
+Hitroom      A mysterious warmth radiates from $N.~
+HText        Usage: cast 'inner warmth' <target>
+ 
+This spell will make the target resistant to cold.
+~
+Affect       'l*23' 'resistant' 0 '1' 'cold'
+End
+
+#SKILL
+Name         invisible~
+Type         Spell
+Flags        candoall~
+Minpos       standing~
+Slot         59
+Mana         5
+Rounds       12
+Code         spell_invis
+Wearoff      You are no longer invisible.~
+HText        Usage: cast invis <target>
+ 
+This spell allows visible things to become invisible. It can be cast on objects
+or characters.
+~
+End
+
+#SKILL
+Name         kindred strength~
+Type         Spell
+Target       defensive~
+Minpos       fighting~
+Slot         114
+Mana         20
+Rounds       12
+Code         spell_smaug
+Wearoff      Your vampiric potence slowly withers away...~
+Hitvict      The strength of the kindred flows through your veins.~
+Hitroom      $N's muscles ripple as vampiric powers flow through $M.~
+HText        Usage: cast 'kindred strength' <target>
+ 
+This spell will increase the target's strength.
+~
+Affect       'l*24' 'stat' 0 '1+(l/17)' 'strength'
+End
+
+#SKILL
+Name         knock~
+Type         Spell
+Minpos       standing~
+Slot         60
+Mana         10
+Rounds       12
+Code         spell_knock
+HText        Usage: cast knock <object/direction>
+ 
+This spell allows you to unlock a lock using magic.
+~
+End
+
+#SKILL
+Name         know alignment~
+Type         Spell
+Target       defensive~
+Minpos       defensive~
+Slot         61
+Mana         9
+Rounds       12
+Code         spell_know_alignment
+HText        Usage: cast 'know alignment' <target>
+ 
+This spell reveals the alignment of the target.
+~
+End
+
+#SKILL
+Name         lethargy~
+Type         Spell
+Target       offensive~
+Minpos       evasive~
+Slot         115
+Mana         20
+Rounds       12
+Code         spell_smaug
+Wearoff      You are no longer so lethargic.~
+Hitvict      You are assailed by a magical lethargy.~
+Hitroom      $N is assailed by a magical lethargy.~
+HText        Usage: cast lethargy <target>
+ 
+This spell will decrease the dexterity of the target by 2.
+~
+Affect       'l*15' 'stat' 0 '-2' 'dexterity'
+End
+
+#SKILL
+Name         lightning bolt~
+Type         Spell
+SDamage      electricity~
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       defensive~
+Slot         62
+Mana         15
+Rounds       12
+Code         spell_smaug
+Dammsg       lightning bolt~
+Dice         (L/2)R(L*2)}L~
+HText        Usage: cast 'lightning bolt' <target>
+ 
+This spell will inflict damage on the target when it hits.
+~
+End
+
+#SKILL
+Name         lightning breath~
+Type         Spell
+SDamage      electricity~
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       defensive~
+Slot         63
+Mana         15
+Rounds       4
+Code         spell_smaug
+Dammsg       blast of lightning~
+Dice         ((H/16+1)R(H/8))~
+HText        cast 'lightning breath' <target>
+
+This spell damages the target.
+~
+End
+
+#SKILL
+Name         major invocation~
+Type         Spell
+Flags        group candoall~
+Target       defensive~
+Minpos       standing~
+Slot         116
+Mana         90
+Rounds       15
+Code         spell_smaug
+Wearoff      Your time in the sanctuary of the high gods is over.~
+Hitvict      The sanctuary of the high gods is temporarily given to you.~
+HText        Usage: cast 'major invocation'
+ 
+The spell MAJOR INVOCATION lays upon the members of the casters group
+a strong, but short-lived Sanctuary of The High Gods.
+~
+Affect       'l' 'affected' 0 'sanctuary' 'sanctuary'
+End
+
+#SKILL
+Name         mass invis~
+Type         Spell
+Flags        group candoall~
+Target       defensive~
+Minpos       standing~
+Slot         117
+Mana         20
+Rounds       24
+Code         spell_smaug
+Wearoff      You are no longer invisible~
+Hitvict      You fade from existence.~
+HText        Usage: cast 'mass invis'
+The MASS INVIS spell makes all characters in the caster's group invisible,
+including the caster.
+~
+Affect       'l*11' 'affected' 0 'invisible' 'invisible'
+End
+
+#SKILL
+Name         midas touch~
+Type         Spell
+SAction      destroy~
+SPower       major~
+Target       objinv~
+Minpos       evasive~
+Slot         64
+Mana         30
+Rounds       20
+Code         spell_midas_touch
+HText        Usage: cast 'midas touch' <object>
+ 
+Turns an object in your inventory into gold.
+~
+End
+
+#SKILL
+Name         minor invocation~
+Type         Spell
+Flags        group candoall~
+Target       defensive~
+Minpos       evasive~
+Slot         118
+Mana         10
+Rounds       15
+Code         spell_smaug
+Wearoff      The minor invocation fades away.~
+Hitvict      A minor invocation is laid upon you.~
+HText        Usage: cast 'minor invocation'
+ 
+This spell improves the to-hit roll and saving throw versus spell of all
+members of the caster's group by 1 each.
+~
+Affect       'l*23' 'hitroll' 0 'l/8' '-1'
+End
+
+#SKILL
+Name         nostrum~
+Type         Spell
+Target       self~
+Minpos       aggressive~
+Slot         119
+Mana         50
+Rounds       12
+Code         spell_smaug
+Hitvict      A sense of revival rushes through your body.~
+HText        Usage: cast nostrum
+ 
+A restorative spell of the Augurer which heals the caster of wounds.
+The spell cannot be cast on others.
+~
+Affect       '0' 'hit' 0 '100' '-1'
+End
+
+#SKILL
+Name         pass door~
+Type         Spell
+Flags        candoall~
+Target       self~
+Minpos       berserk~
+Slot         65
+Mana         50
+Rounds       12
+Code         spell_smaug
+Wearoff      You feel solid again.~
+Hitchar      $N turns translucent.~
+Hitvict      You turn translucent.~
+Hitroom      $N turns translucent.~
+HText        Usage: cast 'pass door'
+ 
+This spell allows you to pass through closed doors.
+~
+Affect       'l/4' 'affected' 0 'pass_door' 'pass_door'
+End
+
+#SKILL
+Name         poison~
+Type         Spell
+Flags        pksensitive~
+Target       offensive~
+Minpos       evasive~
+Slot         66
+Mana         10
+Rounds       20
+Code         spell_smaug
+Dammsg       poison~
+Wearoff      You feel less sick.~
+Hitchar      $N shivers as your poison spreads through $S body.~
+Hitvict      You feel very sick.~
+Hitroom      $N shivers as $n's poison spreads through $S body.~
+HText        Usage: cast poison <target>
+ 
+This spell poisons the target which slows their regeneration rate and messes up
+their mentalstate.
+~
+Affect       'l' 'affected' 0 'poison' 'poison'
+End
+
+#SKILL
+Name         polymorph~
+Type         Spell
+Minpos       evasive~
+Slot         67
+Mana         60
+Rounds       12
+Code         spell_polymorph
+HText        Usage: cast polymorph <morph>
+ 
+This spell enables you to morph into the desired creature.
+~
+End
+
+#SKILL
+Name         portal~
+Type         Spell
+Minpos       evasive~
+Slot         68
+Mana         70
+Rounds       25
+Code         spell_portal
+HText        Usage: cast portal <victim>
+
+This spell can form a temporary tunnel through space to the victim.
+~
+End
+
+#SKILL
+Name         protection~
+Type         Spell
+Flags        candoall~
+Target       self~
+Minpos       evasive~
+Slot         120
+Mana         5
+Rounds       12
+Code         spell_smaug
+Wearoff      You feel less protected from evil.~
+Hitvict      You are blessed with a protection from evil.~
+Hitroom      $N is blessed with a protection from evil.~
+HText        Usage: cast protection <target>
+This spell will help protect the target from evil.
+~
+Affect       'l*10' 'affected' 0 'protect' 'protect'
+End
+
+#SKILL
+Name         quickening~
+Type         Spell
+Flags        candoall~
+Target       self~
+Minpos       defensive~
+Slot         121
+Mana         60
+Rounds       10
+Code         spell_smaug
+Wearoff      Your pulse returns to a normal rate.~
+Hitvict      You feel your pulse quicken!~
+Missvict     You fail to gather enough magic to perform this spell.~
+HText        Usage: cast quickening <target>
+This spell will increase the dexterity of the target.
+~
+Affect       'l+50' 'stat' 0 '2' 'dexterity'
+End
+
+#SKILL
+Name         razorbait~
+Type         Spell
+Target       offensive~
+Minpos       defensive~
+Slot         122
+Mana         45
+Rounds       14
+Code         spell_smaug
+Wearoff      You are no longer so frightened of stabbing weapons.~
+Hitchar      You place a fear of stabbing weapons in $N's mind...~
+Hitvict      You suddenly grow weary of stabbing weapons...~
+Hitroom      #N flinches as someone brandishes a stabbing weapon.~
+HText        Usage: cast razorbait <target>
+ 
+This spell will make the target susceptible to pierceing attacks.
+~
+Affect       'l*23' 'resistant' 0 '-1' 'pierce'
+End
+
+#SKILL
+Name         recharge~
+Type         Spell
+Target       objinv~
+Minpos       evasive~
+Slot         70
+Mana         100
+Rounds       24
+Code         spell_recharge
+HText        Usage: cast recharge <object>
+ 
+This spell allows you to recharge the spells on a wand or staff.
+~
+End
+
+#SKILL
+Name         remove curse~
+Type         Spell
+Target       defensive~
+Minpos       evasive~
+Slot         71
+Mana         5
+Rounds       12
+Code         spell_remove_curse
+HText        Usage: cast 'remove curse' <target>
+ 
+This spell removes a curse from the target or one of the objects the target is
+carrying/wearing.
+~
+End
+
+#SKILL
+Name         remove invis~
+Type         Spell
+Minpos       standing~
+Slot         72
+Mana         10
+Rounds       12
+Code         spell_remove_invis
+HText        Usage: cast 'remove invis' <target>
+ 
+This spell allows invisible things to become visible again. It can be cast on
+objects or characters. If cast on another character it is considered to be an
+aggressive attack.
+~
+End
+
+#SKILL
+Name         remove trap~
+Type         Spell
+Minpos       standing~
+Slot         73
+Mana         35
+Rounds       12
+Code         spell_remove_trap
+HText        Usage: cast 'remove trap' <object>
+ 
+This spell allows you to magically disarm a trapped object.
+~
+End
+
+#SKILL
+Name         resilience~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       evasive~
+Slot         123
+Mana         47
+Rounds       13
+Code         spell_smaug
+Wearoff      You no longer feel resilient.~
+Hitvict      You feel resilient.~
+Hitroom      $N grows resilient from a powerful spell.~
+HText        Usage: cast resilience <target>
+ 
+This spell will make the target resistant to drain attacks.
+~
+Affect       'l*23' 'resistant' 0 '1' 'drain'
+End
+
+#SKILL
+Name         restore mana~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       defensive~
+Slot         74
+Mana         20
+Rounds       12
+Code         spell_smaug
+Hitvict      A surge of mana spreads throughout your being.~
+HText        Usage: cast 'restore mana' [<target>]
+ 
+This allows you to restore the target's or your own mana.
+~
+Affect       '0' 'mana' 0 'l+2d10' '-1'
+End
+
+#SKILL
+Name         sagacity~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       evasive~
+Slot         124
+Mana         12
+Rounds       12
+Code         spell_smaug
+Wearoff      Furrowing your brow, you sense the weight of wisdom leave you.~
+Hitvict      The wisdom of your elders blossoms within you.~
+Hitroom      $N grows serious as wisdom takes root within $M.~
+HText        Usage: cast sagacity <target>
+ 
+This spell will increase the target's wisdom.
+~
+Affect       'l*24' 'stat' 0 '1+(l/17)' 'wisdom'
+End
+
+#SKILL
+Name         sanctuary~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       standing~
+Slot         75
+Mana         75
+Rounds       12
+Code         spell_smaug
+Wearoff      The luminous aura about your body fades away.~
+Hitchar      A luminous aura spreads slowly over $N's body.~
+Hitvict      A luminous aura spreads slowly over your body.~
+Hitroom      A luminous aura spreads slowly over $N's body.~
+HText        Usage: cast sanctuary <target>
+ 
+This spell reduces the damage taken by the target by one half.
+~
+Affect       '(l*4)+30' 'affected' 0 'sanctuary' 'sanctuary'
+End
+
+#SKILL
+Name         scry~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       fighting~
+Slot         76
+Mana         20
+Rounds       12
+Code         spell_smaug
+Wearoff      Your clairvoyance slowly disintegrates...~
+Hitchar      $N's eyes glaze over as $E endures a vision...~
+Hitvict      You receive a revelatory vision...~
+Hitroom      $N's eyes glaze over as $E endures a vision...~
+HText        Usage: cast scry <target>
+ 
+This spell allows the target to see into nearby rooms simply by looking in the
+desired direction.
+~
+Affect       'l*23' 'affected' 0 'scrying' 'scrying'
+End
+
+#SKILL
+Name         shadowform~
+Type         Spell
+Flags        candoall~
+Target       self~
+Minpos       evasive~
+Slot         77
+Mana         110
+Rounds       20
+Code         spell_smaug
+Wearoff      The shadows surrounding your form dissipate...~
+Hitvict      You dematerialize to shadow form.~
+Hitroom      Swirling masses of shadows rise to consume $N.~
+HText        Usage: cast shadowform
+
+This spell makes you harder to hit with non-magical attacks.
+~
+Affect       'l*10' 'resistant' 0 '1' 'nonmagic'
+End
+
+#SKILL
+Name         shield~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       fighting~
+Slot         125
+Mana         12
+Rounds       18
+Code         spell_smaug
+Wearoff      Your force shield shimmers then fades away.~
+Hitvict      A force shield of shimmering blue surrounds you.~
+Hitroom      A force shield of shimmering blue surrounds $N.~
+HText        Usage: cast shield <target>
+ 
+This spell will increase the target's armor by 20.
+~
+Affect       'l*24' 'armor' 0 '20' '-1'
+End
+
+#SKILL
+Name         shockshield~
+Type         Spell
+Flags        candoall~
+Target       self~
+Minpos       evasive~
+Slot         78
+Mana         95
+Rounds       12
+Code         spell_smaug
+Wearoff      The torrents of cascading energy suddenly fade away.~
+Hitvict      Torrents of cascading energy form around you.~
+Hitroom      Torrents of cascading energy form around $N.~
+HText        Usage: cast shockshield
+ 
+This spell allows you to use a shield of electrical energy to protect yourself.
+~
+Affect       '(l*3)+14' 'affected' 0 'shockshield' 'shockshield'
+End
+
+#SKILL
+Name         sleep~
+Type         Spell
+Flags        pksensitive~
+Minpos       standing~
+Slot         79
+Mana         15
+Rounds       12
+Code         spell_sleep
+Wearoff      You feel less tired.~
+HText        Usage: sleep
+ 
+This command allows you to go to sleep.
+~
+End
+
+#SKILL
+Name         slink~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       evasive~
+Slot         126
+Mana         12
+Rounds       12
+Code         spell_smaug
+Wearoff      You suddenly feel less coordinated.~
+Hitvict      You suddenly feel more nimble.~
+Hitroom      $N suddenly appears more agile.~
+HText        Usage: cast slink <target>
+ 
+This spell will increase the dexterity of the target.
+~
+Affect       'l*24' 'stat' 0 '1+(l/17)' 'dexterity'
+End
+
+#SKILL
+Name         stone skin~
+Type         Spell
+Flags        candoall~
+Target       self~
+Minpos       fighting~
+Slot         127
+Mana         12
+Rounds       18
+Code         spell_smaug
+Wearoff      Your skin feels soft again.~
+Hitvict      Your skin hardens to a malleable stone.~
+Hitroom      $N's skin hardens to a malleable stone.~
+HText        Usage: cast 'stone skin' <target>
+ 
+This spell will increase the armor of the target by 40.
+~
+Affect       'l*23' 'armor' 0 '40' '-1'
+End
+
+#SKILL
+Name         summon~
+Type         Spell
+Minpos       evasive~
+Slot         80
+Mana         50
+Rounds       12
+Code         spell_summon
+HText        Usage: cast summon <target>
+ 
+This spell summons a character that is somewhere else to you.
+After summoning someone you will be stunned for awhile.
+~
+End
+
+#SKILL
+Name         swordbait~
+Type         Spell
+Target       offensive~
+Minpos       evasive~
+Slot         128
+Mana         55
+Rounds       25
+Code         spell_smaug
+Wearoff      Your fear of slashing weapons dissipates.~
+Hitchar      You place a fear of shashing weapons in $N's mind.~
+Hitvict      A fear of shashing weapons occupies your thoughts.~
+Hitroom      $N flinches as someone brandishes a slashing weapon.~
+HText        Usage: cast swordbait <target>
+ 
+This spell will make the target susceptible to slashing attacks.
+~
+Affect       'l*23' 'resistant' 0 '-1' 'slash'
+End
+
+#SKILL
+Name         teleport~
+Type         Spell
+Flags        candoall~
+Target       self~
+Minpos       defensive~
+Slot         81
+Mana         35
+Rounds       12
+Code         spell_teleport
+HText        Usage: cast teleport
+
+This spell takes you from your current location to a random location somewhere
+in the world.
+~
+End
+
+#SKILL
+Name         torrent~
+Type         Spell
+SDamage      electricity~
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       fighting~
+Slot         82
+Mana         15
+Rounds       12
+Code         spell_smaug
+Dammsg       tendril of lightning~
+Dice         (L/4)R(L/2)~
+HText        This spell is used by the code to inflict damage on your opponents, if you are
+affected by shockshield and your opponent isn't.
+~
+End
+
+#SKILL
+Name         transport~
+Type         Spell
+Minpos       evasive~
+Slot         83
+Mana         70
+Rounds       15
+Code         spell_transport
+HText        Usage: cast transport <object> <target>
+ 
+This spell sends an object in your inventory to the victim.
+~
+End
+
+#SKILL
+Name         trollish vigor~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       evasive~
+Slot         129
+Mana         16
+Rounds       12
+Code         spell_smaug
+Wearoff      Your vigor subsides, leaving you more charismatic.~
+Hitvict      You sense a bestial vigor consume you.~
+Hitroom      $N's face contorts with a bestial vigor.~
+HText        Usage: cast 'trollish vigor' <target>
+ 
+This spell will increase the constitution of the target, but it will also
+decrease the charisma of the target.
+~
+Affect       'l*24' 'stat' 0 '1+(l/17)' 'constitution'
+Affect       'l*24' 'stat' 0 '-1' 'charisma'
+End
+
+#SKILL
+Name         true sight~
+Type         Spell
+Flags        candoall~
+Target       self~
+Minpos       standing~
+Slot         84
+Mana         70
+Rounds       12
+Code         spell_smaug
+Wearoff      Your vision descends to the material plane.~
+Hitvict      Your vision is elevated to the highest plane.~
+Hitroom      $N's eyes begin to glow a soft white.~
+HText        Usage: cast 'true sight'
+
+This spell makes it so you can see despite blindness.
+~
+Affect       'l-10' 'affected' 0 'truesight' 'truesight'
+End
+
+#SKILL
+Name         unravel defense~
+Type         Spell
+Target       offensive~
+Minpos       fighting~
+Slot         130
+Mana         70
+Rounds       15
+Code         spell_smaug
+Wearoff      Your intricate defenses are restored to their original quality.~
+Hitvict      Your defenses are unravelled before your very eyes.~
+Hitroom      $N's eyes widen in fear as $S defenses are unravelled.~
+HText        Usage: cast 'unravel defense' <victim>
+ 
+This spell renders the victim susceptible to both magic and nonmagic attacks.
+~
+Affect       '(l*3)+25' 'resistant' 0 '-1' 'magic'
+Affect       '(l*3)+25' 'resistant' 0 '-1' 'nonmagic'
+End
+
+#SKILL
+Name         uplift~
+Type         Spell
+Flags        distant character~
+Minpos       standing~
+Slot         131
+Mana         50
+Rounds       16
+Code         spell_smaug
+Hitvict      You reach across the planes and aid $N.~
+Hitroom      A mystical hand appears from nowhere and aids $N.~
+HText        Usage: cast uplift <target>
+ 
+This spell allows the caster to give a little hp to the target without being in
+the same room.
+~
+Affect       '0' 'hit' 0 '20' '-1'
+End
+
+#SKILL
+Name         valiance~
+Type         Spell
+Flags        candoall~
+Target       defensive~
+Minpos       evasive~
+Slot         132
+Mana         40
+Rounds       18
+Code         spell_smaug
+Wearoff      Your resistance to paralysis slowly fades away.~
+Hitvict      A magical resistance to paralysis consumes you.~
+Hitroom      $N is surrounded by an aura which protects $M from paralysis.~
+HText        Usage: cast valiance <target>
+ 
+This spell will make the target resistant to paralysis.
+~
+Affect       'l*23' 'resistant' 0 '1' 'paralysis'
+End
+
+#SKILL
+Name         venomshield~
+Type         Spell
+SPower       major~
+Flags        candoall~
+Target       self~
+Minpos       standing~
+Slot         85
+Mana         70
+Rounds       15
+Code         spell_smaug
+Wearoff      The noxious cloud surrounding you dissipates into nothing.~
+Hitchar      A noxious vapor cloud forms around you.~
+Hitvict      A noxious vapor cloud forms around you.~
+Hitroom      A noxious vapor cloud forms around $N.~
+Missvict     You fail to create the noxious cloud.~
+HText        Usage: cast venomshield
+ 
+This spell allows you to use a shield of venom to protect yourself.
+~
+Affect       '(l*4)+8' 'affected' 0 'venomshield' 'venomshield'
+End
+
+#SKILL
+Name         venomshot~
+Type         Spell
+SDamage      poison~
+SAction      create~
+SClass       death~
+SPower       greater~
+Target       offensive~
+Minpos       fighting~
+Slot         86
+Mana         15
+Rounds       12
+Code         spell_smaug
+Dammsg       burst of vapor~
+Hitchar      $N coughs and chokes on vapors from your venomshield!&z~
+Hitvict      You cough and choke on vapors from $N's venomshield!&z~
+Hitroom      $N coughs and chokes on vapors from $n's venomshield!&z~
+Diechar      $N gags and sputters, then collapses dead!&z~
+Dievict      The vapors from $n's venomshield prove too much for you....&z~
+Dieroom      $N gags and sputters for a moment, then collapses dead!~
+Dice         l/2~
+HText        This spell is used by the code to inflict damage on your opponents, if you are
+affected by venomshield and your opponent isn't.
+~
+End
+
+#SKILL
+Name         weaken~
+Type         Spell
+Target       offensive~
+Minpos       defensive~
+Slot         35
+Code         spell_smaug
+Hitchar      $N labors weakly as your spell atrophies $S muscles.~
+Hitvict      You labor weakly as $n's spell atrophies your muscles.~
+Hitroom      $N labors weakly as $n's spell atrophies $S muscles.~
+HText        Usage: cast weaken <victim>
+ 
+This spell reduces the strength of the victim by two.
+~
+Affect       'L+20' 'stat' 0 '-2' 'strength'
+End
+
+#SKILL
+Name         winter mist~
+Type         Spell
+Target       offensive~
+Minpos       defensive~
+Slot         133
+Mana         65
+Rounds       8
+Code         spell_smaug
+Wearoff      The magical chilling mist about you subsides.~
+Hitvict      A magical chilling mist flurries about you.~
+Hitroom      A magical chilling mist flurries about $N.~
+HText        Usage: cast 'winter mist' <victim>
+ 
+This spell makes the victim more susceptible to all forms of coldness.
+~
+Affect       'l*23' 'resistant' 0 '-1' 'cold'
+End
+
+#SKILL
+Name         word of recall~
+Type         Spell
+Flags        candoall~
+Target       self~
+Minpos       resting~
+Slot         88
+Mana         5
+Rounds       12
+Code         spell_word_of_recall
+HText        Usage: cast 'word of recall'
+ 
+This spell will recall you to your home sanctuary.
+~
+End
+
+#SKILL
+Name         aggressive style~
+Type         Skill
+Minpos       defensive~
+Rounds       4
+Code         spell_null
+HText        Usage: style aggressive
+ 
+This style of combat allows you to do more damage to your opponent, but it also
+allows your opponent to do more damage to you.
+~
+End
+
+#SKILL
+Name         aid~
+Type         Skill
+Minpos       aggressive~
+Rounds       12
+Code         do_aid
+HText        Usage: aid <target>
+ 
+This skill allows you to aid someone that is unconscious.
+~
+End
+
+#SKILL
+Name         backstab~
+Type         Skill
+NonMagical
+Minpos       standing~
+Rounds       12
+Code         do_backstab
+Dammsg       backstab~
+HText        Usage: backstab <target>
+ 
+This skill allows you to sneak up behind someone and backstab them.
+You need to be holding a piercing or stabbing weapon.
+~
+End
+
+#SKILL
+Name         bash~
+Type         Skill
+NonMagical
+Target       offensive~
+Minpos       berserk~
+Rounds       8
+Code         do_bash
+Dammsg       bash~
+HText        Usage: bash
+ 
+This skill can only be used while fighting. If successful bash will inflict
+damage and daze your opponent for a short time.
+~
+End
+
+#SKILL
+Name         berserk~
+Type         Skill
+Target       offensive~
+Minpos       evasive~
+Rounds       4
+Code         do_berserk
+Wearoff      You regain your composure...~
+HText        Usage: berserk
+ 
+This skill allows you to go berserk during a fight.
+~
+End
+
+#SKILL
+Name         berserk style~
+Type         Skill
+Minpos       defensive~
+Rounds       4
+Code         spell_null
+HText        Usage: style berserk
+
+This style of combat allows you to do the greatest damage to your opponent, but
+it also allows your opponent to do the greatest damage to you.
+~
+End
+
+#SKILL
+Name         bite~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       berserk~
+Rounds       8
+Code         spell_smaug
+Dammsg       bite~
+Dice         1RL~
+HText        Usage: bite
+ 
+This skill inflicts damage on the opponent.
+~
+End
+
+#SKILL
+Name         blitz~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SPower       minor~
+SSave        halfdam~
+Target       offensive~
+Minpos       berserk~
+Rounds       8
+Code         spell_smaug
+Dammsg       blitz~
+Dice         l/2{40~
+HText        Usage: blitz <target>
+ 
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         block~
+Type         Skill
+Minpos       aggressive~
+Code         spell_null
+HText        Block is a skill which assist you in avoiding incoming attacks.
+ 
+This skill functions automatically.
+If your opponent is using a weapon you need to use a weapon or shield.
+~
+End
+
+#SKILL
+Name         bloodlet~
+Type         Skill
+Minpos       berserk~
+Rounds       12
+Code         do_bloodlet
+HText        Usage: bloodlet
+ 
+This skill allows you to open your veins and let a small amount of your blood
+spill to the ground so others can consume some blood.
+~
+End
+
+#SKILL
+Name         brew~
+Type         Skill
+Target       objinv~
+Minpos       standing~
+Mana         95
+Rounds       12
+Code         do_brew
+HText        Usage: brew <spell>
+ 
+This skill allows you to brew the spell into a potion.
+You need to be in a room with a fire and be holding a flask.
+You can brew up to 3 spells into a single potion.
+~
+End
+
+#SKILL
+Name         carve~
+Type         Skill
+Target       objinv~
+Minpos       standing~
+Mana         90
+Rounds       12
+Code         do_carve
+HText        Usage: carve <spell>
+ 
+This skill allows you to carve a spell on a staff.
+You need to be holding an uncarved staff and have a gem in your inventory.
+~
+End
+
+#SKILL
+Name         chop~
+Type         Skill
+Code         do_chop
+HText        Usage: chop
+ 
+This skill allows you to chop some wood in a forest.
+You need to be holding an axe.
+~
+End
+
+#SKILL
+Name         circle~
+Type         Skill
+NonMagical
+Minpos       aggressive~
+Rounds       8
+Code         do_circle
+Dammsg       circle~
+HText        Usage:  circle <mob>
+ 
+A skill which can only be used while in combat.
+You must be wielding a piercing weapon.
+~
+End
+
+#SKILL
+Name         claw~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       berserk~
+Rounds       8
+Code         spell_smaug
+Dammsg       claw~
+Dice         1RL~
+HText        Usage: claw <target>
+ 
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         climb~
+Type         Skill
+Target       offensive~
+Minpos       standing~
+Rounds       10
+Code         do_climb
+Dammsg       climb~
+HText        Usage: climb [direction]
+ 
+If no direction is specified you will climb in or out the first exit it finds
+that you can use climb for.
+ 
+If you specify a direction it will allow you to climb in or out of the exit in
+that direction.
+~
+End
+
+#SKILL
+Name         concoct~
+Type         Skill
+Target       objinv~
+Minpos       standing~
+Mana         90
+Rounds       12
+Code         do_concoct
+HText        Usage: concoct <spell>
+ 
+This skill allows you to concoct a spell into a pill.
+You will need a casing, powder and mortar.
+You can concoct up to 3 spells into a single pill.
+~
+End
+
+#SKILL
+Name         cook~
+Type         Skill
+Minpos       defensive~
+Rounds       14
+Code         do_cook
+Misschar     You aren't a very good cook yet.~
+HText        Usage: cook <item>
+ 
+This skill allows you to cook food in order to preserve it longer as well as
+remove many poisons.
+You will need to be near a fire.
+~
+End
+
+#SKILL
+Name         counter~
+Type         Skill
+NonMagical
+Minpos       aggressive~
+Code         spell_null
+HText        Counter is a skill which allows you to counter incoming attacks.
+ 
+The skill functions automatically.
+~
+End
+
+#SKILL
+Name         cuff~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SPower       minor~
+SSave        halfdam~
+Target       offensive~
+Minpos       fighting~
+Rounds       8
+Code         spell_smaug
+Dammsg       cuff~
+Dice         l/3~
+HText        Usage: cuff <target>
+ 
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         defensive style~
+Type         Skill
+Rounds       4
+Code         spell_null
+HText        Usage: style defensive
+
+This style of combat allows you to take less damage from your opponent, but it
+also allows your opponent to take less damage from you.
+~
+End
+
+#SKILL
+Name         detrap~
+Type         Skill
+Minpos       sitting~
+Rounds       24
+Code         do_detrap
+HText        Usage: detrap <object>
+ 
+This skill allows you to disarm a trapped object.
+~
+End
+
+#SKILL
+Name         dig~
+Type         Skill
+Minpos       standing~
+Rounds       20
+Code         do_dig
+HText        Usage: dig [direction]
+ 
+DIG with no specified direction will attempt to dig up an object.
+If you use a shovel you have a better chance of digging up an object.
+ 
+If you specify a direction you will attempt to dig open an exit.
+~
+End
+
+#SKILL
+Name         disarm~
+Type         Skill
+Minpos       aggressive~
+Rounds       24
+Code         do_disarm
+HText        Usage: disarm
+ 
+This skill allows you to attempt to disarm an opponent.
+You need to holding a weapon.
+~
+End
+
+#SKILL
+Name         dodge~
+Type         Skill
+Minpos       aggressive~
+Code         spell_null
+HText        Dodge is a skill which assist you in dodging incoming attacks.
+
+The skill functions automatically.
+~
+End
+
+#SKILL
+Name         dominate~
+Type         Skill
+SSave        negate~
+Target       offensive~
+Minpos       standing~
+Mana         5
+Rounds       12
+Code         spell_charm_person
+HText        Usage: dominate <target>
+ 
+This skill allows you to bend the target to your will.
+~
+End
+
+#SKILL
+Name         doorbash~
+Type         Skill
+Minpos       standing~
+Rounds       24
+Code         do_bashdoor
+Dammsg       bashdoor~
+HText        Usage: doorbash <direction>
+ 
+This skill allows you to bash open a closed door.
+~
+End
+
+#SKILL
+Name         duck~
+Type         Skill
+Minpos       aggressive~
+Code         spell_null
+HText        Duck is a skill which assist you in avoiding incoming attacks.
+ 
+This skill functions automatically.
+~
+End
+
+#SKILL
+Name         elbow~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SSave        halfdam~
+Target       offensive~
+Minpos       aggressive~
+Rounds       8
+Code         spell_smaug
+Dammsg       elbow~
+Hitchar      You raise your elbow and strike out at $N.~
+Dice         l/2 { 25~
+HText        Usage: elbow <target>
+ 
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         enhanced damage~
+Type         Skill
+Minpos       berserk~
+Code         spell_null
+HText        This skill increases the damage dealt to your opponent.
+ 
+This skill functions automatically.
+~
+End
+
+#SKILL
+Name         evasive style~
+Type         Skill
+Rounds       4
+Code         spell_null
+HText        Usage: style evasive
+
+This style of combat allows you to take the least damage from your opponent,
+but it also allows your opponent to take the least damage from you.
+~
+End
+
+#SKILL
+Name         feed~
+Type         Skill
+Minpos       berserk~
+Rounds       10
+Code         do_feed
+Dammsg       bite~
+HText        Usage: feed
+ 
+This skill allows you to suck some life out of your opponent.
+~
+End
+
+#SKILL
+Name         gouge~
+Type         Skill
+NonMagical
+Minpos       berserk~
+Rounds       10
+Code         do_gouge
+Dammsg       gouge~
+HText        Usage: gouge
+
+This attack can only be used in combat, and will strike at the eyes of
+your opponent, causing damage and temporary blindness.
+~
+End
+
+#SKILL
+Name         grip~
+Type         Skill
+Minpos       berserk~
+Code         spell_null
+HText        This skill helps you grip your weapon tighter when someone tries to disarm you.
+ 
+The skill functions automatically when someone tries to disarm you.
+~
+End
+
+#SKILL
+Name         headbutt~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SPower       minor~
+SSave        halfdam~
+Target       offensive~
+Minpos       berserk~
+Rounds       8
+Code         spell_smaug
+Dammsg       headbutt~
+Hitchar      You charge straight into $N and ram $M with your head!~
+Hitvict      $n headbutts you!~
+Dice         l/2 { 35~
+HText        Usage: headbutt <target>
+ 
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         hide~
+Type         Skill
+Target       self~
+Minpos       standing~
+Rounds       12
+Code         do_hide
+Wearoff      You are no longer hidden.~
+Hitvict      You attempt to hide.~
+Misschar     You attempt to hide.~
+HText        Usage: hide [<object>] [<object>]
+ 
+This skill allows you to hide from ones that can't see hidden people.
+It also allows you to hide an object in the room or inside another object.
+~
+Affect       'l*23' 'affected' 0 'hide' 'hide'
+End
+
+#SKILL
+Name         imbue~
+Type         Skill
+Target       objinv~
+Minpos       standing~
+Mana         90
+Rounds       12
+Code         do_imbue
+HText        Usage: imbue <spell>
+ 
+This skill allows you to imbue a spell on a wand.
+You need to have an unimbued wand.
+~
+End
+
+#SKILL
+Name         jab~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SPower       minor~
+SSave        halfdam~
+Target       offensive~
+Minpos       aggressive~
+Rounds       8
+Code         spell_smaug
+Dammsg       jab~
+Hitchar      You jab at $N with your fist.~
+Hitvict      $n jabs at you with a fist.~
+Dice         l/2 { 20~
+HText        Usage: jab <target>
+
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         kick~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       berserk~
+Rounds       8
+Code         spell_smaug
+Dammsg       kick~
+Dice         1RL~
+HText        Usage: kick <target>
+ 
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         knee~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SSave        halfdam~
+Target       offensive~
+Minpos       aggressive~
+Rounds       8
+Code         spell_smaug
+Dammsg       knee~
+Hitchar      You strike out at $N with your knee.~
+Dice         l/2 { 25~
+HText        Usage: knee <target>
+
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         leap~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SPower       minor~
+Target       offensive~
+Minpos       berserk~
+Rounds       8
+Code         spell_smaug
+Dammsg       leap~
+Dice         l/2{35~
+HText        Usage: leap <target>
+ 
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         lunge~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SSave        halfdam~
+Target       offensive~
+Minpos       aggressive~
+Rounds       8
+Code         spell_smaug
+Dammsg       lunge~
+Dice         l/2{35~
+HText        Usage: lunge <target>
+ 
+This skill inflicts damage to your opponent when landed.
+~
+End
+
+#SKILL
+Name         makefire~
+Type         Skill
+Code         do_makefire
+HText        Usage: makefire
+ 
+This skill allows you to use chopped wood to make a fire.
+You need to have chopped wood in your inventory.
+~
+End
+
+#SKILL
+Name         meditate~
+Type         Skill
+Flags        nofight~
+Target       self~
+Minpos       resting~
+Rounds       25
+Code         spell_smaug
+Hitvict      You meditate peacefully, collecting mana from the cosmos.~
+Missvict     You spend several minutes in deep concentration, but fail to collect any mana.~
+HText        Usage: meditate
+ 
+This skill allows you to meditate to collect mana from the cosmos.
+~
+Affect       '0' 'mana' 0 '22' '-1'
+End
+
+#SKILL
+Name         mix~
+Type         Skill
+Target       objinv~
+Minpos       standing~
+Mana         90
+Rounds       12
+Code         do_mix
+HText        Usage: mix <spell> [<spell>] [<spell>]
+ 
+This skill allows you to mix a spell into a salve.
+You will need an empty tin, mortar and powder.
+You can mix up to 3 spells into a single salve.
+~
+End
+
+#SKILL
+Name         mount~
+Type         Skill
+Minpos       standing~
+Rounds       10
+Code         do_mount
+HText        Usage: mount <target>
+ 
+This skill allows you to mount the target and save on movement points as you
+move around.
+~
+End
+
+#SKILL
+Name         occulutus visum~
+Type         Skill
+Flags        character~
+Target       self~
+Minpos       resting~
+Mana         30
+Rounds       12
+Code         spell_smaug
+Wearoff      The fire in your eyes slowly fades...~
+Hitvict      Your eyes blaze like coals, filling your sight with unseen forms.~
+Hitroom      $N's eyes burn like coals in the darkness.~
+HText        Usage: occulutus visum
+ 
+Triggers the vampire's innate ability to sense all manner of the unseen.
+~
+Affect       'l*14' 'affected' 0 'detect_hidden' 'detect_hidden'
+Affect       'l*14' 'affected' 0 'detect_invis' 'detect_invis'
+End
+
+#SKILL
+Name         parry~
+Type         Skill
+Minpos       aggressive~
+Code         spell_null
+HText        Parry is a skill which assist you in avoiding incoming attacks.
+ 
+The skill functions automatically.
+You need to have a weapon in your hand to parry an attack.
+~
+End
+
+#SKILL
+Name         peek~
+Type         Skill
+Minpos       standing~
+Code         spell_null
+HText        This skill allows you to see a character's inventory when you look at them.
+
+This skill functions automatically.
+~
+End
+
+#SKILL
+Name         pelt~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SSave        halfdam~
+Target       offensive~
+Minpos       berserk~
+Rounds       8
+Code         spell_smaug
+Dammsg       pelt~
+Dice         l/2{30~
+HText        Usage: pelt <target>
+ 
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         pick lock~
+Type         Skill
+Minpos       standing~
+Rounds       12
+Code         do_pick
+HText        Usage: pick <object|direction>
+ 
+This skill allows you to pick a lock.
+You need to have a lockpick in order to pick a lock.
+~
+End
+
+#SKILL
+Name         poison weapon~
+Type         Skill
+Target       objinv~
+Minpos       standing~
+Rounds       12
+Code         do_poison_weapon
+Dammsg       poisonous concoction~
+HText        Usage: 'poison weapon' <weapon>
+ 
+This skill allows you to coat your weapon with a deadly poison.
+Requires a poisoning powder and a container with water be present in your
+inventory.
+~
+End
+
+#SKILL
+Name         pummel~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SPower       minor~
+SSave        halfdam~
+Target       offensive~
+Minpos       berserk~
+Rounds       8
+Code         spell_smaug
+Dammsg       pummel~
+Dice         l/1{40~
+HText        Usage: pummel <target>
+This skill will inflict damage on the target.
+~
+End
+
+#SKILL
+Name         punch~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       aggressive~
+Rounds       8
+Code         spell_smaug
+Dammsg       punch~
+Dice         1RL~
+HText        Usage: punch <target>
+ 
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         punt~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SPower       minor~
+SSave        halfdam~
+Target       offensive~
+Minpos       fighting~
+Rounds       8
+Code         spell_smaug
+Dammsg       punt~
+Dice         l/2{25~
+HText        Usage: punt <target>
+ 
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         rescue~
+Type         Skill
+Minpos       berserk~
+Rounds       12
+Code         do_rescue
+HText        Usage: rescue <character>
+ 
+This skill allows you to rescue the character during a battle.
+~
+End
+
+#SKILL
+Name         roundhouse~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SPower       minor~
+SSave        halfdam~
+Target       offensive~
+Minpos       aggressive~
+Rounds       8
+Code         spell_smaug
+Dammsg       roundhouse~
+Hitchar      You strike at $N with a vicious roundhouse blow!~
+Dice         l/2 { 30~
+HText        Usage: roundhouse <target>
+ 
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         scan~
+Type         Skill
+Minpos       standing~
+Rounds       12
+Code         do_scan
+HText        Usage: scan [<direction>]
+ 
+If no direction is specified you will scan all directions for one room.
+If a direction is specified you will scan in that direction for one or more
+rooms.
+~
+End
+
+#SKILL
+Name         scribe~
+Type         Skill
+Target       objinv~
+Minpos       standing~
+Rounds       12
+Code         do_scribe
+HText        Usage: scribe <spell>
+ 
+This skill allows you to scribe a spell onto a scroll.
+You need to be holding a blank scroll.
+You can scribe up to 3 spells onto a single scroll.
+~
+End
+
+#SKILL
+Name         search~
+Type         Skill
+Minpos       standing~
+Rounds       20
+Code         do_search
+HText        Usage: search [object/direction]
+ 
+Without an argument you will search the room for hidden objects.
+ 
+If you specify an object you will search the object for hidden objects.
+ 
+If you specify a direction you will search for a hidden exit in that direction.
+~
+End
+
+#SKILL
+Name         shieldblock~
+Type         Skill
+Minpos       aggressive~
+Code         spell_null
+HText        Shieldblock is a skill which assist you in blocking incoming attacks.
+
+Shieldblock is an automatic skill.
+You need a be using a shield to use shieldblock.
+~
+End
+
+#SKILL
+Name         shoulder~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SPower       minor~
+SSave        halfdam~
+Target       offensive~
+Minpos       fighting~
+Rounds       8
+Code         spell_smaug
+Dammsg       shoulder~
+Hitchar      You lean into $N and hit $M with your shoulder.~
+Dice         l/2 { 25~
+HText        Usage: shoulder <target>
+
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         shriek~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+Flags        area~
+Minpos       fighting~
+Mana         15
+Rounds       12
+Code         spell_smaug
+Dammsg       shriek~
+HText        Usage: shriek
+ 
+An undead wail which may be used to wither the life of all who hear
+its anguished sound.
+~
+End
+
+#SKILL
+Name         slice~
+Type         Skill
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       standing~
+Rounds       12
+Code         do_slice
+HText        Usage: slice <corpse>
+ 
+This skill allows you to slice some meat from a corpse.
+You need to be holding a slicing, slashing, stabbing or piercing weapon.
+~
+End
+
+#SKILL
+Name         smell~
+Type         Skill
+Minpos       standing~
+Rounds       8
+Code         do_smell
+HText        Usage: smell <object>
+ 
+This skill allows you to smell food and drink to check for poison.
+~
+End
+
+#SKILL
+Name         sneak~
+Type         Skill
+Target       self~
+Minpos       standing~
+Rounds       1
+Code         spell_smaug
+Hitvict      You attempt to move silently.~
+Misschar     You attempt to move silently.~
+HText        Usage: sneak
+ 
+This skill allows you to move from room to room without being noticed by
+others.
+~
+Affect       'l*23' 'affected' 0 'sneak' 'sneak'
+End
+
+#SKILL
+Name         spinkick~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SSave        halfdam~
+Target       offensive~
+Minpos       fighting~
+Rounds       12
+Code         spell_smaug
+Dammsg       spinkick~
+Hitchar      You whirl in a circle and hit $N with a kick.~
+Misschar     Your spinkick misses $N.~
+Missvict     $n narrowly misses you with a spinkick.~
+Dice         l/2 { 30~
+HText        Usage: spinkick <target>
+ 
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         spurn~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SSave        halfdam~
+Target       offensive~
+Minpos       berserk~
+Rounds       8
+Code         spell_smaug
+Dammsg       spurn~
+Dice         l/2{35~
+HText        Usage: spurn <target>
+
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         standard style~
+Type         Skill
+Rounds       4
+Code         spell_null
+HText        Usage: style standard
+ 
+This style of combat offers a balance of offense and defense.
+~
+End
+
+#SKILL
+Name         steal~
+Type         Skill
+Minpos       standing~
+Rounds       24
+Code         do_steal
+HText        Usage: steal <object/coins> <target>
+ 
+This skill allows you to steal an object or coins from the target.
+~
+End
+
+#SKILL
+Name         strike~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SSave        halfdam~
+Target       offensive~
+Minpos       aggressive~
+Rounds       8
+Code         spell_smaug
+Dammsg       strike~
+Dice         l/2{20~
+HText        Usage: strike <target>
+ 
+This skill inflicts damage on the target when landed.
+~
+End
+
+#SKILL
+Name         stun~
+Type         Skill
+NonMagical
+Target       offensive~
+Minpos       aggressive~
+Rounds       8
+Code         do_stun
+Dammsg       stun~
+Wearoff      You regain consciousness.~
+HText        Usage: stun
+ 
+This skill if successful will stun your opponent for a little while.
+~
+End
+
+#SKILL
+Name         swat~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SPower       minor~
+SSave        halfdam~
+Target       offensive~
+Minpos       fighting~
+Rounds       8
+Code         spell_smaug
+Dammsg       swat~
+Dice         l/2{15~
+HText        Usage: swat <target>
+ 
+This skill inflicts damage on the target when landed.
+~
+End
+
+#SKILL
+Name         swipe~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SPower       minor~
+SSave        halfdam~
+Target       offensive~
+Minpos       fighting~
+Rounds       8
+Code         spell_smaug
+Dammsg       swipe~
+Dice         l/2{20~
+HText        Usage: swipe <target>
+ 
+This skill inflicts damage to the target when landed.
+~
+End
+
+#SKILL
+Name         tail~
+Type         Skill
+SAction      create~
+SClass       death~
+Target       offensive~
+Minpos       fighting~
+Mana         95
+Rounds       8
+Code         spell_smaug
+Dammsg       tail~
+Dice         1RL~
+HText        Usage: tail <target>
+ 
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         taste~
+Type         Skill
+Minpos       standing~
+Rounds       8
+Code         do_taste
+HText        Usage: taste <object>
+ 
+This skill allows you to taste food and drink to check for poison.
+~
+End
+
+#SKILL
+Name         tend~
+Type         Skill
+Target       defensive~
+Minpos       sitting~
+Mana         60
+Rounds       12
+Code         spell_smaug
+Hitchar      You kneel down and tend to $N's wounds.~
+Hitvict      Your wounds are soothed and lessened.~
+HText        Usage: tend <target>
+ 
+This skill will heal some of the target's hitpoints.
+~
+Affect       '0' 'hit' 0 'l*2' '-1'
+End
+
+#SKILL
+Name         track~
+Type         Skill
+Minpos       standing~
+Rounds       14
+Code         do_track
+HText        Usage: track <target>
+ 
+This skill allows you to track down the target if it is within the same area as
+you.
+~
+End
+
+#SKILL
+Name         trance~
+Type         Skill
+Flags        nofight~
+Target       self~
+Minpos       resting~
+Rounds       32
+Code         spell_smaug
+Hitvict      You enter a peaceful trance, collecting mana from the cosmos.~
+Missvict     You spend several minutes in a deep trance, but fail to collect any mana.~
+HText        Usage: trance
+ 
+This skill allows you to go into a trance collecting mana from the cosmos.
+~
+Affect       '0' 'mana' 0 '50' '-1'
+End
+
+#SKILL
+Name         trapset~
+Type         Skill
+Minpos       sitting~
+Rounds       24
+Code         do_trapset
+HText        Usage: trapset room
+Usage: trapset <object>
+ 
+This skill allows the user to set a trap in the room or an object in the room.
+~
+End
+
+#SKILL
+Name         tumble~
+Type         Skill
+Minpos       aggressive~
+Code         spell_null
+HText        Tumble is a skill for the evasion of incoming attacks.
+
+The skill functions autonomically.
+~
+End
+
+#SKILL
+Name         uppercut~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SSave        halfdam~
+Target       offensive~
+Minpos       fighting~
+Rounds       8
+Code         spell_smaug
+Dammsg       uppercut~
+Hitchar      You launch your fist upwards, hitting $N.~
+Dice         l/2 { 30~
+HText        Usage: uppercut <target>
+
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         vault~
+Type         Skill
+NonMagical
+SAction      create~
+SClass       death~
+SPower       minor~
+SSave        halfdam~
+Target       offensive~
+Minpos       berserk~
+Rounds       8
+Code         spell_smaug
+Dammsg       vault~
+Dice         l/2{40~
+HText        Usage: vault <target>
+ 
+This skill inflicts damage on your opponent when landed.
+~
+End
+
+#SKILL
+Name         barehanded~
+Type         Weapon
+Code         spell_null
+HText        This skill represents your proficiency with no weapon.
+ 
+This is an automatic skill.
+~
+End
+
+#SKILL
+Name         bludgeons~
+Type         Weapon
+Code         spell_null
+HText        This skill represents your proficiency with Pound and crush weapons.
+ 
+This is an automatic skill.
+~
+End
+
+#SKILL
+Name         flexible arms~
+Type         Weapon
+Code         spell_null
+HText        This skill represents your proficiency with Whip weapons.
+ 
+This is an automatic skill.
+~
+End
+
+#SKILL
+Name         long blades~
+Type         Weapon
+Code         spell_null
+HText        This skill represents your proficiency with Slash and Slice weapons.
+ 
+This is an automatic skill.
+~
+End
+
+#SKILL
+Name         missile weapons~
+Type         Weapon
+Code         spell_null
+HText        This skill represents your proficiency with MissileWeapons.
+ 
+This is an automatic skill.
+~
+End
+
+#SKILL
+Name         pugilism~
+Type         Weapon
+Code         spell_null
+HText        This skill represents your proficiency with Hit, Suction, Bite, and Blast
+weapons.
+ 
+This is an automatic skill.
+~
+End
+
+#SKILL
+Name         short blades~
+Type         Weapon
+Code         spell_null
+HText        This skill represents your proficiency with Pierce and Stab weapons.
+ 
+This is an automatic skill.
+~
+End
+
+#SKILL
+Name         talonous arms~
+Type         Weapon
+Code         spell_null
+HText        This skill represents your proficiency with Claw weapons.
+ 
+This is an automatic skill.
+~
+End
+
+#SKILL
+Name         common~
+Type         Tongue
+Code         spell_null
+HText        Usage: speak common
+ 
+This is the common language.
+~
+End
+
+#SKILL
+Name         dwarven~
+Type         Tongue
+Code         spell_null
+End
+
+#SKILL
+Name         elvish~
+Type         Tongue
+Code         spell_null
+End
+
+#SKILL
+Name         gith~
+Type         Tongue
+Code         spell_null
+End
+
+#SKILL
+Name         gnome~
+Type         Tongue
+Code         spell_null
+End
+
+#SKILL
+Name         halfling~
+Type         Tongue
+Code         spell_null
+End
+
+#SKILL
+Name         ogre~
+Type         Tongue
+Code         spell_null
+End
+
+#SKILL
+Name         orcish~
+Type         Tongue
+Code         spell_null
+End
+
+#SKILL
+Name         pixie~
+Type         Tongue
+Code         spell_null
+End
+
+#SKILL
+Name         trollish~
+Type         Tongue
+Code         spell_null
+End
+
+#END

@@ -1,0 +1,63 @@
+#HERB
+Name         pipeweed~
+Type         Herb
+Slot         0
+Rounds       5
+Code         spell_null
+Dammsg       smoke~
+End
+
+#HERB
+Name         black gwyvel~
+Type         Herb
+Target       offensive~
+Minpos       aggressive~
+Slot         1
+Rounds       12
+Code         spell_smaug
+Dammsg       smoke~
+Hitvict      You start to cough and choke!~
+Affect       '0' 'hit' 0 '-10' '-1'
+End
+
+#HERB
+Name         vermeir~
+Type         Herb
+Target       self~
+Minpos       berserk~
+Slot         2
+Rounds       4
+Code         spell_smaug
+Hitchar      .~
+Hitvict      You feel a sparkling warmth flow through your limbs.~
+Hitroom      $N leans back, relishing the flavor of the vermeir.~
+Affect       '0' 'move' 0 '20' '-1'
+End
+
+#HERB
+Name         nooracht~
+Type         Herb
+Target       self~
+Minpos       berserk~
+Slot         3
+Rounds       4
+Code         spell_smaug
+Wearoff      Your feet slowly lower to the ground.~
+Hitvict      The acrid taste of the smoke overwhelms your senses. You feel light headed.~
+Hitroom      $N grimaces at the acrid flavor of the nooracht.~
+Affect       '0' 'mana' 0 '20' '-1'
+Affect       '30' 'affected' 0 'floating' 'floating'
+End
+
+#HERB
+Name         occadaal~
+Type         Herb
+Target       self~
+Slot         4
+Code         spell_smaug
+Hitvict      The sharp flavor of the smoke sends a flow of warmth through your body.~
+Hitroom      $N's eyes water as the smoke flows around $m.~
+Affect       '0' 'hit' 0 '20' '-1'
+End
+
+#END

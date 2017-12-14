@@ -1,0 +1,5486 @@
+#HELP
+Keyword   ADVENTURE~
+Updated   1185731973
+UpdatedBy Remcon~
+Text      .   In our efforts to give credit to everyone who deserves it, we almost
+   forgot to give credit to one of the "grandfathers" of computer adventure
+   games... David Platt, the author of the original "Adventure" (c)1979.
+
+   Also credit to Ken Wellsch for porting the original Fortran-77 version
+   to UNIX-C (over a period of about 3 years) (c)1984.
+~
+End
+
+#HELP
+Perm      4
+Keyword   AFFECTTYPES~
+Updated   1252364567
+UpdatedBy Remcon~
+Text      .      affected       HELP OBJECTAFFECTED
+   weaponspell  <sn> Cast a spell on victim with every blow of a weapon.
+     wearspell  <sn> Cast a spell on wearer when object is worn.
+   removespell  <sn> Cast a spell on wearer when object is removed.
+       stripsn  <sn> Strips the specified <sn> from the wearer.
+  <skill> <modifier> Modifies a player's ability in a skill.
+           hit   <#> Increases the wearer's max hitpoints.
+          mana   <#> Increases the wearer's max mana/blood.
+          move   <#> Increases the wearer's max movement.
+       hitroll   <#> Increases the wearer's hitroll.
+       damroll   <#> Increases the wearer's damroll.
+         armor   <#> Increases the wearer's armor.
+ resistant <ris> <#> HELP RIS. Makes the wearer resistant to the <ris>.
+     waitstate   <#> Makes the one it's used on have the specified waitstate.
+ stat <#> <#> <stat> HELP STATTYPES. Increases the wearer's specified stat.
+~
+End
+
+#HELP
+Keyword   AMOTD~
+Updated   1284171005
+UpdatedBy Remcon~
+Text      &R         _,-/                &gThe LoP Avatar MOTD                  &R\-,_
+      ,-`  /   ,             &gUpdated: &w10/03/2009               &R,   \  `-,
+    /'    |   /(_                                             _)\   |    `\
+  /'   /  \,_/  .\     &gAs the Gods rip the world asunder,    &R/,  \_,/  \   `\
+ /    |    /,  ,-'        &ga slew of changes rain down.       &R`-,  ,\    |    \
+|     | ,-, \ \_3|                                           |G,/ / ,-, |     |
+|   ,-|/ / ,_\,_/_                                           _\_,/_  \ \|-,   |
+| /'    |   __,  _)                                         (_  ,__`  |    `\ |
+|/      `;-`_.--`                                             `--._`-;'      \|
+|         \ \__                                                  __/ /        |
+          `&B.-.&R``            &gSome of the changes...             &R''&B.-.&R'
+          &B(&G(&C|&G)&B)  &R<&W*&R>                                            &B(&G(&C|&G)&B)
+           &B|&C|&B|   &R<&W*&R>                                             &B|&C|&B|
+           &B|&C|&B|   &R<&W*&R>                                             &B|&C|&B|
+           &B|&C|&B|   &R<&W*&R>                                             &B|&C|&B|
+           &B|&C|&B|   &R<&W*&R>                                             &B|&C|&B|
+           &B|&C|&B|   &R<&W*&R>                                             &B|&C|&B|
+          &B/&G/&C|&G\&B\  &R<&W*&R>                                            &B/&G/&C|&G\&B\
+         &B|&G|&B|&C|&B|&G|&B| &R<&W*&R>                                           &B|&G|&B|&C|&B|&G|&B|
+         &B|&G|&B|&C|&B|&G|&B| &R<&W*&R>                                           &B|&G|&B|&C|&B|&G|&B|
+         &B|&G|&B|&C|&B|&G|&B| &R<&W*&R>                                           &B|&G|&B|&C|&B|&G|&B|&D
+~
+End
+
+#HELP
+Perm      4
+Keyword   AREAFLAGS~
+Updated   1281823139
+UpdatedBy Remcon~
+Text      Usage: aset <area filename> flags <flag(s)>
+
+        Flag | Description
+-------------+-----------------------------------------------------------------
+     NOPKILL | Can't pkill in the area.
+    FREEKILL | Can kill anyone and everyone.
+  NOTELEPORT | Can't teleport into the area.
+   PROTOTYPE | Area is under construction.
+     NOQUEST | Won't be sent to this area for a quest.
+      NOSHOW | Area won't show up on areas command.
+-------------------------------------------------------------------------------
+~
+End
+
+#HELP
+Perm      1
+Keyword   BODYPARTS~
+Updated   1193520057
+UpdatedBy Remcon~
+Text      Body parts:
+  HEAD   ARMS      LEGS      HEART   BRAINS       GUTS         HANDS
+  FEET   FINGERS   EAR       EYE     LONG_TONGUE  EYESTALKS    TENTACLES
+  FINS   WINGS     TAIL      SCALES  BEAK         HAUNCHES     HOOVES
+  PAWS   FORELEGS  FEATHERS
+ 
+Used for attacking:
+  CLAWS  FANGS     HORNS     TUSKS   TAILATTACK   SHARPSCALES
+~
+End
+
+#HELP
+Keyword   CHA CHARISMA~
+Updated   1188858323
+UpdatedBy Remcon~
+Text      Charisma (CHA in your 'score') represents your characters physical beauty and
+charm.
+
+Among other things, it affects:
+ 
+ - a character's practice rate with a language scholar
+ 
+ - prices charged to a character by shopkeepers
+~
+End
+
+#HELP
+Keyword   CHAT~
+Updated   1188422704
+UpdatedBy Remcon~
+Text      Usage: chat <message>
+ 
+This channel is used for chatting.
+~
+End
+
+#HELP
+Keyword   CLANTALK~
+Updated   1188423734
+UpdatedBy Remcon~
+Text      Usage: clantalk <message>
+ 
+This command allows a member of a clan to send a message to everyone online that
+is in that clan.
+~
+End
+
+#HELP
+Keyword   CLASSTALK~
+Updated   1188861971
+UpdatedBy Remcon~
+Text      Usage: classtalk <message>
+ 
+This channel is used to send the message to everyone online that has the same
+class as you.
+~
+End
+
+#HELP
+Keyword   COLORS~
+Updated   1188856647
+UpdatedBy Remcon~
+Text      &DForeground:
+&&x   &&[black] = &xBlack&D   &&r   &&[dred] = &rDark Red&D   &&g  &&[dgreen] = &gDark Green&D
+&&O  &&[orange] = &OOrange&D  &&b  &&[dblue] = &bDark Blue&D  &&p  &&[purple] = &pPurple&D
+&&c    &&[cyan] = &cCyan&D    &&w   &&[gray] = &wGray&D       &&z   &&[dgray] = &zDark Gray&D
+&&R     &&[red] = &RRed&D     &&G  &&[green] = &GGreen&D      &&Y  &&[yellow] = &YYellow&D
+&&B    &&[blue] = &BBlue&D    &&P   &&[pink] = &PPink&D       &&C   &&[lblue] = &CLight Blue&D
+&&W   &&[white] = &WWhite&D
+ 
+Blinking Foreground:
+}}x   &&[blink] = }xBlack&D   }}r  &&[bdred] = }rDark Red&D   }}g &&[bdgreen] = }gDark Green&D
+}}O &&[borange] = }OOrange&D  }}b &&[bdblue] = }bDark Blue&D  }}p &&[bpurple] = }pPurple&D
+}}c   &&[bcyan] = }cCyan&D    }}w  &&[bgray] = }wGray&D       }}z  &&[bdgray] = }zDark Gray&D
+}}R    &&[bred] = }RRed&D     }}G &&[bgreen] = }GGreen&D      }}Y &&[byellow] = }YYellow&D
+}}B   &&[bblue] = }BBlue&D    }}P  &&[bpink] = }PPink&D       }}C  &&[blblue] = }CLight Blue&D
+}}W  &&[bwhite] = }WWhite&D
+ 
+Background:
+^^x = ^xBlack&D    ^^r = ^rRed&D      ^^g = ^gGreen&D   ^^O = ^OOrange&D
+^^b = ^bBlue&D     ^^p = ^pPurple&D   ^^c = ^cCyan&D    ^^w = ^wGray&D
+ 
+Other:
+&&v - &&V = &vReverse the colors.&D   &&u - &&U = &uUnderline the text.&D
+&&i - &&I = &iItalicize the text.&D   &&s - &&S = &sStrikeover text.&D
+&&D = Resets to custom color for whatever is being displayed.
+&&d = Resets to terminal default color.
+ 
+When using color close out the colors with a &&D tag.
+When setting foreground and background set the foreground first.
+~
+End
+
+#HELP
+Keyword   CON CONSTITUTION~
+Updated   1188857887
+UpdatedBy Remcon~
+Text      Constitution (CON in your 'score') represents your character's physical
+stamina.
+
+Among other things, it affects:
+ 
+ - the number of hitpoints recovered or regenerated at each tick if resting or
+   sleeping
+ 
+ - improvement or worsening of a character's mental state, thus affecting
+   general endurance
+~
+End
+
+#HELP
+Keyword   'CONFIG ANSI'~
+Updated   1196031041
+UpdatedBy Remcon~
+Text      Usage: config ansi
+ 
+If set you will receive ANSI color sequences.
+~
+End
+
+#HELP
+Keyword   'CONFIG AUTOEXIT'~
+Updated   1196031524
+UpdatedBy Remcon~
+Text      Usage: config autoexit
+ 
+If set you automatically see exits.
+~
+End
+
+#HELP
+Keyword   'CONFIG AUTOGOLD'~
+Updated   1196031696
+UpdatedBy Remcon~
+Text      Usage: config autogold
+ 
+If set you automatically get the gold from a corpse.
+~
+End
+
+#HELP
+Keyword   'CONFIG AUTOLOOT'~
+Updated   1196031559
+UpdatedBy Remcon~
+Text      Usage: config autoloot
+ 
+If set you automatically loot corpses.
+~
+End
+
+#HELP
+Keyword   'CONFIG AUTOSAC'~
+Updated   1196031293
+UpdatedBy Remcon~
+Text      Usage: config autosac
+ 
+If set you will automatically sacrifice corpses.
+~
+End
+
+#HELP
+Keyword   'CONFIG AUTOSPLIT'~
+Updated   1196035299
+UpdatedBy Remcon~
+Text      Usage: config autosplit
+ 
+If set when you get gold it will auto split the gold with party members that
+are in the same room that also auto split gold.
+~
+End
+
+#HELP
+Keyword   'CONFIG BLANK'~
+Updated   1196031158
+UpdatedBy Remcon~
+Text      Usage: config blank
+ 
+If set you will have a blank line before your prompt.
+~
+End
+
+#HELP
+Keyword   'CONFIG BRIEF'~
+Updated   1196031186
+UpdatedBy Remcon~
+Text      Usage: config brief
+ 
+If set you see only brief descriptions.
+~
+End
+
+#HELP
+Keyword   'CONFIG COMBINE'~
+Updated   1196031322
+UpdatedBy Remcon~
+Text      Usage: config combine
+ 
+If set you see object lists in a combined format.
+~
+End
+
+#HELP
+Keyword   'CONFIG COMPASS'~
+Updated   1196031344
+UpdatedBy Remcon~
+Text      Usage: config compass
+ 
+If set you see the compass.
+~
+End
+
+#HELP
+Keyword   'CONFIG DRAG'~
+Updated   1196031076
+UpdatedBy Remcon~
+Text      Usage: config drag
+ 
+If set others can drag you if you are incapacitated.
+~
+End
+
+#HELP
+Keyword   'CONFIG FINFO'~
+Updated   1204595105
+UpdatedBy Remcon~
+Text      Usage: config finfo
+ 
+If set you will see when people on your friends list (that also have this set)
+log in and out.
+~
+End
+
+#HELP
+Keyword   'CONFIG GAG'~
+Updated   1196031008
+UpdatedBy Remcon~
+Text      Usage: config gag
+ 
+If set you won't see all battle details.
+~
+End
+
+#HELP
+Keyword   'CONFIG GROUPAFFECTS'~
+Updated   1196031991
+UpdatedBy Remcon~
+Text      Usage: config groupaffects
+ 
+If set you will see affects in a grouped format.
+~
+End
+
+#HELP
+Keyword   'CONFIG GROUPWHO'~
+Updated   1196031593
+UpdatedBy Remcon~
+Text      Usage: config groupwho
+ 
+If set it lets others know that you seek to group on who display.
+~
+End
+
+#HELP
+Keyword   'CONFIG HINTS'~
+Updated   1196031206
+UpdatedBy Remcon~
+Text      Usage: config hints
+ 
+If set you see hints.
+~
+End
+
+#HELP
+Keyword   'CONFIG KEEPALIVE'~
+Updated   1196031959
+UpdatedBy Remcon~
+Text      Usage: config keepalive [<#>]
+ 
+If set you will receive keep alive messages from the mud.
+~
+End
+
+#HELP
+Keyword   'CONFIG NICE'~
+Updated   1196031099
+UpdatedBy Remcon~
+Text      Usage: config nice
+ 
+If set you won't attack back if attacked.
+~
+End
+
+#HELP
+Keyword   'CONFIG NOASSIST'~
+Updated   1196031731
+UpdatedBy Remcon~
+Text      Usage: config noassist
+ 
+If set no one can assist you in battle unless partied with you.
+~
+End
+
+#HELP
+Keyword   'CONFIG NOINDUCT'~
+Updated   1196031764
+UpdatedBy Remcon~
+Text      Usage: config noinduct
+ 
+If set no one can induct you.
+~
+End
+
+#HELP
+Keyword   'CONFIG NOINTRO'~
+Updated   1196031377
+UpdatedBy Remcon~
+Text      Usage: config nointro
+ 
+If set you won't see the graphic screen at login.
+~
+End
+
+#HELP
+Keyword   'CONFIG NORECALL'~
+Updated   1196031796
+UpdatedBy Remcon~
+Text      Usage: config norecall
+ 
+If set you won't recall from battle if you loose link.
+~
+End
+
+#HELP
+Keyword   'CONFIG NOSUMMON'~
+Updated   1196031834
+UpdatedBy Remcon~
+Text      Usage: config nosummon
+ 
+If set another player can not summon you.
+~
+End
+
+#HELP
+Keyword   'CONFIG PAGER'~
+Updated   1196031246
+UpdatedBy Remcon~
+Text      Usage: config pager [<# of lines>]
+ 
+If set your page pauses on long scrolls.
+~
+End
+
+#HELP
+Keyword   'CONFIG PROMPT'~
+Updated   1196031263
+UpdatedBy Remcon~
+Text      Usage: config prompt
+ 
+If set you have a prompt.
+~
+End
+
+#HELP
+Keyword   'CONFIG SMARTSAC'~
+Updated   1196031917
+UpdatedBy Remcon~
+Text      Usage: config smartsac
+ 
+If set you will not autosac a corpse with objects.
+~
+End
+
+#HELP
+Keyword   'CONFIG SOLO'~
+Updated   1196031128
+UpdatedBy Remcon~
+Text      Usage: config solo
+ 
+If set no one auto-follows you when you leave the room.
+~
+End
+
+#HELP
+Keyword   'CONFIG SPARING'~
+Updated   1204595162
+UpdatedBy Remcon~
+Text      Usage: config sparing
+ 
+If set you will be able to spar against someone for the fun of it.
+~
+End
+
+#HELP
+Keyword   'CONFIG SUICIDE'~
+Updated   1196031402
+UpdatedBy Remcon~
+Text      Usage: config suicide
+ 
+If set you will automatically die when you get to 0 hp.
+~
+End
+
+#HELP
+Keyword   'CONFIG TELNETGA'~
+Updated   1196031462
+UpdatedBy Remcon~
+Text      Usage: config telnetga
+ 
+If set you receive a telnet GA sequence.
+~
+End
+
+#HELP
+Perm      4
+Keyword   CONTAINERFLAGS~
+Updated   1195004320
+UpdatedBy Remcon~
+Text      CLOSEABLE  PICKPROOF  CLOSED  LOCKED
+   EATKEY
+
+Usage: oset <object> cflags <flag>
+*Note* The flags are only going to work correctly if the object is
+       of the right object type (container, quiver).
+
+If you wish to know the bitvectors you start at 1 for CLOSEABLE and multiply
+it by 2 for the PICKPROOF bitvector and continue on for the others.
+Example: CLOSEABLE = 1, PICKPROOF = 2, CLOSED = 4, ...
+~
+End
+
+#HELP
+Keyword   COPYRIGHT~
+Updated   1187659146
+UpdatedBy Remcon~
+Text      SMAUG (c)1995, 1996, 1997, 1998 D.S.D. Software.
+~
+End
+
+#HELP
+Keyword   COUNCILTALK~
+Updated   1188775396
+UpdatedBy Remcon~
+Text      Usage: counciltalk <message>
+ 
+This channel is used to send the message to everyone online that is in the same
+council you are.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET BANCLASS'~
+Updated   1196382666
+UpdatedBy Remcon~
+Text      Usage: cset banclass <#>
+ 
+This allows you to set the permission level required to ban a class.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET BANRACE'~
+Updated   1196382644
+UpdatedBy Remcon~
+Text      Usage: cset banrace <#>
+ 
+This allows you to set the permission level required to ban a race.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET BANSITE'~
+Updated   1196382598
+UpdatedBy Remcon~
+Text      Usage: cset bansite <#>
+ 
+This allows you to set the permission level required to ban a site.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET BESTOWDIF'~
+Updated   1196382105
+UpdatedBy Remcon~
+Text      Usage: cset bestowdif <#>
+
+This allows you to set the max permission level difference for bestowed
+commands.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET BUILD'~
+Updated   1196384313
+UpdatedBy Remcon~
+Text      Usage: cset build <#>
+ 
+This allows you to set the permission level required to see the build channel.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET DENYNEWPLAYERS'~
+Updated   1196381583
+UpdatedBy Remcon~
+Text      Usage: cset denynewplayers
+
+Toggles on/off denying new players.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET EXPMULTI'~
+Updated   1203901834
+UpdatedBy Remcon~
+Text      Usage: cset expmulti <#>
+ 
+This allows you to set the exp multiplier.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET FORCEPC'~
+Updated   1196382541
+UpdatedBy Remcon~
+Text      Usage: cset forcepc <#>
+ 
+This allows you to set the permission level required to force a pc.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET GETOBJNOTAKE'~
+Updated   1196382124
+UpdatedBy Remcon~
+Text      Usage: cset getobjnotake <#>
+
+This allows you to set the permission level to pick up items flagged as notake.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET IDENT'~
+Updated   1196380978
+UpdatedBy Remcon~
+Text      Usage: cset ident <#>
+
+This will set the ident retries.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET LOG'~
+Updated   1196384290
+UpdatedBy Remcon~
+Text      Usage: cset log <#>
+ 
+This allows you to set the permission level required to see the log channel.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET MAXPET'~
+Updated   1200887865
+UpdatedBy Remcon~
+Text      Usage: cset maxpet <#>
+ 
+This allows you to set the maximum number of pets players can have at a time.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET MLDEADLY'~
+Updated   1196384590
+UpdatedBy Remcon~
+Text      Usage: cset mldeadly <#>
+ 
+This allows you to set the deadly connections limit for multiplaying.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET MLPEACEFUL'~
+Updated   1196384624
+UpdatedBy Remcon~
+Text      Usage: cset mlpeaceful <#>
+ 
+This allows you to set the peaceful connections limit for multiplaying.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET MLTOTAL'~
+Updated   1196384562
+UpdatedBy Remcon~
+Text      Usage: cset mltotal <#>
+ 
+This allows you to set the total connections limit for multiplaying.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET MORPHOPT'~
+Updated   1196381543
+UpdatedBy Remcon~
+Text      Usage: cset morphopt
+
+Toggles on/off morph optimizing.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET MSET_PLAYER'~
+Updated   1196382188
+UpdatedBy Remcon~
+Text      Usage: cset mset_player <#>
+
+This allows you to set the permission level to mset a player.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET MUDNAME'~
+Updated   1196380943
+UpdatedBy Remcon~
+Text      Usage: cset mudname <new mud name>
+
+This will change the name of the mud.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET MULTICLASS'~
+Updated   1208611594
+UpdatedBy Remcon~
+Text      Usage: cset multiclass <#>
+ 
+This allows you to set the mutliclass limit.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET MUSE'~
+Updated   1196384233
+UpdatedBy Remcon~
+Text      Usage: cset muse <#>
+ 
+This allows you to set the permission level required to see/use the muse
+channel.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET NAMERESOLVING'~
+Updated   1196381561
+UpdatedBy Remcon~
+Text      Usage: cset nameresolving
+
+Toggles on/off host name resolving.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET OVERRIDEPRIVATE'~
+Updated   1196384497
+UpdatedBy Remcon~
+Text      Usage: cset overrideprivate <#>
+ 
+This allows you to set the permission level required to override
+private/solitary.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET PETSAVE'~
+Updated   1196380999
+UpdatedBy Remcon~
+Text      Usage: cset petsave
+
+Toggles on/off pet saveing.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET PKLOOT'~
+Updated   1196381030
+UpdatedBy Remcon~
+Text      Usage: cset pkloot
+
+Toggles on/off PK looting.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET PROTOMODIFY'~
+Updated   1196384423
+UpdatedBy Remcon~
+Text      Usage: cset protomodify <#>
+ 
+This allows you to set the permission level required to modify prototype
+objects.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET ROOMALTAR'~
+Updated   1200887923
+UpdatedBy Remcon~
+Text      Usage: cset roomaltar <#>
+ 
+This allows you to set the room vnum for where some (Ones not in a clan or
+nation) go when they die.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET ROOMAUTHSTART'~
+Updated   1200887952
+UpdatedBy Remcon~
+Text      Usage: cset roomauthstart <#>
+ 
+This allows you to set the room vnum for where new players start when waiting
+to be authorized.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET ROOMDEADLY'~
+Updated   1200887921
+UpdatedBy Remcon~
+Text      Usage: cset roomdeadly <#>
+ 
+This allows you to set the room vnum for where deadly's recall to.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET ROOMLIMBO'~
+Updated   1200887866
+UpdatedBy Remcon~
+Text      Usage: cset roomlimbo <#>
+ 
+This allows you to set the room vnum for limbo (Where the mud will send you
+when you idle to long).
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET ROOMPOLY'~
+Updated   1200887951
+UpdatedBy Remcon~
+Text      Usage: cset roompoly <#>
+ 
+This allows you to set the room vnum for where the supermob normaly hangs out.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET ROOMSCHOOL'~
+Updated   1200887965
+UpdatedBy Remcon~
+Text      Usage: cset roomschool <#>
+ 
+This allows you to set the room vnum for where new players start when not
+waiting to be authorized, as well as where they are sent after being authorized
+(if you use the mpapply and mpapplyb in your authorization area).
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET ROOMTEMPLE'~
+Updated   1200887981
+UpdatedBy Remcon~
+Text      Usage: cset roomtemple <#>
+ 
+This allows you to set the room vnum for like a last chance to have a valid
+room incase the others are missing. What can I say don't really see another use
+for this one lol.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET SAVE'~
+Updated   1196380916
+UpdatedBy Remcon~
+Text      Usage: cset save
+
+This will save the control settings.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET SAVEFLAG'~
+Updated   1196380964
+UpdatedBy Remcon~
+Text      Usage: cset saveflag <flag>
+
+Flags:
+   death     kill  passwd     drop   put  give   auto
+     zap  auction     get  receive  idle  fill  empty
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET SAVEFREQUENCY'~
+Updated   1196382063
+UpdatedBy Remcon~
+Text      Usage: cset savefrequency <#>
+
+This allows you to set the save frequency.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET SKIPCLASSES'~
+Updated   1196384668
+UpdatedBy Remcon~
+Text      Usage: cset skipclasses
+ 
+This allows you to toggle on/off if class picking on creation is skipped.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET THINK'~
+Updated   1196384265
+UpdatedBy Remcon~
+Text      Usage: cset think <#>
+ 
+This allows you to set the permission level required to see/use the think
+channel.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET VERSION'~
+Updated   1232902559
+UpdatedBy Remcon~
+Text      Usage: cset majorversion/minorversion <#>
+ 
+This allows you a way to set the major and minor versions for the mud online.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET WAITFORAUTH'~
+Updated   1196381659
+UpdatedBy Remcon~
+Text      Usage: cset waitforauth
+
+Toggles on/off waiting for authorization.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'CSET WIZLOCK'~
+Updated   1196381055
+UpdatedBy Remcon~
+Text      Usage: cset wizlock
+
+Toggles on/off wizlock.
+~
+End
+
+#HELP
+Keyword   DAMAGE~
+Updated   1193535797
+UpdatedBy Remcon~
+Text      When one character attacks another, the severity of the damage is shown
+in the verb used in the damage message.  Damage messages vary depending
+on weapon type, or what is inflicting the damage. Escalating damage is
+indicated by the use of _ _ around the messages, regardless of weapon
+type. Messages in all caps indicate even higher degrees of damage,
+while those in all caps and surrounded by * * indicate the highest levels.
+~
+End
+
+#HELP
+Perm      2
+Keyword   DAMTYPES ACTTYPES CLASSTYPES POWERTYPES SAVEEFFECTS SAVES~
+Updated   1195741321
+UpdatedBy Remcon~
+Text      .-------------------------------------------------------------------------
+|      DAMAGE |   ACTION |    CLASS |   POWER | SAVEEFFECT |        SAVES |
+|-------------+----------+----------+---------+------------+--------------|
+|        none |     none |     none |    none |       none |         none |
+|        fire |   create |    lunar |   minor |     negate | poison_death |
+|        wind |  destroy |    solar | greater |   eightdam |        wands |
+|       earth |   resist |   travel |   major | quarterdam |   para_petri |
+|       water |  suscept |   summon |---------|    halfdam |       breath |
+|         ice | divinate |     life |         |    3qtrdam |  spell_staff |
+|        cold |  obscure |    death |         |    reflect |--------------
+| electricity |   change | illusion |         |     absorb |
+|      energy |---------------------           ------------
+|        acid |
+|      poison |
+|       drain |
+|        holy |
+|      shadow |
+ -------------
+~
+End
+
+#HELP
+Keyword   DARKHAVEN~
+Updated   1199238355
+UpdatedBy Remcon~
+Text      .          #            a - Mortuary
+          |            A - Altar
+  #-#-#-#-#-#-#-#-#    b - Pond
+  |       |       |    B - Scribe
+  #       #       #    c - Alchemist
+  |       |       |    C - Wizard
+  #   a   #       #    d - Butcher
+  |   |   |       |    D - Bakery
+  # A-#-# # #-b   #    e - Dairy
+  |      \|/      |    E - Jeweler
+#-#-#-#-#-@-#-#-#-#-#  f - Blacksmith
+  |       |       |    F - Armory
+  # B-c-C # d-D-e #    g - Weaponry
+  | | | | | | | | |    G - Questmaster
+  #-#-#-#-#-#-#-#-#    h - Tailor
+  | | |   | | | | |    H - Fisherman
+  | E-J   | f-F-g |    i - Bank
+  |       |       |    I - Companions and Mounts
+  #-#-#-#-#-G     #    j - Skills, Spells and Languages
+  |       |       |    J - Trapper
+  |   h H | j i I |    @ - Darkhaven Square
+  |   | | | | | | |
+  #-#-#-#-#-#-#-#-#
+          |
+          #
+~
+End
+
+#HELP
+Keyword   DEATH~
+Updated   1193578341
+UpdatedBy Remcon~
+Text      When your character dies, you are reincarnated. Your corpse is left behind
+where you were killed, together with all of your equipment. Your gold stays
+with you.
+
+Any spells which were affecting you are canceled by death, and you lose
+experience points as well. Following/groups are not affected by death.
+
+Corpses decay after time. When this happens the objects inside a corpse
+will decay with it. Player corpses last roughly 30 minutes of real time.
+Only the player who died or someone in their group can retrieve objects
+from a player's corpse. The only exceptions are for deadly characters,
+who can loot each other's corpses at will.
+~
+End
+
+#HELP
+Keyword   'DEBUGGING CREDITS' 'CODING CREDITS'~
+Updated   1185731568
+UpdatedBy Remcon~
+Text      .                             @%#$%&&*!@#!?!?!
+   -----------=======[ Debugging / Coding Credits ]=======-----------
+  | Most of the extensive debugging and coding of Realms of Despair  |
+  | was done by Thoric in what little spare time he could set aside. |
+  |                                                                  |
+  | Other credits go out to Haus for debugging work on the online    |
+  | building, and also to Strahd, Caine and all the gods who         |
+  | reported nasty bugs and crash causes.                            |
+  |                                                                  |
+  | Nivek has been a crucial part of getting version 1.4 out as bug  |
+  | free possible.                                                   |
+   ------------------------------------------------------------------
+~
+End
+
+#HELP
+Keyword   DEX DEXTERITY~
+Updated   1188858018
+UpdatedBy Remcon~
+Text      Dexterity (DEX in your 'score') represents your character's agility.
+
+Among other things, it affects:
+ 
+ - the maximum number of items you can carry at once in your inventory;
+   with each additional point of dex you can carry additional items.
+ 
+ - each additional point of dexterity also lowers (improves) your natural
+   armor class.
+ 
+ - the number of moves you regenerate at each tick (when resting to refresh or
+   regain movement points).
+ 
+ - success chances with bash, stun and gouge, and helps determine whether a
+   thief will be able to poison a weapon or tumble effectively.
+ 
+Dexterity is also very important for quaffing potions in combat.  High dex
+will allow you to quaff without dropping many potions during the heat of
+battle, while a poor dexterity will cause you to accidentally drop many
+of the valuable vials.
+~
+End
+
+#HELP
+Perm      4
+Keyword   DICEFORMULAS~
+Updated   1195741369
+UpdatedBy Remcon~
+Text      To make the special SMAUG spells possible, special dice formula handling
+had to be coded in.  (At least to make it nice).  This dice formula code
+supports full BEDMAS expressions ( ) ^^ / * + -, plus extra mud related
+operators and variables:
+ 
+To make the special SMAUG spells possible, special dice formula handling
+had to be coded in.  (At least to make it nice).  This dice formula code
+supports full BEDMAS expressions ( ) ^ / * + -, plus extra mud related
+operators and variables:
+ 
+Use Uppercase letters for victim and lower case for character.
+A - Charisma      H - Hit Points    U - Luck
+B - Hitroll       I - Intelligence  V - Movement
+C - Constitution  L - Level         W - Wisdom
+D - Dice          M - Mana          X - Dexterity
+E - Damroll       S - Strength      Y - Age
+ 
+} - Min           { - Max           R - Number Range
+~
+End
+
+#HELP
+Keyword   DIKU~
+Updated   1193351318
+UpdatedBy Remcon~
+Text      .         SMAUG was originally based on the Merc 2.1 code which was
+              based on the original DIKUMud code created by:
+
+                       The Original DIKUMud Team:
+
+          Katja Nyboe               [Superwoman] (katz@freja.diku.dk)
+          Tom Madsen              [Stormbringer] (noop@freja.diku.dk)
+          Hans Henrik Staerfeldt           [God] (bombman@freja.diku.dk)
+          Michael Seifert                 [Papi] (seifert@freja.diku.dk)
+          Sebastian Hammer               [Quinn] (quinn@freja.diku.dk)
+
+                     Additional contributions from:
+
+ Michael Curran  - the player title collection and additional locations.
+ Bill Wisner     - for being the first to successfully port the game,
+                   uncovering several old bugs, uh, inconsistencies,
+                   in the process.
+
+         And: Mads Haar and Stephan Dahl for additional locations.
+
+  The Original DIKUMud was Developed at the Department of Computer Science
+                     at the University of Copenhagen.
+~
+End
+
+#HELP
+Keyword   DISCLAIMER~
+Updated   1193578417
+UpdatedBy Remcon~
+Text      By continuing to play this MUD you are acknowledging that:
+(1)  you are willing to abide by the decisions of the Immortals concerning
+     all issues involved in the game.
+(2)  conversation and situations may arise during the course of play that 
+     may not be suitable for young children.
+
+By these acknowledgments you hereby save and except this MUD and it's
+Administrators from any and all liability that may arise during gameplay.
+~
+End
+
+#HELP
+Perm      2
+Keyword   DOORDIRS~
+Updated   1194561772
+UpdatedBy Remcon~
+Text      Here is the order of the exits, and their value:
+ -------------------
+| Direction | Value |
+ -------------------
+| NORTH     |   0   |
+| EAST      |   1   |
+| SOUTH     |   2   |
+| WEST      |   3   |
+| UP        |   4   |
+| DOWN      |   5   |
+| NORTHEAST |   6   |
+| NORTHWEST |   7   |
+| SOUTHEAST |   8   |
+| SOUTHWEST |   9   |
+| SOMEWHERE |  10   |
+ -------------------
+~
+End
+
+#HELP
+Keyword   DR DAMROLL~
+Updated   1194306712
+UpdatedBy Remcon~
+Text      Represents the damage you can inflict upon an opponent.
+The higher the number, the better.
+~
+End
+
+#HELP
+Keyword   EDITOR~
+Updated   1194794790
+UpdatedBy Remcon~
+Text      The SMAUG Editor is used when editing long bodies of text.
+The commands in the editor are:
+
+/?            Displays editor help.
+/l            Lists the current contents of the note.
+/c            Clears the current contents of the note.
+/d [line]     Delete line. If no line number is given, the most recent line
+                 is deleted.
+/g <line>     Goto line. This is useful for inserting lines, deleting and
+                 fixing lines, etc.
+/i <line>     Insert line. Inserts a new blank line where specified.
+/a            Abort editing. No changes you made are kept.
+/! <command>  Execute mud command. '/! smile' sends the smile social, without
+                 exiting the editor.
+/s            Save buffer, and exit the editor.
+~
+End
+
+#HELP
+Keyword   EQDAMAGE~
+Updated   1194561914
+UpdatedBy Remcon~
+Text      While in combat, you may notice that your equipment is taking damage.
+Example: "Your lifebane gets damaged."
+Each time this happens, the AC of the item is damaged by one.
+ 
+To preserve the equipment, you must repair it by taking it to a blacksmith.
+(NOTE:  Not all equipment is repairable)
+~
+End
+
+#HELP
+Perm      2
+Keyword   EXFLAGS~
+Updated   1188832415
+UpdatedBy Remcon~
+Text      Usage: redit exflags <dir> <flag(s)>
+
+Flags:
+          DIG   Passage is blocked and must be dug out
+          FLY   Must be able to fly to go that way
+         AUTO   Keyword can be typed to go this way
+         SWIM   Must be able to swim to go that way
+        CLIMB   Must be able to climb to go that way
+        NOMOB   Mobs may not pass through this exit
+       BASHED   Denotes a door that has successfully been bashed open
+       BOLTED   The door is bolted
+       CLOSED   The door is closed
+       EATKEY   The door will destroy the key when unlocked
+       HIDDEN   Door is not "obvious" -- doesn't appear with autoexits
+       ISBOLT   The door has a bolt
+       ISDOOR   There is a door in that direction
+       LOCKED   The door is locked
+       NOFLEE   Can't flee through the exit
+       PORTAL   The exit is a portal
+       SECRET   The door is a secret door
+       WINDOW   Points to a destination, but does not allow direct access to it
+      PASSAGE   The exit is a passage
+     CAN_LOOK   Allows a person to view the destination room for a WINDOW exit
+     MCREATED   A mobile created the exit
+    BASHPROOF   Cannot bash the door
+    CAN_CLIMB   Can use the climb command to go this way
+    CAN_ENTER   Can use the enter command to go this way
+    CAN_LEAVE   Can use the leave command to go this way
+    PICKPROOF   Door is pickproof
+   NOPASSDOOR   Door is resistant to the passdoor spell
+   SEARCHABLE   Searching in this direction can remove the SECRET flag
+~
+End
+
+#HELP
+Perm      2
+Keyword   EXITMAKING~
+Updated   1188832002
+UpdatedBy Remcon~
+Text      Usage: redit <field>
+
+FIELDS:
+      exit <direction> [<to room vnum>] [<key vnum>] [<keyword(s)>] [<flags>]
+     bexit <direction> [<to room vnum>] [<key vnum>] [<keyword(s)>] [<flags>]
+    exdesc <direction> <text>           Add an exit description on the exit
+   exflags <direction> <flags>          SEE HELP EXFLAGS
+    exname <direction> <keyword(s)>     Give an exit a keyword
+     exkey <direction> <key vnum>       Set the key vnum for an exit
+ 
+Possible Directions:
+   nw    n    ne
+   w   u   d   e
+   sw    s    se
+   ? <? is a somewhere exit direction>
+ 
+If only 'redit <exit/bexit> <direction>' is used the exit in that direction
+will be removed.
+
+EXAMPLES:
+   redit exit n                      Removes the north exit
+   redit exit n 3001                 Creates an exit north to room 3001
+   redit exflags n isdoor closed     Sets the exit north to be a closed door
+   redit exname n gate               Changes the north exit name to gate
+   redit exkey n 15                  Sets the north exit to use key vnum 15
+   redit bexit n 3001 15 gate isdoor closed
+      Creates an exit north to 3001 that has the keyword gate, uses key
+      vnum 15 and gives it the flags isdoor and closed and creates the exit
+      back and sets it to match.
+~
+End
+
+#HELP
+Keyword   FAVOR~
+Updated   1194561992
+UpdatedBy Remcon~
+Text      Your favor reflects how much your deity favors you.
+Favor is used to receive gifts from your deity.
+~
+End
+
+#HELP
+Keyword   FUSS SMAUGFUSS 'SMAUG FUSS'~
+Updated   1188154136
+UpdatedBy Remcon~
+Text      .                           The SMAUG FUSS Project
+                             www.smaugfuss.org
+
+FUSS stands for: [F]ixed [U]p [S]maug [S]ource
+It has also come to be known by the alias: [F]ixed [U]p [S]tock [S]ource
+
+The ongoing goal of this project is to find and eliminate as many of the
+bugs in the stock SMAUG source code as possible so as to provide for a
+clean, stable base for new admins to run a SMAUG mud from.
+
+The project is coordinated by Samson, lead developer of the AFKMud codebase.
+Contributions are made by various members of the SMAUG community.
+
+Most of the fixes are culled from forum posts, emails to the SMAUG mailing
+list, and from continuing work on other SMAUG derivative projects in which
+bugs are found that apply backward to the base distribution.
+~
+End
+
+#HELP
+Keyword   GLORY~
+Updated   1194568423
+UpdatedBy Remcon~
+Text      Glory is a measure of how valiant you are, and is accumulated by taking part
+in quests.
+~
+End
+
+#HELP
+Keyword   GREETING~
+Updated   1185729999
+UpdatedBy Remcon~
+Text      &W *****************************************************************
+ *   Lands of    __                                              *
+ *              |  \     |         |                             *
+ *              |__/ __  |__  _  _ | _  _  __ __                 *
+ *              |   /  | |  \ |  | | |  | |  |  |                *
+ *              |   \__| |__/ |__| | |__| |  |  |                *
+ *****************************************************************
+ * DikuMUD        - Hans Staerfeldt, Katja Nyboe, Tom Madsen,    *
+ *                  Michael Seifert, Sebastian Hammer            *
+ * MERC 2.1       - Hatchet, Furey, and Kahn.                    *
+ * SMAUG 1.4      - Thoric (Derek Snider) with Altrag, Blodkai,  *
+ *                  Haus, Narn, Scryn, Swordbearer, Tricops,     *
+ *                  Gorog, Rennard, Grishnakh, Fireblade, Nivek. *
+ * SMAUG 1.7 FUSS - Samson and others of the SMAUG community.    *
+ *                  Their contributions are greatly appreciated. *
+ * LoP            - Lands of Pabulum team.                       *
+ *****************************************************************
+Enter your character's name, or type new: 
+~
+End
+
+#HELP
+Perm      4
+Keyword   'GRUB MOB'~
+Updated   1204398326
+UpdatedBy Remcon~
+Text      Usage: grub mob flags <flag> [<...>]
+Usage: grub mob sex <sex>
+Usage: grub mob <stat> <#> [<#>]
+Usage: grub mob affected <aff> [<...>]
+Usage: grub mob resistant/immune/susceptible/absorb <ris> [<...>]
+Usage: grub mob parts <part> [<...>]
+Usage: grub mob attacks <attack> [<...>]
+Usage: grub mob defenses <defense> [<...>]
+Usage: grub mob position/defposition <pos>
+Usage: grub mob <check> <#> [<#>]
+Checks:
+     ac   mgold   minhit     alignment    savingparapetri
+   gold  height   weight    numattacks   savingspellstaff
+  count  killed  damroll    savingwand  savingpoisondeath
+  level  maxhit  hitroll  savingbreath
+ 
+This will allow you to check all mobile indexs in the mud for the specified
+things.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'GRUB OBJ'~
+Updated   1204314773
+UpdatedBy Remcon~
+Text      Usage: grub obj flags <flag> [<...>]
+Usage: grub obj weight <#> [<#>]
+Usage: grub obj type <type>/<#>
+Usage: grub obj level <#> [<#>]
+Usage: grub obj cost <#> [<#>]
+Usage: grub obj value<0-5> <#> [<#>]
+Usage: grub obj count <#> [<#>]
+Usage: grub obj class <class> [<...>]
+Usage: grub obj race <race> [<...>]
+Usage: grub obj layers <#> [<#>]
+Usage: grub obj wear <flag> [<...>]
+Usage: grub obj <stat> <#> [<#>]
+ 
+This will allow you to check all object indexs in the mud for the specified
+things.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'GRUB RESET'~
+Updated   1204405207
+UpdatedBy Remcon~
+Text      Usage: grub reset mob/obj <#>
+ 
+This will allow you to check all resets in the mud for the specified vnum.
+~
+End
+
+#HELP
+Perm      4
+Keyword   'GRUB ROOM'~
+Updated   1204164870
+UpdatedBy Remcon~
+Text      Usage: grub room tunnel <#> [<#>]
+Usage: grub room sector <sector>/<#>
+Usage: grub room televnum [<#>]
+Usage: grub room flags <flag> [<...>]
+Usage: grub room light <#> [<#>]
+ 
+This will allow you to check all rooms in the mud for the specified things.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'HOWTO HIGHSCORE'~
+Updated   1202662008
+UpdatedBy Remcon~
+Text      The highscore code is used to give players a way of competing with others.
+ 
+The code is already set to handle these highscore tables:
+          QCompleted              PKills             PDeaths
+             MDeaths              MKills                Gold
+          SudokuWins
+ 
+You will have to create the highscore tables online though because they are
+deleted in the release. To create them do these:
+makehightable QCompleted
+makehightable MDeaths
+makehightable SudokuWins
+makehightable PKills
+makehightable MKills
+makehightable PDeaths
+makehightable Gold
+ 
+What each table is for:
+   QCompleted is for quest completed.
+   MDeaths is for the amount of deaths caused by mobiles.
+   SudokuWins is for the amount of sudoku puzzles they have won.
+   PKills is for the amount of players they have legally killed.
+   MKills is for the amount of mobiles they have killed.
+   PDeaths is for the amount of deaths caused by players.
+   Gold is for the amount of gold (In Millions) that they have on hand.
+ 
+The list are only updated upon saving of the player file.
+ 
+Commands:
+   Highscore       (Allows you to see the highscore tables.)
+   Makehightable   (Creates a new highscore table.)
+   Deletehightable (Deletes the highscore table.)
+   Clearhightable  (Clears all scores on the table.)
+   Sethightable    (Allows you to change the stuff on a highscore table.)
+~
+End
+
+#HELP
+Keyword   HR HITROLL~
+Updated   1194795393
+UpdatedBy Remcon~
+Text      Represents your chances of hitting your opponent.
+The higher the number, the better.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ASUPRESSED'~
+Updated   1194098535
+UpdatedBy Remcon~
+Text      Example: if asupressed($n) >= 20
+ 
+This will check the target to see if they are asupressed for 20 or more rounds.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK CANPKILL'~
+Updated   1194110398
+UpdatedBy Remcon~
+Text      Example: if canpkill($n)
+ 
+This will check to see if the target can pkill.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK CANSEE'~
+Updated   1194110205
+UpdatedBy Remcon~
+Text      Example: if cansee($n)
+ 
+This will check to see if the mobile can see the target.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK CARRYINGVNUM'~
+Updated   1194099892
+UpdatedBy Remcon~
+Text      Example: if carryingvnum($n) == 500
+ 
+This will check everything the target is carrying to see if they are carrying
+vnum 500.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK CARRYWEIGHT'~
+Updated   1194098728
+UpdatedBy Remcon~
+Text      Example: if carryweight($n) >= 50
+ 
+This will check the target's carry weight to see if they are carrying 50 or
+higher.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK CHA'~
+Updated   1193969032
+UpdatedBy Remcon~
+Text      Example: if cha($n) >= 50
+ 
+This will check the target ($n) to see if their charisma is 50 or higher.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK CHARCOUNT'~
+Updated   1194135198
+UpdatedBy Remcon~
+Text      Example: if charcount(500) >= 1
+ 
+This will check room vnum 500 to see if there is 1 or more mobiles or mortals
+there.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK CLAN'~
+Updated   1194107192
+UpdatedBy Remcon~
+Text      Example: if clan($n) == Testing
+ 
+This will check the target to see if they are in the Testing clan.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK CLASS'~
+Updated   1194107255
+UpdatedBy Remcon~
+Text      Example: if class($n) == Warrior
+ 
+This will check the target to see if their class is warrior.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK CON'~
+Updated   1193969075
+UpdatedBy Remcon~
+Text      Example: if con($n) >= 50
+ 
+This will check the target ($n) to see if their constitution is 50 or higher.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK CONTOBJCOUNT'~
+Updated   1223070541
+UpdatedBy Remcon~
+Text      Example: if contobjcount($n) == 12
+
+This will check the target object to see if it contains 12 objects.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK CONTOBJVNUM'~
+Updated   1223070517
+UpdatedBy Remcon~
+Text      Example: if contobjvnum($n) == 1200
+
+This will check the target object to see if it contains object vnum 1200.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK COUNCIL'~
+Updated   1194107535
+UpdatedBy Remcon~
+Text      Example: if council($n) == Newbie
+ 
+This will check to see if the target is in the Newbie council.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK DAY'~
+Updated   1194100948
+UpdatedBy Remcon~
+Text      Example: if day() == 5
+ 
+This will check the current day to see if it is 5.
+This is for real time, use (1-31).
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK DEITY'~
+Updated   1194107380
+UpdatedBy Remcon~
+Text      Example: if deity($n) == Iovlise
+ 
+This will check the target to see if they worship the deity Iovlise.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK DEX'~
+Updated   1193969139
+UpdatedBy Remcon~
+Text      Example: if dex($n) >= 50
+ 
+This will check the target ($n) to see if their dexterity is 50 or higher.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK FAVOR'~
+Updated   1193970391
+UpdatedBy Remcon~
+Text      Example: if favor($n) >= 50
+ 
+This will check the target ($n) to see if their favor is 50 or higher.
+May only be used on players.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK GOLDAMT'~
+Updated   1194041108
+UpdatedBy Remcon~
+Text      Example: if goldamt($n) >= 50
+ 
+This will check the target ($n) to see if they have 50 or more gold.
+ 
+This one is only really useable for up to 1 million gold, for higher amounts
+use 'mgoldamt' ifcheck.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK HIT'~
+Updated   1193969185
+UpdatedBy Remcon~
+Text      Example: if hit($n) >= 50
+ 
+This will check the target ($n) to see if their hitpoints is 50 or higher.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK HITPRCNT'~
+Updated   1194041393
+UpdatedBy Remcon~
+Text      Example: if hitprcnt($n) >= 50
+ 
+This will check the target ($n) to see if their hitpoints are at 50 percent or
+higher.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK HOUR'~
+Updated   1194101125
+UpdatedBy Remcon~
+Text      Example: if hour() == 13
+ 
+This will check the current hour to see if it is 13 (1pm).
+This is for real time, use (1-24).
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK INROOM'~
+Updated   1194040862
+UpdatedBy Remcon~
+Text      Example: if inroom($n) == 500
+ 
+This will check the target ($n) to see if they are in room 500.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK INT'~
+Updated   1193969225
+UpdatedBy Remcon~
+Text      Example: if int($n) >= 50
+ 
+This will check the target ($n) to see if their intelligence is 50 or higher.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISAFFECTED'~
+Updated   1194109876
+UpdatedBy Remcon~
+Text      Example: if isaffected($n) == curse
+
+This will check to see if the target is affected by curse.
+
+         blind      invisible   detect_evil  detect_invis
+  detect_magic  detect_hidden     sanctuary   faerie_fire
+      infrared          curse        poison       protect
+     paralysis          sneak          hide         sleep
+         charm         flying     pass_door      floating
+     truesight   detect_traps       scrying    fireshield
+   shockshield      iceshield       berserk   aqua_breath
+      acidmist    venomshield  detect_sneak       silence
+        nomove
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISALIGN'~
+Updated   1194041169
+UpdatedBy Remcon~
+Text      Example: if isalign($n) >= 50
+ 
+This will check the target ($n) to see if their alignment is 50 or higher.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISCLAN1'~
+Updated   1194110260
+UpdatedBy Remcon~
+Text      Example: if isclan1($n)
+ 
+This will check to see if the target is number 1 of a clan.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISCLAN2'~
+Updated   1194110286
+UpdatedBy Remcon~
+Text      Example: if isclan2($n)
+ 
+This will check to see if the target is number 2 of a clan.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISCLANLEADER'~
+Updated   1194110864
+UpdatedBy Remcon~
+Text      Example: if isclanleader($n)
+ 
+This will check to see if the target is the leader of a clan.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISDEVOTED'~
+Updated   1194110581
+UpdatedBy Remcon~
+Text      Example: if isdevoted($n)
+ 
+This will check to see if the target is devoted to a deity.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISFIGHT'~
+Updated   1194110338
+UpdatedBy Remcon~
+Text      Example: if isfight($n)
+ 
+This will check to see if the target is fighting.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISFOLLOW'~
+Updated   1194110455
+UpdatedBy Remcon~
+Text      Example: if isfollow($n)
+ 
+This will check to see if the target is following someone.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISIMMORT'~
+Updated   1194110545
+UpdatedBy Remcon~
+Text      Example: if isimmort($n)
+ 
+This will check to see if the target is an immortal.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISLEADER'~
+Updated   1194110908
+UpdatedBy Remcon~
+Text      Example: if isleader($n)
+ 
+This will check to see if the target is the leader, number 1, or number 2 of a
+clan.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISLOCKED'~
+Updated   1194109563
+UpdatedBy Remcon~
+Text      Example: if islocked($n) == north
+ 
+This will check to see if the exit north is closed and locked.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISMORPHED'~
+Updated   1194110830
+UpdatedBy Remcon~
+Text      Example: if ismorphed($n)
+ 
+This will check to see if the target is morphed.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISMOUNTED'~
+Updated   1194110762
+UpdatedBy Remcon~
+Text      Example: if ismounted($n)
+ 
+This will check to see if the target is mounted.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISNPC'~
+Updated   1194110109
+UpdatedBy Remcon~
+Text      Example: if isnpc($n)
+ 
+This will check to see if the target is not a player character.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISNPCACT'~
+Updated   1194108260
+UpdatedBy Remcon~
+Text      Example: if isnpcact($n) == sentinel
+
+This will check to see if the target is set to be sentinel.
+
+          npc     sentinel   scavenger   aggressive
+     stayarea        wimpy         pet     practice
+     immortal    meta_aggr     running    mountable
+      mounted      scholar   secretive      hardhat
+     mobinvis     noassist    pacifist     noattack
+     annoying   statshield   prototype       banker
+   questgiver   undertaker      nokill      nodeath
+    autopurge
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISOPEN'~
+Updated   1194107434
+UpdatedBy Remcon~
+Text      Example: if isopen($n) == north
+ 
+This will check to see if the exit north is open.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISPASSAGE'~
+Updated   1194109920
+UpdatedBy Remcon~
+Text      Example: if ispassage($n) == north
+ 
+This will check to see if the exit north is a passage.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISPC'~
+Updated   1194110055
+UpdatedBy Remcon~
+Text      Example: if ispc($n)
+ 
+This will check to see if the target is a player character.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISPCACT'~
+Updated   1210620887
+UpdatedBy Remcon~
+Text      Example: if ispcact($n) == keepalive
+
+This will check to see if the target has on the keepalive.
+
+   npc       shovedrag   autoexits     autoloot
+   autosac   blank       brief         combine
+   prompt    telnet_ga   holylight     wizinvis
+   silence   noemote     notell        deny
+   freeze    ansi        nice          flee
+   autogold  afk         keepalive     questor
+   telloff   whisperoff  compass       solo
+   suicide   noassist    groupaffects  nohints
+   smartsac  noinduct    autosplit     noinfo
+   sparing
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK ISPKILL'~
+Updated   1194110364
+UpdatedBy Remcon~
+Text      Example: if ispkill($n)
+ 
+This will check to see if the target is a pkiller.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK LCK'~
+Updated   1193969274
+UpdatedBy Remcon~
+Text      Example: if lck($n) >= 50
+ 
+This will check the target ($n) to see if their luck is 50 or higher.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK LEVEL'~
+Updated   1193970490
+UpdatedBy Remcon~
+Text      Example: if level($n) >= 50
+ 
+This will check the target($n) to see if their level is 50 or higher.
+ 
+May be used on objects, mobiles and players.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK LEVERPOS'~
+Updated   1194137778
+UpdatedBy Remcon~
+Text      Example: if leverpos($n) == up
+
+This will check to see if the lever position is up.
+
+Example: if leverpos($n)
+
+This will check to see if the lever position is down.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MANA'~
+Updated   1193969563
+UpdatedBy Remcon~
+Text      Example: if mana($n) >= 50
+ 
+This will check the target ($n) to see if their mana is 50 or higher.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MANAPRCNT'~
+Updated   1194045291
+UpdatedBy Remcon~
+Text      Example: if manaprcnt($n) >= 50
+ 
+This will check to see if the target's mana is 50 percent or higher.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MDAY'~
+Updated   1194101007
+UpdatedBy Remcon~
+Text      Example: if mday() == 5
+ 
+This will check the current mud day to see if it is 5.
+This is for mud time, use (1-31).
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MDEATHS'~
+Updated   1194041228
+UpdatedBy Remcon~
+Text      Example: if mdeaths($n) >= 50
+ 
+This will check the target ($n) to see if they have died to a mobile 50 or more
+times.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MGOLDAMT'~
+Updated   1194042012
+UpdatedBy Remcon~
+Text      Example: if mgoldamt($n) >= 50
+ 
+This will check the target ($n) to see if they have 50 million or more gold.
+ 
+This one is only useable for gold in the millions, for amounts under 1 million
+use 'goldamt' ifcheck.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MHOUR'~
+Updated   1194101277
+UpdatedBy Remcon~
+Text      Example: if mhour() == 13
+ 
+This will check the current mud hour to see if it is 13 (1pm).
+This is for mud time, use (1-24).
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MKILLS'~
+Updated   1194040975
+UpdatedBy Remcon~
+Text      Example: if mkills($n) >= 50
+ 
+This will check the target ($n) to see if they have killed 50 or more mobiles.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MMONTH'~
+Updated   1194101452
+UpdatedBy Remcon~
+Text      Example: if mmonth() == 5
+ 
+This will check the current mud month to see if it is 5.
+This is for mud time.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MOBCOUNT'~
+Updated   1194135128
+UpdatedBy Remcon~
+Text      Example: if mobcount(500) >= 1
+ 
+This will check room vnum 500 to see if there is 1 or more mobiles there.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MOBINAREA'~
+Updated   1194135403
+UpdatedBy Remcon~
+Text      Example: if mobinarea(500) >= 1
+ 
+This will check the area the mobile is in to see if there is 1 or more mobiles
+there that are vnum 500.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MOBINROOM'~
+Updated   1194135352
+UpdatedBy Remcon~
+Text      Example: if mobinroom(500) >= 1
+ 
+This will check the room the mobile is in to see if there is 1 or more mobiles
+in there that are vnum 500.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MOBINVISLEVEL'~
+Updated   1194100458
+UpdatedBy Remcon~
+Text      Example: if mobinvislevel($n) >= 50
+ 
+This will check the target mobile to see if they are invis at level is at 50 or
+higher.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MOBINWORLD'~
+Updated   1194135451
+UpdatedBy Remcon~
+Text      Example: if mobinworld(500) >= 1
+ 
+This will check the entire mud to see if there is 1 or more mobiles in it that
+are vnum 500.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MONTH'~
+Updated   1194101344
+UpdatedBy Remcon~
+Text      Example: if month() == 5
+ 
+This will check the current month to see if it is 5.
+This is for real time, use (1-12).
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MORPH'~
+Updated   1194029480
+UpdatedBy Remcon~
+Text      Example: if morph($n) == 50
+ 
+This will check the target ($n) to see if they are morphed into 50.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MORTCOUNT'~
+Updated   1194135236
+UpdatedBy Remcon~
+Text      Example: if mortcount(500) >= 1
+ 
+This will check room vnum 500 to see if there is 1 or more mortals there.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MOVE'~
+Updated   1193969599
+UpdatedBy Remcon~
+Text      Example: if move($n) >= 50
+ 
+This will check the target ($n) to see if their movement is 50 or higher.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MOVEPRCNT'~
+Updated   1194047902
+UpdatedBy Remcon~
+Text      Example: if moveprcnt($n) >= 50
+ 
+This will check to see if the target's movement is 50 percent or higher.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MULTI'~
+Updated   1194040816
+UpdatedBy Remcon~
+Text      Example: if multi($n) == 5
+ 
+This will check the target ($n) to see if they are multiplaying 5 characters.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK MYEAR'~
+Updated   1194101403
+UpdatedBy Remcon~
+Text      Example: if myear() % 5
+ 
+This will check the current mud year to see if it is a multiple of 5 (5, 10,
+15, ...).
+This is for mud time.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK NAME'~
+Updated   1194107300
+UpdatedBy Remcon~
+Text      Example: if name($n) == Jobo
+ 
+This will check the target to see if their name is Jobo.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK NATION'~
+Updated   1194107500
+UpdatedBy Remcon~
+Text      Example: if nation($n) == Human
+ 
+This will check to see if the target belongs to the Human nation.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK NORECALL'~
+Updated   1194110712
+UpdatedBy Remcon~
+Text      Example: if norecall($n)
+ 
+This will check to see if the target can't recall.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK NUMFIGHTING'~
+Updated   1194099460
+UpdatedBy Remcon~
+Text      Example: if numfighting($n) >= 2
+ 
+This will check the target to see if they are fighting 2 or more characters.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK OBJTYPE'~
+Updated   1194136765
+UpdatedBy Remcon~
+Text      Example: if objtype($n) == staff
+
+This will check the target object to see if it is a staff.
+
+Possible Types:
+            none        light      scroll       wand
+           staff       weapon    treasure      armor
+          potion        trash   container   drinkcon
+             key         food       money       boat
+          corpse    corpse_pc    fountain       pill
+           blood   bloodstain      scraps       pipe
+         herbcon         herb        fire     switch
+           lever    pullchain      button       trap
+             map       portal       paper   lockpick
+   missileweapon   projectile      quiver     shovel
+           salve         cook     keyring     chance
+             gem       mortar      powder        axe
+            wood
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK OBJVAL' 'IFCHECK OBJVAL0' 'IFCHECK OBJVAL1' 'IFCHECK OBJVAL2' 'IFCHECK OBJVAL3' 'IFCHECK OBJVAL4' 'IFCHECK OBJVAL5'~
+Updated   1194135992
+UpdatedBy Remcon~
+Text      Example: if objval0($n) >= 20
+         if objval1($n) >= 20
+         if objval2($n) >= 20
+         if objval3($n) >= 20
+         if objval4($n) >= 20
+         if objval5($n) >= 20
+
+These will check the target object's values (0-5) and see if they are 20 or
+higher.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK OTYPECARRY'~
+Updated   1193968894
+UpdatedBy Remcon~
+Text      Example: if otypecarry(weapon) >= 1
+ 
+This will check the objects being carried by the mobile to see if any of them
+are weapon types.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK OTYPEHERE'~
+Updated   1193968499
+UpdatedBy Remcon~
+Text      Example: if otypehere(weapon) >= 1
+ 
+This will check the mobile's inventory and the room the mobile is in for a
+weapon type object.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK OTYPEINV'~
+Updated   1193968432
+UpdatedBy Remcon~
+Text      Example: if otypeinv(weapon) >= 1
+ 
+This will check the mobile's inventory to see if they have a weapon type
+object.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK OTYPEROOM'~
+Updated   1193968620
+UpdatedBy Remcon~
+Text      Example: if otyperoom(weapon) >= 1
+ 
+This will check the room the mobile is in for a weapon type object.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK OTYPEWEAR'~
+Updated   1193968687
+UpdatedBy Remcon~
+Text      Example: if otypewear(weapon) >= 1
+ 
+This will check the objects that the mobile is wearing to see if it is wearing
+a weapon type object.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK OVNUMCARRY'~
+Updated   1193968937
+UpdatedBy Remcon~
+Text      Example: if ovnumcarry(400) >= 1
+ 
+This will check the objects being carried by the mobile to see if any of them
+are vnum 400.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK OVNUMHERE'~
+Updated   1193968737
+UpdatedBy Remcon~
+Text      Example: if ovnumhere(400) >= 1
+ 
+This will check the mobile's inventory and the room the mobile is in for object
+vnum 400.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK OVNUMINV'~
+Updated   1193968570
+UpdatedBy Remcon~
+Text      Example: if ovnuminv(400) >= 1
+ 
+This will check the mobile's inventory to see if they have object vnum 400.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK OVNUMROOM'~
+Updated   1193968779
+UpdatedBy Remcon~
+Text      Example: if ovnumroom(400) >= 1
+ 
+This will check the room the mobile is in for object vnum 400.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK OVNUMWEAR'~
+Updated   1193968824
+UpdatedBy Remcon~
+Text      Example: if ovnumwear(400) >= 1
+ 
+This will check the objects worn by the mobile to see if it is wearing object
+vnum 400.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK PDEATHS'~
+Updated   1194041286
+UpdatedBy Remcon~
+Text      Example: if pdeaths($n) >= 50
+ 
+This will check the target ($n) to see if they have died to a player 50 or more
+times.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK PERM'~
+Updated   1193969775
+UpdatedBy Remcon~
+Text      Example: if perm($n) >= 1
+ 
+This will check the target ($n) to see if they are immortal or higher.
+0 = all, 1 = immortal, 2 = builder, 3 = leader, 4 = head, 5 = implimentor
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK PKILLS'~
+Updated   1194041017
+UpdatedBy Remcon~
+Text      Example: if pkills($n) >= 50
+ 
+This will check the target ($n) to see if they have killed 50 or more players.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK POSITION'~
+Updated   1194044591
+UpdatedBy Remcon~
+Text      Example: if position($n) == 6
+         if position($n) == resting
+ 
+This will check to see if the target's position is resting.
+ 
+Positions:
+    0 - dead        1 - mortal        2 - incap
+    3 - stunned     4 - sleeping      5 - berserk
+    6 - resting     7 - aggressive    8 - sitting
+    9 - fighting   10 - defensive    11 - evasive
+   12 - standing   13 - mounted      14 - shove
+   15 - drag
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK RACE'~
+Updated   1194107226
+UpdatedBy Remcon~
+Text      Example: if race($n) == Human
+ 
+This will check the target to see if their race is human.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK RAND'~
+Updated   1194137560
+UpdatedBy Remcon~
+Text      Example: if rand(50)
+ 
+This will check to see if 50 is higher then a random number from 1 - 100.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK RANK'~
+Updated   1194107331
+UpdatedBy Remcon~
+Text      Example: if rank($n) == Supreme
+ 
+This will check the target to see if their rank is supreme.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK SEX'~
+Updated   1193969410
+UpdatedBy Remcon~
+Text      Example: if sex($n) == 1
+ 
+This will check the target ($n) is a male.
+ 
+0 = Neutral, 1 = Male, 2 = Female
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK STR'~
+Updated   1193969470
+UpdatedBy Remcon~
+Text      Example: if str($n) >= 50
+ 
+This will check the target ($n) to see if their strength is 50 or higher.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK TIMESKILLED'~
+Updated   1194099518
+UpdatedBy Remcon~
+Text      Example: if timeskilled($n) >= 50
+ 
+This will check the target mobile to see if they have been killed 50 or more
+times.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK VNUM'~
+Updated   1193970313
+UpdatedBy Remcon~
+Text      Example: if vnum($n) == 50
+ 
+This will check the target ($n) vnum to see if it is 50.
+May be used on objects and mobiles.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK WAITSTATE'~
+Updated   1194050687
+UpdatedBy Remcon~
+Text      Example: if waitstate($n) >= 2
+ 
+This will check the target's waitstate to see if it is 2 or higher.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK WASINROOM'~
+Updated   1194050745
+UpdatedBy Remcon~
+Text      Example: if wasinroom($n) == 500
+ 
+This will check the target to see if they were in room 500.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK WEARING'~
+Updated   1194109036
+UpdatedBy Remcon~
+Text      Example: if wearing($n) == shoulder
+
+This will see if the target is wearing something on their shoulder.
+
+     take     head    ears         ear       eyes
+      eye     face    neck   shoulders   shoulder
+    about     body    back        arms        arm
+   wrists    wrist   hands        hand    fingers
+   finger    2hand    hold       waist       legs
+      leg   ankles   ankle        feet       foot
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK WEARINGVNUM'~
+Updated   1194099641
+UpdatedBy Remcon~
+Text      Example: if wearingvnum($n) == 500
+ 
+This will check the target to see if they are wearing object vnum 500.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK WIS'~
+Updated   1193969505
+UpdatedBy Remcon~
+Text      Example: if wis($n) >= 50
+ 
+This will check the target ($n) to see if their wisdom is 50 or higher.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'IFCHECK YEAR'~
+Updated   1194101209
+UpdatedBy Remcon~
+Text      Example: if year() % 5
+ 
+This will check the current year to see if it is a multiple of 5 (5, 10, 15,
+...).
+This is for real time.
+~
+End
+
+#HELP
+Perm      1
+Keyword   IFCHECKS~
+Updated   1194140413
+UpdatedBy Remcon~
+Text      .
+   cha    rank   council   isfollow     mortcount    carryingvnum
+   con    vnum   goldamt   isimmort     moveprcnt    contobjcount
+   day    year   isalign   isleader     otypehere    isclanleader
+   dex   class   isclan1   islocked     otyperoom   mobinvislevel
+   hit   deity   isclan2   isnpcact     otypewear
+   int   favor   isfight   leverpos     ovnumhere
+   lck   isnpc   ispcact   mgoldamt     ovnumroom
+   sex   level   ispkill   mobcount     ovnumwear
+   str   morph   mdeaths   norecall     waitstate
+   wis   multi   objtype   ovnuminv     wasinroom
+  clan   mhour   objval0   otypeinv    asupressed
+  hour   month   objval1   position    isaffected
+  ispc   myear   objval2  charcount    mobinworld
+  mana  cansee   objval3  isdevoted    otypecarry
+  mday  inroom   objval4  ismorphed    ovnumcarry
+  move  isopen   objval5  ismounted   carryweight
+  name  mkills   pdeaths  ispassage   contobjvnum
+  perm  mmonth   wearing  manaprcnt   numfighting
+  race  nation  canpkill  mobinarea   timeskilled
+  rand  pkills  hitprcnt  mobinroom   wearingvnum
+
+*NOTICE*
+    On ones with a <#> you may use
+    == (equals)                  > (greater than)         < (less than)
+     ! (not)                     % (evenly divisible)    != (not equal)
+    >= (greater than or equal)  <= (less than or equal)   & (???)
+     | (???)
+ 
+    On ones with a <string> instead of a <#> you may use
+    == (equals)                 != (not equal)            / (???)
+    !/ (???)
+~
+End
+
+#HELP
+Perm      1
+Keyword   IMMTALK~
+Updated   1188862083
+UpdatedBy Remcon~
+Text      Usage: immtalk <message>
+ 
+This channel is used to send the message to all immortals online.
+~
+End
+
+#HELP
+Perm      1
+Keyword   IMOTD~
+Updated   1254626152
+UpdatedBy Remcon~
+Text      &R         _,-/               &gThe LoP Immortal MOTD                 &R\-,_
+      ,-`  /   ,             &gUpdated: &w10/03/2009               &R,   \  `-,
+    /'    |   /(_                                             _)\   |    `\
+  /'   /  \,_/  .\     &gAs the Gods rip the world asunder,    &R/,  \_,/  \   `\
+ /    |    /,  ,-'        &ga slew of changes rain down.       &R`-,  ,\    |    \
+|     | ,-, \ \_3|                                           |G,/ / ,-, |     |
+|   ,-|/ / ,_\,_/_                                           _\_,/_  \ \|-,   |
+| /'    |   __,  _)                                         (_  ,__`  |    `\ |
+|/      `;-`_.--`                                             `--._`-;'      \|
+|         \ \__                                                  __/ /        |
+          `&B.-.&R``            &gSome of the changes...             &R''&B.-.&R'
+          &B(&G(&C|&G)&B)  &R<&W*&R>                                            &B(&G(&C|&G)&B)
+           &B|&C|&B|   &R<&W*&R>                                             &B|&C|&B|
+           &B|&C|&B|   &R<&W*&R>                                             &B|&C|&B|
+           &B|&C|&B|   &R<&W*&R>                                             &B|&C|&B|
+           &B|&C|&B|   &R<&W*&R>                                             &B|&C|&B|
+           &B|&C|&B|   &R<&W*&R>                                             &B|&C|&B|
+          &B/&G/&C|&G\&B\  &R<&W*&R>                                            &B/&G/&C|&G\&B\
+         &B|&G|&B|&C|&B|&G|&B| &R<&W*&R>                                           &B|&G|&B|&C|&B|&G|&B|
+         &B|&G|&B|&C|&B|&G|&B| &R<&W*&R>                                           &B|&G|&B|&C|&B|&G|&B|
+         &B|&G|&B|&C|&B|&G|&B| &R<&W*&R>                                           &B|&G|&B|&C|&B|&G|&B|&D
+~
+End
+
+#HELP
+Keyword   INT INTELLIGENCE~
+Updated   1188858106
+UpdatedBy Remcon~
+Text      Intelligence (INT in your 'score') represents your character's mental capacity.
+
+Among other things, it affects:
+ 
+ - affects the amount of mana regenerated or recovered at each tick
+   if a character is resting or sleeping
+ 
+ - the rate at which a character learns a new skill or spell
+ 
+ - the percentage rate at which a character practices a new language
+ 
+Intelligence is an important factor in learning between combatants.  If
+a character fights a creature several times, the more intelligent of the
+two opponents will gain an advantage over time...
+~
+End
+
+#HELP
+Keyword   'LAW ASSIST'~
+Updated   1185738888
+UpdatedBy Remcon~
+Text      &GA non-deadly may give, sell or trade scrolls, potions and equipment
+with a deadly character.
+ 
+A non-deadly character may spy for a deadly character.
+ 
+A non-deadly may _not_ shield, heal, summon, help, hinder, portal or
+otherwise assist a deadly character (this includes charm).
+~
+End
+
+#HELP
+Keyword   'LAW CHANNELS'~
+Updated   1185738801
+UpdatedBy Remcon~
+Text      &GSpam, Harassment, and Profanity are not allowed on channels.
+~
+End
+
+#HELP
+Keyword   'LAW CHARM'~
+Updated   1185738389
+UpdatedBy Remcon~
+Text      &GDo not bring aggressive mobs into or near Darkhaven, as when their charm
+wears off (either naturally or by attack) their aggressive nature will
+return.  Also do not bring aggressive mobs into areas which are lower in
+level than the area from which the mob originally came.  You can use the
+'areas' command to check an area's level.  See 'help charm' for more.
+~
+End
+
+#HELP
+Keyword   'LAW CHEATING'~
+Updated   1185738275
+UpdatedBy Remcon~
+Text      &GCheating is a very serious offense and will get you punished.
+ 
+What is considered cheating?
+ - exploiting a bug to gain equipment or gold
+ - intentionally causing the system to crash
+ - intentionally duplicating equipment or gold
+ - knowingly accepting illegal equipment from others
+ - attempting to duplicate equipment or gold -- * even if not successful *
+ - using or making profit from equipment that was accidentally duplicated
+ - using gold that was accidentally duplicated
+ 
+Cheating hurts the game, and every player in the game.  Protect yourself
+and report any bugs you find, and inform the Immortals if you have reason
+to believe someone is engaged in any of the above. 
+ 
+If you find you have accidentally duplicated an item, turn the item over
+immediately to an Immortal or drop and sacrifice the item.
+~
+End
+
+#HELP
+Keyword   'LAW HARASSMENT'~
+Updated   1185737371
+UpdatedBy Remcon~
+Text      &GHarassment is giving any unwanted attention to someone.
+&RNo form of harassment will be tolerated.&D
+~
+End
+
+#HELP
+Keyword   'LAW KILLSTEAL'~
+Updated   1185737070
+UpdatedBy Remcon~
+Text      &GKilling something that is already being fought by someone else is considered
+kill stealing. It is annoying and considered illegal.
+ 
+If someone steals your kills:
+  Inform the person of the rules and ask them to type 'laws killsteal'
+  Type 'config noassist' (This will stop people from being able to steal kills)
+  If they somehow manage to keep stealing your kills inform an immortal
+~
+End
+
+#HELP
+Keyword   'LAW MULTIPLAYING'~
+Updated   1185735252
+UpdatedBy Remcon~
+Text      &GMulti-playing is permitted within the Realms, with the following rules:
+ 
+ - You may only have &Wone&G deadly character online.
+ 
+ - You may have more than one character online as long as &Wnone&G of your
+   characters are deadly.
+ 
+ - You may not use multiple characters to spam any player or channel.&D
+~
+End
+
+#HELP
+Keyword   'LAW MURDER'~
+Updated   1185735591
+UpdatedBy Remcon~
+Text      Player killing is only allowed between deadly players.
+~
+End
+
+#HELP
+Keyword   'LAW OBJECTS'~
+Updated   1185735911
+UpdatedBy Remcon~
+Text      &GAny object on the ground with no player and no player corpse in the room
+is considered to be abandoned and free for the taking.
+
+If there is a player or a corpse in the room you must get the permission
+of the person before picking up the object.
+
+Don't take items from a mobile corpse unless you made the kill yourself
+or you have permission from the player that made the kill.
+~
+End
+
+#HELP
+Keyword   'LAW PKILL'~
+Updated   1185736131
+UpdatedBy Remcon~
+Text      &GDeadly Characters are characters who are able to kill other deadlys.
+ 
+Deadly characters may &Wnot&G:
+ a) multi-play while using a deadly character
+ b) be shared
+ c) receive help (healing, shielding, portaling, etc.) from non-deadlies
+ d) receive Immortal corpse retrievals or reimbursements - no exceptions
+ e) attack players more than 5 levels outside their own
+    - includes picking up disarmed weapons from someone outside your range
+    - includes healing a fighting character outside your range
+    - includes looting the corpse of someone outside your level range
+ 
+Deadly characters are allowed to:
+ a) pkill another player who appears on the deadly
+    list (who deadly) who is within 5 levels of their own.
+ b) loot the corpse of the fallen deadly player, provided they were
+    the tank or dealt the killing blow.
+ c) use mobs within or lower than the pkill level range of the victim
+ 
+&RWarning&G:  Going AFK or link-dead in a non-safe area leaves you open to
+attack; a deadly is open to attack every second online, link-live or not.
+~
+End
+
+#HELP
+Keyword   'LAW SHARING'~
+Updated   1185736229
+UpdatedBy Remcon~
+Text      &GCharacter sharing (when allowed) is always done at the risk of the players
+involved.  Immortals will &Wnot&G recover any character lost to trading or
+sharing.  Whoever owns the password owns the character.
+ 
+A character may &Wnot&G be shared if:
+ - the character is a deadly character
+ - the character holds any leadership position in a Guild or Order
+~
+End
+
+#HELP
+Keyword   'LAW SPAM'~
+Updated   1185736473
+UpdatedBy Remcon~
+Text      &WANYTHING&G that causes alot of screen scroll can be considered spam.
+Using the same phrase over different channels is considered spam.
+Using all caps can be considered spam.&D
+~
+End
+
+#HELP
+Keyword   'LAW STAKE'~
+Updated   1185736545
+UpdatedBy Remcon~
+Text      &GThe first player to attack a mob has the rights to the kill.  Others should
+not get involved without being requested to do so. Those receiving aid are 
+under no obligation to reward their benefactors. Monopolization of a mob and
+its repops will not be tolerated.
+ 
+Any disputes brought to the attention of an immortal for resolution will be
+handled according to the immortal's discretion.  All such decisions are final.
+~
+End
+
+#HELP
+Keyword   'LAW STORES'~
+Updated   1185736726
+UpdatedBy Remcon~
+Text      &GDo not steal or kill any shopkeepers.
+&GDo not kill or steal from any shopkeeper.
+~
+End
+
+#HELP
+Perm      1
+Keyword   LAYERS~
+Updated   1194796523
+UpdatedBy Remcon~
+Text      &gLayers are set with a numeric value, or combination of values. The lower the
+value, the lower the layer, or thinner the item of clothing/armor is. Valid
+numeric values are:
+ 
+&G0, 1, 2, 4, 8, 16, 32, 64, 128.
+ 
+&gOr any combination of the above. A value of zero means no other items can
+be layered with this item. Items of clothing can be layered over one another
+as long as their layer values do not overlap. ie, if leather armor were set
+to a value of 56 (8, 16, and 32), it could not layer with, say, a set of
+heavy chain that is set to a value of 96 (32 and 64), as they overlap on the
+layer value of 32.
+ 
+It is suggested that only those items that will occupy the highest value 
+slots, or a slot of 0, have any special affects added to them. Underclothing
+should only have a.c. settings.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'LEVERFLAGS AUTORETURN'~
+Updated   1252547080
+UpdatedBy Remcon~
+Text      .      Flags:  Description
+  AUTORETURN  Means it will go back to the way it was after being used.
+ 
+The flags are in v0 (Value[0]) of the lever.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'LEVERFLAGS CAST'~
+Updated   1252634883
+UpdatedBy Remcon~
+Text      .      Flags:  Description
+        CAST  Will cast the spell on the actor.
+ 
+The flags are in v0 (Value[0]) of the lever.
+The spell (slot) number to use is v1 (Value[1]) of the lever.
+The level of the spell is v2 (Value[2]) of the lever.
+   You can leave the v2 as 0 if you want it to use the actor level.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'LEVERFLAGS CONTAINER'~
+Updated   1252635229
+UpdatedBy Remcon~
+Text      .      Flags:  Description
+   CONTAINER  Will cast the spell on the actor.
+ 
+The flags are in v0 (Value[0]) of the lever.
+The room vnum to look for the container is v1 (Value[1]) of the lever.
+The container vnum to look for in the room is v2 (Value[2]) of the lever.
+The flags to use on the container is v3 (Value[3]) of the lever.
+   (HELP CONTAINERFLAGS).
+~
+End
+
+#HELP
+Perm      1
+Keyword   'LEVERFLAGS DEATH'~
+Updated   1252547458
+UpdatedBy Remcon~
+Text      .      Flags:  Description
+       DEATH  Kills the one that activated it.
+              (Not a full DT, leaves a corpse in the room).
+ 
+The flags are in v0 (Value[0]) of the lever.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'LEVERFLAGS DOOR' 'LEVERFLAGS PASSAGE' 'LEVERFLAGS CLOSE' 'LEVERFLAGS OPEN' 'LEVERFLAGS D_SOMEWHERE' 'LEVERFLAGS D_SOUTHEAST' 'LEVERFLAGS D_NORTHWEST' 'LEVERFLAGS D_NORTHEAST' 'LEVERFLAGS D_DOWN' 'LEVERFLAGS D_UP' 'LEVERFLAGS D_WEST' 'LEVERFLAGS D_EAST' 'LEVERFLAGS D_SOUTH' 'LEVERFLAGS D_NORTH' 'LEVERFLAGS UNLOCK' 'LEVERFLAGS LOCK'~
+Updated   1252636896
+UpdatedBy Remcon~
+Text      .      Flags:  Description
+        DOOR  Will have it check exits in the room.
+     PASSAGE  Will allow it to make a new passage if it doesn't exist.
+       CLOSE  Will allow it to close an open door.
+              (Probably should make it so it fully removes the PASSAGES).
+              (If it created them or something).
+        OPEN  Will allow it to open a door if it is closed.
+ D_SOMEWHERE  Will make it look at the somewhere exit for the door.
+ D_SOUTHEAST  Will make it look at the southeast exit for the door.
+ D_NORTHWEST  Will make it look at the northwest exit for the door.
+ D_NORTHEAST  Will make it look at the northeast exit for the door.
+      D_DOWN  Will make it look at the down exit for the door.
+        D_UP  Will make it look at the up exit for the door.
+      D_WEST  Will make it look at the west exit for the door.
+      D_EAST  Will make it look at the east exit for the door.
+     D_SOUTH  Will make it look at the south exit for the door.
+     D_NORTH  Will make it look at the north exit for the door.
+      UNLOCK  Will allow it to unlock a locked door.
+        LOCK  Will allow it to lock an unlocked door.
+ 
+The flags are in v0 (Value[0]) of the lever.
+The room vnum to look for the exit in is v1 (Value[1]) of the lever.
+The room vnum to connect it to is v2 (Value[2]) of the lever.
+   (Used if making a new PASSAGE only).
+   (Maybe make it check to see if the existing exit is pointing to that room).
+      (Would help if you had more then one exit etc... in that room).
+~
+End
+
+#HELP
+Perm      1
+Keyword   'LEVERFLAGS MLOAD' 'LEVERFLAGS OLOAD'~
+Updated   1252634718
+UpdatedBy Remcon~
+Text      .      Flags:  Description
+       MLOAD  Will load the specified mobile in the specified room.
+       OLOAD  Will load the specified object in room or on actor.
+ 
+The flags are in v0 (Value[0]) of the lever.
+The vnum to load is v1 (Value[1]) of the lever.
+The room would be v2 (Value[2]) of the lever.
+   You don't have to specify the room vnum.
+   If you want it to load the mobile in the current room set it to 0.
+   If you want the object to load in the current room set it to 0.
+      If it is an item that can be picked up it puts it on the actor.
+The level of the object is v3 (Value[3]) of the lever.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'LEVERFLAGS RAND4' 'LEVERFLAGS RAND6' 'LEVERFLAGS RAND10' 'LEVERFLAGS RAND11'~
+Updated   1252547051
+UpdatedBy Remcon~
+Text      .      Flags:  Description
+       RAND4  Will randomize exits in the room 0 - 3.
+              (North, East, South, West).
+       RAND6  Will randomize exits in the room 0 - 5.
+              (North, East, South, West, Up, Down).
+      RAND10  Will randomize exits in the room 0 - 9.
+              (North, East, South, West, Up, Down,).
+              (NorthEast, NorthWest, SouthEast, SouthWest).
+      RAND11  Will randomize exits in the room 0 - 10.
+              (North, East, South, West, Up, Down,).
+              (NorthEast, NorthWest, SouthEast, SouthWest,).
+              (Somewhere).
+ 
+The flags are in v0 (Value[0]) of the lever.
+The room it will randomize exits in is v1 (Value[1]) of the lever.
+~
+End
+
+#HELP
+Perm      1
+Keyword   LEVERFLAGS SWITCHFLAGS BUTTONFLAGS PULLCHAINFLAGS~
+Updated   1195001224
+UpdatedBy Remcon~
+Text      .
+          UP       UNLOCK          LOCK       D_NORTH       D_SOUTH
+      D_EAST       D_WEST          D_UP        D_DOWN   D_NORTHEAST
+ D_NORTHWEST  D_SOUTHEAST   D_SOUTHWEST   D_SOMEWHERE          DOOR
+   CONTAINER         OPEN         CLOSE       PASSAGE         OLOAD
+       MLOAD     TELEPORT   TELEPORTALL  TELEPORTPLUS         DEATH
+        CAST        RAND4         RAND6        RAND10        RAND11
+SHOWROOMDESC   AUTORETURN
+
+Usage: oset <object> tflags <flag>
+*Note* The flags are only going to work correctly if the object is
+       of the right object type (lever, switch, button, pullchain).
+
+If you wish to know the bitvectors you start at 1 for UP and multiply it
+by 2 for the UNLOCK bitvector and continue on for the others.
+Example: UP = 1, UNLOCK = 2, LOCK = 4, ...
+~
+End
+
+#HELP
+Perm      1
+Keyword   'LEVERFLAGS TELEPORT' 'LEVERFLAGS TELEPORTALL' 'LEVERFLAGS TELEPORTPLUS' 'LEVERFLAGS SHOWROOMDESC'~
+Updated   1252547105
+UpdatedBy Remcon~
+Text      .      Flags:  Description
+    TELEPORT  Means this should be used to teleport the actor.
+ TELEPORTALL  Means it should teleport everyone in the room.
+TELEPORTPLUS  Means it should teleport everyone and everything in the room.
+SHOWROOMDESC  Means it will show the room description once it teleports them.
+ 
+The flags are in v0 (Value[0]) of the lever.
+The room it will teleport them to is v1 (Value[1]) of the lever.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'LEVERFLAGS UP'~
+Updated   1252636982
+UpdatedBy Remcon~
+Text      .      Flags:  Description
+          UP  Just used to let it know if the lever is up or not.
+~
+End
+
+#HELP
+Perm      2
+Keyword   LIQUIDTYPES~
+Updated   1195749587
+UpdatedBy Remcon~
+Text      | Value | Liquid Type      | Value | Liquid Type       | Value | Liquid Type
+  -----   ---------------    -----   ----------------    -----   ------------
+|   0   | unknown          |   1   | water             |   2   | beer
+|   3   | wine             |   4   | ale               |   5   | dark ale
+|   6   | whiskey          |   7   | lemonade          |   8   | firebreather
+|   9   | local specialty  |  10   | slime mold juice  |  11   | milk
+|  12   | tea              |  13   | coffee            |  14   | blood
+|  15   | salt water       |  16   | cola              |  17   | mead
+|  18   | grog
+~
+End
+
+#HELP
+Keyword   LUC LUCK~
+Updated   1189028717
+UpdatedBy Remcon~
+Text      Luck (LUC in your 'score') represents your characters luck.
+ 
+As in life, the exact extent of this factor remains and will always remain
+shrouded in uncertainty...
+~
+End
+
+#HELP
+Keyword   MERC FUREY KHAN HATCHET~
+Updated   1188756615
+UpdatedBy Remcon~
+Text      SMAUG was originally based on the Merc 2.1 code which was created by Furey,
+Hatchet, and Kahn.
+This original code base is available as Merc_21.tar.gz via FTP from:
+ftp.tcp.com, ftp.math.okstate.edu and ftp.game.org.
+E-mail to 'merc-request@kpc.com' to join the merc mailing list.
+
+Merc would like to thank ...
+  ... Diku Mud for their code base.
+  ... The Free Software Foundation and DJ Delorie for kick-ass tools.
+  ... Copper Mud and Alfa Mud for releasing their code and worlds.
+  ... Aod of Generic for ... well, everything.  You're a hoopy frood, Aod.
+  ... Alander for many ideas and contributions.
+  ... John Brothers of Silly for permission to use Silly code and worlds.
+  ... Zrin for administering the mailing list.
+  ... Abaddon for proofreading our comm.c.
+  ... Hind, Quin, Vic, Diavolo, Oleg, Trienne, and others for porting help.
+  ... Diavolo, Grodyn, Morgenes, and others for code and bug fixes.
+  ... Raff, Doctor, VampLestat, Nirrad, Tyrst, PinkF, Chris, Glop for worlds.
+  ... the players and imps of Mud Dome, Final Mud, Mud Lite, Vego Mud, Rivers
+      of Mud, Ruhr Mud, and Mystic Realms for bug reports, ideas, new code,
+      and hours of enjoyment.
+                                Share and enjoy.
+~
+End
+
+#HELP
+Perm      1
+Keyword   MOBAFFECTED~
+Updated   1193350635
+UpdatedBy Remcon~
+Text      Usage: mset <mob name> affected <affect flag>
+
+         blind      invisible   detect_evil  detect_invis
+  detect_magic  detect_hidden     sanctuary   faerie_fire
+      infrared          curse        poison       protect
+     paralysis          sneak          hide         sleep
+         charm         flying     pass_door      floating
+     truesight   detect_traps       scrying    fireshield
+   shockshield      iceshield       berserk   aqua_breath
+      acidmist    venomshield  detect_sneak       silence
+        nomove
+~
+End
+
+#HELP
+Perm      1
+Keyword   MOBATTACKS~
+Updated   1193350871
+UpdatedBy Remcon~
+Text      Usage: mset <mob vnum> attack <attack name(s)>
+
+bite         claws           tail         punch
+kick         trip            bash         stun
+gouge        backstab        feed         drain
+firebreath   frostbreath     acidbreath   lightnbreath
+gasbreath    poison          blindness    causeserious
+earthquake   causecritical   curse        fireball
+~
+End
+
+#HELP
+Perm      1
+Keyword   MOBDEFENSES~
+Updated   1193351184
+UpdatedBy Remcon~
+Text      Usage: mset <mob vnum> defense <defense name(s)>
+
+parry        dodge      heal       curelight   cureserious  curecritical
+dispelmagic  dispelevil sanctuary  fireshield  shockshield  shield
+bless        stoneskin  teleport   disarm      venomshield
+~
+End
+
+#HELP
+Perm      1
+Keyword   MOBFLAGS~
+Updated   1254581847
+UpdatedBy Remcon~
+Text      .    MOBFLAG | DESCRIPTION
+------------|---------------------------------------------------------------
+   sentinel | Mobile always stays at its post.
+  scavenger | Mobile picks up items of value.
+ aggressive | Mobile attacks players.
+   stayarea | Mobile does not leave its home area.
+      wimpy | Mobile flees when low in hits.
+        pet | Mobile can be used in creating a petshop.
+   practice | Players can "practice" at this mobile.
+   immortal | Mobile is immortal.
+  meta_aggr | Mobile is VERY aggressive.
+    running | Mobile is running (moves twice as fast).
+  mountable | Mobile can be mounted.
+    mounted | Mobile is mounted.
+    scholar | Mobile can teach languages.
+  secretive | Mobile will not echo acts. MOBs actions are invisible.
+    hardhat | Mobile not damaged by falling objects.
+   mobinvis | Mobile is invisible to both pc's and non pc's.
+   noassist | Mobile won't assist other mobs in a fight.
+   pacifist | Mobile cannot be attacked.
+   noattack | Mobile won't use any physical attacks.
+   annoying | Is annoying and likely will get hit by other mobiles?
+ statshield | Keeps lower level imms from touching the mobile's stats.
+  prototype | Mobile is under construction.
+     banker | Players may use "bank" at this mobile.
+ questgiver | Players may use "aquest" at this mobile.
+ undertaker | Players may use "retrieve" at this mobile.
+     nokill | Players may fight this mobile and it won't kill them.
+    nodeath | Players may fight this mobile and it won't die.
+  autopurge | Mobile will purge inventory on death (except gold).
+----------------------------------------------------------------------------
+~
+End
+
+#HELP
+Perm      2
+Keyword   MOBPROGRAM OBJPROGRAM ROOMPROGRAM~
+Updated   1195878554
+UpdatedBy Remcon~
+Text      .         The MOBprograms have been contributed by N'Atas-ha.
+         Haus hacked together room && obj programs 'cause
+          he got sick of failing to add lever bitvectors,
+               and cause he thought Carnage was a
+                  Transcendentally Cool Mud.
+~
+End
+
+#HELP
+Perm      2
+Keyword   MOBTRIGGERS~
+Updated   1195828173
+UpdatedBy Remcon~
+Text      Trigger Optnl Triggering Variable Explanation
+------- ----- ------------------- ---------------------------------------------
+Act      {p}  <keyword / phrase>  [emotes, socials, actions, bamfs]
+Speech   {p}  <keyword / phrase>  [says or tells from same room as mob]
+Rand          <percentage>        [randomly triggered based on percentile]
+Fight         <percentage>        [random, within a fight, based on percentile]
+Hitprcnt      <percentage>        [percent is % of mob's max H.P.]
+Greet         <percentage>        [entry that mob can see, by mob/player]
+Allgreet      <percentage>        [entry by a mob/player, regardless if seen]
+Entry         <percentage>        [when the mob itself enters a room]
+Bribe         <amount of gold>    [when a player gives the mob money]
+Death         <percentage>        [when the mob dies]
+Script   {h}                      [loops a line at a time. Hour triggers start]
+Time          <hour>              [script prog, runs once on hour specified]
+Hour          <hour>              [loops as Script for an hour from start hour]
+Give          <keyword / phrase>  [when someone gives the mobile something]
+                                  [can also use object vnums]
+
+*NOTE* {hour}/<hour> is in military time. ie, 15 hours is 3p.m. mud time.
+*NOTE* The mpcommand MPDONOTHING currently only works in Script progs,
+       NOT in Time or Hour progs.
+~
+End
+
+#HELP
+Keyword   MOTD~
+Updated   1254626136
+UpdatedBy Remcon~
+Text      &R         _,-/                   &gThe LoP MOTD                      &R\-,_
+      ,-`  /   ,             &gUpdated: &w10/03/2009               &R,   \  `-,
+    /'    |   /(_                                             _)\   |    `\
+  /'   /  \,_/  .\     &gAs the Gods rip the world asunder,    &R/,  \_,/  \   `\
+ /    |    /,  ,-'        &ga slew of changes rain down.       &R`-,  ,\    |    \
+|     | ,-, \ \_3|                                           |G,/ / ,-, |     |
+|   ,-|/ / ,_\,_/_                                           _\_,/_  \ \|-,   |
+| /'    |   __,  _)                                         (_  ,__`  |    `\ |
+|/      `;-`_.--`                                             `--._`-;'      \|
+|         \ \__                                                  __/ /        |
+          `&B.-.&R``            &gSome of the changes...             &R''&B.-.&R'
+          &B(&G(&C|&G)&B)  &R<&W*&R>                                            &B(&G(&C|&G)&B)
+           &B|&C|&B|   &R<&W*&R>                                             &B|&C|&B|
+           &B|&C|&B|   &R<&W*&R>                                             &B|&C|&B|
+           &B|&C|&B|   &R<&W*&R>                                             &B|&C|&B|
+           &B|&C|&B|   &R<&W*&R>                                             &B|&C|&B|
+           &B|&C|&B|   &R<&W*&R>                                             &B|&C|&B|
+          &B/&G/&C|&G\&B\  &R<&W*&R>                                            &B/&G/&C|&G\&B\
+         &B|&G|&B|&C|&B|&G|&B| &R<&W*&R>                                           &B|&G|&B|&C|&B|&G|&B|
+         &B|&G|&B|&C|&B|&G|&B| &R<&W*&R>                                           &B|&G|&B|&C|&B|&G|&B|
+         &B|&G|&B|&C|&B|&G|&B| &R<&W*&R>                                           &B|&G|&B|&C|&B|&G|&B|&D
+~
+End
+
+#HELP
+Perm      1
+Keyword   MPASUPPRESS~
+Updated   1242530088
+UpdatedBy Remcon~
+Text      Usage: mpasuppress <victim> <rounds>
+ 
+This command suppresses the victim for the specified number of rounds.
+~
+End
+
+#HELP
+Perm      2
+Keyword   MPCOMMANDS RPCOMMANDS OPCOMMANDS~
+Updated   1195876690
+UpdatedBy Remcon~
+Text      The following commands can be used for Room, Mob and Object progs.  The
+commands listed at the bottom are for mob progs only.  Each command also
+has its own help file.  Type HELP <COMMAND>.
+ 
+ MPASOUND    MPJUNK      MPECHOAROUND    MPECHOAT
+ MPECHO      MPMLOAD     MPOLOAD         MPPURGE
+ MPADVANCE   MPTRANSFER  MPFORCE         MPSLAY
+ MPDREAM     MPDAMAGE    MPCLOSEPASSAGE  MPOPENPASSAGE
+ MPDELAY     MPAPPLY     MPAPPLYB        MPMSET
+ MPPRACTICE  MPOSET      MPFAVOR         MPPEACE
+ MPPKSET     MPSCATTER   MPRESTORE       MPUNMORPH
+ MPNOTHING   MPECHOZONE  MPASUPRESS      MPINVIS
+ MPMORPH     MPKILL      MPGOTO          MPAT
+~
+End
+
+#HELP
+Perm      2
+Keyword   'MSET CLASS'~
+Updated   1236823201
+UpdatedBy Remcon~
+Text      Usage: mset <victim> class add <class>
+This allows you to add a new class to a player.
+
+Usage: mset <victim> <class> <class>
+This allows you to change the class to another one.
+
+Usage: mset <victim> <class> -1
+This allows you to remove a class from a player.
+~
+End
+
+#HELP
+Keyword   MUSIC~
+Updated   1188422760
+UpdatedBy Remcon~
+Text      Usage: music <message>
+ 
+This channel is used for singing.
+~
+End
+
+#HELP
+Keyword   M_ADVHERO_~
+Updated   1185734725
+UpdatedBy Remcon~
+Text      You have mastered yourself as far as mortally possible.
+~
+End
+
+#HELP
+Keyword   NATIONTALK~
+Updated   1188153973
+UpdatedBy Remcon~
+Text      Usage: nationtalk <message>
+ 
+This channel can be used to send a message to everyone online that belongs to
+the same nation as you.
+~
+End
+
+#HELP
+Keyword   NEW_DEATH~
+Updated   1185732348
+UpdatedBy Remcon~
+Text      ...Everything begins to fade to black.  You feel yourself leaving your body.
+Rising up into the air, you feel more free than you have ever felt before...
+
+However, before your deity comes to collect your soul, you feel a strange
+pulling sensation as strange and colorful mists swirl around you...
+ 
+&CA low voice fills your head with words of advice...
+"When your character dies, you are reincarnated at the cathedral of Notre
+ Dame de Sioux in New Darkhaven; should you one day become a member of a
+ clan, guild or order you will be returned to your own altar."
+ 
+"Your corpse, however, is left behind where you were killed, together with
+ all of your equipment, so that you can attempt to return to the scene and
+ loot your corpse.  Your gold stays with you.  Corpses decay after time,
+ and when this happens the objects inside will decay with it."
+ 
+"Once you have chosen a deity and gained sufficient favor, you may be able
+ to supplicate to your deity for your corpse.  Type '&Whelp death&C' for more
+ information.  This message will appear only on your first two deaths..."
+~
+End
+
+#HELP
+Keyword   NMOTD~
+Updated   1254626127
+UpdatedBy Remcon~
+Text      &R         _,-/                 &gThe LoP New MOTD                    &R\-,_
+      ,-`  /   ,             &gUpdated: &w10/03/2009               &R,   \  `-,
+    /'    |   /(_                                             _)\   |    `\
+  /'   /  \,_/  .\     &gAs the Gods rip the world asunder,    &R/,  \_,/  \   `\
+ /    |    /,  ,-'        &ga slew of changes rain down.       &R`-,  ,\    |    \
+|     | ,-, \ \_3|                                           |G,/ / ,-, |     |
+|   ,-|/ / ,_\,_/_                                           _\_,/_  \ \|-,   |
+| /'    |   __,  _)                                         (_  ,__`  |    `\ |
+|/      `;-`_.--`                                             `--._`-;'      \|
+|         \ \__                                                  __/ /        |
+          `&B.-.&R``            &gSome of the changes...             &R''&B.-.&R'
+          &B(&G(&C|&G)&B)  &R<&W*&R> &WUse 'news' to keep informed of changes     &B(&G(&C|&G)&B)
+           &B|&C|&B|   &R<&W*&R> &WSee 'help start' 'help pager' 'help laws'   &B|&C|&B|
+           &B|&C|&B|   &R<&W*&R> &W    'help deities' 'help bank' 'help locker'&B|&C|&B|
+           &B|&C|&B|   &R<&W*&R> &W    'help fish' 'help pfiles' 'help run'    &B|&C|&B|
+           &B|&C|&B|   &R<&W*&R> &W    'help channels'                         &B|&C|&B|
+           &B|&C|&B|   &R<&W*&R> &WBanks can hold up to 10 sextillion gold     &B|&C|&B|
+          &B/&G/&C|&G\&B\  &R<&W*&R>                                            &B/&G/&C|&G\&B\
+         &B|&G|&B|&C|&B|&G|&B| &R<&W*&R>                                           &B|&G|&B|&C|&B|&G|&B|
+         &B|&G|&B|&C|&B|&G|&B| &R<&W*&R>                                           &B|&G|&B|&C|&B|&G|&B|
+         &B|&G|&B|&C|&B|&G|&B| &R<&W*&R>                                           &B|&G|&B|&C|&B|&G|&B|&D
+~
+End
+
+#HELP
+Perm      2
+Keyword   OBJECTAFFECTED~
+Updated   1193350610
+UpdatedBy Remcon~
+Text      Usage: oset <item> affect affected <affect flag>
+
+         blind      invisible   detect_evil  detect_invis
+  detect_magic  detect_hidden     sanctuary   faerie_fire
+      infrared          curse        poison       protect
+     paralysis          sneak          hide         sleep
+         charm         flying     pass_door      floating
+     truesight   detect_traps       scrying    fireshield
+   shockshield      iceshield       berserk   aqua_breath
+      acidmist    venomshield  detect_sneak       silence
+        nomove
+~
+End
+
+#HELP
+Perm      1
+Keyword   OBJECTFLAGS~
+Updated   1223067464
+UpdatedBy Remcon~
+Text      Flags that objects can have:
+    FLAG     |         DESCRIPTION
+---------------+-------------------------------------------------
+          GLOW | Can be seen in the dark
+         LOYAL | Returns to inventory on disarm
+         INVIS | Invisible
+         MAGIC | Prevents enchantment,  1 - 12 resist damage
+        NODROP | Can't be dropped
+         BLESS | 1 - 5 resist damage,  * 2 poison weapon duration
+     ANTI_GOOD | Zap if align above +350
+     ANTI_EVIL | Zap if align below -350
+  ANTI_NEUTRAL | Zap if align between -350 and +350
+      NOREMOVE | Can't be removed
+     INVENTORY | + 20 resist damage, ( Normally store items )
+       ORGANIC | - 1 - 5 resist damage
+         METAL | + 1 - 5 resist damage
+      DONATION | Prevents get all on containers
+    CLANOBJECT |  
+    CLANCORPSE |  
+        HIDDEN | Hidden
+      POISONED | Poisoned
+      COVERING |  
+      DEATHROT | Vanishes on death
+        BURIED | Buried
+     PROTOTYPE | Prototype object
+      NOLOCATE | Can't be located using locate spell
+     GROUNDROT | Slowly decays when on ground
+    PKDISARMED | Disarmed by another player
+       NOSCRAP | Won't scrap
+     ENCHANTED | It has been enchanted
+         QUEST | (Set on objects obtained from do_rewards)
+        LODGED | (Set on objects when they get lodged in the body)
+       PIERCED | (Set on objects when they have been pierced by a projectile)
+        RANDOM | Object's stats and requirements are random (based on current settings)
+   NOCONTAINER | Can't put this object into a container.
+       NOGROUP | (Used by the reset system).
+CONTINUOUSFIRE | Allows a projectile to continously be fired.
+~
+End
+
+#HELP
+Perm      1
+Keyword   OBJECTTYPES~
+Updated   1200881976
+UpdatedBy Remcon~
+Text      Object types listed in order:
+  None           Light        Scroll     Wand           Staff       Weapon
+  Treasure       Armor        Potion     Trash          Container   Drinkcon
+  Key            Food         Money      Boat           Corpse_npc  Corpse_pc
+  Fountain       Pill         Blood      Bloodstain     Scraps      Pipe
+  Herbcon        Herb         Fire       Switch         Lever       Pullchain
+  Button         Trap         Map        Portal         Paper       Lockpick
+  Missileweapon  Projectile   Quiver     Shovel         Salve       Cook
+  Keyring        Gem          Mortar     Powder         Axe         Wood
+  Fish           Fishingpole  Piece      Furniture      Cleaner
+~
+End
+
+#HELP
+Perm      2
+Keyword   OBJTRIGGERS~
+Updated   1195827869
+UpdatedBy Remcon~
+Text      Trigger Optnl Triggering Variable Explanation
+------- ----- ------------------- --------------------------------------------
+Wear          <percentage>        [when a player wears the object]
+Remove        <percentage>        [when a player removes the object]
+Speech   {p}  <keyword / phrase>  [says or tells from same room as mob]
+Rand          <percentage>        [randomly triggered based on percentile]
+Sac           <percentage>        [when a player sacrifices the object]
+Zap           <percentage>        [when the player is zapped due to alignment]
+Get           <percentage>        [when a player gets the object]
+Drop          <percentage>        [when a player drops the object]
+Damage        <percentage>        [when the object is damaged]
+Repair        <percentage>        [when the object is repaired]
+Greet         <percentage>        [when a mob/player enters the room]
+Exa           <percentage>        [when the object is Examined or Looked upon]
+Push          <percentage>        [when a player pushes an object]
+Pull          <percentage>        [when a player pulls an object]
+Use           <percentage>        [see 'help useprog' for details]
+Open          <percentage>        [when a player opens an object]
+Close         <percentage>        [when a player closes an object]
+Scrap         <percentage>        [when an object gets scrapped]
+Put           <percentage>        [when an object is put in another object]
+Act      {p}  <keyword / phrase>  [emotes, socials, actions, bamfs]
+Script   {h}                      [loops a line at a time. Hour triggers start]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE ABSORB'~
+Updated   1252370860
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check to see if the looker is able to absorb something.
+SEE ALSO: "HELP RIS".
+ 
+Examples:
+[#absorb = fire: You will absorb fire.]
+[#absorb ! fire: You won't absorb fire.]
+ 
+Note: They will only absorb it if more then 100 resistance.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE AFFECTED'~
+Updated   1252024030
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check to see if the looker is affected by something.
+SEE ALSO: "HELP OBJAFFECTED".
+ 
+Examples:
+[#affected = fly: You are affected by fly.]
+[#affected ! fly: You aren't affected by fly.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE CARRY'~
+Updated   1252024636
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check to see if the looker is carrying something.
+ 
+Examples:
+[#carry = 1200: You're carrying item 1200.]
+[#carry ! 1200: You're not carrying item 1200.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE CHARISMA'~
+Updated   1252024187
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the charisma of the looker.
+ 
+Examples:
+[#charisma > 30: You have more then 30 charisma.]
+[#charisma < 30: You have less then 30 charisma.]
+[#charisma = 30: You have 30 charisma.]
+[#charisma ! 30: You don't have 30 charisma.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE CONSTITUTION'~
+Updated   1252024148
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the constitution of the looker.
+ 
+Examples:
+[#constitution > 30: You have more then 30 constitution.]
+[#constitution < 30: You have less then 30 constitution.]
+[#constitution = 30: You have 30 constitution.]
+[#constitution ! 30: You don't have 30 constitution.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE DEXTERITY'~
+Updated   1252023622
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the dexterity of the looker.
+ 
+Examples:
+[#dexterity > 30: You have more then 30 dexterity.]
+[#dexterity < 30: You have less then 30 dexterity.]
+[#dexterity = 30: You have 30 dexterity.]
+[#dexterity ! 30: You don't have 30 dexterity.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE EXIT'~
+Updated   1252023901
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check to see if an exit going in a direction.
+ 
+Examples:
+[#exit = north: There is an exit North.]
+[#exit ! north: There isn't an exit going North.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE GOLD'~
+Updated   1252024752
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the gold of the looker.
+ 
+Examples:
+[#gold > 300: Your gold is above 300.]
+[#gold < 300: Your gold is less then 300.]
+[#gold = 300: Your gold is 300.]
+[#gold ! 300: Your gold is not 300.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE HP'~
+Updated   1252023471
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the hp of the looker.
+ 
+Examples:
+[#hp > 300: Your hp is above 300.]
+[#hp < 300: Your hp is less then 300.]
+[#hp = 300: Your hp is 300.]
+[#hp ! 300: Your hp is not 300.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE IMMUNE'~
+Updated   1252370779
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check to see if the looker is immune to something.
+SEE ALSO: "HELP RIS".
+ 
+Examples:
+[#immune = fire: You are immune to fire.]
+[#immune ! fire: You aren't immune to fire.]
+ 
+Note: They are only immune if they have a resistance of 100.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE INTELLIGENCE'~
+Updated   1252023588
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the intelligence of the looker.
+ 
+Examples:
+[#intelligence > 30: You have more then 30 intelligence.]
+[#intelligence < 30: You have less then 30 intelligence.]
+[#intelligence = 30: You have 30 intelligence.]
+[#intelligence ! 30: You don't have 30 intelligence.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE LEVEL'~
+Updated   1252023803
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the level of the looker.
+ 
+Examples:
+[#level > 30: Your level is above 30.]
+[#level < 30: Your level is less then 30.]
+[#level = 30: Your level is 30.]
+[#level ! 30: Your level is not 30.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE LIGHT'~
+Updated   1252023501
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the amount of light in the room.
+ 
+Examples:
+[#light > 3: There are more then 3 lights in the room.]
+[#light < 3: There are less then 3 lights in the room.]
+[#light = 3: There are 3 lights in the room.]
+[#light ! 3: There aren't 3 lights in the room.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE LUCK'~
+Updated   1252023543
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the luck of the looker.
+ 
+Examples:
+[#luck > 30: You have more then 30 luck.]
+[#luck < 30: You have less then 30 luck.]
+[#luck = 30: You have 30 luck.]
+[#luck ! 30: You don't have 30 luck.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE MANA'~
+Updated   1252023709
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the mana of the looker.
+ 
+Examples:
+[#mana > 300: Your mana is above 300.]
+[#mana < 300: Your mana is less then 300.]
+[#mana = 300: Your mana is 300.]
+[#mana ! 300: Your mana is not 300.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE MDAY'~
+Updated   1252101474
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the mday of the area.
+ 
+MDay (Mud Day) depends on the number of days in the month.
+ 
+Examples:
+[#mday > 3: The mday of the mud is above 3.]
+[#mday < 3: The mday of the mud is less then 3.]
+[#mday = 3: The mday of the mud is 3.]
+[#mday ! 3: The mday of the mud is not 3.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE MHOUR'~
+Updated   1252101359
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the mhour of the area.
+ 
+MHour (Mud Hour) time goes 0 - 23
+ 
+Examples:
+[#mhour > 3: The mhour of the mud is above 3.]
+[#mhour < 3: The mhour of the mud is less then 3.]
+[#mhour = 3: The mhour of the mud is 3.]
+[#mhour ! 3: The mhour of the mud is not 3.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE MMONTH'~
+Updated   1252101527
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the mmonth of the area.
+ 
+MMonth (Mud Month) depends on the number of months in a year.
+ 
+Examples:
+[#mmonth > 3: The mmonth of the mud is above 3.]
+[#mmonth < 3: The mmonth of the mud is less then 3.]
+[#mmonth = 3: The mmonth of the mud is 3.]
+[#mmonth ! 3: The mmonth of the mud is not 3.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE MOVE'~
+Updated   1252023450
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the movement points of the looker.
+ 
+Examples:
+[#move > 300: Your moves is above 300.]
+[#move < 300: Your moves is less then 300.]
+[#move = 300: Your moves is 300.]
+[#move ! 300: Your moves isn't 300.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE MWDAY'~
+Updated   1252101430
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the mwday of the area.
+ 
+MWDay (Mud Week Day) depends on the number of days you have a week.
+ 
+Examples:
+[#mwday > 3: The mwday of the mud is above 3.]
+[#mwday < 3: The mwday of the mud is less then 3.]
+[#mwday = 3: The mwday of the mud is 3.]
+[#mwday ! 3: The mwday of the mud is not 3.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE MYEAR'~
+Updated   1252101588
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the myear of the area.
+ 
+MYear (Mud Year).
+ 
+Examples:
+[#myear > 3: The myear of the mud is above 3.]
+[#myear < 3: The myear of the mud is less then 3.]
+[#myear = 3: The myear of the mud is 3.]
+[#myear ! 3: The myear of the mud is not 3.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE NAME'~
+Updated   1252024498
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check to see if the looker's name does or doesn't match.
+ 
+Examples:
+[#name = testing: Your name is Testing.]
+[#name ! testing: Your name isn't Testing.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE OHERE'~
+Updated   1252024691
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check to see if there is a specific object in the room.
+ 
+Examples:
+[#ohere = 1200: Item 1200 is in the room.]
+[#ohere ! 1200: Item 1200 is not in the room.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE PRECIPITATION'~
+Updated   1252101254
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the precipitation of the area.
+ 
+Examples:
+[#precipitation > 30: The precipitation of the area is above 30.]
+[#precipitation < 30: The precipitation of the area is less then 30.]
+[#precipitation = 30: The precipitation of the area is 30.]
+[#precipitation ! 30: The precipitation of the area is not 30.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE RESISTANT'~
+Updated   1252024320
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check to see if the looker is resistant by something.
+SEE ALSO: "HELP RIS".
+ 
+Examples:
+[#resistant = fire: You are resistant to fire.]
+[#resistant ! fire: You aren't resistant to fire.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE ROOM'~
+Updated   1251510798
+UpdatedBy Remcon~
+Text      This stuff allows you to make it so a room description can be more dynamic.
+
+Usage: [#<check> <?> <checking>: Message sent if the check was valid.]
+
+Example: [#name = Remcon: Your name is Remcon.]
+Example: [#hp > 3000: You have over 3000 hp.]
+
+Checks:
+  HP  NAME  MHOUR    AFFECTED  CONSTITUTION
+EXIT  WIND  MWDAY    CHARISMA INNTELLIGENCE
+GOLD  WORN  MYEAR    STRENGTH PRECIPITATION
+LUCK CARRY ABSORB   DEXTERITY
+MANA LEVEL IMMUNE   RESISTANT
+MDAY LIGHT MMONTH SUSCEPTIBLE
+MOVE OHERE WISDOM TEMPERATURE
+
+?s: < = > !
+ 
+Checkings: That is what your checking against.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE STRENGTH'~
+Updated   1252023484
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the strength of the looker.
+ 
+Examples:
+[#strength > 30: You have more then 30 strength.]
+[#strength < 30: You have less then 30 strength.]
+[#strength = 30: You have 30 strength.]
+[#strength ! 30: You don't have 30 strength.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE SUSCEPTIBLE'~
+Updated   1252024388
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check to see if the looker is susceptible by something.
+SEE ALSO: "HELP RIS".
+ 
+Examples:
+[#susceptible = fire: You are susceptible to fire.]
+[#susceptible ! fire: You aren't susceptible to fire.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE TEMPERATURE'~
+Updated   1252101180
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the temperature of the area.
+ 
+Examples:
+[#temperature > 30: The temperature of the area is above 30.]
+[#temperature < 30: The temperature of the area is less then 30.]
+[#temperature = 30: The temperature of the area is 30.]
+[#temperature ! 30: The temperature of the area is not 30.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE WIND'~
+Updated   1252101210
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the wind of the area.
+ 
+Examples:
+[#wind > 30: The wind of the area is above 30.]
+[#wind < 30: The wind of the area is less then 30.]
+[#wind = 30: The wind of the area is 30.]
+[#wind ! 30: The wind of the area is not 30.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE WISDOM'~
+Updated   1252023524
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check the wisdom of the looker.
+ 
+Examples:
+[#wisdom > 30: You have more then 30 wisdom.]
+[#wisdom < 30: You have less then 30 wisdom.]
+[#wisdom = 30: You have 30 wisdom.]
+[#wisdom ! 30: You don't have 30 wisdom.]
+~
+End
+
+#HELP
+Perm      1
+Keyword   'PARSE WORN'~
+Updated   1252024583
+UpdatedBy Remcon~
+Text      This is a check you can put in room descriptions to
+check to see if the looker is wearing something.
+ 
+Examples:
+[#worn = 1200: You're wearing item 1200.]
+[#worn ! 1200: You're not wearing item 1200.]
+~
+End
+
+#HELP
+Keyword   PFILES~
+Updated   1196901000
+UpdatedBy Remcon~
+Text      Player files (pfiles) are cleaned up daily going by the level of the player.
+A level 5 player will be deleted if they haven't logged on for 5 days.
+ 
+If you will be gone for more days then your current level ask an immortal to
+set the "nopdelete" flag on you and let them know why you won't be on for
+awhile.
+~
+End
+
+#HELP
+Perm      2
+Keyword   PIPEFLAGS~
+Updated   1195847257
+UpdatedBy Remcon~
+Text      These flags may be used with the item type pipe in the v3 item
+ # | Flag           | Description
+--- ---------------- ------------------------------------------------
+ 1 | PIPE_LIT       | Pipe is lit (required for smoking)
+ 2 | PIPE_GOINGOUT  | Pipe is about to go out
+ 4 | PIPE_FULLOFASH | Pipe is full of ashes, and needs to be emptied.
+~
+End
+
+#HELP
+Keyword   POSITIONS~
+Updated   1193520722
+UpdatedBy Remcon~
+Text      Positions are in a special order.
+
+Example: You can do more Sitting then you can Standing.
+If something has a minpos of Fighting, it can be done while Fighting (in standard style),
+Defensive, Evasive, Standing, Mounted, Shove, and Drag.
+
+The ordered list is as follows, left to right, top to bottom:
+-------------------------------------------------------------
+Dead                 Mortally Wounded       Incapacitated
+Stunned              Sleeping               Berserk
+Resting              Aggressive             Sitting
+Fighting             Defensive              Evasive
+Standing             Mounted                Shove
+Drag
+
+*Notice* Berserk, Aggressive, Fighting, Defensive, Evasive are all fighting positions.
+~
+End
+
+#HELP
+Keyword   PTOKENS~
+Updated   1214006857
+UpdatedBy Remcon~
+Text      Your prompt can be any string of characters that you wish. You can also embed
+special characters and tokens into the string that you set. These special
+characters are linked with specific groups of tokens. These tokens will add
+specific sets of information to your prompt.
+
+The first special character is:  %
+Tokens for % are:
+  %a - your alignment                    %A - invisible/hide/sneak display
+  %b - current blood/mana                %B - maximum blood/mana
+  %c - hp of who your fighting (%)       %C - hp of the tank (%)
+  %f -                                   %F - room flags (IMMORTAL)
+  %g - gold held (string)                %G -
+  %h - current hitpoints                 %H - maximum hitpoints
+  %i - wizinvis/invis display            %I - level of wizinvis
+  %j - new line                          %J - new line
+  %m - current blood/mana                %M - maximum blood/mana
+  %n - name of who your fighting         %N - name of the tank
+  %q - time left on/until quest          %Q -
+  %r - vnum of current room (IMMORTAL)   %R -
+  %s -                                   %S - your current style
+  %t - current mud time (number)         %T - current mud time (string)
+  %u - current connected descriptors     %U - max players
+  %v - current movement                  %V - maximum movement
+ 
+You can also use color in your prompt and fprompt.
+ 
+Examples (assuming current hit points of 43, mana of 23, and movement of 120):
+Prompt %h %m %v   =  43 23 120
+Prompt %h-%m-%v   =  43-23-120
+~
+End
+
+#HELP
+Perm      2
+Keyword   PULLTYPES PUSHTYPES~
+Updated   1195875633
+UpdatedBy Remcon~
+Text      Usage: redit pushtype <direction> <type>
+Usage: redit push <direction> <force>
+
+Pushtype/Pulltype where type is:
+undefined  vortex  vacuum     slip      ice        mysterious
+current    wave    whirlpool  geyser    wind       storm
+coldwind   breeze  landslide  sinkhole  quicksand  earthquake
+lava       hotair
+ 
+The frequency of the push is controlled by the value set in
+redit push <force>, and may be anything from -100 to 100. Positive
+and negative values represent pulling and pushing, respectively.
+The more positive (or negative) the number is, the sooner the force
+will push or pull you.
+~
+End
+
+#HELP
+Keyword   QUEST~
+Updated   1188862018
+UpdatedBy Remcon~
+Text      Usage: quest <message>
+ 
+This channel is used to send the message to everyone online.
+~
+End
+
+#HELP
+Keyword   RACETALK~
+Updated   1188175087
+UpdatedBy Remcon~
+Text      Usage: racetalk <message>
+ 
+This channel is used to send the message to everyone online that has the same
+race as you.
+~
+End
+
+#HELP
+Perm      1
+Keyword   RIS~
+Updated   1198988766
+UpdatedBy Remcon~
+Text      .
+   FIRE         WIND      EARTH     WATER     ICE        COLD
+   ELECTRICITY  ENERGY    BLUNT     PIERCE    SLASH      ACID
+   POISON       DRAIN     SLEEP     CHARM     NONMAGIC   MAGIC
+   PARALYSIS    HOLY      SHADOW    ABDAMAGE
+~
+End
+
+#HELP
+Perm      2
+Keyword   ROOMFLAGS~
+Updated   1204993943
+UpdatedBy Remcon~
+Text      Usage: redit flags <flag(s)>
+
+ROOM FLAGS:
+             DND   Room is DoNotDisturb.
+            DARK   Room is always dark.
+            SAFE   Room is safe... no violence allowed.
+           ARENA   Room is an arena.
+           DEATH   Room causes instant death.
+           NOMOB   Mobs cannot wander into this room.
+          LOCKER   Locker room... Can use locker command here.
+          NODROP   Nothing can be dropped in this room.
+          TUNNEL   Room is a tunnel - x number of players allowed.
+                   (use 'redit tunnel #' to  set the number).
+         INDOORS   Room is indoors (MUST also use sectortype inside).
+         NOFLOOR   Room has no floor: exit down + no fly = fall.
+         NOMAGIC   Magic cannot be used in this room.
+         PETSHOP   Petshop (next vnum must be the storeroom).
+         PRIVATE   Room is private (restricted to 2 people).
+         SILENCE   Not a sound can be made or heard in this room.
+        DONATION   Donation room... cannot get all.
+        EXPLORER   Players gain exp when entering (1 time).
+        NOASTRAL   People cannot astral to this room.
+        NORECALL   Players cannot recall out of this room.
+        NOSUMMON   Player cannot be summoned out of this room.
+        SOLITARY   Room is solitary (restricted to 1 person).
+        TELEPORT   People in this room will be teleported out.
+       NODROPALL   Cannot drop all in this room.
+       NOMISSILE   Missiles won't be of any use.
+       LOGSPEECH   All speech in this room is logged.
+      WILDERNESS   Players can enter and leave the wilderness in the room.
+     STORAGEROOM   Storage room.
+    NOSUPPLICATE   Players can't supplicate out.
+    TELESHOWDESC   Players will see the room desc of the destination room.
+~
+End
+
+#HELP
+Perm      2
+Keyword   ROOMTRIGGERS~
+Updated   1195827896
+UpdatedBy Remcon~
+Text      Trigger Optnl Triggering Variable Explanation
+------- ----- ------------------- ------------------------------------------
+Act      {p}  <keyword / phrase>  [emotes, socials, actions, bamfs]
+Speech   {p}  <keyword / phrase>  [says or tells from within the room]
+Rand          <percentage>        [randomly triggered based on percentile]
+Sleep         <percentage>        [when a player sleeps within the room]
+Rest          <percentage>        [when a player rests within the room]
+Entry         <percentage>        [when a mob/player enters the room]
+Fight         <percentage>        [when a player is fighting in the room]
+Death         <percentage>        [when a player dies in the room]
+Leave         <percentage>        [when a player leaves the room]
+Time          <hour>              [script prog, runs once on hour specified]
+Hour          <hour>              [loops as Script for an hour from start hour]
+Script   {h}                      [loops a line at a time. Hour triggers start]
+ 
+*NOTE* {hour}/<hour> is in military time. ie, 15 hours is 3p.m. mud time.
+*NOTE* The mpcommand MPDONOTHING currently only works in Script progs,
+       NOT in Time or Hour progs.
+~
+End
+
+#HELP
+Perm      2
+Keyword   SAVINGTHROWS~
+Updated   1195875546
+UpdatedBy Remcon~
+Text      Saving throws:
+  sav1 - Saving vs. poison or death
+  sav2 - Saving vs. wands
+  sav3 - Saving vs. paralysis or petrification
+  sav4 - Saving vs. breath
+  sav5 - Saving vs. spells or staves
+~
+End
+
+#HELP
+Perm      2
+Keyword   SECTORTYPES~
+Updated   1188831849
+UpdatedBy Remcon~
+Text      Usage: redit sector <sector>
+
+SECTORS:
+    0         INSIDE      1           CITY
+    2          FIELD      3         FOREST
+    4          HILLS      5       MOUNTAIN
+    6     WATER_SWIM      7   WATER_NOSWIM
+    8     UNDERWATER      9            AIR
+   10         DESERT     11          DUNNO
+   12     OCEANFLOOR     13    UNDERGROUND
+   14           LAVA     15          SWAMP
+~
+End
+
+#HELP
+Keyword   SHOUT~
+Updated   1188422930
+UpdatedBy Remcon~
+Text      Usage: shout <message>
+ 
+This channel is used to send a message to all awake players in the mud.
+~
+End
+
+#HELP
+Keyword   'SLEEP SPELL'~
+Updated   1186968164
+UpdatedBy Remcon~
+Text      Usage: cast sleep <target>
+ 
+This spell allows you to put the target into a deep slumber.
+~
+End
+
+#HELP
+Keyword   SMAUG~
+Updated   1185730909
+UpdatedBy Remcon~
+Text      .                               [WWW.SMAUG.ORG]
+         /     _      _            _      _    _____
+        /      |\    /|     /\     |      |   /     \     ***************
+       /       | \  / |    /  \    |      |  |            *   \\._.//   *
+      /        |  \/  |   /    \   |      |  |            *   (0...0)   *
+     /_______  |      |  |______|  |      |  |            *    ).:.(    *
+            /  |      |  |      |  |      |  |            *    {o o}    *
+           /   |      |  |      |  |      |  |     __     *   / ' ' \   *
+          /    |      |  |      |  |      |  |       |    *-'^.VxvxV.^'-*
+         /     |      |  |      |   \____/    \_____/     ***************
+        /
+            [S]imulated [M]edieval multi-[U]ser [A]dventure [G]ame
+SMAUG 1.4 is a Merc2.1 derivative written by Thoric (Derek Snider) with help
+from Altrag, Blodkai, Haus, Narn, Scryn, Swordbearer, Tricops, Gorog, Rennard,
+Grishnakh, Fireblade and Nivek.
+~
+End
+
+#HELP
+Perm      3
+Keyword   SMAUGSPELLS~
+Updated   1195875511
+UpdatedBy Remcon~
+Text      SMAUG has a specially coded spell type "spell_smaug", which is a generic
+spell handler that uses the extra spell fields to determine what the spell
+is going to achieve.
+ 
+damtype   the class of damage done (see DAMTYPES)
+acttype   the action of the spell (see ACTTYPES)
+classtype the class of spell (see CLASSTYPES)
+powertype the power ranking of the spell (see POWERTYPES)
+flag      special extra flags this spell has (see SPELLFLAGS)
+hit       Message displayed when spell is successful
+miss      Message displayed when spell misses or fails
+die       Message sent if spell causes death
+imm       Message sent if victim is immune
+(Messages must specify char, vict or room, ie: hitchar, hitvict, hitroom)
+dice      a dice formula used for rolling things like damage (see DICEFORMULAS)
+saves     saving throw victim gets (see SPELLSAVES)
+bitvector see AFFECTED_BY, the bitvector applied by the spell, if any
+affects   see AFFECTTYPES, the effect the spell has, if any
+value     an extra field reserved for things like the vnum used in spells
+          that create objects, or summon monsters to the caster's aid.
+~
+End
+
+#HELP
+Perm      2
+Keyword   SPECFUNCS~
+Updated   1195767319
+UpdatedBy Remcon~
+Text      To add special: mset <mob> spec <function>/none
+              SPECIAL  DESCRIPTION
+---------------------  --------------------------------------------
+      spec_breath_any  Mobiles uses the breaths randomly.
+     spec_breath_acid  Mobile has acid breath.
+     spec_breath_fire  Mobile has fire breath.
+    spec_breath_frost  Mobile has frost breath.
+      spec_breath_gas  Mobile has gas breath.
+spec_breath_lightning  Mobile has lightning breath.
+      spec_cast_adept  Mobile casts helpful spells.
+                       cure blindness, cure light, cure poison, cure serious,
+                       remove curse, cure critical, heal
+     spec_cast_cleric  Mobile casts offensive spells during battle.
+                       cause light, cause serious, cause critical, earthquake,
+                       blindness, dispel evil, curse, dispel magic
+       spec_cast_mage  Mobile casts offensive spells during battle.
+                       energy drain, fireball
+     spec_cast_undead  Mobile casts offensive spells during battle.
+                       curse, blindness, poison, energy drain, gate
+            spec_fido  Mobile eats corpses.
+         spec_janitor  Mobile picks up trash.
+          spec_poison  Mobile poisons during battle.
+           spec_thief  Mobile steals gold from players.
+~
+End
+
+#HELP
+Perm      2
+Keyword   SPELLCOMPONENTS~
+Updated   1199155657
+UpdatedBy Remcon~
+Text      .   T#  check for item of type #
+   V#  check for item of vnum #
+Kword  check for item with keyword 'word'
+   G#  check if player has # amount of gold
+   H#  check if player has # amount of hitpoints
+   M#  check if player has # of movement
+ 
+Special operators:
++ don't consume this component
+@ decrease component's value[0], and extract if it reaches 0
+# decrease component's value[1], and extract if it reaches 0
+$ decrease component's value[2], and extract if it reaches 0
+% decrease component's value[3], and extract if it reaches 0
+^^ decrease component's value[4], and extract if it reaches 0
+&& decrease component's value[5], and extract if it reaches 0
+and ! will make the spell fail if the caster is carrying that component.
+ 
+Example: V1100 V+1101
+The spell will only succeed if the caster is carrying objects of vnums
+1100 and 1101.  The object of vnum 1100 will get consumed by the spell,
+and the object of vnum 1101 will not.
+ 
+With the decremental operators (@#$%^^&&), the object must have at least
+a value of 1 in the respective location for the spell to succeed.
+~
+End
+
+#HELP
+Perm      2
+Keyword   SPELLFLAGS~
+Updated   1214069020
+UpdatedBy Remcon~
+Text      .       FLAGS  DESCRIPTION
+------------  -------------------------------------------------------
+       water  water based (create water, ice spells)
+        area  an "area spell"... affects everyone in the room
+     distant  affects something far away
+      noself  can't be used on yourself
+accumulative  can be cast repeatedly to have an increased effect
+  recastable  can be cast again to refresh the spell
+   canscribe  can be scribed onto a scroll
+     canbrew  can be brewed into a potion
+       group  affects everyone in the caster's group (same room only)
+      object  specifically affects an object (for target 'ignore')
+   character  specifically affect a character (for target 'ignore')
+ secretskill  only shows up on practice if they have learned it
+ pksensitive  affects target as if they were double your level
+  stoponfail  stops on failing
+     nofight  can't be cast while fighting
+    nodispel  not removed by dispel magic
+      canmix  can be mixed into a salve
+  canconcoct  can be concocted into a pill
+    cancarve  can be carved into a staff
+    canimbue  can be imbued into a wand
+     nomount  can't use this while mounted
+    candoall  can be scribed, brewed, concocted, carved and imbued
+~
+End
+
+#HELP
+Perm      3
+Keyword   SPELLSAVES~
+Updated   1195875425
+UpdatedBy Remcon~
+Text      Here are the saving throws you can set for use in SMAUG spells:
+none            victim doesn't get a saving throw
+poison_death    save vs. poison or death
+wands           save vs. wands
+para_petri      save vs. paralysis or petrification
+breath          save vs. (dragon) breath
+spell_staff     save vs. spells or staves
+~
+End
+
+#HELP
+Perm      3
+Keyword   'SSET CODE'~
+Updated   1203981211
+UpdatedBy Remcon~
+Text      Usage: sset <sn> code <code>
+ 
+This allows you to set the code on a spell, skill, etc...
+If there is a code added specific for it you can use it.
+If you want it to be a generic type of skill typically spell_smaug is used as
+the code.
+~
+End
+
+#HELP
+Perm      3
+Keyword   'SSET DELETE'~
+Updated   1213562698
+UpdatedBy Remcon~
+Text      Usage: sset <sn> type deleted
+ 
+This will allow you to set the type of a spell/skill/etc... to deleted and it
+won't be saved to the file. It is an effective way of removing them online.
+~
+End
+
+#HELP
+Perm      3
+Keyword   'SSET REQSKILL'~
+Updated   1204476883
+UpdatedBy Remcon~
+Text      Usage: sset <sn> reqskill <sn>
+ 
+This allows you to set it so the spell/skill/etc... requires a previous one to
+be learned.
+ 
+Example:
+Lets say we have fireball spell at sn 25 and another one called fireblast at
+26.
+If we wanted fireball to be learned only by ones that know fireblast you would
+set fireball reqskill to 26.
+~
+End
+
+#HELP
+Keyword   STATS~
+Updated   1211839292
+UpdatedBy Remcon~
+Text      .         Stat | Ways to increase
+--------------+----------------------------
+     Strength | Heavy weapons
+              | Pushups
+       Wisdom | Wiser enemies
+ Intelligence | More Intelligent enemies
+    Dexterity | Moving around
+ Constitution | Situps
+     Charisma | Increases if you level and charisma is lower then your level.
+              | Decreases if you aren't wearing something on body or legs.
+              | Decreases if you are wearing bloody or blood stained objects.
+         Luck | Random
+
+These are ways you can increase your perm stats.
+No stat can be increased higher then your level.
+(Still looking for a way to have charisma increase that makes sense)
+~
+End
+
+#HELP
+Perm      2
+Keyword   STATTYPES~
+Updated   1250902947
+UpdatedBy Remcon~
+Text      Usage: oset <item> affect stat <stat> <amount>
+ 
+Stats:
+luck
+wisdom
+charisma
+strength
+dexterity
+constitution
+intelligence
+~
+End
+
+#HELP
+Keyword   STR STRENGTH~
+Updated   1188858248
+UpdatedBy Remcon~
+Text      Strength (STR in your 'score') represents your character's physical power.
+ 
+Among other things, it affects:
+ 
+ - how much weight you can carry.
+
+ - damage roll and hitroll; for each additional point of strength, each
+   of these will increase
+ 
+ - chances of success for bash, stun, bashdoor, shove and drag, and the
+   ability to dual-wield heavier weapons
+~
+End
+
+#HELP
+Keyword   SUMMARY~
+Updated   1235862824
+UpdatedBy Remcon~
+Text      |-----------| MOVEMENT |-----------|-------------| GROUP |------------|
+|north east south west northeast up| follow group gtell split         |
+|northwest southeast southwest down|---------| INFORMATION |----------|
+|somewhere open close lock unlock  |death damage areas commands score |
+|leave enter climb fly float look  |title weather channels description|
+|where scan scry sleep wake stand  |who report password typo note MOTD|
+|rest sit                          |wizlist news bug time slist report|
+|---------| CONFIG OPTIONS |-------|languages idea                    |
+|autoloot autogold autoexit autosac|------------| COMBAT |------------|
+|nice norecall ansi blank pager gag|kill flee wimpy rescue aid murder |
+|nointro prompt telnetga brief solo|cast                              |
+|combine keepalive compass hints   |---------| COMMUNICATION |--------|
+|groupaffects finfo suicide sparing|yell chat racetalk classtalk music|
+|autosplit nosummon noassist drag  |quest immtalk wartalk traffic     |
+|smartsac noinduct groupwho wimpy  |fchat                             |
+|-----------------------------| OBJECTS |-----------------------------|
+|get put drop give sacrifice recite wield wear remove inventory list  |
+|appraise buy sell compare examine hold quaff zap brandish equipment  |
+|empty fill eat drink pick value open close lock unlock look auction  |
+|---------------------------------------------------------------------|
+ 
+Also see help on: 
+, SAVE, QUIT, PAGELENGTH, PRACTICE.
+To use the help menu, just type "help <topic>".
+To see help on individual areas, you can now type "help <full area name>".
+If you are new to the Realms, type HELP NEW to see a special help series.
+~
+End
+
+#HELP
+Keyword   TAMP~
+Updated   1188752088
+UpdatedBy Remcon~
+Text      Usage: tamp <pipe>
+ 
+This command empties your pipe so that you may fill it with fresh herbs.
+~
+End
+
+#HELP
+Perm      3
+Keyword   TARGETTYPES~
+Updated   1195833577
+UpdatedBy Remcon~
+Text      .   Target  Function
+---------  -----------------------------------------------
+   ignore  Spell affect relies on the casting argument
+offensive  Spell will initiate combat
+defensive  Can be cast on anyone safely
+     self  Spell only affects the caster
+   objinv  Casted onto an object in the caster's inventory
+~
+End
+
+#HELP
+Keyword   TRAFFIC~
+Updated   1188169245
+UpdatedBy Remcon~
+Text      Usage: traffic [<message>]
+ 
+This channel is used to buy/sell something.
+~
+End
+
+#HELP
+Perm      2
+Keyword   TRAPFLAGS~
+Updated   1194561601
+UpdatedBy Remcon~
+Text      .Trap Flag | Description
+-------------------------------------------------------
+      ROOM | Trap is in a room
+       OBJ | Trap is on an object
+     ENTER | Trap is triggered by entering the room
+     LEAVE | Trap is triggered by leaving the room
+      OPEN | Trap is triggered by opening
+     CLOSE | Trap is triggered by closing
+       GET | Trap is triggered by getting the object
+       PUT | Trap is triggered by putting the object
+   EXAMINE | Trap is triggered by examining the object
+      PICK | Trap is triggered by picking the object
+    UNLOCK | Trap is triggered by unlocking the object
+     NORTH | Trap is triggered by moving north
+     SOUTH | Trap is triggered by moving south
+      EAST | Trap is triggered by moving east
+      WEST | Trap is triggered by moving west
+        UP | Trap is triggered by moving up
+      DOWN | Trap is triggered by moving down
+        NE | Trap is triggered by moving northeast
+        NW | Trap is triggered by moving northwest
+        SE | Trap is triggered by moving southeast
+        SW | Trap is triggered by moving southwest
+~
+End
+
+#HELP
+Perm      2
+Keyword   TRAPSETTING~
+Updated   1195875457
+UpdatedBy Remcon~
+Text      Setting a trap is a little tricky.
+
+Parameters: <vnum> <type> <charges> <flags>
+VNUM    - The vnum of either the room or object to be trapped.
+TYPE    - The type of trap.  (See TRAPTYPES)
+CHARGES - The number of charges this trap should contain.
+FLAGS   - Flags specifying the characteristics of the trap.
+          (ie: room trap or object trap, what triggers the trap, etc.)
+~
+End
+
+#HELP
+Perm      2
+Keyword   TRAPTYPES~
+Updated   1194561659
+UpdatedBy Remcon~
+Text      Trap Types:
+  ------------------------------------------------------
+ | Num. | Description     | Num. | Description          |
+  ------------------------------------------------------
+ |   1  | Poison gas      |   7  | Sleeping gas         |
+ |   2  | Poison dart     |   8  | Flame                |
+ |   3  | Poison needle   |   9  | Explosion            |
+ |   4  | Poison dagger   |  10  | Acid Spray           |
+ |   5  | Poison arrow    |  11  | Electric Shock       |
+ |   6  | Blindness gas   |  12  | Blade                |
+  ------------------------------------------------------
+~
+End
+
+#HELP
+Keyword   TSR D&&D AD&&D~
+Updated   1199155675
+UpdatedBy Remcon~
+Text      .               Dungeons && Dragons (tm) and TSR Hobbies Inc.
+
+  Here we'd like to duplicate the original credits from the Basic Rules,
+Dungeons && Dragons (tm), (c) 1974, 1977, 1978, 1981, 1983 TSR Hobbies Inc.
+
+Acknowledgements:
+The following individuals have made this work possible through its years of
+evolution: Dave Arneson, Brian Blume, Dave Cook, Anne C. Gray, Ernie Gygax,
+E. Gary Gygax, Allen Hammack, Kevin Hendryx, John Eric Holmes, Harrold
+Johnston, Tim Kask, Jeff Key, Rob Kuntz, Alan Lucien, Steve Marsh, Tom
+Moldvay, Mike Mornard, Jon Pickens, Brian Pitzer, Michael Price, Patrick L.
+Price, Paul Reiche, Evan Robinson, Gordon Schick, Lawrence Schick, Don Snow,
+Edward G. Sollers, Garry Spiegle, Stephen D. Sullivan, Ralph Wagner, Jim
+Ward, Jean Wells, Bill Wilkerson, Donald Paterson, and Frank Mentzer.
+
+      DIKUMud's concepts were directly based on TSR's D&&D concepts.
+~
+End
+
+#HELP
+Perm      2
+Keyword   USEPROG~
+Updated   1199670499
+UpdatedBy Remcon~
+Text      Usage: opedit <object> <command> [number] [use_prog] [percentage]
+ 
+The use_prog is an objtrigger that can be used in object programs. The
+use_prog will be executed when the item is used. To define what will
+trigger the use_prog, here is a list:
+ 
+* Wands - when you zap
+* Staves - when you brandish
+* Food/pills - when you eat
+* Blood/fountains/drink containers - when you drink
+* Lights/armour/weapons - when you wear
+* Potions - when you quaff
+* Pipes - when you smoke
+* Salves - when you apply it
+ 
+When the use_prog is executed you will not see the standard 'usage message'
+(EX: You quaff a violet potion). What you will see is any mpechoes placed
+in the program.
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES ARMOR'~
+Updated   1195039084
+UpdatedBy Remcon~
+Text      V0 = Current Condition
+V1 = Original Condition
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES AXE'~
+Updated   1198968906
+UpdatedBy Remcon~
+Text      V0 = Condition
+V1 = Original Condition
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES BLOOD'~
+Updated   1195861244
+UpdatedBy Remcon~
+Text      V0 = Capacity
+V1 = Quantity
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES BUTTON'~
+Updated   1195039438
+UpdatedBy Remcon~
+Text      V0 = Flags (Help LEVERFLAGS)
+V1 = Vnum or Spell Number
+V2 = Vnum
+V3 = Vnum or Value
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES CONTAINER'~
+Updated   1198966899
+UpdatedBy Remcon~
+Text      V0 = Capacity
+V1 = Flags (Help CONTAINERFLAGS)
+V2 = Key Vnum
+V3 = Condition
+V4 = Original Condition
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES COOK'~
+Updated   1195441057
+UpdatedBy Remcon~
+Text      V0 = Food Value
+V1 = Condition (0- = Bad - 10+ = Fresh)
+V2 = Condition (0 = raw, 1 = roasted, 2 = over cooked, 3+ = burnt)
+V3 = Poison
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES DRINKCON'~
+Updated   1195859815
+UpdatedBy Remcon~
+Text      V0 = Capacity
+V1 = Quantity
+V2 = Liquid Number
+V3 = Poison
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES FISH'~
+Updated   1198359407
+UpdatedBy Remcon~
+Text      V0 = Food Value
+V1 = Condition (0- = Bad - 10+ = Fresh)
+V2 = Condition (0 = raw, 1 = roasted, 2 = over cooked, 3+ = burnt)
+V3 = Poison
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES FOOD'~
+Updated   1198358717
+UpdatedBy Remcon~
+Text      V0 = Food Value
+V1 = Condition (0- = Bad - 10+ = Fresh)
+V3 = Poison
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES HERB'~
+Updated   1195859552
+UpdatedBy Remcon~
+Text      V1 = Charges
+V2 = Herb Spell Number
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES HERBCON'~
+Updated   1195859778
+UpdatedBy Remcon~
+Text      V0 = Capacity
+V1 = Quantity
+V2 = Herb Spell Number
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES KEY'~
+Updated   1195431572
+UpdatedBy Remcon~
+Text      V0 = (Number for the exit key)
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES KEYRING'~
+Updated   1198966928
+UpdatedBy Remcon~
+Text      V0 = Capacity
+v3 = Condition
+V4 = Original Condition
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES LEVER'~
+Updated   1195039419
+UpdatedBy Remcon~
+Text      V0 = Flags (Help LEVERFLAGS)
+V1 = Vnum or Spell Number
+V2 = Vnum
+V3 = Vnum or Value
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES LIGHT'~
+Updated   1198967016
+UpdatedBy Remcon~
+Text      V0 = Current Condition
+V1 = Original Condition
+V2 = Hours Left
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES LOCKPICK'~
+Updated   1198980196
+UpdatedBy Remcon~
+Text      V0 = Condition
+V1 = Original Condition
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES MISSILEWEAPON'~
+Updated   1195865334
+UpdatedBy Remcon~
+Text      V0 = Condition (1 - 12)
+V1 = Number of Dice
+V2 = Size of Dice
+V3 = Weapon Type (Help WEAPONTYPES)
+V4 = Range
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES MONEY'~
+Updated   1255570055
+UpdatedBy Remcon~
+Text      V0 = Amount (Under a Billion)
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES MORTAR'~
+Updated   1195430125
+UpdatedBy Remcon~
+Text      V0 = Number of Uses Left
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES PIECE'~
+Updated   1200882628
+UpdatedBy Remcon~
+Text      V0 = Vnum of what it connects to
+V1 = Vnum it creates when it's connected
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES PILL'~
+Updated   1198890809
+UpdatedBy Remcon~
+Text      V0 = Spell Level
+V1 = Spell Number (Set to -1 if you want people able to concoct a spell here (V5 has to be 1))
+V2 = Spell Number (Set to -1 if you want people able to concoct a spell here (V5 has to be 1))
+V3 = Spell Number (Set to -1 if you want people able to concoct a spell here (V5 has to be 1))
+V4 = Food Value (How much it decreases hunger)
+V5 = (Set to 1 if you want it so spells can be concocted into it)
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES PIPE'~
+Updated   1195859502
+UpdatedBy Remcon~
+Text      V0 = Capacity
+V1 = # of Draws Left
+V2 = Herb Spell Number
+V3 = Help PIPEFLAGS
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES POTION'~
+Updated   1198890419
+UpdatedBy Remcon~
+Text      V0 = Spell Level
+V1 = Spell Number (Set to -1 if you want people able to brew a spell here (V5 has to be 1))
+V2 = Spell Number (Set to -1 if you want people able to brew a spell here (V5 has to be 1))
+V3 = Spell Number (Set to -1 if you want people able to brew a spell here (V5 has to be 1))
+V5 = (Set to 1 if you want it so spells can be brewed onto it)
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES POWDER'~
+Updated   1195430125
+UpdatedBy Remcon~
+Text      V0 = Number of Uses Left
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES PROJECTILE'~
+Updated   1200872097
+UpdatedBy Remcon~
+Text      V1 = Number of Dice
+V2 = Size of Dice
+V3 = Weapon Type (Help WEAPONTYPES)
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES PULLCHAIN'~
+Updated   1195039461
+UpdatedBy Remcon~
+Text      V0 = Flags (Help LEVERFLAGS)
+V1 = Vnum or Spell Number
+V2 = Vnum
+V3 = Vnum or Value
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES QUIVER'~
+Updated   1198966874
+UpdatedBy Remcon~
+Text      V0 = Capacity
+V1 = Flags (Help CONTAINERFLAGS)
+V2 = Key Vnum
+V3 = Condition
+V4 = Original Condition
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES SALVE'~
+Updated   1195172131
+UpdatedBy Remcon~
+Text      V0 = Spell Level
+V1 = Charges (Set to -1 if you want people to be able to use it in mixing)
+V2 = Delay
+V3 = Spell Number (Set to -1 if you want people able to mix a spell here (V1 has to be -1))
+V4 = Spell Number (Set to -1 if you want people able to mix a spell here (V1 has to be -1))
+V5 = Spell Number (Set to -1 if you want people able to mix a spell here (V1 has to be -1))
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES SCROLL'~
+Updated   1198890533
+UpdatedBy Remcon~
+Text      V0 = Spell Level
+V1 = Spell Number (Set to -1 if you want people able to scribe a spell here (V5 has to be 1))
+V2 = Spell Number (Set to -1 if you want people able to scribe a spell here (V5 has to be 1))
+V3 = Spell Number (Set to -1 if you want people able to scribe a spell here (V5 has to be 1))
+V5 = (Set to 1 if you want it so spells can be scribed onto it)
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES SHOVEL'~
+Updated   1198981625
+UpdatedBy Remcon~
+Text      V0 = Condition
+V1 = Original Condition
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES STAFF'~
+Updated   1195039032
+UpdatedBy Remcon~
+Text      V0 = Spell Level
+V1 = Max Charges
+V2 = Charges
+V3 = Spell Number (Set to -1 if you want it so spells can be carved onto it)
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES SWITCH'~
+Updated   1195039395
+UpdatedBy Remcon~
+Text      V0 = Flags (Help LEVERFLAGS)
+V1 = Vnum or Spell Number
+V2 = Vnum
+V3 = Vnum or Value
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES TRAP'~
+Updated   1239582475
+UpdatedBy Remcon~
+Text      V0 = Charges
+V1 = Help TRAPTYPES
+V2 = Level
+V3 = Help TRAPFLAGS
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES WAND'~
+Updated   1195038999
+UpdatedBy Remcon~
+Text      V0 = Spell Level
+V1 = Max Charges
+V2 = Charges
+V3 = Spell Number
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES WEAPON'~
+Updated   1195172051
+UpdatedBy Remcon~
+Text      V0 = Condition (1 - 12)
+V1 = Number of Dice
+V2 = Size of Dice
+V3 = Weapon Type (Help WEAPONTYPES)
+~
+End
+
+#HELP
+Perm      1
+Keyword   'VALUES WOOD'~
+Updated   1195430259
+UpdatedBy Remcon~
+Text      V0 = Time added to fire when using makefire.
+~
+End
+
+#HELP
+Perm      2
+Keyword   VARIABLE VARIABLES~
+Updated   1198447368
+UpdatedBy Remcon~
+Text      This is the list of variables to be used in actiondescs for objects and in
+mob/room/object programs.
+ 
+Program Variables:
+VARIABLE          ACTOR    RANDOM  VICTIM  MOBILE  OBJECT   OBJECT2
+----------------  -------  ------  ------  ------  -------  -------
+Name              $n ($f)  $r      $t      $i      $o ($w)  $p ($z)
+Short Desc/Title  $N ($F)  $R      $T      $I      $O ($W)  $P ($Z)
+a/an                                               $a       $A
+he/she/it         $e       $J      $E      $j
+him/her/it        $m       $K      $M      $k
+his/her/its       $s       $L      $S      $l
+
+$w $W $z $Z is for the wearer of the object.
+$f $F is for who is fighting the actor.
+
+Action Variables:
+VARIABLE          ACTOR  VICTIM  OBJECT   OBJECT2
+----------------  -----  ------  -------  -------
+Short Desc/Title  $n     $N      $p       $P
+he/she/it         $e     $E
+him/her/it        $m     $M
+his/hers/its      $s     $S
+ 
+$q adds an s to something when shown to others besides the actor.
+$Q shows "your" when shown to actor and "his/her/its" when shown to others.
+~
+End
+
+#HELP
+Keyword   WARTALK~
+Updated   1188169261
+UpdatedBy Remcon~
+Text      Usage: wartalk [<message>]
+ 
+This channel is mostly used by deadlies.
+~
+End
+
+#HELP
+Perm      2
+Keyword   WEAPONTYPES~
+Updated   1194477045
+UpdatedBy Remcon~
+Text      For items of type "weapon", the value3 field specifies the weapon type:
+ 
+Value3 | Type     | Weapons     | Skill
+-------------------------------------------------------------
+   0   | hit      | general     |pugilism
+   1   | slice    | knife/sword |long blades
+   2   | stab     | dagger      |short blades
+   3   | slash    | sword       |long blades
+   4   | whip     | whip        |flexible arms
+   5   | claw     | claw        |talonous arms
+   6   | blast    | magical     |pugilism
+   7   | pound    | club/hammer |bludgeons
+   8   | crush    | club/hammer |bludgeons
+   9   | bite     |             |pugilism
+  10   | pierce   | dagger      |short blades
+  11   | suction  |             |pugilism
+  12   | bolt     | crossbow    |missile weapons
+  13   | arrow    | bow         |missile weapons
+  14   | dart     | pipe        |missile weapons
+  15   | stone    | sling       |missile weapons
+  16   | pea      | peashooter  |missile weapons
+~
+End
+
+#HELP
+Perm      2
+Keyword   WEARFLAGS~
+Updated   1194474992
+UpdatedBy Remcon~
+Text      These flags should be self explanatory:
+ notake  head       ears      ear      eyes    face
+ neck    shoulders  shoulder  about    arm     wrists
+ wrist   hands      hand      fingers  finger  2hand
+ hold    waist      legs      leg      ankles  ankle
+ feet    foot
+~
+End
+
+#HELP
+Perm      2
+Keyword   WEARLOCS~
+Updated   1194474790
+UpdatedBy Remcon~
+Text      Locations where items may be equipped:
+  -------------------------------------------------------
+ |  0 | head        |  1 | ears        |  2 | ear1       |
+ |  3 | ear2        |  4 | eyes        |  5 | eye1       |
+ |  6 | eye2        |  7 | face        |  8 | neck       |
+ |  9 | shoulders   | 10 | shoulder1   | 11 | shoulder2  |
+ | 12 | about       | 13 | body        | 14 | back       |
+ | 15 | arms        | 16 | arm1        | 17 | arm2       |
+ | 18 | wrists      | 19 | wrist1      | 20 | wrist2     |
+ | 21 | hands       | 22 | hand1       | 23 | hand2      |
+ | 24 | fingers     | 25 | finger1     | 26 | finger2    |
+ | 27 | 2hand       | 28 | hold1       | 29 | hold2      |
+ | 30 | waist       | 31 | legs        | 32 | leg1       |
+ | 33 | leg2        | 34 | ankles      | 35 | ankle1     |
+ | 36 | ankle2      | 37 | feet        | 38 | foot1      |
+ | 39 | foot2                                            |
+  -------------------------------------------------------
+~
+End
+
+#HELP
+Keyword   WIS WISDOM~
+Updated   1188857774
+UpdatedBy Remcon~
+Text      Wisdom (WIS in your 'score') represents your character's wisdom and ability to
+incorporate learning.
+
+Among other things, it affects:
+
+ - the percentage you learn of a new language each practice,
+   though intelligence affects this slightly more
+ 
+ - the ability to remove a trap or poison a weapon
+~
+End
+
+#HELP
+Keyword   YELL~
+Updated   1188422895
+UpdatedBy Remcon~
+Text      Usage: yell <message>
+ 
+This channel is used to send a message to all awake players in the same area as
+you.
+~
+End
+
+#HELP
+Keyword   _DIEMSG_~
+Updated   1185732451
+UpdatedBy Remcon~
+Text      ...Everything begins to fade to black.
+
+You feel yourself leaving your body... rising up into the air, you feel
+more free than you have ever felt before...
+
+However, before your deity comes to collect your soul, you feel a strange
+pulling sensation as strange and colorful mists swirl around you...
+~
+End
+
+#END

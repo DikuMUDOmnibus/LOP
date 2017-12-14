@@ -1,0 +1,36 @@
+Name        Pixie~
+Used        0
+Classes     Paladin Warrior Augurer~
+NStat       9 100 strength~
+NStat       12 100 intelligence~
+NStat       16 100 dexterity~
+NStat       11 100 constitution~
+NStat       16 100 charisma~
+Hit         100
+Mana        100
+Move        100
+Uses        1
+Affected    flying~
+SLanguage   pixie~
+Align       0
+Min_Align   -1000
+Max_Align   1000
+AC_Plus     0
+MinHeight   53
+MaxHeight   82
+MinWeight   166
+MaxWeight   241
+Hunger_Mod  0
+Thirst_mod  0
+Race_Recall 0
+Skill 'common' 1 100
+Skill 'dwarven' 1 100
+Skill 'elvish' 1 100
+Skill 'gith' 1 100
+Skill 'gnome' 1 100
+Skill 'halfling' 1 100
+Skill 'ogre' 1 100
+Skill 'orcish' 1 100
+Skill 'pixie' 1 100
+Skill 'trollish' 1 100
+End

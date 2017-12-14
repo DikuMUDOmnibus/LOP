@@ -1,0 +1,23 @@
+This file is going to be a simple document on how to go about creating an object.
+
+OCREATE = This is the command you will use to create an object, you can create
+          a completely new one or use a similar existing one to copy and save
+          yourself some typing.
+          EX: ocreate 500 Testing
+              This will create a new object called testing using vnum 500.
+          EX: ocreate 500 400 Testing
+              This will create a new object called testing and set it up
+              like object 400.
+
+   OSET = This is the command you will use to set stuff on objects.
+          See HELP OSET
+
+ OPEDIT = This is the command you will use to add programs to objects.
+          See HELP OPEDIT
+
+ OPCOPY = This command allows you to copy object programs from one object to
+          another.
+          See HELP OPCOPY
+
+   To modify a prototype object you must have the object you are modifying set
+as a prototype.

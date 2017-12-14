@@ -1,0 +1,21 @@
+This file is going to be a simple document on how to go about creating a skill/spell/etc...
+
+SLOOKUP = This command allows you to lookup a skill/spell/etc... that is
+          already created and see how it is set.
+
+   SSET = This command will allow you to create and set a skill/spell/etc...
+
+While these are the two major things when creating spells/skills/etc... there
+are lots of help files you might find helpfull.
+Help files you should look at:
+        SLOOKUP
+           SSET
+    AFFECTTYPES
+ OBJECTAFFECTED
+      STATTYPES
+      SSET CODE
+    SSET DELETE
+  SSET REQSKILL
+
+Most of it should be easy to figure out, one day more info might be given in
+this document.

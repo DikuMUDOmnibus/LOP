@@ -1,0 +1,836 @@
+#AREA       Limbo~
+#AVNUM      1
+#AUTHOR     RoD~
+#RANGES     0 100 0 100
+#RESETMSG   A dim pulse of light filters through the swirling mists.~
+#FLAGS      noteleport noquest noshow~
+#CLIMATE    2 2 2
+
+#MOBILES
+Vnum        1
+Level       100
+Name        Puff~
+Short       Puff~
+Long        Puff the Fractal Dragon is here, contemplating a higher reality.
+~
+Flags       npc sentinel prototype~
+Affected    detect_invis detect_hidden sanctuary infrared protect truesight~
+NResistant  100 sleep~
+NResistant  100 charm~
+NResistant  100 nonmagic~
+NResistant  100 magic~
+NResistant  100 paralysis~
+Attacks     claws~
+Defenses    parry dodge~
+DefPosition standing~
+Sex         female~
+Alignment   1000
+Hit         30000 30550
+NStat       125 strength~
+NStat       125 intelligence~
+NStat       125 wisdom~
+NStat       125 dexterity~
+NStat       125 constitution~
+NStat       125 charisma~
+NStat       125 luck~
+Armor       300
+Gold        1000
+Special     spec_breath_gas
+> rand_prog 5~
+mpe To escape Limbo, type a command or say "return" ...
+~
+> rand_prog 50~
+mpat 4 mppurge
+~
+|
+End
+
+Vnum        3
+Level       100
+Name        supermob~
+Short       the supermob~
+Long        The supermob is here.  He looks busy as hell.
+~
+Description
+ How clever he looks!
+~
+Flags       npc mobinvis~
+Affected    invisible detect_invis detect_hidden hide truesight~
+NResistant  100 blunt~
+NResistant  100 pierce~
+NResistant  100 slash~
+NResistant  100 sleep~
+NResistant  100 charm~
+NResistant  100 nonmagic~
+NResistant  100 paralysis~
+Defenses    parry dodge~
+DefPosition standing~
+Alignment   -1000
+Hit         31000 31550
+NStat       125 strength~
+NStat       125 intelligence~
+NStat       125 wisdom~
+NStat       125 dexterity~
+NStat       125 constitution~
+NStat       125 charisma~
+NStat       125 luck~
+Armor       300
+Gold        1000
+> rand_prog 10~
+mpinvis 5
+if isnpcact($i) != mobinvis
+  mpinvis
+endif
+~
+|
+End
+
+Vnum        5
+Level       1
+Name        undead animated corpse~
+Short       an animated corpse~
+Long        An animated corpse struggles with the horror of its undeath.
+~
+Description
+ Denied its rightful death, this animated corpse has been infused with the
+powerful energies of its master.  It exists on the precipice between life
+and unlife, even as its physical body rots and decays under the strain of
+its tasks.
+~
+Flags       npc~
+Parts       head arms legs~
+Defenses    dodge~
+DefPosition standing~
+Hit         200 500
+End
+
+Vnum        80
+Level       25
+Name        guardian vampire~
+Short       a guardian vampire~
+Long        A vampire is here hiding his face from your light source.
+~
+Description
+ Before you stands a guardian vampire, looking quite evil to say the least.
+The hair on your arms is raised by its presence alone, and it seems to you
+that he appears too formidable to be a minor minion.
+~
+Flags       npc sentinel wimpy~
+Affected    detect_invis detect_hidden~
+Parts       head arms legs hands feet ear eye~
+Attacks     drain curse~
+DefPosition standing~
+Sex         male~
+Alignment   -1000
+Hit         300 500
+Armor       4
+> fight_prog 60~
+if isnpc($n)
+  , shrieks in rage and vanishes ...
+  mpgoto 4
+endif
+~
+|
+End
+
+Vnum        81
+Level       50
+Name        cityguard~
+Short       a cityguard~
+Long        A cityguard is here protecting his beloved city.
+~
+Flags       npc prototype~
+DefPosition standing~
+Sex         male~
+Hit         2500 3000
+End
+
+Vnum        99
+Level       1
+Name        final mob~
+Short       a newly created final mob~
+Long        Some god abandoned a newly created final mob here.
+~
+Flags       npc~
+DefPosition standing~
+Hit         1 100
+End
+
+#0
+
+
+#OBJECTS
+Vnum     1
+Name     first object~
+Short    a newly created first object~
+Description
+Some god dropped a newly created first object here.~
+Flags    prototype~
+End
+
+Vnum     2
+Name     coin gold~
+Short    a gold coin~
+Description
+One miserable gold coin.~
+Type     money~
+Val0     1
+Val1     0 
+End
+
+Vnum     3
+Name     coins gold~
+Short    %s gold coins~
+Description
+A pile of %s gold coins.~
+Type     money~
+Val1     0 
+End
+
+Vnum     10
+Name     corpse~
+Short    the corpse of %s~
+Description
+The corpse of %s lies here.~
+Type     corpse~
+Val0     0
+Val1     0 
+Val3     1 
+Weight   100
+End
+
+Vnum     11
+Name     corpse~
+Short    the corpse of %s~
+Description
+The corpse of %s is lying here.~
+Type     corpse_pc~
+Wear     notake~
+Val0     0
+Val1     0 
+Val3     1 
+Weight   100
+End
+
+Vnum     12
+Name     head~
+Short    the decapitated head of %s~
+Description
+The head of %s lies here, a vacant stare of shock on its face.~
+Action   %s gobble$q down $p with gusto... disgusting!~
+Type     cook~
+Val0     10
+Weight   5
+End
+
+Vnum     13
+Name     heart~
+Short    the torn-out heart of %s~
+Description
+The torn-out heart of %s lies here, no longer beating with life.~
+Action   %s savagely devour$q $p!~
+Type     cook~
+Val0     16
+Weight   2
+End
+
+Vnum     14
+Name     arm~
+Short    the mangled arm of %s~
+Description
+A writhing arm lies torn from the body of %s.~
+Action   %s chomp$q on $p.~
+Type     cook~
+Val0     30
+Weight   5
+End
+
+Vnum     15
+Name     leg~
+Short    the dismembered leg of %s~
+Description
+Still twitching as if to kick you, the leg of %s lies here.~
+Action   %s chomp$q on $p.~
+Type     cook~
+Val0     40
+Weight   5
+End
+
+Vnum     16
+Name     guts~
+Short    the spilled guts of %s~
+Description
+The disemboweled guts of %s swarm with maggots.~
+Type     cook~
+Val0     5
+Val3     1 
+End
+
+Vnum     17
+Name     blood~
+Short    the spilled blood~
+Description
+A pool of spilled blood lies here.~
+Type     blood~
+Wear     notake~
+Val0     5
+Val3     1 
+End
+
+Vnum     18
+Name     bloodstain~
+Short    the bloodstain~
+Description
+Blood stains the ground.~
+Type     bloodstain~
+Wear     notake~
+Val0     5
+Val3     1 
+End
+
+Vnum     19
+Name     scraps remnants~
+Short    the remnants of %s~
+Description
+The remnants of %s are strewn about.~
+Type     scraps~
+Val0     5
+Val3     1 
+End
+
+Vnum     20
+Name     magic mushroom~
+Short    a magic mushroom~
+Description
+A magic mushroom appears to have been left here.~
+Action   %s enjoy$q $p.~
+Type     food~
+Val0     5
+Cost     10
+End
+
+Vnum     21
+Name     ball light~
+Short    a ball of light~
+Description
+A ball of light.~
+Type     light~
+Flags    glow magic~
+Wear     hold~
+End
+
+Vnum     22
+Name     mystical spring flowing~
+Short    a mystical spring~
+Description
+A mystical spring flows majestically from a glowing circle of blue.~
+Type     fountain~
+Flags    magic~
+Wear     notake~
+Val1     100 
+Weight   10
+> use_prog 100~
+mpechoat $n You drink deeply from the flow of mystical water.
+mpechoar $n $n drinks deeply from the flow of mystical water.
+~
+|
+End
+
+Vnum     23
+Name     skin~
+Short    the skin of %s~
+Description
+The skin of %s lies here.~
+Type     treasure~
+End
+
+Vnum     24
+Name     meat fresh slice~
+Short    a slice of raw meat from %s~
+Description
+A slice of raw meat from %s lies lies on the ground.~
+Type     cook~
+Flags    clancorpse~
+Val0     15
+Weight   2
+> use_prog 100~
+mpechoat $n Your mouth waters in delight as you enjoy this fresh meat.
+mpechoaround $n $n chews contentedly, enjoying the flavor of the fresh meat.
+~
+|
+End
+
+Vnum     25
+Name     shoppe bag shopping~
+Short    a bag~
+Description
+A shoppe bag lies discarded nearby.~
+Type     container~
+Val0     50
+Val1     0 
+Weight   2
+Cost     20
+End
+
+Vnum     26
+Name     blood pool spill bloodlet~
+Short    a quantity of let blood~
+Description
+A pool of let blood glistens here.~
+Type     blood~
+Wear     notake~
+End
+
+Vnum     30
+Name     fire flame cloud~
+Short    a cloud of vaporous flame~
+Description
+A cloud of vaporous flame blazes here, defying the elements.~
+Type     fire~
+Flags    magic~
+Wear     notake~
+Weight   10
+Cost     10
+End
+
+Vnum     31
+Name     default trap~
+Short    a newly created default trap~
+Description
+Some god dropped a newly created default trap here.~
+Flags    prototype~
+End
+
+Vnum     32
+Name     portal whirling~
+Short    a whirling portal~
+Description
+A whirling portal of energy turns slowly, beckoning to the unknown.~
+Type     portal~
+Flags    magic~
+Wear     notake~
+Weight   100
+Cost     10
+End
+
+Vnum     33
+Name     black poison powder~
+Short    black poisoning powder~
+Description
+A small amount of black poisoning powder sits in a small container on the ground.~
+Cost     48000
+End
+
+Vnum     34
+Name     blank scroll~
+Short    a blank scroll~
+Description
+A blank scroll lays here gathering dust.~
+Type     scroll~
+Flags    inventory~
+Wear     hold~
+Val5     1 
+Cost     5000
+End
+
+Vnum     35
+Name     empty flask~
+Short    an empty flask~
+Description
+An empty flask lays here gathering dust.~
+Type     potion~
+Flags    inventory~
+Wear     hold~
+Val5     1 
+Cost     5000
+End
+
+Vnum     36
+Name     chopped wood~
+Short    chopped wood~
+Description
+Some chopped wood has been stacked here.~
+Type     wood~
+Cost     1500
+End
+
+Vnum     39
+Name     woodfire fire~
+Short    a wood fire~
+Description
+A wood fire burns brightly here.~
+Type     fire~
+Wear     notake~
+End
+
+Vnum     44
+Name     chunk chunks brain brains~
+Short    the splattered brains of %s~
+Description
+Grey chunks of the brain of %s lie here attracting flies.~
+Action   %s savagely devour$q $p!~
+Type     food~
+Val0     16
+Weight   2
+End
+
+Vnum     45
+Name     hand~
+Short    the severed hand of %s~
+Description
+The severed hand of %s clenches in a death spasm.~
+Action   %s savagely devour$q $p!~
+Type     cook~
+Val0     12
+Weight   2
+End
+
+Vnum     46
+Name     foot~
+Short    the twisted foot of %s~
+Description
+The foot of %s lies in a pool of coagulated blood.~
+Action   %s savagely devour$q $p!~
+Type     cook~
+Val0     12
+Weight   2
+End
+
+Vnum     47
+Name     finger~
+Short    the wriggling finger of %s~
+Description
+Ripped from the hand of %s, a finger lies wriggling here.~
+Action   %s savagely devour$q $p!~
+Type     cook~
+Val0     5
+End
+
+Vnum     48
+Name     ear~
+Short    the torn ear of %s~
+Description
+The sliced-off ear of %s lies here, never again to hear battle.~
+Action   %s savagely devour$q $p!~
+Type     cook~
+Val0     5
+End
+
+Vnum     49
+Name     eye~
+Short    the gouged-out eye of %s~
+Description
+A gouged-out eye forever envisions the gruesome death of %s.~
+Action   %s savagely devour$q $p!~
+Type     cook~
+Val0     5
+End
+
+Vnum     50
+Name     long-tongue~
+Short    the long tongue of %s~
+Description
+Twisting as if to taste you, the writhing tongue of %s lies here.~
+Action   %s savagely devour$q $p!~
+Type     cook~
+Val0     14
+Weight   2
+End
+
+Vnum     51
+Name     eyestalk~
+Short    the eyestalk of %s~
+Description
+Visions of death fill your mind as you notice the eyestalks of %s.~
+Action   %s savagely devour$q $p!~
+Type     cook~
+Val0     10
+End
+
+Vnum     52
+Name     tentacle~
+Short    the slimy tentacle of %s~
+Description
+A tentacle of %s thrashes wildly in a feeble attempt to regain life.~
+Action   %s savagely devour$q $p!~
+Type     cook~
+Val0     25
+Weight   4
+End
+
+Vnum     53
+Name     fin~
+Short    the mutilated fin of %s~
+Description
+The mutilated fin of %s lies here, smelling of rot and decay.~
+Weight   2
+End
+
+Vnum     54
+Name     wing~
+Short    the wing of %s~
+Description
+The mangled wing of %s thrashes in final throes.~
+Weight   4
+End
+
+Vnum     55
+Name     tail~
+Short    the thrashing tail of %s~
+Description
+The tail of %s lies here in a heap of morbid decay.~
+Weight   5
+End
+
+Vnum     56
+Name     scale~
+Short    a scale from %s~
+Description
+A scale from %s lies here, caked thickly in blood.~
+Weight   3
+End
+
+Vnum     57
+Name     tusk~
+Short    the broken tusk of %s~
+Description
+The broken tusk of %s has dropped here.~
+Weight   5
+End
+
+Vnum     58
+Name     horn~
+Short    the cracked horn of %s~
+Description
+The cracked horn of %s lies dislodged here.~
+Weight   6
+End
+
+Vnum     59
+Name     claw~
+Short    the severed claw of %s~
+Description
+The severed claw of %s lies mangled here.~
+Weight   5
+End
+
+Vnum     60
+Name     blood fountain~
+Short    a fountain of blood~
+Description
+A fountain of fresh blood flows in the corner.~
+Type     blood~
+Wear     notake~
+Val0     99999
+Val1     99999 
+End
+
+Vnum     63
+Name     extradimensional portal~
+Short    an extradimensional portal~
+Description
+Some wizard left an extradimensional portal laying here.~
+Type     container~
+Flags    bless~
+Val0     500
+Val1     0 
+Weight   4
+Cost     1000
+End
+
+Vnum     80
+Name     feather~
+Short    a feather from %s~
+Description
+A feather from %s floats about here.~
+End
+
+Vnum     81
+Name     forelegs~
+Short    the severed foreleg of %s~
+Description
+The severed foreleg of %s lies here.~
+End
+
+Vnum     82
+Name     paw~
+Short    %s's severed paw~
+Description
+The severed paw of %s lies here.~
+End
+
+Vnum     83
+Name     hoof~
+Short    the cloven hoof of %s~
+Description
+The cloven hoof of %s lies here.~
+Weight   2
+End
+
+Vnum     84
+Name     beak~
+Short    the beak of %s~
+Description
+The beak of %s lies here.~
+End
+
+Vnum     85
+Name     sharpscale~
+Short    a sharp scale from %s~
+Description
+A sharp scale from %s lies here.~
+End
+
+Vnum     86
+Name     haunch~
+Short    the haunch of %s~
+Description
+The great haunch of %s lies here.~
+Type     food~
+Val0     25
+Weight   4
+End
+
+Vnum     87
+Name     fang~
+Short    the fang of %s~
+Description
+The fang of %s lies here.~
+End
+
+Vnum     91
+Name     map~
+Short    a map~
+Description
+A map has been discarded here.~
+Type     map~
+Wear     hold~
+End
+
+Vnum     95
+Name     %s fish~
+Short    %s~
+Description
+%s lies here on the ground.~
+Type     fish~
+End
+
+Vnum     97
+Name     %s~
+Short    %s's locker~
+Description
+%s's locker stands in the corner here.~
+Type     container~
+Wear     notake~
+Val0     999
+Val1     1 
+Val3     100 
+End
+
+Vnum     99
+Name     final object~
+Short    a newly created final object~
+Description
+Some god dropped a newly created final object here.~
+End
+
+#0
+
+
+#ROOMS
+Vnum         1
+Name         First Room~
+Description  First room
+~
+Flags        nomob safe~
+End
+
+Vnum         2
+Name         Limbo~
+Description  You float in a formless void, detached from all sensation of physical
+matter, surrounded by swirling glowing light which fades into the
+relative darkness around you without any trace of edge or shadow.
+~
+Flags        nomob~
+NR M 0 1 1 2 100
+NR O 0 22 1 2 100
+NR O 0 60 1 2 100
+> act_prog is~
+mpmset $n full 50
+mpmset $n thirst 100
+mprestore $n 2
+~
+> act_prog p has lost~
+mpmset $n full 50
+mpmset $n thirst 100
+mprestore $n 2
+~
+> speech_prog p return~
+mptrans $n 21017
+~
+|
+End
+
+Vnum         3
+Name         Storage~
+Description  This room is reserved for storage of polymorphed players.
+~
+Flags        nomob safe~
+End
+
+Vnum         4
+Name         Deity purge room~
+Description  This room handles the purging of unused deities.
+~
+Flags        nomob safe~
+End
+
+Vnum         5
+Name         Floating in a void~
+Description  &R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+&R&C&B&C&D&E&F&G&H&I&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Zlalalalalalalalalalalalalalalalalalalalalalalalalalalalalal
+~
+End
+
+Vnum         9
+Name         Task Room~
+Description  Any mob here is probably performing tasks.  Mess with it and I will
+kill your dog.
+-- Blodkai
+~
+Flags        nomob safe~
+End
+
+Vnum         99
+Name         A Final Room~
+Description  A final Room.
+~
+Flags        nomob safe~
+End
+
+#0
+
+
+#$

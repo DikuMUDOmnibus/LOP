@@ -1,0 +1,52 @@
+#! /bin/csh -f
+
+# Set the port number.
+set port = 2700
+if( "$1" != "" ) set port="$1"
+
+set shutdown = "system/shutdown.dat"
+set exename = "LOP"
+
+# Change to main directory.
+cd ../
+
+# Set limits.
+limit coredumpsize unlimited
+limit stacksize unlimited
+if ( -e $shutdown ) rm -f $shutdown
+
+while ( 1 )
+    # If you want to have logs in a different directory,
+    #   change the 'set logfile' line to reflect the directory name.
+    set index = 1000
+    while ( 1 )
+	if ( $index > 1025 ) then
+           rm -f log/*.log
+           set index = 1000
+	endif
+	set logfile = log/$index.log
+	if ( ! -e $logfile ) break
+	@ index++
+    end
+
+    # Record starting time
+    date > $logfile
+    date > system/boot.dat
+
+    # Run SMAUG.
+    # Check if already running
+    set matches = `netstat -an | grep ":$port " | grep -c LISTEN`
+    if ( $matches >= 1 ) then
+        # Already running
+        echo Port $port is already in use.
+        exit 0
+    endif
+    ./$exename $port >&! $logfile
+
+    # Restart, giving old connections a chance to die.
+    if ( -e $shutdown ) then
+	rm -f $shutdown
+	exit 0
+    endif
+    sleep 5
+end

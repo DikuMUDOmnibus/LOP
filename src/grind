@@ -1,0 +1,2 @@
+cd ../
+valgrind -v --tool=memcheck --leak-check=yes --show-reachable=yes --db-attach=yes --num-callers=10 --track-fds=yes --suppressions=src/specials/vg_suppress.supp ./LOP 2700

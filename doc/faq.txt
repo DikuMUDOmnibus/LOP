@@ -1,0 +1,115 @@
+Q: How do I create my main immortal?
+A: If this is the first time you unpacked the code etc... after you create
+      your character type FIRSTIMM. The command is only useful once.
+   If you want to allow this command to work again you can create a file in
+      your system directory called firstimm.
+
+Q: What about adding in a template/menu driven system for creating mobiles/objects?
+A: If you go with a template and add in for it to use that template for the mobile
+      and the only thing that went into the area files was what template to use
+      that could be nice and save some space etc... Would need to be done just
+      right though to be worth it.
+   The menu driven is a waste of time and space to keep current.
+
+Q: Why not add in a way to read other muds area files?
+A: There is a converter that will convert areas that SmaugFUSS can read
+   over to LoP. It is a seperate program so it doesn't eat up resources
+   or be around for more then when you want to use it.
+
+Q: Why is the mud so bare?
+A: I personaly hate seeing nothing but stock areas etc... on most muds.
+      At one time all that came with LoP was limbo.are and later I added
+      in Darkhaven to give people a chance to test it out some so they
+      can see what it has to offer.
+
+Q: Are there any known bugs that haven't been fixed?
+A: There is one where if you use like mpat mpgoto etc... it changes
+      the list of the mobiles in the room and can cause a program to
+      fire twice. The problem comes from having a mobile in the room with
+      say an allgreet program that fires when someone enters. If in that
+      program it uses like "mpat <vnum> do something" it will remove the
+      mobile from the room and then when it puts them back they are at
+      the end of the list of characters in the room and so it will fire
+      the program again. (Stock Smaug issue).
+
+Q: Why haven't alot of cool snippets out there been added?
+A: Have to leave some stuff out so you have something to add.
+      A snippet is a great way to learn how to code. So if you are new to
+      coding it is great to need something that is in a snippet so you
+      can work on adding it and learning things as you go.
+
+Q: Are there questions you have been asked and haven't included here?
+A: Yea, tons of them that I don't recall currently.
+   By the next release of the codebase I will probably have a lot more listed.
+
+Q: Why haven't you changed the crapy weather system?
+A: Might one of these days, because the stock one kind of sucks :P.
+
+Q: Why don't areas save a backup like smaug?
+A: I found this to normaly be useless.
+   If you want a backup make sure you keep a recent backup of everything.
+
+Q: Why doesn't hotboot save all data like smaug?
+A: This was just something to make hotboot look more meaningfull.
+   There can be alot of issues on tight quotas with doing this so I went with just saving descriptors.
+
+Q: Will there ever be a final release of LOP?
+A: Yea, one of these days.
+
+Q: Whats the max amount of gold a person can have?
+A: 2,000,000,000 (2 Billion).
+      Same max for stuff dealing with gold in auction.
+      Same max for amount of gold you can drop.
+      Same max for amount of gold on ground.
+      Same max for amount of gold you can give.
+   Can hold up to 10 Sextillion in bank accounts.
+
+Q: One day, will all the help files and documents that are needed be included?
+A: Yea, I will eventually get around to adding everything that is needed :).
+
+Q: How do you punish people since you removed hell?
+A: If I'm going to hell someone I just ban them :).
+
+Q: What does it take to make a great mud?
+A: Wouldn't everyone like to know?
+   This is one of those questions that more or less depends on the perception of the one asking and the one answering.
+   I've seen a lot of successfull muds and a lot of failing muds and everything between the two.
+   A lot fail from lack of changes, a lot fail from to many changes.
+   A lot fail from it being to easy, a lot fail from it being to hard.
+   A lot fail from to many players, a lot fail from not enough players.
+   So what does this mean? Well you have to have balance more or less I think.
+   RoD for example is one of the busiest muds that I've seen and while it's so busy it's one of the few things it has
+      going for it. The changes there are rare and until you get high enough to do stuff and earn respect it's kind of boring.
+      You can also get to max level very easily even with your first character. The server is so busy that a lot of the cool
+      and useful stuff had to be stopped because of the spam/lag it caused. Unless they finaly added some of the stuff back in.
+      An example of that would be with the locate object spell having to be disabled because locating a sword would kick you and
+      probably cause a great deal of lag. It is also hard to enjoy some of the great things that is offered because you have hundreds
+      (if not more) people going after it sometimes.
+   So everything has its good and bad points. Some of the more active muds out there are closer to stock then others. So sometimes
+      people don't want a different mud they want the same with less players to get in there way lol.
+
+   Here are a few things that will cause you to loose players that you should try to avoid:
+      Crashing alot.
+         No one likes playing just a few mins and having to relog.
+      Major bugs.
+         No one likes to have to keep redoing things because of bugs.
+      Downing things that people are use to.
+         If you down something when players are use to it they get mad lol.
+      Over upping things.
+         There is a limit and eventually you will hit it and fast if you over up things.
+         Like having a super strong level 5 sword that is already at the maxes it makes it so
+            they never get to upgrade and if you down it later they will be mad so this is a no win deal.
+      Lack of interaction.
+         People are on to play and interact.
+      To many people doing the same thing.
+         No one enjoys waiting and fighting to get one nice piece of equipment that is rare and super hard to get.
+            RoD had quite a few things you could only get after a reboot/crash and everyone went after it at the same time.
+
+   So here are a few suggestions:
+      Fix any crashing issue or major bug ASAP, with as little down time as possible.
+      Don't over do object stats etc... because one day you might have to down some.
+         I think one of the first things anyone should do is start with a building guideline on objects so it keeps everything good.
+      Balance for classes and races is another important thing. Otherwise everyone will pick the strongest race and class.
+      Keeping players entertained so they stay so that new ones have people to interact with is important also.
+      A good varity of things for people to do so they aren't constantly going against each other is also important.
+         When you limit things so much it makes things super rare and someone will always be going after it to exploit it.

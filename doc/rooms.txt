@@ -1,0 +1,25 @@
+This file is going to be a simple document on how to go about creating a room.
+
+   GOTO = This command allows you to go to a specified vnum (if it doesn't
+          exist yet it will be created (if it is in your vnum range)).
+          After it is created you may use redit to modify the room.
+
+   RDIG = This command allows you to quickly dig out a new room in a specified
+          direction.
+          See HELP RDIG
+
+  REDIT = This is the command you will use to set stuff in rooms.
+          See HELP REDIT
+
+ RPEDIT = This is the command you will use to add programs to rooms.
+          See HELP RPEDIT
+
+ RPCOPY = This command allows you to copy room programs from one room to
+          another.
+          See HELP RPCOPY
+
+ MAPOUT = This command can be used to quickly create and link alot of rooms.
+          See HELP MAPOUT
+
+   Rooms don't need to be set as prototype since there is only one copy of each
+room on the mud.

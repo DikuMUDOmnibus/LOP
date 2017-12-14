@@ -1,0 +1,3482 @@
+#AREA       Darkhaven~
+#AVNUM      2
+#AUTHOR     RoD~
+#RANGES     0 100 0 100
+#CLIMATE    2 2 2
+
+#MOBILES
+Vnum        21000
+Level       1
+Name        healer cleric priestess~
+Short       the cathedral priestess~
+Long        A priestess of the cathedral bestows blessings from the altar.
+~
+Flags       npc sentinel pacifist~
+Affected    detect_invis detect_hidden sanctuary truesight~
+DefPosition standing~
+Sex         female~
+Special     spec_cast_adept
+End
+
+Vnum        21001
+Level       1
+Name        wizard shopkeeper~
+Short       the wizard shopkeeper~
+Long        The wizard shopkeeper stands here.
+~
+Flags       npc sentinel pacifist~
+Affected    detect_invis detect_hidden truesight~
+DefPosition standing~
+Sex         male~
+NShop       120 90 0 23  wand staff~
+NRepair     100 0 23  wand staff~
+End
+
+Vnum        21002
+Level       1
+Name        blacksmith~
+Short       the blacksmith~
+Long        The blacksmith stands here.
+~
+Flags       npc sentinel pacifist~
+Affected    detect_invis detect_hidden truesight~
+DefPosition standing~
+Sex         male~
+NRepair     100 0 23  light weapon armor container lockpick missileweapon quiver shovel keyring axe~
+End
+
+Vnum        21003
+Level       1
+Name        alchemist~
+Short       the alchemist~
+Long        The alchemist stands behind the counter.
+~
+Flags       npc sentinel pacifist~
+Affected    detect_invis detect_hidden truesight~
+DefPosition standing~
+Sex         female~
+NShop       120 90 0 23  potion~
+End
+
+Vnum        21004
+Level       1
+Name        scribe~
+Short       the scribe~
+Long        The scribe stands here.
+~
+Flags       npc sentinel pacifist~
+Affected    detect_invis detect_hidden truesight~
+DefPosition standing~
+Sex         male~
+NShop       120 90 0 23  scroll~
+End
+
+Vnum        21005
+Level       1
+Name        jeweler~
+Short       the jeweler~
+Long        The jeweler smiles warmly.
+~
+Flags       npc sentinel pacifist~
+Affected    detect_invis detect_hidden truesight~
+DefPosition standing~
+Sex         female~
+End
+
+Vnum        21006
+Level       100
+Name        armorer~
+Short       the armorer~
+Long        The armorer is here fitting a mail helm.
+~
+Flags       npc sentinel pacifist~
+Affected    detect_invis detect_hidden truesight~
+DefPosition standing~
+Sex         female~
+NShop       120 90 0 23  armor~
+End
+
+Vnum        21007
+Level       1
+Name        smith weaponsmith~
+Short       the weapon smith~
+Long        The weapon smith labors over a length blade.
+~
+Flags       npc sentinel pacifist~
+Affected    detect_invis detect_hidden truesight~
+DefPosition standing~
+Sex         male~
+NShop       120 90 0 23  weapon missileweapon projectile quiver~
+End
+
+Vnum        21008
+Level       1
+Name        butcher~
+Short       the butcher~
+Long        A butcher greets you.
+~
+Flags       npc sentinel pacifist~
+Affected    detect_invis detect_hidden truesight~
+DefPosition standing~
+Sex         male~
+NShop       120 90 0 23  food cook fish~
+End
+
+Vnum        21009
+Level       1
+Name        baker~
+Short       the baker~
+Long        The baker is here, covered in flour.
+~
+Flags       npc sentinel pacifist~
+Affected    detect_invis detect_hidden truesight~
+DefPosition standing~
+Sex         male~
+NShop       120 90 0 23  food~
+End
+
+Vnum        21010
+Level       1
+Name        tailor~
+Short       the tailor~
+Long        The tailor is here, showing off his wares.
+~
+Flags       npc sentinel pacifist~
+Affected    detect_invis detect_hidden truesight~
+DefPosition standing~
+Sex         male~
+NShop       120 90 0 23  armor~
+End
+
+Vnum        21011
+Level       10
+Name        city guard~
+Short       A city guard~
+Long        A city guard is standing beside the gate.
+~
+Flags       npc sentinel~
+Affected    detect_invis detect_hidden truesight~
+Parts       head arms legs heart brains guts hands feet fingers ear eye~
+DefPosition standing~
+Sex         male~
+Hit         300 500
+End
+
+Vnum        21012
+Level       5
+Name        thief figure~
+Short       a thief~
+Long        A thief is wondering around looking for something to steal.
+~
+Flags       npc stayarea~
+Affected    detect_hidden sneak hide~
+Parts       head arms legs heart brains guts hands feet fingers ear eye~
+DefPosition standing~
+Sex         male~
+Hit         100 500
+Special     spec_thief
+End
+
+Vnum        21013
+Level       3
+Name        stray dog~
+Short       a stray~
+Long        A stray dog noses along the street.
+~
+Flags       npc stayarea~
+Parts       head legs heart brains guts feet ear eye~
+DefPosition standing~
+Sex         female~
+Hit         50 100
+Special     spec_fido
+End
+
+Vnum        21014
+Level       1
+Name        hawk~
+Short       the regal hawk~
+Long        A proud hawk perches regally here, defiant to all.
+~
+Flags       npc sentinel pet~
+Affected    detect_invis detect_hidden flying truesight~
+Parts       head legs heart brains guts feet eye wings claws~
+Attacks     claws~
+Defenses    dodge~
+DefPosition standing~
+Hit         75 100
+End
+
+Vnum        21015
+Level       1
+Name        mare horse~
+Short       the beautiful mare~
+Long        A beautiful white mare slowly trots in a circle.
+~
+Flags       npc sentinel pet mountable~
+Parts       head legs heart brains guts feet ear eye tail~
+NResistant  10 cold~
+Attacks     kick~
+Defenses    dodge~
+DefPosition standing~
+Hit         100 150
+End
+
+Vnum        21016
+Level       1
+Name        stable keeper~
+Short       the stable keeper~
+Long        The stable keeper is tending to the animals.
+~
+Flags       npc sentinel pacifist~
+Affected    detect_invis detect_hidden truesight~
+DefPosition standing~
+Sex         female~
+Hit         2000 3000
+End
+
+Vnum        21017
+Level       1
+Name        banker~
+Short       the banker~
+Long        The banker is busy tending to customers.
+~
+Flags       npc sentinel pacifist banker~
+DefPosition standing~
+Sex         female~
+Hit         2000 3000
+End
+
+Vnum        21018
+Level       1
+Name        fisherman~
+Short       a fisherman~
+Long        A fisherman is busy tending to the store.
+~
+Flags       npc sentinel pacifist~
+DefPosition standing~
+Sex         male~
+Hit         1000 2000
+NShop       120 90 0 23  fish~
+End
+
+Vnum        21019
+Level       100
+Name        undertaker~
+Short       the undertaker~
+Long        The undertaker is busy examining corpses.
+~
+Flags       npc sentinel pacifist undertaker~
+DefPosition standing~
+Sex         female~
+Hit         20000 30000
+NStat       125 strength~
+NStat       125 intelligence~
+NStat       125 wisdom~
+NStat       125 dexterity~
+NStat       125 constitution~
+NStat       125 charisma~
+NStat       125 luck~
+End
+
+Vnum        21020
+Level       100
+Name        quest master~
+Short       The quest master~
+Long        The quest master is busy coming up with new quest for adventurers.
+~
+Flags       npc sentinel pacifist questgiver~
+Affected    detect_invis detect_hidden truesight~
+DefPosition standing~
+Sex         female~
+NStat       125 strength~
+NStat       125 intelligence~
+NStat       125 wisdom~
+NStat       125 dexterity~
+NStat       125 constitution~
+NStat       125 charisma~
+NStat       125 luck~
+End
+
+Vnum        21021
+Level       1
+Name        big rat~
+Short       a big rat~
+Long        A big rat is scouring for something to eat.
+~
+Flags       npc stayarea~
+Affected    infrared~
+DefPosition standing~
+Hit         50 100
+NStat       5 strength~
+NStat       1 intelligence~
+NStat       1 wisdom~
+NStat       5 dexterity~
+NStat       6 constitution~
+NStat       1 charisma~
+NStat       2 luck~
+End
+
+Vnum        21022
+Level       4
+Name        huge rat~
+Short       a huge rat~
+Long        A huge rat is scouring for something to eat.
+~
+Flags       npc stayarea~
+Affected    infrared~
+DefPosition standing~
+Hit         100 125
+NStat       7 strength~
+NStat       1 intelligence~
+NStat       1 wisdom~
+NStat       7 dexterity~
+NStat       8 constitution~
+NStat       1 charisma~
+NStat       2 luck~
+End
+
+Vnum        21023
+Level       3
+Name        bat~
+Short       a bat~
+Long        A bat is hanging from the ceiling.
+~
+Flags       npc stayarea~
+Affected    infrared flying~
+DefPosition standing~
+Hit         50 100
+NStat       2 strength~
+NStat       1 intelligence~
+NStat       1 wisdom~
+NStat       8 dexterity~
+NStat       5 constitution~
+NStat       1 charisma~
+NStat       2 luck~
+End
+
+Vnum        21024
+Level       3
+Name        spider~
+Short       a spider~
+Long        A spider is hanging around on its web.
+~
+Flags       npc stayarea~
+Affected    infrared~
+Attacks     bite~
+DefPosition standing~
+Hit         25 100
+NStat       2 strength~
+NStat       1 intelligence~
+NStat       1 wisdom~
+NStat       5 dexterity~
+NStat       6 constitution~
+NStat       1 charisma~
+NStat       1 luck~
+End
+
+Vnum        21025
+Level       3
+Name        maggot~
+Short       a maggot~
+Long        A maggot is crawling around looking for something to eat.
+~
+Flags       npc stayarea~
+Affected    infrared~
+Attacks     bite~
+DefPosition standing~
+Hit         25 100
+NStat       2 strength~
+NStat       1 intelligence~
+NStat       1 wisdom~
+NStat       5 dexterity~
+NStat       6 constitution~
+NStat       1 charisma~
+NStat       1 luck~
+End
+
+Vnum        21026
+Level       3
+Name        snake~
+Short       a snake~
+Long        A snake slithers its way through the sewer.
+~
+Flags       npc stayarea~
+Affected    infrared~
+Attacks     bite~
+DefPosition standing~
+Hit         25 100
+NStat       2 strength~
+NStat       1 intelligence~
+NStat       1 wisdom~
+NStat       5 dexterity~
+NStat       6 constitution~
+NStat       1 charisma~
+NStat       1 luck~
+End
+
+Vnum        21027
+Level       1
+Name        farmer girl~
+Short       the farmer girl~
+Long        A young farmer girl smiles as you enter.
+~
+Flags       npc sentinel pacifist~
+Affected    detect_invis detect_hidden truesight~
+DefPosition standing~
+Sex         female~
+NShop       120 90 0 23 ~
+End
+
+Vnum        21028
+Level       100
+Name        Domick~
+Short       Domick~
+Long        Domick, Lord of Knowledge, sits here reading, waiting for students.
+~
+Description
+ Domick carries himself with a grace and confidence born from his long life and
+many experiences in these Realms. He is looked on with awe and unquestioned
+respect. That respect is well deserved. Do not attempt to kill him, for you
+shall surely die.
+~
+Flags       npc sentinel practice scholar pacifist~
+Affected    detect_invis detect_hidden sanctuary truesight~
+DefPosition standing~
+Sex         male~
+Hit         30000 30100
+End
+
+Vnum        21029
+Level       1
+Name        trapper~
+Short       the trapper~
+Long        The trapper stands here working on new traps.
+~
+Flags       npc sentinel pacifist~
+DefPosition standing~
+NShop       120 90 0 23 ~
+End
+
+Vnum        21199
+Level       1
+Name        last mob~
+Short       A newly created last mob~
+Long        Some god abandoned a newly created last mob here.
+~
+Flags       npc~
+DefPosition standing~
+End
+
+#0
+
+
+#OBJECTS
+Vnum     21000
+Name     potion violet glowing~
+Short    a glowing violet potion~
+Description
+A glowing violet potion has been carelessly left here.~
+Type     potion~
+Val0     25
+Val1     75 'heal'
+Cost     1000
+End
+
+Vnum     21001
+Name     potion purple glowing~
+Short    a glowing purple potion~
+Description
+A glowing purple potion has been carelessly left here.~
+Type     potion~
+Val0     25
+Val1     33 'cure critical'
+Cost     650
+End
+
+Vnum     21002
+Name     puce potion glowing~
+Short    a glowing puce potion~
+Description
+A glowing puce potion has been carelessly left here.~
+Type     potion~
+Val0     10
+Val1     36 'cure serious'
+Cost     240
+End
+
+Vnum     21003
+Name     potion maroon glowing~
+Short    a glowing maroon potion~
+Description
+A glowing maroon potion has been carelessly left here.~
+Type     potion~
+Val0     1
+Val1     34 'cure light'
+Cost     75
+End
+
+Vnum     21004
+Name     potion blue glowing~
+Short    glowing blue potion~
+Description
+A glowing blue potion has been carelessly left here.~
+Type     potion~
+Val0     22
+Val1     106 'restore mana'
+Val2     106 'restore mana'
+Cost     1250
+End
+
+Vnum     21005
+Name     scroll recall~
+Short    recall scroll~
+Description
+a scroll of recall has been carelessly left here.~
+Type     scroll~
+Val0     1
+Val1     130 'word of recall'
+Cost     20
+End
+
+Vnum     21006
+Name     tablet magical identify~
+Short    a magical tablet~
+Description
+A magical tablet has been carelessly left here.~
+Type     scroll~
+Val0     1
+Val1     78 'identify'
+Cost     40
+End
+
+Vnum     21007
+Name     scroll detect invis~
+Short    a scroll of detect invisibility~
+Description
+A scroll of detect invisibility has been carelessly left here.~
+Type     scroll~
+Val0     5
+Val1     41 'detect invis'
+Cost     200
+End
+
+Vnum     21008
+Name     salami~
+Short    a slice of salami~
+Description
+A slice of salami has been dropped here.~
+Type     food~
+Val0     1
+Val1     10 
+Cost     5
+End
+
+Vnum     21009
+Name     beef~
+Short    a big chunk of beef~
+Description
+A large chunk of raw beef lies here.~
+Type     food~
+Val0     5
+Val1     10 
+Cost     10
+End
+
+Vnum     21010
+Name     turkey~
+Short    a cooked turkey~
+Description
+A cooked bird, which looks quite edible, has been dropped here.~
+Type     food~
+Val0     10
+Val1     10 
+Cost     20
+End
+
+Vnum     21011
+Name     chocolate cake~
+Short    a chocolate cake~
+Description
+A large chocolate cake awaits someone to eat it.~
+Type     food~
+Val0     10
+Val1     10 
+Cost     15
+End
+
+Vnum     21012
+Name     loaf bread~
+Short    a loaf of bread~
+Description
+A scrumptious loaf of bread lies here.~
+Type     food~
+Val0     4
+Val1     10 
+Cost     15
+End
+
+Vnum     21013
+Name     cherry pie~
+Short    a cherry pie~
+Description
+A cherry pie makes your mouth water.~
+Type     food~
+Val0     4
+Val1     10 
+Cost     10
+End
+
+Vnum     21014
+Name     iron ring~
+Short    an iron ring~
+Description
+An iron ring has fallen here.~
+Type     armor~
+Wear     finger~
+Val0     3
+Val1     3 
+Cost     50
+End
+
+Vnum     21015
+Name     neck guard iron~
+Short    an iron neck guard~
+Description
+An iron neck guard has fallen here.~
+Type     armor~
+Wear     neck~
+Val0     5
+Val1     5 
+Cost     60
+End
+
+Vnum     21016
+Name     crested breastplate plate~
+Short    a crested breastplate~
+Description
+A crested breastplate has fallen here.~
+Type     armor~
+Wear     body~
+Val0     6
+Val1     6 
+Cost     100
+End
+
+Vnum     21017
+Name     iron helm~
+Short    an iron helm~
+Description
+An iron helm has fallen here.~
+Type     armor~
+Wear     head~
+Val0     5
+Val1     5 
+Cost     80
+End
+
+Vnum     21018
+Name     mail leggings~
+Short    mail leggings~
+Description
+A set of mail leggings has fallen here.~
+Type     armor~
+Wear     legs~
+Val0     4
+Val1     4 
+Cost     30
+End
+
+Vnum     21019
+Name     black boots~
+Short    black boots~
+Description
+A set of black boots has fallen here.~
+Type     armor~
+Wear     feet~
+Val0     4
+Val1     4 
+Cost     20
+End
+
+Vnum     21020
+Name     chain sleeves~
+Short    chain sleeves~
+Description
+A set of chain sleeves has fallen here.~
+Type     armor~
+Wear     arms~
+Val0     5
+Val1     5 
+Cost     40
+End
+
+Vnum     21021
+Name     iron gauntlets~
+Short    iron gauntlets~
+Description
+Some iron gauntlets have fallen here.~
+Type     armor~
+Wear     hands~
+Val0     5
+Val1     5 
+Cost     40
+End
+
+Vnum     21022
+Name     iron bracer~
+Short    an iron bracer~
+Description
+An iron bracer has fallen here.~
+Type     armor~
+Wear     wrist~
+Val0     4
+Val1     4 
+Cost     10
+End
+
+Vnum     21023
+Name     iron shield~
+Short    an iron shield~
+Description
+An iron shield has fallen here.~
+Type     armor~
+Wear     hold~
+Val0     7
+Val1     7 
+Cost     60
+End
+
+Vnum     21024
+Name     iron visor~
+Short    an iron visor~
+Description
+An iron visor has fallen here.~
+Type     armor~
+Wear     eyes~
+Val0     4
+Val1     4 
+Cost     10
+End
+
+Vnum     21025
+Name     torch~
+Short    a torch~
+Description
+A plain wooden torch has been dropped here.~
+Type     light~
+Wear     hold~
+Val0     10
+Val1     10 
+Val2     15 
+End
+
+Vnum     21026
+Name     wooden bow~
+Short    a wooden bow~
+Description
+A wooden bow has fallen here.~
+Type     missileweapon~
+Wear     hold~
+Val0     12
+Val1     1 
+Val2     2 
+Val3     13 
+Val4     1 
+Cost     30
+End
+
+Vnum     21027
+Name     sword longsword~
+Short    a long sword~
+Description
+A long sword has fallen here.~
+Type     weapon~
+Flags    metal~
+Wear     hold~
+Val0     12
+Val1     1 
+Val2     5 
+Val3     3 
+Cost     30
+End
+
+Vnum     21028
+Name     leather shirt~
+Short    a leather shirt~
+Description
+Someone has left a leather shirt lying here.~
+Type     armor~
+Wear     body~
+Val0     3
+Val1     3 
+Cost     20
+End
+
+Vnum     21029
+Name     leather pants~
+Short    some leather pants~
+Description
+Some leather pants are lying here.~
+Type     armor~
+Wear     legs~
+Val0     3
+Val1     3 
+Cost     15
+End
+
+Vnum     21030
+Name     leather sleeves~
+Short    leather sleeves~
+Description
+Some leather sleeves have been dropped here.~
+Type     armor~
+Wear     arms~
+Val0     3
+Val1     3 
+Cost     7
+End
+
+Vnum     21031
+Name     leather boots~
+Short    leather boots~
+Description
+A pair of leather boots are lying here.~
+Type     armor~
+Wear     feet~
+Val0     2
+Val1     2 
+Cost     12
+End
+
+Vnum     21032
+Name     leather gloves~
+Short    a pair of leather gloves~
+Description
+A pair of leather gloves are lying here.~
+Type     armor~
+Wear     hands~
+Val0     3
+Val1     3 
+Cost     10
+End
+
+Vnum     21033
+Name     steel dagger~
+Short    a steel dagger~
+Description
+A gleaming dagger shines brightly here.~
+Type     weapon~
+Flags    metal~
+Wear     hold~
+Val0     12
+Val1     1 
+Val2     5 
+Val3     2 
+Cost     10
+End
+
+Vnum     21034
+Name     iron mace~
+Short    an iron mace~
+Description
+An iron mace has been carelessly dropped here.~
+Type     weapon~
+Flags    metal~
+Wear     hold~
+Val0     12
+Val1     1 
+Val2     5 
+Val3     7 
+Cost     20
+End
+
+Vnum     21035
+Name     arrow~
+Short    a magical arrow~
+Description
+A magical arrow lies here.~
+Type     projectile~
+Flags    magic~
+Wear     hold~
+Val3     13 
+Cost     5
+End
+
+Vnum     21036
+Name     smoked rabbit~
+Short    smoked rabbit~
+Description
+A freshly smoked rabbit lies here.~
+Action   %s savour$q a piece of $p.~
+Type     food~
+Val0     10
+Val1     10 
+Cost     20
+End
+
+Vnum     21037
+Name     roast quail~
+Short    roast quail~
+Description
+A plump roast quail has been carelessly dropped here.~
+Action   %s delicately nibble$q on a piece of $p.~
+Type     food~
+Val0     10
+Val1     10 
+Cost     20
+End
+
+Vnum     21038
+Name     fountain crystal~
+Short    a crystal fountain~
+Description
+A beautifully crafted crystal fountain decorates the center of the square.~
+Type     fountain~
+Wear     notake~
+Val0     99999
+Val1     99999 
+End
+
+Vnum     21039
+Name     fishingpole pole~
+Short    a fishing pole~
+Description
+A fishing pole has been carelessly left here.~
+Type     fishingpole~
+Wear     hold~
+Cost     30
+End
+
+Vnum     21040
+Name     minnow~
+Short    a minnow~
+Description
+A minnow has been left here.~
+Type     fish~
+Val0     1
+Val1     10 
+Cost     5
+End
+
+Vnum     21041
+Name     canoe~
+Short    a canoe~
+Description
+A battered canoe has been left here.~
+Type     boat~
+Cost     100
+End
+
+Vnum     21042
+Name     steel wrist light~
+Short    a steel wrist light~
+Description
+A steel wrist light has been left here.~
+Type     light~
+Wear     wrist~
+Val0     5
+Val1     5 
+Cost     30
+End
+
+Vnum     21043
+Name     quiver~
+Short    a quiver~
+Description
+A quiver has been dropped here.~
+Type     quiver~
+Wear     shoulder~
+Val0     100
+Val1     0 
+Val3     20 
+Val4     20 
+Cost     50
+End
+
+Vnum     21046
+Name     flint~
+Short    a piece of flint~
+Description
+A piece of flint has been left here.~
+Cost     5
+End
+
+Vnum     21047
+Name     water canteen~
+Short    a water canteen~
+Description
+A water canteen has been discarded here.~
+Type     drinkcon~
+Val0     50
+Val1     50 
+Val2     1 
+Cost     15
+End
+
+Vnum     21048
+Name     rune bag~
+Short    a rune bag~
+Description
+A rune bag has been left here.~
+Type     container~
+Flags    glow~
+Val0     100
+Val1     1 
+Val3     10 
+Val4     10 
+Cost     100
+End
+
+Vnum     21049
+Name     ball light~
+Short    a bright ball of light~
+Description
+A bright ball of light shimmers in the air.~
+Type     light~
+Flags    glow magic~
+Wear     hold~
+Val0     5
+Val1     5 
+Cost     10
+End
+
+Vnum     21050
+Name     bottle milk~
+Short    a bottle of milk~
+Description
+A bottle of milk sits upright on the ground here.~
+Type     drinkcon~
+Val0     10
+Val1     10 
+Val2     11 
+Cost     10
+End
+
+Vnum     21051
+Name     wheel cheese~
+Short    a wheel of cheese~
+Description
+A tasty looking wheel of cheese has been discarded here.~
+Type     food~
+Val0     5
+Val1     10 
+Cost     25
+End
+
+Vnum     21052
+Name     two handed longsword~
+Short    a two-handed long sword~
+Description
+A two-handed long sword has been dropped here.~
+Type     weapon~
+Flags    metal~
+Wear     2hands~
+Val0     12
+Val1     5 
+Val2     10 
+Val3     3 
+Weight   2
+Cost     60
+End
+
+Vnum     21053
+Name     room acid spray trap~
+Short    an acid spray trap~
+Description
+An acid spray trap has been put here.~
+Type     trap~
+Val0     1
+Val1     10 
+Val2     10 
+Val3     0 
+Cost     50
+End
+
+Vnum     21199
+Name     last obj~
+Short    a newly created last obj~
+Description
+Some god dropped a newly created last obj here.~
+End
+
+#0
+
+
+#ROOMS
+Vnum         21000
+Name         Inside the Northern Gate~
+Description  There is a huge gate to the north that is used to help protect the city against
+any enemies in the event they try to attack. To the south lies the city of
+Darkhaven in all its glory.
+~
+Sector       city~
+Exit         north
+To           21136
+End
+Exit         south
+To           21005
+End
+NR M 0 21011 1 21000 100
+  NR E 0 21027 1 28 100
+  NR E 0 21016 1 13 100
+  NR E 0 21022 1 19 100
+  NR E 0 21015 1 8 100
+  NR E 0 21022 1 20 100
+  NR E 0 21014 1 25 100
+  NR E 0 21023 1 29 100
+  NR E 0 21024 1 4 100
+  NR E 0 21019 1 37 100
+  NR E 0 21014 1 26 100
+  NR E 0 21020 1 15 100
+  NR E 0 21021 1 21 100
+  NR E 0 21018 1 31 100
+  NR E 0 21017 1 0 100
+End
+
+Vnum         21001
+Name         Meeting of Falcon Road and Justice Road~
+Description  Falcon Road and Justice Road come together here to form one of the four corners
+of Darkhaven. A stone staircase lead upward onto the fantastic city's
+battlements, from where even the strongest foe can be repelled. Falcon Road
+lies to the south, while Justice Road stretches eastward. There is a manhole in
+the center of the street.
+~
+Sector       city~
+Exit         east
+To           21002
+End
+Exit         south
+To           21010
+End
+Exit         down
+Keyword      manhole~
+Flags        isdoor closed secret can_enter~
+To           21080
+End
+NR M 0 21013 1 21001 100
+End
+
+Vnum         21002
+Name         Justice Road~
+Description  This is a rather unremarkable portion of Justice Road, as nothing out of the
+ordinary pokes at your attention.  The northern wall lines the cobbled street,
+which ranges to the east and west.
+~
+Sector       city~
+Exit         east
+To           21003
+End
+Exit         west
+To           21001
+End
+End
+
+Vnum         21003
+Name         Justice Road~
+Description  You travel down an eerie portion of Justice Road.  The mysterious
+melody sends shivers down your spine, making you wonder who would sing such a
+song in a city of peace and goodness.  Justice Road stretches east and west.
+~
+Sector       city~
+Exit         east
+To           21004
+End
+Exit         west
+To           21002
+End
+End
+
+Vnum         21004
+Name         Justice Road~
+Description  Everyone seems to be more cautious around here for some reason. There have been
+rumors of thieves prowling these parts, mocking the very name of the road.
+Justice road stretches to the east and west.
+~
+Sector       city~
+Exit         east
+To           21005
+End
+Exit         west
+To           21003
+End
+End
+
+Vnum         21005
+Name         Intersection of Vertic Avenue and Justice Road~
+Description  To the north a beautiful gate can be seen. Justice Road stretches to the east
+and west, while Vertic Avenue goes south into the center of Darkhaven.
+~
+Sector       city~
+Exit         north
+To           21000
+End
+Exit         east
+To           21006
+End
+Exit         south
+To           21011
+End
+Exit         west
+To           21004
+End
+End
+
+Vnum         21006
+Name         Justice Road~
+Description  This portion of Justice Road seems unkempt.  A whistling northern wind can be
+heard passing through the trees to the south, and you smile to yourself as you
+continue on your way.  Justice Road stretches to the east and west.
+~
+Sector       city~
+Exit         east
+To           21007
+End
+Exit         west
+To           21005
+End
+End
+
+Vnum         21007
+Name         Justice Road~
+Description  You are on a solemn section of Justice Road.  A statue depicting a party of
+adventurers fighting off an undead dragon sits in the center of the road. 
+Blinking back a tear, you remember hearing this tale in a local inn, and
+realize that the statue is a memorial.  Justice Road extends to the east and
+west.
+~
+Sector       city~
+Exit         east
+To           21008
+End
+Exit         west
+To           21006
+End
+End
+
+Vnum         21008
+Name         Justice Road~
+Description  You are walking down Justice Road.  The long road, which lines the northern
+wall of Darkhaven, meets up with Hawk Street to the east to form one of the
+four corners of Darkhaven.  The street continues westward.
+~
+Sector       city~
+Exit         east
+To           21009
+End
+Exit         west
+To           21007
+End
+End
+
+Vnum         21009
+Name         Meeting of Hawk Street and Justice Road~
+Description  Hawk Street and Justice Road come together here to form one of the four corners
+of Darkhaven.  A stone staircase leads upward onto the fantastic city's
+battlements, from where even the strongest foe can be repelled. Hawk Street
+lies to the south, while Justice Road stretches westward. There is a manhole in
+the center of the street.
+~
+Sector       city~
+Exit         south
+To           21012
+End
+Exit         west
+To           21008
+End
+Exit         down
+Keyword      manhole~
+Flags        isdoor closed secret can_enter~
+To           21088
+End
+NR M 0 21013 1 21009 100
+End
+
+Vnum         21010
+Name         Falcon Road~
+Description  Here you spy the spires and stained glass windows of the cathedral peeking out
+peek out from the lush green forest cultivated in the center of this thriving
+city. Falcon Road ranges to both the north and south. 
+~
+Sector       city~
+Exit         north
+To           21001
+End
+Exit         south
+To           21013
+End
+End
+
+Vnum         21011
+Name         Vertic Avenue~
+Description  You continue down Vertic Avenue. To the east you can see the stone structure of
+the warrior's, the cathedral rises in the west, and to the north you can seen
+an intersection. 
+~
+Sector       city~
+Exit         north
+To           21005
+End
+Exit         south
+To           21014
+End
+End
+
+Vnum         21012
+Name         Hawk Street~
+Description  This section of Hawk Street is reserved for storing the eastern wall's defense
+supplies.  Quivers of arrows are stacked high into the air, almost within reach
+of the guards on the battlements.  Hawk Street stretches to the north and
+south.
+~
+Sector       city~
+Exit         north
+To           21009
+End
+Exit         south
+To           21015
+End
+End
+
+Vnum         21013
+Name         Falcon Road~
+Description  You walk through a poor, almost abandoned section of Darkhaven. Indeed, this
+portion of Falcon Road is neither dirty nor clean, just untouched. The cobbled
+road continues to the north and south. 
+~
+Sector       city~
+Exit         north
+To           21010
+End
+Exit         south
+To           21016
+End
+End
+
+Vnum         21014
+Name         Vertic Avenue~
+Description  Nothing in particular strikes your attention as you walk down this portion of
+Vertic Avenue. It seems almost as if the citizens of the city forgot to place a
+statue here, or perhaps a plaque. The lengthy road ranges to the north and
+south. 
+~
+Sector       city~
+Exit         north
+To           21011
+End
+Exit         south
+To           21020
+End
+End
+
+Vnum         21015
+Name         Hawk Street~
+Description  This portion of Hawk Street is rather poor and unkempt.  Rags litter the
+street, and several of the city's unfortunate have set up residence here. A
+tent has been set up on the eastern side of the road, a beggar's home no doubt.
+Hawk Street continues to the north and south.
+~
+Sector       city~
+Exit         north
+To           21012
+End
+Exit         south
+To           21021
+End
+End
+
+Vnum         21016
+Name         Falcon Road~
+Description  You are walking down a rarely used portion of Falcon Road. To the east is
+Darkhaven's church, while Falcon Road ranges to the north and south. 
+~
+Sector       city~
+Exit         north
+To           21013
+End
+Exit         south
+To           21023
+End
+End
+
+Vnum         21017
+Name         The Cathedral Altar~
+Description  You are before the cathedral's altar.  Those of ill luck or poor faith often
+come here to pray to their God for guidance, or chance.  An aisle leads back
+east through the cathedral.
+~
+Exit         east
+To           21018
+End
+NR M 0 21000 1 21017 100
+End
+
+Vnum         21018
+Name         Inside the Cathedral~
+Description  You are in the aisle which leads to the cathedral's altar.  A serene melody
+floats through the air.  The entrance to the church is to the east, while the
+altar itself lies to the west.
+~
+Exit         north
+To           21036
+End
+Exit         east
+To           21019
+End
+Exit         west
+To           21017
+End
+End
+
+Vnum         21019
+Name         Outside the Cathedral~
+Description  The cathedral which houses the priests and priestesses of Darkhaven stands
+before you, open to all comers.  Traveling west will take you up a flight of
+stairs and into the structure, or you can head back to the southeast.
+~
+Sector       city~
+Exit         west
+To           21018
+End
+Exit         southeast
+To           21027
+End
+End
+
+Vnum         21020
+Name         Vertic Avenue~
+Description  Here the roadway passes by a circular platform, atop which stands a man of
+ultimately stern countenance. A wall surrounding the cathedral rises to the
+west, and a small forested area lines the eastern roadway. Vertic Avenue ranges
+to the north and south. 
+~
+Sector       city~
+Exit         north
+To           21014
+End
+Exit         south
+To           21027
+End
+End
+
+Vnum         21021
+Name         Hawk Street~
+Description  You are walking down the northern half of Hawk Street at a brisk pace. To the
+east is the towering eastern wall of Darkhaven, while a forest surrounded by a
+short wall is to the west.  Hawk Street ranges to the north and south.
+~
+Sector       city~
+Exit         north
+To           21015
+End
+Exit         south
+To           21031
+End
+End
+
+Vnum         21022
+Name         Inside the Western Gate~
+Description  You stand the western gate of Darkhaven.  To the east is the intersection of
+Horizon Road and Falcon Road.
+~
+Sector       city~
+Exit         east
+To           21023
+End
+NR M 0 21011 1 21022 100
+  NR E 0 21027 1 28 100
+  NR E 0 21016 1 13 100
+  NR E 0 21022 1 19 100
+  NR E 0 21017 1 0 100
+  NR E 0 21022 1 20 100
+  NR E 0 21015 1 8 100
+  NR E 0 21014 1 25 100
+  NR E 0 21023 1 29 100
+  NR E 0 21024 1 4 100
+  NR E 0 21014 1 26 100
+  NR E 0 21019 1 37 100
+  NR E 0 21020 1 15 100
+  NR E 0 21021 1 21 100
+  NR E 0 21018 1 31 100
+End
+
+Vnum         21023
+Name         Intersection of Horizon Road and Falcon Road ~
+Description  You stand at the intersection of Horizon Road and Falcon Road. Gazing to the
+west, you see the huge west gate of Darkhaven. The cobbled roads of Horizon
+Road and Falcon Road lie in the four cardinal directions. 
+~
+Sector       city~
+Exit         north
+To           21016
+End
+Exit         east
+To           21024
+End
+Exit         south
+To           21033
+End
+Exit         west
+To           21022
+End
+End
+
+Vnum         21024
+Name         Horizon Road~
+Description  Peasants passing by also seem interested in those who can find joy in these
+dark times. Horizon Road runs to the east and west.
+~
+Sector       city~
+Exit         east
+To           21025
+End
+Exit         west
+To           21023
+End
+End
+
+Vnum         21025
+Name         Horizon Road~
+Description  Horizon Road runs to the east and west of here.
+~
+Sector       city~
+Exit         east
+To           21026
+End
+Exit         west
+To           21024
+End
+End
+
+Vnum         21026
+Name         Horizon Road ~
+Description  You quicken your pace as you walk down the cobblestones of Horizon Road. Gazing
+to the north, you see the cathedral in all its beauty.  To the east is
+Darkhaven Square, while Horizon Road leads on to the west.  The Western Hall, a
+popular point of congregation, is situated in a building just to the south.
+~
+Sector       city~
+Exit         east
+To           21027
+End
+Exit         west
+To           21025
+End
+End
+
+Vnum         21027
+Name         Darkhaven Square~
+Description  The crystal fountain in the center of the square is surrounded by gardens of
+shrubbery which enhance the air of serenity and peace. The main roads lead away
+in various directions. The spires of the cathedral can be seen to the
+northwest. 
+~
+Sector       city~
+Exit         north
+To           21020
+End
+Exit         east
+To           21028
+End
+Exit         south
+To           21037
+End
+Exit         west
+To           21026
+End
+Exit         northeast
+To           21055
+End
+Exit         northwest
+To           21019
+End
+NR O 0 21038 1 21027 100
+End
+
+Vnum         21028
+Name         Horizon Road~
+Description  Traveling the cobbled streets of Horizon Road, you are pleased to see the
+ancient Darkhaven Town Hall still stands.  Horizon road continues to the east
+and west.
+~
+Sector       city~
+Exit         east
+To           21029
+End
+Exit         west
+To           21027
+End
+End
+
+Vnum         21029
+Name         Horizon Road ~
+Description  While traversing Horizon Road, you gaze up at the Darkhaven Tower of Sorcery,
+whose entrance lies to the south.  The lengthy cobblestone road stretches to
+the east and west.
+~
+Sector       city~
+Exit         east
+To           21030
+End
+Exit         west
+To           21028
+End
+End
+
+Vnum         21030
+Name         Horizon Road ~
+Description  Young and giddy adventurers pass you as you travel this portion of Horizon
+Road.  Gazing southward, you see the illustrious Darkhaven Academy, which has
+the responsibility of training new adventurers.  The cobbled streets of Horizon
+Road continue to the east and west.
+~
+Sector       city~
+Exit         east
+To           21031
+End
+Exit         west
+To           21029
+End
+End
+
+Vnum         21031
+Name         Intersection of Horizon Road and Hawk Street~
+Description  You stand at the intersection of Horizon Road and Hawk Street.  To the east you
+can see the massive east gate of Darkhaven, while Hawk Street lies to the north
+and south, and Horizon Road runs west.
+~
+Sector       city~
+Exit         north
+To           21021
+End
+Exit         east
+To           21032
+End
+Exit         south
+To           21038
+End
+Exit         west
+To           21030
+End
+End
+
+Vnum         21032
+Name         Inside the Eastern Gate~
+Description  You stand inside the eastern gate of Darkhaven.  To the west is the
+intersection of Horizon Road and Hawk Street.
+~
+Sector       city~
+Exit         west
+To           21031
+End
+NR M 0 21011 1 21032 100
+  NR E 0 21027 1 28 100
+  NR E 0 21016 1 13 100
+  NR E 0 21022 1 19 100
+  NR E 0 21015 1 8 100
+  NR E 0 21022 1 20 100
+  NR E 0 21014 1 25 100
+  NR E 0 21023 1 29 100
+  NR E 0 21024 1 4 100
+  NR E 0 21019 1 37 100
+  NR E 0 21014 1 26 100
+  NR E 0 21020 1 15 100
+  NR E 0 21021 1 21 100
+  NR E 0 21018 1 31 100
+  NR E 0 21017 1 0 100
+End
+
+Vnum         21033
+Name         Falcon Road ~
+Description  You are walking down a poorer section of Falcon Road. The cobbled roads seem
+unkempt and dirty, definitely unusual in this city which represents hope and
+order. The street ranges to the north and south. 
+~
+Sector       city~
+Exit         north
+To           21023
+End
+Exit         south
+To           21045
+End
+End
+
+Vnum         21034
+Name         Darkhaven Bank~
+Description  This is a very large bank with lots of lockers at the back.
+~
+Flags        locker~
+Exit         south
+To           21074
+End
+NR M 0 21017 1 21034 100
+End
+
+Vnum         21035
+Name         Fishing Shop~
+Exit         south
+To           21071
+End
+NR M 0 21018 1 21035 100
+  NR G 0 21041 1 100
+  NR G 0 21039 1 100
+  NR G 0 21040 1 100
+End
+
+Vnum         21036
+Name         The Cathedral Mortuary~
+Description  This is such a dreary place to be, death is all around. Corpses are constantly coming in,
+being examined and sent off to their resting places. Players may use the
+&[white]retrieve&D command to have their corpses brought here.
+~
+Exit         south
+To           21018
+End
+NR M 0 21019 1 21036 100
+End
+
+Vnum         21037
+Name         Vertic Avenue~
+Description  You are traveling upon the southern portion of Vertic Avenue. The tents of the
+Darkhaven markets rise high into the air to the east and west. The cobblestone
+road stretches to the north and south, where you can see a bustling
+intersection. 
+~
+Sector       city~
+Exit         north
+To           21027
+End
+Exit         south
+To           21049
+End
+End
+
+Vnum         21038
+Name         Hawk Street~
+Description  You take a brief pause on your way down Hawk Street, and you can hear the
+chirping of birds coming from the other side of the city wall.  Upon catching
+your breath, you gather your belongings and continue on your way.
+~
+Sector       city~
+Exit         north
+To           21031
+End
+Exit         south
+To           21053
+End
+End
+
+Vnum         21039
+Name         The Scribe's Tent~
+Description  You find yourself in a quiet section of the tent.  All that can be heard is the
+constant scratching of quill on parchment and scrolls litter the floor,
+although most have been carefully categorized and placed into different boxes. 
+A desk sits in the center of the room, where the scribe writes an infinite
+amount of scrolls.  You almost pity the man his job, until you see his coin
+pouch.  To the east is the apothecary, while a tent opening to the south leads
+back out onto Market Street.
+~
+Exit         east
+To           21040
+End
+Exit         south
+To           21046
+End
+NR M 0 21004 1 21039 100
+  NR G 0 21006 1 100
+  NR G 0 21007 1 100
+  NR G 0 21005 1 100
+End
+
+Vnum         21040
+Name         The Alchemist's~
+Description  This portion of the tent is filled with the scent of chemicals. Wooden shelves
+are lined with potions, each of varying colors. A counter sits in the center of
+the room. Walking nearer, you notice a small plaque on the counter which reads
+'Success lies in alchemy'. An opening in the tent leads back out onto Market
+Street lies to the south, while two other magic shops are situated to the east
+and west.
+~
+Exit         east
+To           21041
+End
+Exit         south
+To           21047
+End
+Exit         west
+To           21039
+End
+NR M 0 21003 1 21040 100
+  NR G 0 21003 1 100
+  NR G 0 21002 1 100
+  NR G 0 21001 1 100
+  NR G 0 21000 1 100
+  NR G 0 21004 1 100
+End
+
+Vnum         21041
+Name         The Wizard's Tent~
+Description  A musty odor fills your nostrils as you inhale.  Bookcases hug the walls of
+this part of the tent, each shelf filled with magical items.  As you begin to
+inspect several of the shelves, you notice they are all covered in dust.  A
+square wooden counter sits in the center of the room, and an opening in the
+tent leads back out onto Market Street, while the Alchemist's tent lies to the
+west.
+~
+Exit         south
+To           21048
+End
+Exit         west
+To           21040
+End
+NR M 0 21001 1 21041 100
+  NR G 0 21047 1 100
+  NR G 0 34 1 100
+  NR G 0 21049 1 100
+  NR G 0 21048 1 100
+  NR G 0 35 1 100
+End
+
+Vnum         21042
+Name         The Butcher's Shop~
+Description  The smell of fresh meat is present in the air of this shop.  Kept cool in
+magically frosted vaults, the city butcher sells his meats here, imported from
+lands far distant.  To the south is the famous Market Street, while the
+Darkhaven Bakery lies to the east.
+~
+Exit         east
+To           21043
+End
+Exit         south
+To           21050
+End
+NR M 0 21008 1 21042 100
+  NR G 0 21009 1 100
+  NR G 0 21010 1 100
+  NR G 0 21008 1 100
+  NR G 0 21037 1 100
+  NR G 0 21036 1 100
+End
+
+Vnum         21043
+Name         The Darkhaven Bakery ~
+Description  Upon entering the Darkhaven Bakery, you find yourself surrounded by citizens of
+the marvelous city, each waiting in line for their daily bread.  Gazing
+eastward, you see a farmer's shop which sells all forms of dairy products. A
+butcher's shop also lies to the west, while an opening in the tent to the south
+leads back out onto Market Street.
+~
+Exit         east
+To           21044
+End
+Exit         south
+To           21051
+End
+Exit         west
+To           21042
+End
+NR M 0 21009 1 21043 100
+  NR G 0 21013 1 100
+  NR G 0 21011 1 100
+  NR G 0 21012 1 100
+End
+
+Vnum         21044
+Name         The Dairy Tent~
+Description  This small shop smells strongly of cheese, as dozens of types of cheeses have
+been laid out and labeled properly on several long shelves.  You notice many
+bottles of milk, considered to be more important than even water, carefully
+stacked in the northeast corner.  To the west is the Darkhaven Bakery, while
+Market Street lies to the south.
+~
+Exit         south
+To           21052
+End
+Exit         west
+To           21043
+End
+NR M 0 21027 1 21044 100
+  NR G 0 21050 1 100
+  NR G 0 21051 1 100
+End
+
+Vnum         21045
+Name         Intersection of Market Street and Falcon Road~
+Description  You stand at the intersection of Market Street and Falcon Road. A wall towers
+over you to the west, keeping intruders out of Darkhaven. To the east are the
+glorious pavilions and shops of Darkhaven, while Falcon Road continues to the
+north and south. 
+~
+Sector       city~
+Exit         north
+To           21033
+End
+Exit         east
+To           21046
+End
+Exit         south
+To           21060
+End
+End
+
+Vnum         21046
+Name         Market Street ~
+Description  You smile at the sight of the familiar Market Street and its glorious
+pavilions.  A fiery ruby catches your eye in the shop to the south, while the
+shop to the north is eerily silent.  Market Street extends to the east and
+west.
+~
+Sector       city~
+Exit         north
+To           21039
+End
+Exit         east
+To           21047
+End
+Exit         south
+To           21054
+End
+Exit         west
+To           21045
+End
+End
+
+Vnum         21047
+Name         Market Street~
+Description  Citizens of Darkhaven scamper around you, anxious to finish their shopping.
+Gazing northward, you can see a female elf brewing a multitude of potions,
+while to the south you see Darkhaven's courier service.  Market Street ranges
+to the east and west.
+~
+Sector       city~
+Exit         north
+To           21040
+End
+Exit         east
+To           21048
+End
+Exit         south
+To           21135
+End
+Exit         west
+To           21046
+End
+End
+
+Vnum         21048
+Name         Market Street~
+Description  The cobbled road is buzzing with activity.  Eager shouts from numerous tents
+and pavilions encourage potential customers to come inspect a shopkeeper's
+wares.  To the north is the Magician's Tent, while a dealer in parchment is to
+the south.  Market Street stretches to the east and west.
+~
+Sector       city~
+Exit         north
+To           21041
+End
+Exit         east
+To           21049
+End
+Exit         west
+To           21047
+End
+End
+
+Vnum         21049
+Name         Intersection of Vertic Avenue and Market Street~
+Description  You stand at the intersection of Vertic Avenue and Market Street. The
+intersection bustles with activity as citizens go about their business. To the
+east and west runs Market Street, lined with the exotic shops of Darkhaven,
+while Vertic Avenue lies to the north and south. 
+~
+Sector       city~
+Exit         north
+To           21037
+End
+Exit         east
+To           21050
+End
+Exit         south
+To           21064
+End
+Exit         west
+To           21048
+End
+End
+
+Vnum         21050
+Name         Market Street~
+Description  The cobbled road is buzzing with activity.  Eager shouts from numerous tents
+and pavilions encourage potential customers to come inspect a shopkeeper's
+wares.  To the north is the Food Market, while the tent to the south is
+dedicated to repairing items.  Market Street stretches to the east and west.
+~
+Sector       city~
+Exit         north
+To           21042
+End
+Exit         east
+To           21051
+End
+Exit         south
+To           21057
+End
+Exit         west
+To           21049
+End
+End
+
+Vnum         21051
+Name         Market Street~
+Description  Citizens of Darkhaven scamper about you, eager to finish their shopping. The
+aroma of fresh bread assails your nose, coming from a bakery to the north, and
+the clanging of metal on metal rings out from Darkhaven's armory to the south.
+Market Street ranges to the east and west.
+~
+Sector       city~
+Exit         north
+To           21043
+End
+Exit         east
+To           21052
+End
+Exit         south
+To           21058
+End
+Exit         west
+To           21050
+End
+End
+
+Vnum         21052
+Name         Market Street~
+Description  You smile at the familiar sight of Market Street and its glorious pavilions.
+The ring of sword on sword can be heard to the south, while the dairy is
+situated to the north.  Market Street extends east and west.
+~
+Sector       city~
+Exit         north
+To           21044
+End
+Exit         east
+To           21053
+End
+Exit         south
+To           21059
+End
+Exit         west
+To           21051
+End
+End
+
+Vnum         21053
+Name         Intersection of Market Street and Hawk Street ~
+Description  You stand at the intersection of Market Street and Hawk Street.  A wall towers
+over you to the east, keeping intruders out of Darkhaven.  To the west are the
+glorious pavilions and shops of Darkhaven, while Hawk Street continues to the
+north and south.
+~
+Sector       city~
+Exit         north
+To           21038
+End
+Exit         south
+To           21067
+End
+Exit         west
+To           21052
+End
+End
+
+Vnum         21054
+Name         The Shining Emerald~
+Description  A locked display box dominates this particular shop.  Under the glass of the
+box are a myriad of gems, each lying gently upon a miniscule cushion. Hanging
+from the walls are various paintings, while sculptures take up the rest of the
+floor space.  To the east is Darkhaven's courier, while an opening in the tent
+to the north leads back out onto Market Street.
+~
+Exit         north
+To           21046
+End
+Exit         east
+To           21135
+End
+NR M 0 21005 1 21054 100
+End
+
+Vnum         21055
+Name         Path to the Lake~
+Description  The crystal clear water of the Darkhaven Lake can easily be seen to the east,
+while to the southwest people can be seen hurrying through Darkhaven Square.
+~
+Exit         east
+To           21056
+End
+Exit         southwest
+To           21027
+End
+End
+
+Vnum         21056
+Name         Darkhaven Lake~
+Description  The crystal clear water allows for a great view of the fish swimming beneath
+the surface.
+~
+Sector       water_noswim~
+Exit         west
+To           21055
+End
+End
+
+Vnum         21057
+Name         The Blacksmith's Tent~
+Description  You stand within the sweltering tent of the city's blacksmith.  Darkhaven's
+armorer lies to the east, while an opening in the tent leads back out onto
+Market Street.
+~
+Exit         north
+To           21050
+End
+Exit         east
+To           21058
+End
+NR M 0 21002 1 21057 100
+End
+
+Vnum         21058
+Name         Armory ~
+Description  This shop's owner is a dedicated creator of armor and shields.
+Having lost her son to shabby equipment, she took up the job of putting
+protective suits together.  To the west is the blacksmith, while the armorer
+is to the east.  An opening in the tent leads back out north onto
+Market Street.
+~
+Exit         north
+To           21051
+End
+Exit         east
+To           21059
+End
+Exit         west
+To           21057
+End
+NR M 0 21006 1 21058 100
+  NR G 0 21042 1 100
+  NR G 0 21016 1 100
+  NR G 0 21025 1 100
+  NR G 0 21022 1 100
+  NR G 0 21017 1 100
+  NR G 0 21015 1 100
+  NR G 0 21014 1 100
+  NR G 0 21023 1 100
+  NR G 0 21024 1 100
+  NR G 0 21019 1 100
+  NR G 0 21020 1 100
+  NR G 0 21021 1 100
+  NR G 0 21018 1 100
+End
+
+Vnum         21059
+Name         Weaponry Shop~
+Description  Racks line the walls of this tent, each filled to the brim with weapons. You
+grin evilly at the items of destruction, and try out a couple on the practice
+dummies hung from the ceiling.  A counter in the center of the room is where
+the keeper of this shop does business.  To the west is the armorer's shop,
+while an opening in the tent to the north leads back out onto Market Street.
+~
+Exit         north
+To           21052
+End
+Exit         west
+To           21058
+End
+NR M 0 21007 1 21059 100
+  NR G 0 21052 1 100
+  NR G 0 21027 1 100
+  NR G 0 21035 1 100
+  NR G 0 21046 1 100
+  NR G 0 21043 1 100
+  NR G 0 21033 1 100
+  NR G 0 21026 1 100
+  NR G 0 21034 1 100
+End
+
+Vnum         21060
+Name         Falcon Road~
+Description  You pick up your pace as you travel down this portion of Falcon Road. Gazing
+eastward, you see what is easily the darkest alley in the city, though a
+glimmer of light can be seen flickering in the shadows of the slim street. To
+the north is an intersection, while Falcon Road continues to the south. 
+~
+Sector       city~
+Exit         north
+To           21045
+End
+Exit         east
+To           21061
+End
+Exit         south
+To           21068
+End
+End
+
+Vnum         21061
+Name         Thieves Alley  ~
+Description  You are walking through a particularly dark and unkempt alley of Darkhaven.
+Rats scurry across the cobbled ground, squeaking at you.  Empty crates and
+tattered rags are lying about.  The alley opens up to Falcon Road to the west,
+while to the east the darkness deepens.
+~
+Sector       city~
+Exit         east
+To           21062
+End
+Exit         west
+To           21060
+End
+NR M 0 21012 1 21061 100
+End
+
+Vnum         21062
+Name         Thieves Alley~
+Description  You are walking through a particularly dark and unkempt alley of Darkhaven.
+Rats scurry across the cobbled ground, squeaking at you.  Empty crates and
+tattered rags are lying about.  The alley stretches to the east and west, while
+the mysterious Guild of Thieves lies to the north.
+~
+Sector       city~
+Exit         east
+To           21063
+End
+Exit         west
+To           21061
+End
+NR M 0 21012 1 21062 100
+End
+
+Vnum         21063
+Name         Thieves Alley~
+Description  You are walking through a particularly dark and unkempt alley of Darkhaven.
+Rats scurry across the cobbled ground, squeaking at you.  Empty crates and
+tattered rags are lying about.  The alley opens up to Vertic Avenue to the
+east, while to the west the darkness deepens.
+~
+Sector       city~
+Exit         east
+To           21064
+End
+Exit         west
+To           21062
+End
+NR M 0 21012 1 21063 100
+End
+
+Vnum         21064
+Name         Vertic Avenue~
+Description  While traversing the busy, cobbled streets of Darkhaven, you notice a
+particularly dark alley to the west which citizens commonly avoid. Grinning,
+you imagine the cloaked thief lurking in the shadows. Vertic Avenue extends to
+the north and south. 
+~
+Sector       city~
+Exit         north
+To           21049
+End
+Exit         east
+To           21066
+End
+Exit         south
+To           21072
+End
+Exit         west
+To           21063
+End
+End
+
+Vnum         21065
+Name         Annir's Clothing~
+Description  The shop you have entered smells heavily of leather.  Gazing about, you see all
+manner of clothing, from leather to silk.  A wooden counter lines the northern
+wall of the shop, and several stalls line the eastern wall, where you can try
+on your clothes.  A door to the south leads back out onto Law Avenue.
+~
+Exit         south
+To           21070
+End
+NR M 0 21010 1 21065 100
+  NR G 0 21028 1 100
+  NR G 0 21032 1 100
+  NR G 0 21031 1 100
+  NR G 0 21030 1 100
+  NR G 0 21029 1 100
+End
+
+Vnum         21066
+Name         Darkhaven Quest Master~
+Description  There are lots of different types of beautiful objects all over the place.
+~
+Exit         west
+To           21064
+End
+NR M 0 21020 1 21066 100
+End
+
+Vnum         21067
+Name         Hawk Street~
+Description  This portion of Hawk Street is lined with pine trees and small colorful
+gardens.  Two marble benches sit on opposite sides of the cobbled road,
+enticing you to rest.  You can see Law Avenue meeting up with Hawk Street to
+the south, while to the north is the Market Street and Hawk Street
+intersection.
+~
+Sector       city~
+Exit         north
+To           21053
+End
+Exit         south
+To           21076
+End
+End
+
+Vnum         21068
+Name         Meeting of Falcon Road and Law Avenue~
+Description  Falcon Road and Law Avenue come together here to form one of the four corners
+of Darkhaven. A stone staircase leads up onto the fantastic city's battlements,
+from where even the strongest foe can be repelled. Falcon Road lies to the
+north, while Law Avenue stretches eastward. There is a manhole in the center of
+the street.
+~
+Sector       city~
+Exit         north
+To           21060
+End
+Exit         east
+To           21069
+End
+Exit         down
+Keyword      manhole~
+Flags        isdoor closed secret can_enter~
+To           21125
+End
+NR M 0 21013 1 21068 100
+End
+
+Vnum         21069
+Name         Law Avenue~
+Description  This stretch of Law Avenue is cobbled and well kept, like most of the streets
+of Darkhaven. Looking northward, you see a small mansion which seems abandoned.
+Two stone gargoyles guard the gates to the strange building, their ruby eyes
+glowing softly. The lengthy cobblestone road extends to the east and west. 
+~
+Sector       city~
+Exit         east
+To           21070
+End
+Exit         west
+To           21068
+End
+End
+
+Vnum         21070
+Name         Law Avenue~
+Description  You are walking down a rather commercial part of Law Avenue. Merchants hassle
+you to spend your gold as you attempt to continue on your way. Glancing to the
+north, you see the only shop worth visiting, owned by the respectable Annir.
+Law Avenue stretches to the east and west. 
+~
+Sector       city~
+Exit         north
+To           21065
+End
+Exit         east
+To           21071
+End
+Exit         west
+To           21069
+End
+End
+
+Vnum         21071
+Name         Law Avenue~
+Description  You are traversing the cobblestone roads of Law Avenue at a brisk
+pace. To the north is the Fishing Shop. You feel almost like paying the shop a
+visit. Law Avenue extends to the east and west. 
+~
+Sector       city~
+Exit         north
+To           21035
+End
+Exit         east
+To           21072
+End
+Exit         west
+To           21070
+End
+End
+
+Vnum         21072
+Name         Intersection of Vertic Avenue and Law Avenue~
+Description  You stand at the intersection of Vertic Avenue and Law Avenue. Gazing to the
+south, you see the massive south gate of Darkhaven. The cobbled roads of Vertic
+Avenue and Law Avenue lie in the four cardinal directions. 
+~
+Sector       city~
+Exit         north
+To           21064
+End
+Exit         east
+To           21073
+End
+Exit         south
+To           21077
+End
+Exit         west
+To           21071
+End
+End
+
+Vnum         21073
+Name         Law Avenue~
+Description  Although you pass by the building to the north frequently, you still have
+trouble believing it stands there. The road ranges to the east and west from
+here. 
+~
+Sector       city~
+Exit         north
+To           21134
+End
+Exit         east
+To           21074
+End
+Exit         west
+To           21072
+End
+End
+
+Vnum         21074
+Name         Law Avenue~
+Description  A tall statue attracts your attention on this portion of Law Avenue. The marble
+sculpture is of a man in his late forties wielding a blade of ebony against an
+unseen attacker, although from the man's posture it is obvious that his
+opponent was enormous. A small golden plaque sits near the statue, explaining
+its importance. The road stretches both east and west. 
+~
+Sector       city~
+Exit         north
+To           21034
+End
+Exit         east
+To           21075
+End
+Exit         west
+To           21073
+End
+End
+
+Vnum         21075
+Name         Law Avenue ~
+Description  You are walking down Law Avenue, the road which lines the southern wall of
+Darkhaven. The cobblestones here seem worn and used. To the north is the reason
+for this: a mount and pet store. Even from here you can smell the faint scent
+of hay. To the east is one of the four corners of Darkhaven, while Law Avenue
+continues westward. 
+~
+Sector       city~
+Exit         north
+To           21078
+End
+Exit         east
+To           21076
+End
+Exit         west
+To           21074
+End
+End
+
+Vnum         21076
+Name         Meeting of Hawk Street and Law Avenue~
+Description  Hawk Street and Law Avenue come together here to form one of the four corners
+of Darkhaven. A stone staircase leads up onto the fantastic city's battlements,
+from where even the strongest foe can be repelled. Hawk Street lies to the
+north, while Law avenue stretches westward. There is a manhole in the center of
+the street.
+~
+Sector       city~
+Exit         north
+To           21067
+End
+Exit         west
+To           21075
+End
+Exit         down
+Keyword      manhole~
+Flags        isdoor closed secret can_enter~
+To           21133
+End
+NR M 0 21013 1 21076 100
+End
+
+Vnum         21077
+Name         Inside the Southern Gate~
+Description  You stand inside the southern gate of Darkhaven. To the north is the
+intersection of Vertic Avenue and Law Avenue. 
+~
+Sector       city~
+Exit         north
+To           21072
+End
+NR M 0 21011 1 21077 100
+  NR E 0 21027 1 28 100
+  NR E 0 21016 1 13 100
+  NR E 0 21022 1 19 100
+  NR E 0 21017 1 0 100
+  NR E 0 21022 1 20 100
+  NR E 0 21015 1 8 100
+  NR E 0 21014 1 25 100
+  NR E 0 21023 1 29 100
+  NR E 0 21024 1 4 100
+  NR E 0 21014 1 26 100
+  NR E 0 21019 1 37 100
+  NR E 0 21020 1 15 100
+  NR E 0 21021 1 21 100
+  NR E 0 21018 1 31 100
+End
+
+Vnum         21078
+Name         Companions and Mounts~
+Description  You walk into a large shop which smells of horses and hay.  Behind the long
+wooden counter are dozens of cages containing varying types of animals.  You
+can hear the sounds of horses coming from a store room in the back of the
+shop.  A door to the south leads back out onto the busy Law Avenue.
+~
+Flags        petshop~
+Exit         south
+To           21075
+End
+NR M 0 21016 1 21078 100
+End
+
+Vnum         21079
+Name         Pet Shop Stables~
+Flags        nomob solitary nosummon noastral~
+NR M 0 21014 1 21079 100
+NR M 0 21015 1 21079 100
+End
+
+Vnum         21080
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+There is a ladder on the north wall that leads up to a manhole.
+~
+Sector       underground~
+Exit         east
+To           21081
+End
+Exit         south
+To           21089
+End
+Exit         up
+Keyword      manhole~
+Flags        isdoor closed secret can_leave nomob~
+To           21001
+End
+NR M 0 21022 1 21080 100
+NR M 0 21021 1 21080 100
+NR M 0 21022 1 21080 100
+NR M 0 21023 1 21080 100
+NR M 0 21024 1 21080 100
+NR M 0 21025 1 21080 100
+NR M 0 21026 1 21080 100
+End
+
+Vnum         21081
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21082
+End
+Exit         west
+To           21080
+End
+End
+
+Vnum         21082
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21083
+End
+Exit         west
+To           21081
+End
+End
+
+Vnum         21083
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21084
+End
+Exit         west
+To           21082
+End
+End
+
+Vnum         21084
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21085
+End
+Exit         south
+To           21090
+End
+Exit         west
+To           21083
+End
+End
+
+Vnum         21085
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21086
+End
+Exit         west
+To           21084
+End
+End
+
+Vnum         21086
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21087
+End
+Exit         west
+To           21085
+End
+End
+
+Vnum         21087
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21088
+End
+Exit         west
+To           21086
+End
+End
+
+Vnum         21088
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+There is a ladder on the north wall that leads up to a manhole.
+~
+Sector       underground~
+Exit         south
+To           21091
+End
+Exit         west
+To           21087
+End
+Exit         up
+Keyword      manhole~
+Flags        isdoor closed secret can_leave nomob~
+To           21009
+End
+NR M 0 21021 1 21088 100
+NR M 0 21022 1 21088 100
+NR M 0 21023 1 21088 100
+NR M 0 21024 1 21088 100
+NR M 0 21025 1 21088 100
+NR M 0 21026 1 21088 100
+End
+
+Vnum         21089
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21080
+End
+Exit         south
+To           21092
+End
+End
+
+Vnum         21090
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21084
+End
+Exit         south
+To           21093
+End
+End
+
+Vnum         21091
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21088
+End
+Exit         south
+To           21094
+End
+End
+
+Vnum         21092
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21089
+End
+Exit         south
+To           21095
+End
+End
+
+Vnum         21093
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21090
+End
+Exit         south
+To           21096
+End
+End
+
+Vnum         21094
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21091
+End
+Exit         south
+To           21097
+End
+End
+
+Vnum         21095
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21092
+End
+Exit         south
+To           21098
+End
+End
+
+Vnum         21096
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21093
+End
+Exit         south
+To           21102
+End
+End
+
+Vnum         21097
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21094
+End
+Exit         south
+To           21106
+End
+End
+
+Vnum         21098
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21095
+End
+Exit         east
+To           21099
+End
+Exit         south
+To           21107
+End
+End
+
+Vnum         21099
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21100
+End
+Exit         west
+To           21098
+End
+End
+
+Vnum         21100
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21101
+End
+Exit         west
+To           21099
+End
+End
+
+Vnum         21101
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21102
+End
+Exit         west
+To           21100
+End
+End
+
+Vnum         21102
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21096
+End
+Exit         east
+To           21103
+End
+Exit         south
+To           21108
+End
+Exit         west
+To           21101
+End
+NR M 0 21021 1 21102 100
+NR M 0 21022 1 21102 100
+NR M 0 21023 1 21102 100
+NR M 0 21024 1 21102 100
+NR M 0 21025 1 21102 100
+NR M 0 21026 1 21102 100
+End
+
+Vnum         21103
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21104
+End
+Exit         west
+To           21102
+End
+End
+
+Vnum         21104
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21105
+End
+Exit         west
+To           21103
+End
+End
+
+Vnum         21105
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21106
+End
+Exit         west
+To           21104
+End
+End
+
+Vnum         21106
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21097
+End
+Exit         south
+To           21109
+End
+Exit         west
+To           21105
+End
+End
+
+Vnum         21107
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21098
+End
+Exit         south
+To           21110
+End
+End
+
+Vnum         21108
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21102
+End
+Exit         south
+To           21114
+End
+End
+
+Vnum         21109
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21106
+End
+Exit         south
+To           21118
+End
+End
+
+Vnum         21110
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21107
+End
+Exit         east
+To           21111
+End
+Exit         south
+To           21119
+End
+End
+
+Vnum         21111
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21112
+End
+Exit         west
+To           21110
+End
+End
+
+Vnum         21112
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21113
+End
+Exit         west
+To           21111
+End
+End
+
+Vnum         21113
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21114
+End
+Exit         west
+To           21112
+End
+End
+
+Vnum         21114
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21108
+End
+Exit         east
+To           21115
+End
+Exit         south
+To           21123
+End
+Exit         west
+To           21113
+End
+End
+
+Vnum         21115
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21116
+End
+Exit         west
+To           21114
+End
+End
+
+Vnum         21116
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21117
+End
+Exit         west
+To           21115
+End
+End
+
+Vnum         21117
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21118
+End
+Exit         west
+To           21116
+End
+End
+
+Vnum         21118
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21109
+End
+Exit         south
+To           21124
+End
+Exit         west
+To           21117
+End
+End
+
+Vnum         21119
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21110
+End
+Exit         east
+To           21120
+End
+Exit         south
+To           21125
+End
+End
+
+Vnum         21120
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21121
+End
+Exit         west
+To           21119
+End
+End
+
+Vnum         21121
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21122
+End
+Exit         west
+To           21120
+End
+End
+
+Vnum         21122
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21123
+End
+Exit         west
+To           21121
+End
+End
+
+Vnum         21123
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21114
+End
+Exit         south
+To           21129
+End
+Exit         west
+To           21122
+End
+End
+
+Vnum         21124
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21118
+End
+Exit         south
+To           21133
+End
+End
+
+Vnum         21125
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+There is a ladder on the south wall leading up to a manhole.
+~
+Sector       underground~
+Exit         north
+To           21119
+End
+Exit         east
+To           21126
+End
+Exit         up
+Keyword      manhole~
+Flags        isdoor closed secret can_leave nomob~
+To           21068
+End
+NR M 0 21021 1 21125 100
+NR M 0 21022 1 21125 100
+NR M 0 21023 1 21125 100
+NR M 0 21024 1 21125 100
+NR M 0 21025 1 21125 100
+NR M 0 21026 1 21125 100
+End
+
+Vnum         21126
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21127
+End
+Exit         west
+To           21125
+End
+End
+
+Vnum         21127
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21128
+End
+Exit         west
+To           21126
+End
+End
+
+Vnum         21128
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21129
+End
+Exit         west
+To           21127
+End
+End
+
+Vnum         21129
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         north
+To           21123
+End
+Exit         east
+To           21130
+End
+Exit         west
+To           21128
+End
+End
+
+Vnum         21130
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21131
+End
+Exit         west
+To           21129
+End
+End
+
+Vnum         21131
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21132
+End
+Exit         west
+To           21130
+End
+End
+
+Vnum         21132
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+~
+Sector       underground~
+Exit         east
+To           21133
+End
+Exit         west
+To           21131
+End
+End
+
+Vnum         21133
+Name         In a Sewer~
+Description  This is a very slimy and smelly sewer. There is a constant supply of water,
+filled with all kinds of various waste, constantly flowing through the sewer.
+There is a ladder on the south wall leading up to a manhole.
+~
+Sector       underground~
+Exit         north
+To           21124
+End
+Exit         west
+To           21132
+End
+Exit         up
+Keyword      manhole~
+Flags        isdoor closed secret can_leave nomob~
+To           21076
+End
+NR M 0 21021 1 21133 100
+NR M 0 21022 1 21133 100
+NR M 0 21023 1 21133 100
+NR M 0 21024 1 21133 100
+NR M 0 21025 1 21133 100
+NR M 0 21026 1 21133 100
+End
+
+Vnum         21134
+Name         The Laboratory of Skills and Spells~
+Description  This is where you can practice weapons, spells and skills. Type 'practice' to
+get a list of the ones currently available to you. To practice one type
+'practice <spell/skill/weapon>'. To see information about using spells, skills
+or weapons, type 'help cast' or 'help <spell/skill/weapon>'.
+ 
+You are also able to learn languages here. Languages are learned differently.
+You can see what languages you can learn under the 'practice' display. To learn
+a language type 'language learn <language>'. For more information on how to
+learn a language, type HELP LANGUAGES.
+~
+Exit         south
+To           21073
+End
+NR M 0 21028 1 21134 100
+End
+
+Vnum         21135
+Name         Trappers Post~
+Description  This place has a lot of useful traps all around the room. Traps that can be put
+used to trap set to go off when people mess with objects or when they enter the
+room.
+~
+Exit         north
+To           21047
+End
+Exit         west
+To           21054
+End
+NR M 0 21029 1 21135 100
+  NR G 0 21053 1 100
+End
+
+Vnum         21136
+Name         Wilderness~
+Description  ^^^^^^^--------***********&&&**********
+^^^^^--------************&&&&&*********
+^^^@@@@@@@--**************&&&**********
+-@@@@@@@@@@-***************************
+@@@@@@@@@******************************
+@@@@@***************----***************
+*@@*******************----*************
+******************----*****************
+~
+Flags        wilderness~
+Exit         south
+To           21000
+End
+MR M 0 21021 1 21136 100 15 2
+MR M 0 21022 1 21136 100 10 4
+MR M 0 21024 1 21136 100 9 6
+MR M 0 21025 1 21136 100 20 7
+MR M 0 21026 1 21136 100 3 4
+MR M 0 21021 1 21136 100 2 5
+MR M 0 21022 1 21136 100 20 3
+MR M 0 21024 1 21136 100 0 1
+MR M 0 21025 1 21136 100 18 4
+MR M 0 21026 1 21136 100 12 3
+MR O 0 21038 1 21136 100 18 4
+End
+
+Vnum         21199
+Name         Floating in a void~
+End
+
+#0
+
+
+#$

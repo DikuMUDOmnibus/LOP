@@ -1,0 +1,25 @@
+Version           1 42
+MudName           Lands of Pabulum~
+Saveflags         death kill passwd drop put give auto zap auction get receive idle fill empty~
+Highplayertime    1185328537
+NPfileCleanup     1326680152
+Highplayers       6
+WaitForAuth
+MorphOpt
+PetSave
+PkLoot
+AutoSaveCset
+AutoSaveCommands
+AutoSaveSocials
+AutoSaveSkills
+AutoSaveHelps
+Bestowdif         2
+MLimitPeaceful    4
+RoomLimbo         2
+RoomPoly          3
+RoomAuthstart     21017
+RoomDeadly        21017
+RoomSchool        21017
+RoomTemple        21017
+RoomAltar         21017
+End

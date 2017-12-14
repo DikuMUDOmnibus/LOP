@@ -1,0 +1,36 @@
+Name        Drow~
+Used        0
+Classes     Druid Paladin Ranger Warrior~
+NStat       12 100 strength~
+NStat       14 100 intelligence~
+NStat       15 100 dexterity~
+NStat       12 100 constitution~
+NStat       9 100 charisma~
+NStat       14 100 luck~
+Hit         100
+Mana        100
+Move        100
+Uses        1
+Affected    infrared scrying~
+Align       0
+Min_Align   -1000
+Max_Align   1000
+AC_Plus     0
+MinHeight   59
+MaxHeight   97
+MinWeight   154
+MaxWeight   250
+Hunger_Mod  0
+Thirst_mod  0
+Race_Recall 0
+Skill 'common' 1 100
+Skill 'dwarven' 1 100
+Skill 'elvish' 1 100
+Skill 'gith' 1 100
+Skill 'gnome' 1 100
+Skill 'halfling' 1 100
+Skill 'ogre' 1 100
+Skill 'orcish' 1 100
+Skill 'pixie' 1 100
+Skill 'trollish' 1 100
+End

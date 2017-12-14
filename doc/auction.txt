@@ -1,0 +1,26 @@
+This file is going to be a simple document explaining some things about auction in LoP...
+
+Usage: auction
+Usage: auction <#>
+Usage: auction <#> close
+Usage: auction <#> cancel
+Usage: auction <#> bid <amount>
+Usage: auction <object> <autowin>
+Usage: auction list <start #>
+
+With no arguments what's on auction will be displayed.
+With a # argument it will show you the stats for that auction.
+With a # and close argument it will close that auction.
+   (Note: can only stop auctions you started.)
+   (Note: you only get the object back if no bids were made on it.)
+   (Note: only the one who put the object on auction can close it.)
+With a # and cancel argument it will cancel the auction.
+   (Note: the object will be returned to you.)
+   (Note: all bids will be returned to the bidder.)
+   (Note: only the one who put the object on auction can cancel it.)
+With an object argument you place the object on auction.
+   You may specify an autowin for a quicker auction.
+With list and a starting # it will start at that auction and
+   show up to 15 auctions.
+Max gold for bids and autowins is 2,000,000,000 (2 Billion).
+All bids are saved and gave back when outbidded, closed, canceled or won.

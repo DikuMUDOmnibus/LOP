@@ -1,0 +1,6657 @@
+#COMMAND
+Name        at~
+Code        do_at
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: at <location> <command>
+
+This command allows you to execute a command at the specified location.
+~
+End
+
+#COMMAND
+Name        auction~
+Code        do_auction
+Position    sleeping~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: auction
+Usage: auction <#>
+Usage: auction <#> close
+Usage: auction <#> cancel
+Usage: auction <#> bid <amount>
+Usage: auction <object> [<autowin>]
+Usage: auction list <start #>
+
+With no arguments what's on auction will be displayed.
+With a # argument it will show you the stats for that auction.
+With a # and close argument it will close that auction.
+   (Note: can only stop auctions you started.)
+   (Note: you only get the object back if no bids were made on it)
+With a # and cancel argument it will cancel the auction.
+With an object argument you place the object on auction.
+   You may specify an autowin for a quicker auction.
+With list and a starting # it will start at that auction and
+   show up to 15 auctions.
+~
+Flags       allow_tilde~
+End
+
+#COMMAND
+Name        authorize~
+Code        do_authorize
+Position    dead~
+Perm        imm~
+Group       all~
+Log         1
+HText       Usage: authorize <name> [no/add]
+ 
+This command allows you to handle authorizing someone.
+If you don't specify no/name it will authorize the name.
+If you specify no it will deny the name and request they change it.
+If you specify add it will add and deny the specified name.
+   (Used to deny a name not on the authorize list).
+~
+End
+
+#COMMAND
+Name        affected~
+Code        do_affected
+Position    sleeping~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: affected [by]
+
+This command shows you a list of things affecting you.
+If you use the 'by' argument it will give a more detailed list.
+~
+End
+
+#COMMAND
+Name        afk~
+Code        do_afk
+Position    sleeping~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: afk
+ 
+This command allows you to let others know that you are 'away from keyboard'.
+It will also put you as afk to IMC.
+It is automatically removed if you enter a command.
+~
+End
+
+#COMMAND
+Name        ansi~
+Code        do_ansi
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: ansi
+ 
+This command will toggle ansi color on and off.
+~
+End
+
+#COMMAND
+Name        aassign~
+Code        do_aassign
+Position    dead~
+Perm        builder~
+Group       all~
+Log         1
+HText       Usage: aassign <filename>
+
+This command temporarily assigns all vnums in the specified area to you.
+If you are less then a head immortal you may need the area bestowed to you.
+~
+End
+
+#COMMAND
+Name        advance~
+Code        do_advance
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: advance <target> <class>/all <level>
+ 
+This command allows you to advance someone to the specified level.
+~
+End
+
+#COMMAND
+Name        allow~
+Code        do_allow
+Position    dead~
+Perm        leader~
+Group       all~
+Log         1
+HText       Usage: allow site/race/class <address/race/class>
+ 
+This command allows you to remove a site, race, or class from the ban list.
+~
+End
+
+#COMMAND
+Name        appraise~
+Code        do_appraise
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: appraise <item/all>
+ 
+This command allows you to find out how much it will cost to repair the
+specified item or all of the items.
+~
+End
+
+#COMMAND
+Name        areas~
+Code        do_areas
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: areas [<name>]
+Usage: areas [<low level>]
+Usage: areas [<low level>] [<name>]
+Usage: areas [<low level>] [<high level>]
+Usage: areas [<low level>] [<high level>] [<name>]
+
+This command displays the area and info about the area in a list sorted
+alphabetically.
+ 
+If you specify the levels it will only show areas in that level range.
+If you specify a name it will only showing matching names.
+
+Special thanks go to Fireblade for design and coding.
+~
+End
+
+#COMMAND
+Name        aset~
+Code        do_aset
+Position    dead~
+Perm        leader~
+Group       all~
+Log         1
+HText       Usage: aset <area filename> <field> <value>
+
+     Fields           Value  Information
+  ---------  --------------  ---------------------------------------
+   low_vnum          <vnum>  Area's lowest vnum.
+    hi_vnum          <vnum>  Area's highest vnum.
+   low_soft         <level>  Area's lowest level allowed (Warning).
+    hi_soft         <level>  Area's highest level allowed (Warning).
+   low_hard         <level>  Area's lowest level allowed.
+    hi_hard         <level>  Area's highest level allowed.
+       name      <new name>  Area's name.
+   filename  <new filename>  Area's filename.
+     author          <name>  Area's author.
+   resetmsg       <message>  Area's reset message.
+  resetfreq             <#>  Area's reset frequency.
+      flags       <flag(s)>  HELP AREAFLAGS
+
+EXAMPLES:
+   aset limbo.are name Limbo         Sets limbo.are's name to Limbo
+   aset limbo.are filename new.are   Sets limbo.are's filename to new.are
+   aset new.are author ROD           Sets new.are's author to ROD
+   aset new.are resetfreq 5          Sets new.are's resetfreq to 5
+~
+End
+
+#COMMAND
+Name        astat~
+Code        do_astat
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage:  astat [<area filename>]
+ 
+Astat displays the vital stats of an area, including the following:
+Name:             Area name
+Filename:         Area filename
+Prototype:        'Yes' if the area is prototype
+Author:           Area's author
+Age:              Area's age
+Players:          Current number of players in the area
+Max:              Max number of players in the area since startup
+Vnum range:       Area vnums
+Soft range:       Area level range (Recommended)
+Hard range:       Area level range (Enforced)
+Area flags:       Area flags
+Resetmsg:         Area reset message
+Reset frequency:  Area reset frequency
+~
+End
+
+#COMMAND
+Name        apply~
+Code        do_apply
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: apply <object> [<target>] [room/inventory/worn]
+ 
+This command allows you to take a salve or ointment and apply it to your body.
+
+You may specify if the target (if it is an object) is in the room,
+in your inventory, or something that is being worn by you.
+~
+End
+
+#COMMAND
+Name        atobj~
+Code        do_atobj
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: atobj <object> <command>
+
+This command allows you to execute a command at the specified object.
+~
+End
+
+#COMMAND
+Name        aquest~
+Code        do_aquest
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: aquest [request/cancel/complete]
+
+This command allows you to see, request, cancel, and complete a quest given to
+you.
+~
+End
+
+#COMMAND
+Name        aexit~
+Code        do_aexit
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: aexit
+ 
+This will show you all exits leading to and from the area you are currently in.
+~
+End
+
+#COMMAND
+Name        buy~
+Code        do_buy
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: buy [<amount>] <object> [check]
+ 
+This command allows you to buy something from a store.
+
+If you use the 'check' argument it will allow you to check out the item before
+you actually buy it.
+~
+End
+
+#COMMAND
+Name        brandish~
+Code        do_brandish
+Position    sitting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: brandish
+ 
+This command allows you to use a staff.
+When a staff is brandished it affects all in the room.
+If you have a staff in each hand both will be used.
+~
+End
+
+#COMMAND
+Name        bs~
+Code        do_backstab
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: bs <target>
+ 
+This command allows you to try and backstab someone.
+You need to be holding a piercing or stabbing weapon.
+~
+End
+
+#COMMAND
+Name        bamfin~
+Code        do_bamfin
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: bamfin <message>
+ 
+This allows you to replace the default message sent to the room your entering
+when using goto.
+Default: arrives in a swirling mist
+~
+End
+
+#COMMAND
+Name        bamfout~
+Code        do_bamfout
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: bamfout <message>
+ 
+This allows you to replace the default message sent to the room your leaving
+when using goto.
+Default: leaves in a swirling mist
+~
+End
+
+#COMMAND
+Name        ban~
+Code        do_ban
+Position    dead~
+Perm        leader~
+Group       all~
+Log         1
+HText       Usage: ban site/race/class [<address/race/class> <type> <duration>]
+Usage: ban show site/race/class <address/race/class/#>
+ 
+Duration is the length of the ban in days.
+Type can be: newbie, mortal, all, warn or level.
+This command will allow you to ban a site, race, or class from playing the mud
+for the specified amount of time.
+~
+End
+
+#COMMAND
+Name        bank~
+Code        do_bank
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: bank [<account>] delete/balance
+Usage: bank [<account>] share <name>
+Usage: bank [<account>] create/deposit/withdraw <amount>/all
+Usage: bank [<account>] transfer <amount> <account>
+ 
+This allows you to create a bank account and manage it.
+Only ones with access to the account can do things with it.
+Only the owner can delete the account.
+~
+End
+
+#COMMAND
+Name        bestow~
+Code        do_bestow
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: bestow <target> <command(s)>
+Usage: bestow <target> show list
+Usage: bestow <target> none
+ 
+This command is used to give a command to someone who doesn't already have it.
+Using 'bestow <target> none' will remove all the targets bestowments.
+Using 'bestow <target> show list' will show all the targets bestowments.
+~
+End
+
+#COMMAND
+Name        bio~
+Code        do_bio
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: bio
+
+This command will put you into an editor to edit your personal bio (what others
+see when they use whois on you).
+~
+End
+
+#COMMAND
+Name        bodybag~
+Code        do_bodybag
+Position    dead~
+Perm        imm~
+Group       all~
+Log         1
+HText       Usage: bodybag <name> [yes]
+
+With no argument it will show you all specified corpse(s).
+  Yes - brings all specified corpse(s) to your inventory.
+~
+End
+
+#COMMAND
+Name        boards~
+Code        do_boards
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: boards [<board>]
+ 
+If no board is specified it shows all boards. If you specify a board it will
+switch you to that board.
+~
+End
+
+#COMMAND
+Name        bset~
+Code        do_bset
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: bset <board filename> [create]
+Usage: bset <board filename> <field> <value>
+
+Field being one of:
+  post     read        remove     post_group     extra_removers
+  maxpost  read_group  filename   extra_readers
+ 
+This command allows you to create, see, and edit global boards.
+~
+End
+
+#COMMAND
+Name        bug~
+Code        do_bug
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: bug <message>
+ 
+This command will record your bug for the mud implementers.
+~
+End
+
+#COMMAND
+Name        bury~
+Code        do_bury
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: bury <item>
+ 
+This command allows you to bury an object. Depending on the size and weight of
+the object you may need a shovel to bury it.
+ 
+&RWARNING&d Buried objects will not last over a crash, reboot or hotboot. Do not
+attempt to use this command as a way to store items you wish to keep.
+~
+End
+
+#COMMAND
+Name        bestowarea~
+Code        do_bestowarea
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: bestowarea <victim> <filename>.are
+Usage: bestowarea <victim> [list]
+Usage: bestowarea <victim> none
+ 
+This command allows you to bestow areas to immortals so that they can engage in
+group building.
+Once someone has been bestowed an area they can use 'aassign' to assign
+theirself the prototype area.
+ 
+Examples:
+bestowarea joe bob.are           allows joe to work on bob's proto area
+bestowarea joe                   lists all of joe's bestowed areas
+bestowarea joe none              removes all of joe's bestowed areas
+~
+End
+
+#COMMAND
+Name        bolt~
+Code        do_bolt
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: bolt <direction>
+ 
+This command allows you to bolt a closed door.
+You must be on the side of the door that has the bolt.
+~
+End
+
+#COMMAND
+Name        bti~
+Code        do_bti
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: bti (Shows all bugs, typos, and ideas submitted.)
+Usage: bti <#> remove (Removes a bti from the table.)
+ 
+This command allows us to see player submitted bugs, ideas, and typos.
+~
+End
+
+#COMMAND
+Name        bait~
+Code        do_bait
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: bait <object>/remove
+ 
+This command allows you to put bait on the hook of a fishing pole.
+*Note* You must have the fishing pole in your hand.
+To remove the bait or the fish you cought type BAIT REMOVE.
+
+See also: FISH
+~
+End
+
+#COMMAND
+Name        cast~
+Code        do_cast
+Position    sleeping~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: cast <spell> <target>
+ 
+This command allows you to cast a spell.
+~
+End
+
+#COMMAND
+Name        close~
+Code        do_close
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: close <object/direction>
+ 
+This command allows you to close an object or door.
+~
+End
+
+#COMMAND
+Name        consider~
+Code        do_consider
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: consider <target>
+
+This command will give you some idea of how well you will stand up against the
+target.
+~
+End
+
+#COMMAND
+Name        channels~
+Code        do_channels
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: channels
+ 
+This command will show all channels that you may use.
+~
+End
+
+#COMMAND
+Name        checkvnums~
+Code        do_check_vnums
+Position    dead~
+Perm        leader~
+Group       all~
+Log         0
+HText       Usage: checkvnums <start vnum> <end vnum>
+ 
+This command allows you to see if any areas conflict with a set of vnums.
+~
+End
+
+#COMMAND
+Name        clans~
+Code        do_clans
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: clans [<clan name>]
+ 
+If <clan name> is specified it will show information on the clan.
+Without a <clan name> it will show a list of all the clans.
+~
+End
+
+#COMMAND
+Name        cedit~
+Code        do_cedit
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: cedit save cmdtable
+Usage: cedit <command> create [code]
+Usage: cedit <command> [field]
+ 
+Field being one of:
+    delete:  Deletes the command.
+      show:  Shows the command.
+     raise:  Raises the command in the command list.
+     lower:  Lowers the command in the command list.
+      list:  Shows the placement of the command in the command list.
+     flags:  polymorphed, noshow, npc, pc, allow_tilde, fullname
+      perm:  all, imm, builder, leader, head, imp
+  position:  dead, mortal, incap, stunned, sleeping, berserk,
+             resting, aggressive, sitting, fighting, defensive,
+             evasive, standing, mounted, shove, drag
+       log:  0 - normal, 1 - always, 2 - never, 3 - build,
+             4 - high, 5 - comm
+      code:  What code should the command use.
+      help:  Puts you in a buffer to edit the command's helpfile.
+~
+End
+
+#COMMAND
+Name        coinduct~
+Code        do_council_induct
+Position    dead~
+Perm        leader~
+Group       all~
+Log         0
+HText       Usage: coinduct <target>
+ 
+This command allows you to induct someone into your council.
+~
+End
+
+#COMMAND
+Name        compare~
+Code        do_compare
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: compare <object> [<object>]
+
+This command allows you to compare an object with another object. If you only
+specify one object it will compare that object with one you are wearing where
+it would like to put that object.
+
+Special things aren't compared only the basics.
+~
+End
+
+#COMMAND
+Name        commands~
+Code        do_commands
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: commands [<string>/<level>/<low level> <max level>]
+ 
+This command allows you to see all the commands, just ones matching the string
+argument, ones matching the specified level, or ones that are in the specified
+level range.
+~
+End
+
+#COMMAND
+Name        config~
+Code        do_config
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: config [<option>]
+
+Without a specified <option> it will show all your current settings.
+With a specified <option> it will toggle that option on or off.
+
+OPTIONS:
+    GAG    BRIEF   COMBINE  AUTOGOLD   NOSUMMON
+   ANSI    FINFO   COMPASS  AUTOLOOT   SMARTSAC
+   DRAG    HINTS   NOINTRO  GROUPWHO   TELNETGA
+   NICE    PAGER   SPARING  NOASSIST  AUTOSPLIT
+   SOLO   PROMPT   SUICIDE  NOINDUCT
+  BLANK  AUTOSAC  AUTOEXIT  NORECALL
+~
+End
+
+#COMMAND
+Name        cooutcast~
+Code        do_council_outcast
+Position    dead~
+Perm        leader~
+Group       all~
+Log         0
+HText       Usage: cooutcast <target>
+ 
+This command allows you to outcast someone that is in your council.
+~
+End
+
+#COMMAND
+Name        councils~
+Code        do_councils
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: councils [<name>]
+ 
+This command will display all the councils.
+If <name> is specified it will show more information on that council.
+~
+End
+
+#COMMAND
+Name        credits~
+Code        do_credits
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       .  -------------------------------------------------------------------------
+ | o         M A N Y    S P E C I A L    T H A N K S    T O :            o |
+ |           ================================================              |
+ | Dennis M. Ritchie and Ken Thompson for their creation and development   |
+ | of "C" and UNIX; also Bell Laboratories, AT&&T, MIT, and the University  |
+ | of Berkeley California for their development and contributions to UNIX  |
+ | and C libraries; and thanks also to The Free Software Foundation for    |
+ | their GCC compiler, C library and development tools.                    |
+ |                                                                         |
+ | J.R.R. Tolkien for his huge contribution to the fantasy world and great |
+ | many, many inspirations; and of course TSR Hobbies Inc. for their many  |
+ | continuing contributions to the world of gaming, including Dungeons &&   |
+ | Dragons (tm), AD&&D (tm) and Forgotten Realms (tm); also Steve Jackson   |
+ | and Ian Livingstone for their Fighting Fantasy (tm) games and books.    |
+ |                                                                         |
+ | DIKU: Hans Staerfeldt, Tom Madsen, Katja Nyboe,                         |
+ | Michael Seifert ( Seifert@Dikumud.com ) and Sebastian Hammer.           |
+ |                                                                         |
+ | And a great many thanks to all the gods, avatars and wonderful players  |
+ | of Realms of Despair, as without them this mud could not be what it is. | 
+ |                                                                         |
+ | o                             -Thoric                                 o |
+  -------------------------------------------------------------------------
+~
+End
+
+#COMMAND
+Name        cset~
+Code        do_cset
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: cset <field> <level>
+
+Fields:
+    log   pkloot   wizlock   bestowdif    mset_player    nameresolving
+   muse  banrace  banclass   roomaltar    protomodify    roomauthstart
+   save  bansite  expmulti   roomlimbo    skipclasses    savefrequency
+  build  forcepc  mldeadly  mlpeaceful    waitforauth   denynewplayers
+  ident  mltotal  morphopt  roomdeadly   getobjnotake  overrideprivate
+  think  mudname  roompoly  roomschool   majorversion
+ maxpet  petsave  saveflag  roomtemple   minorversion
+~
+End
+
+#COMMAND
+Name        cmdtable~
+Code        do_cmdtable
+Position    dead~
+Perm        leader~
+Group       all~
+Log         0
+HText       Usage: cmdtable [lag]
+ 
+If 'lag' isn't used it will display all used commands and how many times they
+have been used since startup.
+ 
+If 'lag' is used it will display all commands that have lagged and how many
+times they have lagged since startup.
+~
+End
+
+#COMMAND
+Name        climate~
+Code        do_climate
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: climate <field> <name>
+ 
+This command allows you to view or modify the climate settings for an area.
+There are settings for temperature, precipitation, and wind.
+In addition, you may specify neighboring areas who will affect changes in the
+current areas weather. Therefore there are four fields to choose from.
+Each field has a different range of values available.
+ 
+Field name:   Values:
+      temp     cold, cool, normal,   warm,   hot
+    precip     arid,  dry, normal,   damp,   wet
+      wind    still, calm, normal, breezy, windy
+  neighbor    <area name>
+ 
+Specifying an area name which is already on the list will remove it.
+Using climate without any arguments will display the area's current setting.
+Note that this command always refers to the area which you are currently in.
+~
+End
+
+#COMMAND
+Name        cook~
+Code        do_cook
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: cook <item>
+ 
+This skill allows you to cook food in order to preserve it longer as well as
+remove many poisons.
+You will need to be near a fire.
+~
+End
+
+#COMMAND
+Name        color~
+Code        do_color
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: color ansitest
+Usage: color [color type] [color] | default
+Usage: color _reset_ (Resets all colors to default set)
+Usage: color _all_ [color] (Sets all color types to [color])
+Usage: color theme [name] (Sets all color types to a defined theme)
+
+This command allows you to control the colors you see.
+~
+End
+
+#COMMAND
+Name        classes~
+Code        do_classes
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: classes
+ 
+This command will show you all the classes in the mud.
+~
+End
+
+#COMMAND
+Name        checkdice~
+Code        do_checkdice
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: checkdice <string>
+ 
+This command can be useful when figuring out what you want to set a spell or
+skill's dice to.
+~
+End
+
+#COMMAND
+Name        cquit~
+Code        do_clan_quit
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: cquit now
+ 
+This command allows you a way of quitting the clan your a member of.
+~
+End
+
+#COMMAND
+Name        corpses~
+Code        do_corpses
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: corpses 
+
+Shows all player corpses and its location.
+~
+End
+
+#COMMAND
+Name        calendar~
+Code        do_calendar
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: calendar
+ 
+This command shows you the current mud calendar.
+~
+End
+
+#COMMAND
+Name        calendarcheck~
+Code        do_calendarcheck
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: calendarcheck [fix/log]
+ 
+With no argument it will tell you if the current time info is set like it
+should be.
+ 
+If you specify 'fix' and it isn't set like it should be, it will set it to what
+it should be.
+ 
+If you specify 'log' it will log from the start to the current giving you an
+easy way to verify for yourself it is set as it should be.
+*&RNotice&d* It doesn't spam the screen with the log info it sends it to the log
+file and has to be checked there.
+~
+End
+
+#COMMAND
+Name        call~
+Code        do_call
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: call
+ 
+This command will allow you to call all items, owned (claimed) by you, back to your
+inventory.
+~
+End
+
+#COMMAND
+Name        claim~
+Code        do_claim
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: claim <object>
+ 
+This command allows you to claim ownership of an item in your inventory.
+~
+End
+
+#COMMAND
+Name        checkhelps~
+Code        do_check_helps
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: checkhelps
+ 
+This command checks all commands and skills for matching help files.
+Any command/skill that doesn't have a matching help file will be shown.
+~
+End
+
+#COMMAND
+Name        compress~
+Code        do_compress
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: compress
+ 
+This command toggles on/off MCCP compression.
+~
+End
+
+#COMMAND
+Name        clearhightable~
+Code        do_clearhightable
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: clearhightable <name>
+ 
+This command will allow you to clear all the scores on a highscore table.
+~
+End
+
+#COMMAND
+Name        connect~
+Code        do_connect
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: connect <first object> <second object>
+ 
+This command allows you to connect two objects together.
+~
+End
+
+#COMMAND
+Name        classpercent~
+Code        do_classpercent
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: classpercent <class> <percent>
+ 
+This allows you to set up how the experience you gain is distributed.
+~
+End
+
+#COMMAND
+Name        down~
+Code        do_down
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: down
+ 
+This command allows you to move down.
+~
+End
+
+#COMMAND
+Name        drink~
+Code        do_drink
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: drink [room/inventory/worn] [<object>]
+
+This command allows you to drink from a fountain or the specified object.
+
+You may specify if the target (if it is an object) is in the room,
+in your inventory, or something that is being worn by you.
+~
+End
+
+#COMMAND
+Name        drop~
+Code        do_drop
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: drop [<amount>] <object>
+       drop <amount> coins
+ 
+This command allows you to drop an object or coins to the ground.
+~
+End
+
+#COMMAND
+Name        deny~
+Code        do_deny
+Position    dead~
+Perm        leader~
+Group       all~
+Log         1
+HText       Usage: deny <target>
+
+This command allows you to deny access to the mud for the specified target.
+This will persist until it is undone by editing the player file or by removing
+the deny flag.
+~
+End
+
+#COMMAND
+Name        description~
+Code        do_description
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: description
+
+This command will put you into an editor and allow you to edit your long
+description (what others see when they look at you).
+~
+End
+
+#COMMAND
+Name        destroy~
+Code        do_destroy
+Position    standing~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: destroy <target>
+ 
+This allows a way of destroying a player file.
+~
+Flags       fullname~
+End
+
+#COMMAND
+Name        dig~
+Code        do_dig
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: dig [direction]
+ 
+DIG with no specified direction will attempt to dig up an object.
+If you use a shovel you have a better chance of digging up an object.
+ 
+If you specify a direction you will attempt to dig open an exit.
+~
+End
+
+#COMMAND
+Name        disconnect~
+Code        do_disconnect
+Position    dead~
+Perm        leader~
+Group       all~
+Log         1
+HText       Usage: disconnect <target>
+
+This command allows you to disconnect a descriptor from the target.
+~
+End
+
+#COMMAND
+Name        dmesg~
+Code        do_dmesg
+Position    dead~
+Perm        leader~
+Group       all~
+Log         1
+HText       Usage: dmesg
+
+Displays the contents of the boot log.
+~
+End
+
+#COMMAND
+Name        drag~
+Code        do_drag
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: drag <target> <direction>
+ 
+This command allows you to drag the target in the specified direction.
+~
+End
+
+#COMMAND
+Name        devote~
+Code        do_devote
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: devote <deity>/none
+
+This command allows you to devote and undevote to a deity.
+~
+End
+
+#COMMAND
+Name        deities~
+Code        do_deities
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: deities [<deity>]
+
+This command allows you to see all deities or info on the specified deity.
+~
+End
+
+#COMMAND
+Name        dismount~
+Code        do_dismount
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: dismount
+ 
+This skill allows you to dismount anything you are mounted on.
+~
+End
+
+#COMMAND
+Name        dismiss~
+Code        do_dismiss
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: dismiss <target>
+
+This command will uncharm a charmed mobile and make them stop following you.
+~
+End
+
+#COMMAND
+Name        delay~
+Code        do_delay
+Position    dead~
+Perm        leader~
+Group       all~
+Log         0
+HText       Usage: delay <victim> <rounds>
+ 
+This command will allow you to "pause" a player. All commands received by the
+mud from that player will be delayed by the number of rounds specified. After
+the rounds have elapsed, anything input by the victim during the delay will
+take affect on the mud.
+~
+End
+
+#COMMAND
+Name        dnd~
+Code        do_dnd
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: dnd
+ 
+This command toggles on and off your personal dnd flag.
+~
+End
+
+#COMMAND
+Name        delete~
+Code        do_delete
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: delete <password>
+ 
+This allows a player a way of deleting their characters.
+~
+End
+
+#COMMAND
+Name        divorce~
+Code        do_divorce
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: divorce <player> <player>
+ 
+This command allows you to divorce the specified players.
+~
+End
+
+#COMMAND
+Name        deletehightable~
+Code        do_deletehightable
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: deletehightable <table>
+ 
+This command allows you to delete a highscore table.
+~
+End
+
+#COMMAND
+Name        dislodge~
+Code        do_dislodge
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: dislodge <object>
+ 
+This command allows you to dislodge a projectile that has become lodged into
+your body.
+~
+End
+
+#COMMAND
+Name        east~
+Code        do_east
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: east
+ 
+This command allows you to move east.
+~
+End
+
+#COMMAND
+Name        eat~
+Code        do_eat
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: eat <object> [<container>]
+
+This command allows you to eat the specified object.
+If you specify [<container>] it will take the <object> from the [<container>]
+and then you will eat it.
+~
+End
+
+#COMMAND
+Name        emote~
+Code        do_emote
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: emote <text>
+ 
+Emote is a customized expression of emotions or actions.
+Example:
+   emote just smiles and nods.
+ 
+... displays to everyone in the room:
+   <Your character's name> just smiles and nods.
+~
+End
+
+#COMMAND
+Name        exits~
+Code        do_exits
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: exits
+ 
+This command will show you the visible exits for the room you are in.
+~
+End
+
+#COMMAND
+Name        examine~
+Code        do_examine
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: examine [room/inventory/worn] <target>
+
+This command gives a little more info then look on some things.
+
+You may specify if the container is in the room, in your inventory, or
+something that is being worn by you.
+~
+End
+
+#COMMAND
+Name        equipment~
+Code        do_equipment
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: equipment
+ 
+This command will show you all the items that you are wearing.
+~
+End
+
+#COMMAND
+Name        echo~
+Code        do_echo
+Position    dead~
+Perm        builder~
+Group       all~
+Log         1
+HText       Usage: echo [imm/pc] <message>
+
+This command sends the message to all players in the game unless you specify
+imm or pc.
+PC will only show the message to player characters.
+IMM will only show the message to immortals.
+~
+End
+
+#COMMAND
+Name        empty~
+Code        do_empty
+Position    sitting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: empty <container> [<container>] [room/inventory/worn]
+ 
+This command allows you to empty a container of its contents.
+If [<container>] you will empty <container> into it.
+If no [<container>] you will just empty the contents of <container> on the
+ground.
+ 
+You may specify if the container is in the room, in your inventory, or
+something that is being worn by you.
+~
+End
+
+#COMMAND
+Name        enter~
+Code        do_enter
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: enter [<exit>]
+
+This command allows you to enter an exit.
+~
+End
+
+#COMMAND
+Name        elevate~
+Code        do_elevate
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: elevate <target> [<perm>]
+ 
+Perm:  all, imm, builder, leader, head, imp
+ 
+This command is for advancing an immortal to the next permission immortal.
+You may also specify what permission to set them to.
+~
+End
+
+#COMMAND
+Name        email~
+Code        do_email
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: email <string>
+Usage: email clear
+ 
+This allows you to set or clear your email contact information.
+~
+End
+
+#COMMAND
+Name        exphistory~
+Code        do_exphistory
+Position    dead~
+Perm        leader~
+Group       all~
+Log         0
+HText       Usage: exphistory <target> [clear]
+ 
+This command will display a list of explorer rooms the specified target has
+been in.
+~
+End
+
+#COMMAND
+Name        fclear~
+Code        do_fclear
+Position    dead~
+Perm        imp~
+Group       all~
+Log         0
+HText       Usage: fclear moblog/log/hacked
+ 
+This command will allow someone to clear out the moblog, log or
+hacked log file.
+&RNotice&W: log is the logspeech file.&D
+~
+End
+
+#COMMAND
+Name        fill~
+Code        do_fill
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: fill <object> [<object>] [room/inventory/worn]
+
+This command allows you to fill <object> with something.
+If [<object>] it will use it to fill <object>.
+If no [<object>] it will just try to fill <object> from something from the
+room.
+ 
+You may specify if the target (if it is an object) is in the room,
+in your inventory, or something that is being worn by you.
+~
+End
+
+#COMMAND
+Name        flineclear~
+Code        do_flineclear
+Position    dead~
+Perm        imp~
+Group       all~
+Log         0
+HText       Usage: flineclear moblog/log/hacked <#>
+ 
+This command allows a single line to be deleted from the moblog, log or
+hacked log file.
+&RNotice&W: log is the logspeech file.&D
+~
+End
+
+#COMMAND
+Name        follow~
+Code        do_follow
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: follow <target>
+ 
+This command allows you to follow someone else.
+To stop following someone type 'follow self'.
+~
+End
+
+#COMMAND
+Name        flee~
+Code        do_flee
+Position    aggressive~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: flee
+ 
+This command allows you to flee from a fight.
+~
+End
+
+#COMMAND
+Name        foldarea~
+Code        do_foldarea
+Position    dead~
+Perm        leader~
+Group       all~
+Log         1
+HText       Usage: foldarea [<area filename>]
+
+This command allows you to save a non-prototype area.
+~
+End
+
+#COMMAND
+Name        for~
+Code        do_for
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: for <all/mobs/gods/mortals/everywhere> <command> [<target>]
+
+Allows an immortal to perform a command at or on a large number of targets.
+Example: 'for gods glance'
+   You will 'glance' in the room of every god online
+
+You can also perform an action on the argument target.
+Example: 'for mobs poke #'
+   You will perform the 'poke' social on every mob in the game.
+
+'For' does not override private flags.
+~
+End
+
+#COMMAND
+Name        force~
+Code        do_force
+Position    dead~
+Perm        builder~
+Group       all~
+Log         1
+HText       Usage: force all/<character> <command>
+
+This command will force the specified character or all to execute the command.
+~
+End
+
+#COMMAND
+Name        forceclose~
+Code        do_forceclose
+Position    dead~
+Perm        leader~
+Group       all~
+Log         1
+HText       Usage: forceclose <descriptor>
+
+This command will force a certain descriptor to close.
+~
+End
+
+#COMMAND
+Name        formpass~
+Code        do_form_password
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: formpass <password>
+ 
+This will show you what the <password> would become after being encrypted.
+It's main use is figuring out what password to put in someone's pfile.
+~
+End
+
+#COMMAND
+Name        freeze~
+Code        do_freeze
+Position    dead~
+Perm        leader~
+Group       all~
+Log         1
+HText       Usage: freeze <target>
+
+This command allows you to stop the target from issuing any commands.
+~
+End
+
+#COMMAND
+Name        fquit~
+Code        do_fquit
+Position    dead~
+Perm        imm~
+Group       all~
+Log         1
+HText       Usage: fquit <target>
+
+This command forces the target to quit.
+~
+End
+
+#COMMAND
+Name        fprompt~
+Code        do_fprompt
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: fprompt [<string>/default]
+
+Allows you to set the fprompt up to be how you want it.
+Without <string> being specified it shows your current fprompt.
+With default it will set the fprompt back to the default.
+
+See also: HELP PTOKENS
+~
+End
+
+#COMMAND
+Name        fire~
+Code        do_fire
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: fire <direction> <target>
+ 
+This command allows you to use a missile weapon to fire a projectile at
+someone.
+~
+End
+
+#COMMAND
+Name        fshow~
+Code        do_fshow
+Position    dead~
+Perm        leader~
+Group       all~
+Log         0
+HText       Usage: fshow moblog/log/hacked
+ 
+This command allows you to view the moblog, log or hacked log file.
+~
+End
+
+#COMMAND
+Name        firstimm~
+Code        do_firstimm
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: firstimm
+ 
+This command allows you to make your character immortal.
+&RNOTICE&d This command only works once for the first character to use it.
+~
+End
+
+#COMMAND
+Name        fish~
+Code        do_fish
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: fish [stop]
+ 
+This command allows you to start and stop fishing.
+*Note* You must have a baited fishing pole in your hand and be around water.
+ 
+See also: BAIT
+~
+End
+
+#COMMAND
+Name        fname~
+Code        do_fname
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: fname <fname> create/delete
+Usage: fname <fname> name <new fname>
+Usage: fname <fname> minweight/maxweight <#>
+ 
+This command allows you to create and edit fish names and their weight range.
+ 
+See also: BAIT, FISH
+~
+End
+
+#COMMAND
+Name        friend~
+Code        do_friend
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: friend add/remove/approve/deny <name>
+
+This command allows you to modify your friends list.
+    Add - This allows you to add a friend to your list.
+          (Subject to them approving you adding them)
+ Remove - This allows you to remove anyone from your friends list.
+Approve - This allows you to approve someone adding you to their list.
+          If the one you approve isn't on your friends list they are added.
+   Deny - This allows you to deny someone adding you to their list.
+          If the one you deny is on your friends list they are removed.
+~
+End
+
+#COMMAND
+Name        get~
+Code        do_get
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: get [<amount>] <object> [<container>] [room/inventory/worn]
+ 
+This command allows you to get something that is on the ground or in another
+container.
+
+You may specify if the container is in the room, in your inventory, or
+~
+End
+
+#COMMAND
+Name        give~
+Code        do_give
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: give <object> <target>
+       give <amount> coins <target>
+ 
+This command allows you to give an object or some coins to the target.
+~
+End
+
+#COMMAND
+Name        gtell~
+Code        do_gtell
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: gtell <message>
+ 
+This command allows you to send a message to everyone in your group.
+~
+End
+
+#COMMAND
+Name        group~
+Code        do_group
+Position    sleeping~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: group [<target>/all/disband]
+ 
+If a <target> is specified it will add the follower to your group.
+If all is specified it will add all followers (possible) to your group.
+If disband is specified it will disband your group.
+If nothing is specified it will show your group statistics.
+~
+End
+
+#COMMAND
+Name        glance~
+Code        do_glance
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: glance [<target>]
+ 
+This command allows you to glance around the room or at the specified target.
+~
+End
+
+#COMMAND
+Name        goto~
+Code        do_goto
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: goto <location>
+
+This command allows you to go to the location, which can be a room vnum or a
+mobile, player, or object name.
+~
+End
+
+#COMMAND
+Name        gold~
+Code        do_gold
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: gold
+ 
+This command shows you the amount of gold you are carrying.
+~
+End
+
+#COMMAND
+Name        gfighting~
+Code        do_gfighting
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: gfighting [<low>] [<high>] [all/mobs/hating/hunting/fearing/summoning]
+ 
+If nothing is specified it shows only players that are engaged in a fight.
+ 
+If only <low> is specified it will start at that level.
+If <high> is also specified it will show only within the level range.
+ 
+If all is specified it will show all the stuff listed here.
+   (Could get very spammy, but is here all the same.)
+If mobs is specified it will show all mobiles that are engaged in a fight.
+If hating is specified it will only show mobiles and who they are hating.
+   (Will also show Summoning if the mobile is summoning the one they hate.)
+If hunting is specified it will only show mobiles and who they are hunting.
+If fearing is specified it will only show mobiles and who they are fearing.
+If summoning is specified it will only show mobiles and who they are summoning.
+~
+End
+
+#COMMAND
+Name        gwhere~
+Code        do_gwhere
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: gwhere [<low level> <high level> [mobs]]
+ 
+If nothing is specified it shows where all players are in the mud.
+
+If <low level> and <high level> are specified it will show where all players
+(in the level range) are in the mud.
+
+If <low level> and <high level> and mobs is specified it will show where all
+mobiles (in the level range) are in the mud.
+~
+End
+
+#COMMAND
+Name        guest~
+Code        do_guest
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: guest <target>
+ 
+This command allows you to set or remove an immortal from being a guest.
+~
+End
+
+#COMMAND
+Name        gtalk~
+Code        do_gtalk
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: gtalk <string>
+ 
+This allows you to set your gtalk contact info.
+~
+End
+
+#COMMAND
+Name        gift~
+Code        do_gift
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: gift <object> <character>
+ 
+This command allows you to grant ownership of an object you own to the
+specified character.
+~
+End
+
+#COMMAND
+Name        gemote~
+Code        do_gemote
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: gemote <text>
+ 
+GEmote is a global customized expression of emotions or actions.
+Example:
+   gemote just smiles and nods.
+ 
+... displays to everyone in the mud:
+   [GEmote] <Your character's name> just smiles and nods.
+~
+End
+
+#COMMAND
+Name        grub~
+Code        do_grub
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       For usage information see:
+help grub mob
+help grub room
+help grub obj
+help grub reset
+ 
+This command allows you a way to check for various things.
+~
+End
+
+#COMMAND
+Name        guess~
+Code        do_guess
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: guess <guess>
+Usage: guess hint
+ 
+This allows you to take a guess at a trivia question.
+If you specify hint it will show you how the answer looks.
+~
+End
+
+#COMMAND
+Name        help~
+Code        do_help
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: help <string>
+
+This command allows you to view the help file for the specified string.
+~
+End
+
+#COMMAND
+Name        hedit~
+Code        do_hedit
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: hedit [help topic]
+ 
+This command allows you to edit a help topic. If the specified help topic
+does not exist, it will be created for you.
+~
+End
+
+#COMMAND
+Name        hlist~
+Code        do_hlist
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: hlist [<string>/<#>]
+ 
+This command will give you a listing of available help files.
+You can only view help files lower and equal to your level.
+
+Examples:
+   hlist cla     -  Shows all help files that start with cla.
+   hlist all/0   -  Shows all help files with all permission.
+~
+Flags       fullname~
+End
+
+#COMMAND
+Name        hlog~
+Code        do_hlog
+Position    dead~
+Perm        imp~
+Group       all~
+Log         0
+HText       Usage: hlog [<name>]
+ 
+This allows all the stuff in the host log to be displayed.
+If you don't specify <name> it will show all the names and the last 5 things
+   for each.
+If you specify <name> it will show all the stuff for that one.
+~
+End
+
+#COMMAND
+Name        holylight~
+Code        do_holylight
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: holylight
+
+This command allows you to toggle on and off holylight.
+~
+End
+
+#COMMAND
+Name        homepage~
+Code        do_homepage
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: homepage [<url>/clear]
+
+This command allows you to see, set, or clear your homepage.
+~
+Flags       allow_tilde~
+End
+
+#COMMAND
+Name        hsearch~
+Code        do_hsearch
+Position    dead~
+Perm        imp~
+Group       all~
+Log         0
+HText       Usage: hsearch <ip address>
+ 
+This will check the host log and display all characters that connected from the
+<ip address>.
+~
+End
+
+#COMMAND
+Name        hset~
+Code        do_hset
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: hset save
+Usage: hset perm all/imm/builder/leader/head/imp <help topic>
+Usage: hset keyword <keyword> <help topic>
+Usage: hset remove <perm>.<help topic>
+~
+End
+
+#COMMAND
+Name        hotboot~
+Code        do_hotboot
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: hotboot
+ 
+Hotboot keeps the descriptor connections and restarts the mud.
+~
+End
+
+#COMMAND
+Name        host~
+Code        do_host
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: host [add/delete <host>]
+
+This command allows you to setup what host your character can be accessed from.
+Without an argument it shows your current host address as well as any host you
+have setup to be able to access your character.
+ 
+&RWARNING&d: If you lock yourself off of your character it's your own fault.
+~
+End
+
+#COMMAND
+Name        highscore~
+Code        do_highscore
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: highscore [<table>/<name>]
+
+This command allows you to see the highscores.
+If you don't specify anything it will just show all highscore tables.
+If you specify a <table> it will show everyone on that highscore table.
+If you specify a <name> it will show where they are on all the highscore
+tables, if they are on any of them.
+~
+End
+
+#COMMAND
+Name        hintset~
+Code        do_hintset
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: hintset create <hint>
+Usage: hintset delete <hint #>
+Usage: hintset class/race/area <hint #> <class/race/area name>/clear
+Usage: hintset minlevel/maxlevel <hint #> <level>
+
+This command allows you to create, delete and restrict hints.
+Hints are randomly displayed to players that can see them.
+~
+End
+
+#COMMAND
+Name        inventory~
+Code        do_inventory
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: inventory
+ 
+This command will show you all the items (that you are able to see) in your
+inventory.
+~
+End
+
+#COMMAND
+Name        idea~
+Code        do_idea
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: idea <message>
+ 
+This command will record your idea for the mud implementers.
+~
+End
+
+#COMMAND
+Name        immortalize~
+Code        do_immortalize
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: immortalize <target>
+ 
+This command will change a player into an immortal.
+It will set their stats to ( MAX_LEVEL + 25 ).
+It will set all their skills/spells/tongues/weapons to adept.
+It will increase their level to MAX_LEVEL.
+It will set their hp, mana, move to 30,000.
+~
+End
+
+#COMMAND
+Name        induct~
+Code        do_induct
+Position    standing~
+Perm        all~
+Group       all~
+Log         1
+HText       Usage: induct <player>
+ 
+This command allows you a way of inducting members into your clan.
+~
+End
+
+#COMMAND
+Name        installarea~
+Code        do_installarea
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: installarea <area filename> <full area name/title>
+
+Installs a prototype area into the mud as a non-prototype area.
+The filename can be fixed with aset, (don't forget to foldarea the new name.)
+~
+End
+
+#COMMAND
+Name        instazone~
+Code        do_instazone
+Position    dead~
+Perm        head~
+Group       all~
+Log         3
+HText       Usage: instazone
+ 
+This command will setup the resets for all the rooms in the area assigned to
+you.
+~
+End
+
+#COMMAND
+Name        invis~
+Code        do_invis
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: invis [<#>]
+
+This command allows you to toggle on and off immortal invis.
+Makes you invisible to all that are lower level then you.
+
+If you specify <#> it will change your invis.
+~
+End
+
+#COMMAND
+Name        instaroom~
+Code        do_instaroom
+Position    dead~
+Perm        builder~
+Group       all~
+Log         3
+HText       Usage: instaroom
+
+This command will setup the resets for the room you are in.
+~
+End
+
+#COMMAND
+Name        ignore~
+Code        do_ignore
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage:  ignore [<player>/reply/none]
+
+This command allows you to ignore others. 
+
+With no arguments it will show who all you are ignoring.
+If <player> is specified it will add or remove them from your ignore list.
+If reply is specified it will ignore the last one to send you a tell.
+If none is specified it will remove everyone from your ignore list.
+~
+End
+
+#COMMAND
+Name        ipcompare~
+Code        do_ipcompare
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: ipcompare
+ 
+This command will check all the descriptors and let you know if there are any
+repeat connections and if any of the repeat connections have a pkiller logged
+in.
+~
+End
+
+#COMMAND
+Name        kill~
+Code        do_kill
+Position    fighting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: kill <target>
+
+This command allows you to start a fight.
+You may use this command to switch who you are fighting.
+~
+End
+
+#COMMAND
+Name        khistory~
+Code        do_khistory
+Position    dead~
+Perm        leader~
+Group       all~
+Log         0
+HText       Usage: khistory <target>
+ 
+This command will display a list of mobs recently killed by the specified
+target.
+~
+End
+
+#COMMAND
+Name        keepalive~
+Code        do_klive
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: keepalive [<time>]
+ 
+This command with no <time> will toggle keepalive on and off.
+With <time> specified (1-10) it will allow you to set the keepalive message
+time.
+~
+End
+
+#COMMAND
+Name        look~
+Code        do_look
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: look [room/inventory/worn] [<target>]
+Usage: look [room/inventory/worn] in <target>
+
+This command allows you to look at lots of various things.
+
+You may specify if what you want to look at is in the room, in your inventory,
+or something that is being worn by you. This allows you to get around not
+being able to access all objects if for example there are a total of 5 of the
+same objects here, 2 in the room and 3 in your inventory. Before this change
+you would have only been able to look at 3 of the 5 objects (the 2 in the room
+and the 3rd in your inventory). Now though you can specify if your looking at
+the ones in the room or in your inventory to see all 5.
+~
+End
+
+#COMMAND
+Name        lock~
+Code        do_lock
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: lock <object/direction>
+ 
+This command allows you to lock a closed object or door.
+You must have the correct key to lock an object or door.
+~
+End
+
+#COMMAND
+Name        level~
+Code        do_level
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: level
+ 
+This command shows the current and needed experience your character.
+~
+End
+
+#COMMAND
+Name        list~
+Code        do_list
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: list [<name>]
+Usage: list [<#>] [<#>]
+
+This command allows you to see what a store keeper has for sell.
+If you specify a name it will show the objects that match that name.
+If you specify one <#> it will show the objects that match the specified
+   level or higher.
+If you specify two <#>s it will show the objects that are within the
+   specified level range.
+~
+End
+
+#COMMAND
+Name        languages~
+Code        do_languages
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: languages [learn <language>]
+
+Languages alone shows which languages you know.
+
+"languages learn <language>" will add to your percentage of language
+knowledge. 
+
+To learn a language, a scholar who is knowledgeable in that tongue must
+be present.
+~
+End
+
+#COMMAND
+Name        last~
+Code        do_last
+Position    dead~
+Perm        builder~
+Group       all~
+Log         1
+HText       Usage: last [<player>]
+ 
+This command will show all pfiles, size, and days since last modified.
+ 
+If <player> is specified it will show the last time that pfile was modified.
+~
+End
+
+#COMMAND
+Name        leave~
+Code        do_leave
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: leave [<exit>]
+ 
+This command allows you to leave a room.
+~
+End
+
+#COMMAND
+Name        light~
+Code        do_light
+Position    sitting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: light <pipe>
+ 
+This command allows you to light the herb in your pipe.
+Once lit, the herb will continue to burn until it burns itself out, is smoked
+out, or you tamp the pipe.
+~
+End
+
+#COMMAND
+Name        loadarea~
+Code        do_loadarea
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: loadarea <area filename>
+ 
+This command will load an area file that is in the area directory and not yet loaded.
+~
+End
+
+#COMMAND
+Name        loadup~
+Code        do_loadup
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: loadup <player>
+ 
+This command allows you to load up a player's file.
+~
+End
+
+#COMMAND
+Name        log~
+Code        do_log
+Position    dead~
+Perm        leader~
+Group       all~
+Log         1
+HText       Usage: log <target>/all
+
+This command allows you to log everything the character does to the server's
+log file.
+
+Using 'log all' logs all characters.
+~
+End
+
+#COMMAND
+Name        laws~
+Code        do_laws
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       &GThe Realms are governed by a set of laws, most of which are simple common
+sense and courtesy, and all of which must be followed to ensure everyone
+the opportunity to enjoy the game.
+ 
+As with any mud, a player's presence here is a privilege, not a right,
+and is something we reserve the right to deny at any time at our discretion.
+ 
+The Immortals of the Realms are responsible for enforcing these laws, and
+their decisions these matters should be abided.
+ 
+To read the laws, type "laws <topic>" for any of the following:
+&W       |  CHANNELS      |  PKILL     |  STORES  |  HARASSMENT  |
+       |  MULTIPLAYING  |  SHARING   |  STAKE   |  CHARM       |
+       |  OBJECTS       |  CHEATING  |  MURDER  |  ASSIST      |&D
+~
+End
+
+#COMMAND
+Name        listen~
+Code        do_listen
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: listen [all/none/<channel>]
+ 
+This command allows you to start/stop listening to a channel.
+~
+End
+
+#COMMAND
+Name        locate~
+Code        do_locate
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: locate
+ 
+This command allows you to locate all items you have ownership of.
+~
+End
+
+#COMMAND
+Name        locker~
+Code        do_locker
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: locker [<locker>] put/get all
+Usage: locker [<locker>] put/get <object name>
+Usage: locker [<locker>] list
+Usage: locker [<locker>] share [<name>]
+ 
+This allows you to see/get/put things in your locker or the specified locker.
+
+Only the character that the locker belongs to can share the locker.
+If you do "locker share <name>" and the name is already on the shared list it
+is removed.
+If you just do "locker share" it will show all the ones you currently share
+your locker with.
+~
+End
+
+#COMMAND
+Name        morph~
+Code        do_imm_morph
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: morph <vnum> [<target>]
+ 
+This is an immortal command used to morph into various things.
+~
+End
+
+#COMMAND
+Name        morphstat~
+Code        do_morphstat
+Position    dead~
+Perm        leader~
+Group       all~
+Log         0
+HText       Usage:  morphstat <vnum|name> [help|desc]
+ 
+Stats a morphed target by name or vnum.
+~
+End
+
+#COMMAND
+Name        morphcreate~
+Code        do_morphcreate
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: morphcreate <name/vnum> [copy]
+
+This command allows you to create a new morph.
+~
+End
+
+#COMMAND
+Name        morphset~
+Code        do_morphset
+Position    dead~
+Perm        leader~
+Group       all~
+Log         0
+HText       Usage: morphset <morph> <field> <value>
+Usage: morphset save
+Field being one of:
+--------------------------------------------------------------------
+    ac   obj2   deity   skills    objuse3     morphself
+    hp   obj3   dodge   timeto   affected     resistant
+   sex   race   level   tumble   charisma    morphother
+  help   sav1   parry   wisdom   manaused   description
+  long   sav2   pkill  damroll   moveused   unmorphself
+  luck   sav3   short  dayfrom   noskills  constitution
+  mana   sav4   timer  hitroll   strength  intelligence
+  move   sav5  defpos  keyword   timefrom  unmorphother
+  name  class  hpused  objuse1  dexterity
+  obj1  dayto  nocast  objuse2  favorused
+--------------------------------------------------------------------
+
+&R***&YNote&R***&[help]Nothing is auto saved. Use "morphset save".
+~
+End
+
+#COMMAND
+Name        morphdestroy~
+Code        do_morphdestroy
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: morphdestroy <name/vnum>
+
+This command allows you to destroy a morph.
+
+&R***&YNote&R***&[help]The morph list isn't saved until a "morphset save" is used.
+~
+End
+
+#COMMAND
+Name        mpecho~
+Code        do_mpecho
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpecho <phrase>
+
+This command allows a program to send the phrase to the entire room.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpechoat~
+Code        do_mpechoat
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpechoat <name> <phrase>
+ 
+Displays the phrase to the victim.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mea~
+Code        do_mpechoat
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpechoat <name> <phrase>
+ 
+Displays the phrase to the victim.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpat~
+Code        do_mpat
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpat <vnum> <command>
+
+This command lets a program execute the command at the specified room vnum.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpforce~
+Code        do_mpforce
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpforce <name>/all <string>
+
+Forces a player/mob to do a command (non-functional on immortals, all will only
+force all in room).
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpechoaround~
+Code        do_mpechoaround
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpechoaround <name> <phrase>
+
+Displays a phrase to all in the room except victim.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mer~
+Code        do_mpechoaround
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpechoaround <name> <phrase>
+
+Displays a phrase to all in the room except victim.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpasound~
+Code        do_mpasound
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpasound <phrase>
+
+Displays a phrase to all surrounding rooms.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpoload~
+Code        do_mpoload
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpoload <vnum> <level> <timer>
+
+This mpcommand allows a mobile to load up an object.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpjunk~
+Code        do_mpjunk
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpjunk <name>
+
+Destroys an object in inventory/being worn - can be used with all.object .
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpgoto~
+Code        do_mpgoto
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: MPGOTO <vnum>
+
+Goes to any room which is not private.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpdamage~
+Code        do_mp_damage
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpdamage <victim> <amount>
+ 
+This command inflicts a specified amount of damage on the victim.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpdelay~
+Code        do_mpdelay
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpdelay <victim> <delay>
+ 
+This allows a program to put a delay on the specified victim.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mprestore~
+Code        do_mp_restore
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage:  mprestore <victim> <amount>
+ 
+This command restores a specified number of hitpoints to the victim.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpkill~
+Code        do_mpkill
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpkill <name>
+ 
+Kills a player without using murder.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mptransfer~
+Code        do_mptransfer
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mptransfer <name>/all <location>
+
+Transfers one or all in the room to a specified location.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpmload~
+Code        do_mpmload
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpmload <vnum> [<max>]
+
+This mpcommand allows a mobile to load another mobile.
+It defaults to a max of 10. Max can be specified up to 50.
+Allowing a mobile to load a lot of mobiles can cause problems without the right
+   checks, and 50 is a good max limit to allow it to have per mobile it loads.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpnothing~
+Code        do_mpnothing
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpnothing
+ 
+Does nothing. Used for scripts.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mppurge~
+Code        do_mppurge
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mppurge [<object/mobile name>]
+
+Purges the room, or a specified object/mobile.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpinvis~
+Code        do_mpinvis
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage:  mpinvis [<level>]
+ 
+This mpcommand controls a mob's ability to use a modified form of wizinvis.
+Use 'mpinvis' alone to toggle the invisibility.
+Use 'mpinvis <level>' to set the level at which the mob will be invis.
+ 
+Mortals under the mobinvis level of the mob will be unable to see the mob
+when it goes mobinvis; they cannot see it with any spell, it will be
+completely invisible to them.
+ 
+Be warned, however, that its programs will still function as normal, the
+mortal will simply see a 'someone' if it performs an action or an echo
+that they see, just as if a wizinvis immortal performed the action.
+ 
+Also be warned that at the present time, area attacks _will_ hit a mobinvis
+creature even if it is invisible.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpadvance~
+Code        do_mpadvance
+Position    dead~
+Perm        all~
+Group       all~
+Log         1
+HText       Usage: mpadvance <victim>
+ 
+Advances the victim's level (will not advance beyond level 2).
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mppkset~
+Code        do_mppkset
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mppkset <target> yes/no
+ 
+This mpcommand will set the PC to deadly or peaceful based on what is specified
+regardless of their present state.
+
+No = Peaceful
+Yes = Deadly
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpclosepassage~
+Code        do_mp_close_passage
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpclosepassage <room> <direction>
+
+Closes a passage to a room (does not affect pre-existing doors that were not
+created with mpopenpassage)
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpopenpassage~
+Code        do_mp_open_passage
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpopenpassage <origin> <destination> <direction>
+
+Opens a passage to a room (does not affect pre-existing doors)
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpdream~
+Code        do_mpdream
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpdream <name> <phrase>
+
+Sends a message to a sleeping character.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpslay~
+Code        do_mp_slay
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpslay <target>
+ 
+This mpcommand causes the PC/NPC target instant death.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mppractice~
+Code        do_mp_practice
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage:  mppractice <victim> <skill/spell/language> <amount>
+ 
+This command will set the victim's percentage of proficiency in the
+specified skill/spell/language to the specified amount.
+ 
+It cannot train a character in a skill/spell/language the character does
+not have as a part of its class and that it does not already have as a
+result of its level.  In other words, it cannot train a warrior in
+fireball, or a level 1 thief in gouge.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        makerepair~
+Code        do_makerepair
+Position    dead~
+Perm        builder~
+Group       all~
+Log         3
+HText       Usage: makerepair <mob vnum>
+ 
+Sets a mobile to be able to repair damaged equipment.
+~
+End
+
+#COMMAND
+Name        makeshop~
+Code        do_makeshop
+Position    dead~
+Perm        builder~
+Group       all~
+Log         3
+HText       Usage: makeshop <mobile vnum>
+
+Creates a new shop and assigns it to the specified mobile.
+~
+End
+
+#COMMAND
+Name        makewizlist~
+Code        do_makewizlist
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: makewizlist
+ 
+This command updates the wizlist for the mud.
+~
+End
+
+#COMMAND
+Name        mapout~
+Code        do_mapout
+Position    dead~
+Perm        leader~
+Group       all~
+Log         0
+HText       Usage: mapout <write/stat/clear/show/create>
+ 
+ Write: create a map in edit buffer.
+  Stat: get information about a written, but not yet created map.
+ Clear: clear a written, but not yet created map.
+  Show: show a written, but not yet created map.
+Create: turn a written map into rooms in your assigned room vnum range.
+ 
+[Letter to use] [Sector type]    [Letter to use] [Sector type]
+      A         SECT_AIR               C         SECT_CITY
+      D         SECT_DESERT            f         SECT_FIELD
+      F         SECT_FOREST            H         SECT_HILLS
+      I         SECT_INSIDE            L         SECT_LAVA
+      M         SECT_MOUNTAIN          O         SECT_OCEANFLOOR
+      s         SECT_WATER_SWIM        S         SECT_WATER_NOSWIM
+      u         SECT_UNDERGROUND       U         SECT_UNDERWATER
+      W         SECT_SWAMP             #         SECT_DUNNO
+ 
+[Exits to use] [Direction it gives]
+      ^        UP or DOWN
+     = :       Used in all directions except UP and DOWN
+               Makes a closed door in the direction its used in.
+      /        NORTHEAST or SOUTHWEST
+      \        NORTHWEST or SOUTHEAST
+      X        NORTHEAST, NORTHWEST, SOUTHEAST and SOUTHWEST
+      |        NORTH or SOUTH
+      -        EAST or WEST
+      +        NORTH, SOUTH, EAST and WEST
+ 
+Example Map:
+I-C H O
+|X  ^/|\
+A-D-S-+-U
+      H
+
+This would create 9 rooms and link them correctly.
+~
+End
+
+#COMMAND
+Name        mcreate~
+Code        do_mcreate
+Position    dead~
+Perm        builder~
+Group       all~
+Log         3
+HText       Usage: mcreate <vnum> [cvnum] <mobile name>
+ 
+This command allows you to create a new mobile using the specified vnum and
+keywords.
+
+If [cvnum] is used it will make the new mobile match the one it copies.
+~
+End
+
+#COMMAND
+Name        mdelete~
+Code        do_mdelete
+Position    dead~
+Perm        builder~
+Group       all~
+Log         1
+HText       Usage: mdelete <vnum>
+ 
+This command allows you to remove the specified mobile vnum from the mud.
+~
+End
+
+#COMMAND
+Name        memory~
+Code        do_memory
+Position    dead~
+Perm        leader~
+Group       all~
+Log         1
+HText       Usage: memory [hash]
+Usage: memory [check <string>]
+Usage: memory [showhigh <#>]
+
+This command allows you to see the current counts of things in memory.
+All the arguments can only be done if hash strings are enabled.
+If [hash] is used it will show all the current hash statistics.
+If [check <string>] is used it will show the info for that string in the hash.
+If [showhigh <#>] is used it will put the info for matching and higher link
+strings into the log file.
+~
+End
+
+#COMMAND
+Name        mfind~
+Code        do_mfind
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: mfind <name>
+ 
+This command will show all mobiles with the specified name.
+~
+End
+
+#COMMAND
+Name        minvoke~
+Code        do_minvoke
+Position    dead~
+Perm        builder~
+Group       all~
+Log         1
+HText       Usage: minvoke <vnum>/<keyword>
+
+This command allows you to invoke an instance of the specified mobile.
+~
+End
+
+#COMMAND
+Name        mlist~
+Code        do_mlist
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: mlist [free] [<start vnum>] [<end vnum>]
+ 
+If nothing is specified it will show all mobiles in the area.
+If free is specified it will show all free mobiles in the area.
+If <start vnum> is used it will show all mobiles at and after that vnum.
+If <end vnum> is used it will show all mobiles from the start to the end vnum.
+~
+End
+
+#COMMAND
+Name        mpedit~
+Code        do_mpedit
+Position    dead~
+Perm        leader~
+Group       all~
+Log         3
+HText       Usage:  mpedit <mobile> <command> [number]  [program] [arguments]
+Usage:  mpedit <mobile> add       <program> <arguments>
+Usage:  mpedit <mobile> insert    <number>  <program> <arguments>
+Usage:  mpedit <mobile> edit      <number>  [program] [arguments]
+Usage:  mpedit <mobile> delete    <number>
+ 
+Add, insert and edit will put you into the line editor to edit your
+program. The arguments consist of a trigger, plus any arguments
+associated with that trigger.
+~
+End
+
+#COMMAND
+Name        mpstat~
+Code        do_mpstat
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: mpstat <mob/mobvnum> full/<program #>
+ 
+This command will display all of the mobprograms that have been written for the
+specified mob.
+~
+End
+
+#COMMAND
+Name        mset~
+Code        do_mset
+Position    dead~
+Perm        builder~
+Group       builder~
+Log         3
+HText       Usage: mset <victim> <field>  <value>
+
+Field being one of:
+
+
+Usage: mset <victim> <field>  <value>
+
+Field being one of:
+    hp   move   align     title    council      dexterity
+    qp   name   armor    attack    damroll      resistant
+   age   part   blood    height    defense     numattacks
+   pos   race   class    maxhit    hitroll    description
+   sex   rank   deity    minhit   affected    mentalstate
+  clan   sav1   drunk    nation   charisma   constitution
+  full   sav2   favor    speaks   minsnoop   intelligence
+  gold   sav3   flags    thirst   password
+  long   sav4   level    wisdom   practice
+  luck   sav5   pkill    weight   speaking
+  mana   spec   short   aloaded   strength
+~
+End
+
+#COMMAND
+Name        mstat~
+Code        do_mstat
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: mstat <target>
+ 
+This command allows you to see the statistics on the target.
+~
+End
+
+#COMMAND
+Name        murder~
+Code        do_murder
+Position    fighting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: murder <character>
+
+This command is used to initiate attacks on other player characters.
+~
+End
+
+#COMMAND
+Name        mwhere~
+Code        do_mwhere
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: mwhere <name>
+
+This command will show you the locations of all mobiles with a particular name
+currently in the game.
+~
+End
+
+#COMMAND
+Name        mpfavor~
+Code        do_mpfavor
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpfavor <target> [-/+]<#>
+ 
+This mpcommand is used to take, give, or set a PCs favor by/to the specified
+amount.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mposet~
+Code        do_mposet
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mposet <object> <setting> <value>
+ 
+This mpcommand allows the mobile to modify the specified object.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpmset~
+Code        do_mpmset
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpmset <mobile> <setting> <value>
+ 
+This mpcommand allows the mobile to modify the specified mobile.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mortalize~
+Code        do_mortalize
+Position    dead~
+Perm        leader~
+Group       all~
+Log         1
+HText       Usage: mortalize <player>
+ 
+This command will change an immortal into a mortal.
+It may be used with or without the immortal being logged on the mud.
+~
+End
+
+#COMMAND
+Name        mpscatter~
+Code        do_mpscatter
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpscatter <target name> <low vnum> <hi vnum>
+ 
+This mpcommand will send the victim to any one of the rooms specified at
+random.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mppeace~
+Code        do_mppeace
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mppeace <name>
+ 
+Any target name within the room can be forced to cease all fighting.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpechozone~
+Code        do_mpechozone
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpechozone <string>
+
+This mpcommand works much like ECHO and RECHO commands, only this is only
+displayed within the area. 
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mez~
+Code        do_mpechozone
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpechozone <string>
+
+This mpcommand works much like ECHO and RECHO commands, only this is only
+displayed within the area. 
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mplog~
+Code        do_mp_log
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mplog <message>
+ 
+This command can be used by mobiles in a program to log things.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpasuppress~
+Code        do_mpasuppress
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpasuppress <victim> <rounds>
+ 
+This command suppresses the victim for the specified number of rounds.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpmorph~
+Code        do_mpmorph
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpmorph <victim> <morph name/vnum>
+ 
+This command allows a mobile to morph someone.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        mpunmorph~
+Code        do_mpunmorph
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: mpunmorph <victim>
+ 
+This command allows a mobile to unmorph someone.
+~
+Flags       noshow npc~
+End
+
+#COMMAND
+Name        morphlist~
+Code        do_morphlist
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: morphlist
+ 
+This command shows all available morphs.
+~
+End
+
+#COMMAND
+Name        marry~
+Code        do_marry
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: marry <player> <player>
+ 
+This command allows you to marry the specified players.
+~
+End
+
+#COMMAND
+Name        msn~
+Code        do_msn
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: msn <string>
+ 
+This allows you to set your msn contact info.
+~
+End
+
+#COMMAND
+Name        mwreset~
+Code        do_mwreset
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: mwreset create <vnum> <percent(1-100)>
+Usage: mwreset <#> delete
+Usage: mwreset <#> vnum/percent/type <value>
+ 
+This command allows you to create, delete and modify a Mud Wide RESET.
+
+Types:
+   Mobile   = Mobile will reset in random rooms here and there.
+   Object   = Objects will reset into a corpse as a mobile dies.
+~
+End
+
+#COMMAND
+Name        makehightable~
+Code        do_makehightable
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: makehightable <name>
+ 
+This command will create a new highscore table.
+~
+End
+
+#COMMAND
+Name        mpcopy~
+Code        do_mpcopy
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: mpcopy <mobile1> <program> [number] <mobile2>
+Usage: mpcopy <mobile1> all <mobile2>
+Usage: mpcopy <mobile1> all <mobile2> <program>
+
+Program being one of:
+  act speech rand fight hitprcnt greet allgreet
+  entry give bribe death time hour script
+
+This command allows all/specified program(s) to be copied from one mobile to
+another one.
+~
+End
+
+#COMMAND
+Name        north~
+Code        do_north
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: north
+ 
+This command allows you to move north.
+~
+End
+
+#COMMAND
+Name        ne~
+Code        do_northeast
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: northeast
+       ne
+ 
+These commands allow you to move northeast.
+~
+End
+
+#COMMAND
+Name        nw~
+Code        do_northwest
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: northwest
+       nw
+ 
+These commands allow you to move northwest.
+~
+End
+
+#COMMAND
+Name        northeast~
+Code        do_northeast
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: northeast
+       ne
+ 
+These commands allow you to move northeast.
+~
+End
+
+#COMMAND
+Name        northwest~
+Code        do_northwest
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: northwest
+       nw
+ 
+These commands allow you to move northwest.
+~
+End
+
+#COMMAND
+Name        name~
+Code        do_name
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: name <newname>
+ 
+This command allows a pre-authorization player to change their name if their
+original choice was denied.
+~
+End
+
+#COMMAND
+Name        note~
+Code        do_noteroom
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: note [list/unread]
+Usage: note read/remove/edit <#>
+Usage: note vote <#> [open/close/yes/no/abstain]
+Usage: note write/clear/show/post
+Usage: note subject <subject>
+Usage: note to all/immortal/avatar/<clan>/<nation>/<council>/<character>
+ 
+  WRITE - Allows you to start writing a note.
+   EDIT - Allows you to edit a note.
+SUBJECT - Allows you to put a subject on the note.
+     TO - Allows you to put in who can read the note.
+             ALL allows everyone to read it.
+             IMMORTAL allows only immortals to read it.
+             AVATAR allows only avatars and immortals to read it.
+             <CLAN> allows only members of that clan to read it.
+             <NATION> allows only members of that nation to read it.
+             <COUNCIL> allows only members of that council to read it.
+             <CHARACTER> allows only that character to read it.
+  CLEAR - Allows you to clear the note you are writing.
+   SHOW - Allows you to see the note you are writing.
+   POST - Allows you to post the note to the board.
+   LIST - Shows all notes posted on the board.
+   READ - Allows you to read the specified note on the board.
+   VOTE - Allows you to vote on a note.
+~
+End
+
+#COMMAND
+Name        noemote~
+Code        do_noemote
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: noemote <target>
+ 
+This command allows you a way to allow/stop someone from emoting.
+~
+End
+
+#COMMAND
+Name        notell~
+Code        do_notell
+Position    dead~
+Perm        builder~
+Group       all~
+Log         1
+HText       Usage: notell <target>
+ 
+This command allows you a way to allow/stop someone from using tells.
+~
+End
+
+#COMMAND
+Name        notitle~
+Code        do_notitle
+Position    dead~
+Perm        builder~
+Group       all~
+Log         1
+HText       Usage: notitle <target>
+ 
+This command allows you a way to allow/stop someone from changing their title.
+~
+End
+
+#COMMAND
+Name        news~
+Code        do_news
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: news
+Usage: news [<M/D/Y>/<M/D>/<M/Y>/<D/Y>]
+Usage: news date [<M>/<D>/<Y>]
+Usage: news <poster name>
+Usage: news <news #>
+ 
+This command allows you to look at the mud news.
+Immortals Only:
+Usage: news add [<permission>]
+Usage: news <news #> edit/remove
+Usage: news <news #> perm <permission>
+ 
+This allows immortals to add/edit/remove news to keep you informed of recent
+changes.
+~
+End
+
+#COMMAND
+Name        nations~
+Code        do_nations
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: nations [<nation name>]
+ 
+If <nation name> is specified it will show information on the nation.
+Without a <nation name> it will show a list of all the nations.
+~
+End
+
+#COMMAND
+Name        ninduct~
+Code        do_nation_induct
+Position    dead~
+Perm        all~
+Group       all~
+Log         1
+HText       Usage: ninduct <player>
+ 
+This command allows you a way of inducting members into your nation.
+~
+End
+
+#COMMAND
+Name        noutcast~
+Code        do_nation_outcast
+Position    dead~
+Perm        all~
+Group       all~
+Log         1
+HText       Usage: noutcast <player>
+ 
+This command allows you a way of outcasting members of your nation.
+~
+End
+
+#COMMAND
+Name        nquit~
+Code        do_nation_quit
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: nquit now
+ 
+This command allows you a way of quitting the nation your a member of.
+~
+End
+
+#COMMAND
+Name        order~
+Code        do_order
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: order all/<target> <command>
+
+This allows you to order all or just the target to do something.
+~
+End
+
+#COMMAND
+Name        open~
+Code        do_open
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: open <object/direction>
+ 
+This command allows you to open an object or door.
+~
+End
+
+#COMMAND
+Name        ocreate~
+Code        do_ocreate
+Position    dead~
+Perm        builder~
+Group       all~
+Log         3
+HText       Usage: ocreate <vnum> [copy vnum] <item name>
+ 
+This command allows you to create a new object using the specified vnum and
+keywords.
+ 
+If [copy vnum] is used it will make the new object match the one it copies.
+~
+End
+
+#COMMAND
+Name        odelete~
+Code        do_odelete
+Position    dead~
+Perm        builder~
+Group       all~
+Log         1
+HText       Usage: odelete <vnum>
+ 
+This command allows you to remove the specified object vnum from the mud.
+~
+End
+
+#COMMAND
+Name        ofind~
+Code        do_ofind
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: ofind <name>
+ 
+This command will show all objects with the specified name.
+~
+End
+
+#COMMAND
+Name        oinvoke~
+Code        do_oinvoke
+Position    dead~
+Perm        builder~
+Group       all~
+Log         1
+HText       Usage: oinvoke <vnum>/<keyword> [<level>]
+
+This command allows you to invoke an instance of the specified object.
+~
+End
+
+#COMMAND
+Name        olist~
+Code        do_olist
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: olist [free] [<start vnum>] [<end vnum>]
+ 
+If nothing is specified it will show all objects in the area.
+If free is specified it will show all free objects in the area.
+If <start vnum> is used it will show all objects at and after that vnum.
+If <end vnum> is used it will show all objects from the start to the end vnum.
+~
+End
+
+#COMMAND
+Name        opedit~
+Code        do_opedit
+Position    dead~
+Perm        builder~
+Group       all~
+Log         3
+HText       Usage:  opedit <object> <command> [number]  [program] [arguments]
+Usage:  opedit <object> add       <program> <arguments>
+Usage:  opedit <object> insert    <number>  <program> <arguments>
+Usage:  opedit <object> edit      <number>  [program] [arguments]
+Usage:  opedit <object> delete    <number>
+ 
+Add, insert and edit will put you into the line editor to edit your program.
+The arguments consist of a trigger, plus any arguments associated with that
+trigger.  Object programs are like mobprograms, with trigger differences.
+ 
+To edit an Objprogram, you must be holding the object in your inventory.
+~
+End
+
+#COMMAND
+Name        opstat~
+Code        do_opstat
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: opstat <object> full/<program #>
+ 
+This command will display all of the object programs that have been written
+for the specified object.
+~
+End
+
+#COMMAND
+Name        ostat~
+Code        do_ostat
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: ostat <object>
+ 
+This command allows you to see the statistics on an object.
+~
+End
+
+#COMMAND
+Name        outcast~
+Code        do_outcast
+Position    standing~
+Perm        all~
+Group       all~
+Log         1
+HText       Usage: outcast <player>
+ 
+This command allows you a way of outcasting members of your clan.
+~
+End
+
+#COMMAND
+Name        oset~
+Code        do_oset
+Position    dead~
+Perm        builder~
+Group       all~
+Log         3
+HText       Usage: oset <object> <field>  <value>
+
+Field being one of:
+  flags wear level weight cost rent timer
+  name short long ed rmed actiondesc
+  type value0 value1 value2 value3 value4 value5
+  affect rmaffect layers
+For weapons:             For armor:
+  weapontype condition     ac condition
+For scrolls, potions and pills:
+  slevel spell1 spell2 spell3
+For wands and staves:
+  slevel spell maxcharges charges
+For containers:          For levers and switches:
+  cflags key capacity      tflags
+
+This allows you to change the specified object, if it has the PROTOTYPE flag it
+will change the object index also.
+~
+End
+
+#COMMAND
+Name        owhere~
+Code        do_owhere
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: owhere <name>
+ 
+This command will show you the locations of all objects with a particular name
+currently in the game.
+~
+End
+
+#COMMAND
+Name        opcopy~
+Code        do_opcopy
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: opcopy <object1> <program> [number] <object2>
+Usage: opcopy <object1> all <object2>
+Usage: opcopy <object1> all <object2> <program>
+
+Program being one of:
+  act speech rand wear remove sac zap get
+  drop damage repair greet exa use
+  pull push (for levers,pullchains,buttons)
+
+Object should be in your inventory to edit.
+
+This command allows all/specified program(s) to be copied from one object to
+another one.
+~
+End
+
+#COMMAND
+Name        put~
+Code        do_put
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: put [<amount>] <object> <container> [room/inventory/worn]
+ 
+This command allows you to put an object into a container.
+
+You may specify if the container is in the room, in your inventory, or
+something that is being worn by you.
+~
+End
+
+#COMMAND
+Name        password~
+Code        do_password
+Position    dead~
+Perm        all~
+Group       all~
+Log         2
+HText       Usage: password <new password> <new password>
+
+This command allows you to change your character's password.
+~
+End
+
+#COMMAND
+Name        practice~
+Code        do_practice
+Position    sleeping~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: practice [<spell/skill/weapon>]
+ 
+Without an argument, it will show all current spells, skills, weapons, and
+tongues available to you.
+ 
+If you are at a teacher you may use practice with a spell, skill, or weapon
+name to practice it.
+~
+End
+
+#COMMAND
+Name        peace~
+Code        do_peace
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: peace
+ 
+This command causes everyone in the room to stop fighting.
+~
+End
+
+#COMMAND
+Name        pull~
+Code        do_pull
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: pull <target> [room/inventory/worn]
+ 
+This command allows you to pull a lever, pullchain, switch, or button.
+
+You may specify if the target (if it is an object) is in the room,
+in your inventory, or something that is being worn by you.
+~
+End
+
+#COMMAND
+Name        purge~
+Code        do_purge
+Position    dead~
+Perm        leader~
+Group       all~
+Log         0
+HText       Usage: purge [<target>]
+ 
+Without a target this command will purge all possible objects and mobiles in
+the room.
+ 
+If a <target> is specified it will remove the target from anywhere in the
+world.
+~
+End
+
+#COMMAND
+Name        purge~
+Code        do_low_purge
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: purge [<target>]
+ 
+Without a target this command will purge all possible objects and mobiles in
+the room.
+ 
+If a <target> is specified it will remove the target from anywhere in the
+world.
+~
+End
+
+#COMMAND
+Name        push~
+Code        do_push
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: push <target> [room/inventory/worn]
+ 
+This command allows you to push a lever, pullchain, switch, or button.
+
+You may specify if the target (if it is an object) is in the room,
+in your inventory, or something that is being worn by you.
+~
+End
+
+#COMMAND
+Name        prompt~
+Code        do_prompt
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: prompt [<string>/default]
+
+Allows you to set the prompt up to be how you want it.
+Without <string> being specified it shows your current prompt.
+With default it will set the prompt back to the default.
+
+See also: HELP PTOKENS
+~
+End
+
+#COMMAND
+Name        pager~
+Code        do_pager
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: pager [<#>]
+ 
+With <#> specified it sets the pager length to the specified number.
+ 
+With no <#> it will toggle the pager on/off.
+~
+End
+
+#COMMAND
+Name        pcrename~
+Code        do_pcrename
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: pcrename <oldname> <newname>
+ 
+This command permanently changes a players name.
+~
+End
+
+#COMMAND
+Name        pushup~
+Code        do_pushup
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: pushup
+ 
+This command allows you to train your strength.
+~
+End
+
+#COMMAND
+Name        personal~
+Code        do_personal
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: personal create spell/skill offensive/defensive <type> <name>
+Usage: personal <name> delete
+Offensive Types: damage <DTYPE>, <RIS>
+Defensive Types: <RIS>
+  RIS:   ice  fire  blunt   earth        water       poison
+        acid  holy  charm   slash       energy       shadow
+        cold  wind  drain   sleep       pierce  electricity
+DTYPE:   ice  fire   wind   water       shadow
+        acid  holy  drain  energy  electricity
+        cold  none  earth  poison
+ 
+This allows players to create their own personal spells/skills (kind of limited
+still, but works nice). They can create up to 5 spells/skills.
+~
+End
+
+#COMMAND
+Name        quaff~
+Code        do_quaff
+Position    berserk~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: quaff <potion> [<container>]
+ 
+This command allows you to use a potion.
+~
+End
+
+#COMMAND
+Name        quit~
+Code        do_quit
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: quit
+ 
+This command allows you to quit the game.
+~
+Flags       fullname~
+End
+
+#COMMAND
+Name        qpset~
+Code        do_qpset
+Position    dead~
+Perm        imm~
+Group       all~
+Log         1
+HText       Usage: qpset <target> [give/take <amount>]
+ 
+This command allows you to see, give, or take glory from the target.
+~
+End
+
+#COMMAND
+Name        rest~
+Code        do_rest
+Position    sleeping~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: rest
+ 
+This command allows you to rest.
+~
+End
+
+#COMMAND
+Name        report~
+Code        do_report
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: report
+ 
+This command shows you and everyone in the room your character's basic stats.
+~
+End
+
+#COMMAND
+Name        repair~
+Code        do_repair
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: repair all/<object>
+ 
+This command allows you to get objects repaired/recharged.
+~
+End
+
+#COMMAND
+Name        reply~
+Code        do_reply
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: reply <message>
+ 
+This command allows you to send a message to the last person to send you a
+tell.
+~
+End
+
+#COMMAND
+Name        remove~
+Code        do_remove
+Position    aggressive~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: remove <object/all>
+ 
+This command allows you to stop wearing an object or everything.
+~
+End
+
+#COMMAND
+Name        rank~
+Code        do_rank
+Position    dead~
+Perm        leader~
+Group       all~
+Log         0
+HText       Usage: rank <string>
+ 
+This command allows you to set your rank to the specified string.
+~
+End
+
+#COMMAND
+Name        rat~
+Code        do_rat
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: rat vnum1 vnum2 command [parameters]
+ 
+Rat, or 'range at' is the at command with the added parameters of two
+room vnums.  Assuming the vnums are valid, your 'at' command will be
+executed in every room in the range you give.
+ 
+Example: rat 100 110 redit flags 0
+This will clear the room flags in all rooms from 100 to 110 inclusive.
+~
+End
+
+#COMMAND
+Name        rdelete~
+Code        do_rdelete
+Position    dead~
+Perm        builder~
+Group       all~
+Log         1
+HText       Usage: rdelete <vnum>
+ 
+This command allows you to remove the specified room vnum from the mud.
+~
+End
+
+#COMMAND
+Name        reboot~
+Code        do_reboot
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: reboot [mud now/nosave]
+ 
+This command allows you to reboot the mud.
+~
+Flags       fullname~
+End
+
+#COMMAND
+Name        recite~
+Code        do_recite
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: recite <scroll> [<target>] [room/inventory/worn]
+ 
+This command recites a magical scroll.
+
+You may specify if the target (if it is an object) is in the room,
+in your inventory, or something that is being worn by you.
+~
+End
+
+#COMMAND
+Name        recho~
+Code        do_recho
+Position    dead~
+Perm        builder~
+Group       all~
+Log         1
+HText       Usage: recho <message>
+ 
+This command sends the message to all players in the same room as you.
+~
+End
+
+#COMMAND
+Name        redit~
+Code        do_redit
+Position    dead~
+Perm        builder~
+Group       all~
+Log         3
+HText       Usage: redit <field>
+
+Fields:
+      desc                  Edit room description
+      name <room name>      Set room name
+        ed <keyword(s)>     Add/Edit extra description(s)
+      rmed <keyword(s)>     Remove an extra description
+    sector <sector type>    SEE HELP SECTORTYPES
+     flags <flags>          SEE HELP ROOMFLAGS
+ 
+     SEE HELP EXITMAKING for these fields:
+        exit   bexit   exdesc   exflags   exname   exkey
+ 
+EXAMPLES:
+   redit name Testing    Sets the room name to Testing
+   redit desc            Places you in a buffer so you can edit description
+   redit flags private   Toggles the private room flag
+   redit sector inside   Sets the room sectortype to inside
+   redit ed testing      Creates an extra description called testing
+   redit rmed testing    Removes an extra description called testing
+~
+End
+
+#COMMAND
+Name        regoto~
+Code        do_regoto
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: regoto
+ 
+This command will return you to the room you were in before using goto.
+~
+End
+
+#COMMAND
+Name        repairset~
+Code        do_repairset
+Position    dead~
+Perm        builder~
+Group       all~
+Log         3
+HText       Usage: repairset <mob vnum> <field> <value>
+ 
+This command allows you to set what a repair shop does.
+ 
+ ----------------------------------------------
+| Fields  | Meaning                            |
+ --------- ------------------------------------
+| fixtype | Types of items the keeper will fix |
+| profit  | Profit on fixing items             |
+| type    | Repair shop type                   |
+|         |   type 1 = standard                |
+|         |   type 2 = recharge                |
+| open    | Hour shop opens                    |
+| close   | Hour shop closes                   |
+| keeper  | Vnum of repair shop keeper         |
+ ----------------------------------------------
+~
+End
+
+#COMMAND
+Name        repairshops~
+Code        do_repairshops
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: repairshops
+ 
+Shows statistics on all the repair shops.
+~
+End
+
+#COMMAND
+Name        repairstat~
+Code        do_repairstat
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: repairstat <mob vnum>
+ 
+Shows all the statistics on a mobile's repair shop.
+~
+End
+
+#COMMAND
+Name        reset~
+Code        do_reset
+Position    dead~
+Perm        builder~
+Group       all~
+Log         3
+HText       Usage: reset area/list
+Usage: reset random <# directions>
+Usage: reset delete <number>
+Usage: reset hide <objname>
+Usage: reset add obj/mob/give <vnum>
+Usage: reset add equip <vnum> <wearloc>
+Usage: reset cords <#> <x> <y>
+Usage: reset rchance <number> <chance>
+Usage: reset trap room <type> <charges> [flags]
+Usage: reset trap obj <name> <type> <charges> [flags]
+
+This command is used to display, edit, and delete resets for your area.
+~
+End
+
+#COMMAND
+Name        restore~
+Code        do_restore
+Position    dead~
+Perm        builder~
+Group       all~
+Log         1
+HText       Usage: restore all/<target>
+
+This command allows you to fully restore everyone/target.
+~
+End
+
+#COMMAND
+Name        restoretime~
+Code        do_restoretime
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: restoretime
+ 
+This command shows how much time has passed since the last restore all and your
+last restore all.
+~
+End
+
+#COMMAND
+Name        restrict~
+Code        do_restrict
+Position    dead~
+Perm        leader~
+Group       all~
+Log         0
+HText       Usage: restrict <command> [<permission>]
+ 
+If no permission is specified it will display the current command and settings.
+If one is specified it will restrict the command to that permission.
+~
+End
+
+#COMMAND
+Name        retran~
+Code        do_retran
+Position    dead~
+Perm        builder~
+Group       all~
+Log         1
+HText       Usage: retran <target>
+ 
+This command is used to return the target to the room they were transferred
+from.
+~
+End
+
+#COMMAND
+Name        retire~
+Code        do_retire
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: retire <target>
+ 
+This command allows you to set or remove an immortal from retirement.
+~
+End
+
+#COMMAND
+Name        rlist~
+Code        do_rlist
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: rlist [free] [<start vnum>] [<end vnum>]
+ 
+If nothing is specified it will show all rooms in the area.
+If free is specified it will show all free rooms in the area.
+If <start vnum> is used it will show all rooms at and after that vnum.
+If <end vnum> is used it will show all rooms from the start to the end vnum.
+~
+End
+
+#COMMAND
+Name        rpedit~
+Code        do_rpedit
+Position    dead~
+Perm        builder~
+Group       all~
+Log         3
+HText       Usage:  rpedit <command> [number]  [program] [arguments]
+Usage:  rpedit add       <program> <arguments>
+Usage:  rpedit insert    <number>  <program> <arguments>
+Usage:  rpedit edit      <number>  [program] [arguments]
+Usage:  rpedit delete    <number>
+ 
+Add, insert and edit will put you into the line editor to edit your
+program.  The arguments consist of a trigger, plus any arguments 
+associated with that trigger.
+ 
+To edit a room program you must be in the room.
+~
+End
+
+#COMMAND
+Name        rpstat~
+Code        do_rpstat
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: rpstat [full/<program #>]
+ 
+This command allows you to see the room programs written for a room.
+If you use the 'full' argument it will show all programs and what is in them.
+If you use the '<program #>' it will show what is in the specified program.
+~
+End
+
+#COMMAND
+Name        rstat~
+Code        do_rstat
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: rstat [<location>]
+ 
+This command allows you to see the statistics on the specified location or your
+current location if no location is specified.
+~
+End
+
+#COMMAND
+Name        reserve~
+Code        do_reserve
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: reserve
+Usage: reserve [*]<name>
+ 
+Names in the reserved list can't be used by players on creation.
+If a * is used at the start of a name, a name can't contain that string.
+ 
+Examples:
+  reserve - Shows all the names currently reserved.
+  reserve joe - Will add/remove joe from the reserve list.
+  reserve *joe - Will make it so no name can contain joe.
+~
+End
+
+#COMMAND
+Name        rap~
+Code        do_rap
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: rap <exit>
+ 
+This command allows you to rap on a closed exit getting the attention of others
+on the other side.
+~
+End
+
+#COMMAND
+Name        remains~
+Code        do_remains
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: remains
+ 
+If you have a deity you may request knowledge on your remains.
+It will cost you favor to receive this knowledge, which will be somewhere
+between your character level to two times your character level.
+~
+End
+
+#COMMAND
+Name        retell~
+Code        do_retell
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: retell <message>
+ 
+This command allows you to send a message to the last person you sent a tell
+to.
+~
+End
+
+#COMMAND
+Name        repeat~
+Code        do_repeat
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: repeat
+ 
+This command will show the last 20 tells you received.
+~
+End
+
+#COMMAND
+Name        revert~
+Code        do_revert
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: revert
+ 
+This command is used to return you to your original body from a polymorphed
+state.
+~
+End
+
+#COMMAND
+Name        races~
+Code        do_races
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: races
+ 
+This command will show you all the races in the mud.
+~
+End
+
+#COMMAND
+Name        reward~
+Code        do_reward
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: reward [<#>] [buy]
+ 
+Without an argument it will show a list of all the rewards.
+With a number argument specified you will get to see the objects information.
+With a number and buy argument you will be buying that reward.
+~
+End
+
+#COMMAND
+Name        retrieve~
+Code        do_retrieve
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: retrieve
+ 
+This command allows you to have a mobile bring you your corpse(s).
+~
+End
+
+#COMMAND
+Name        rdig~
+Code        do_rdig
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: rdig <direction>
+ 
+This command allows you to dig out an exit to a new room.
+The room is auto created from your list of vnums that haven't been used yet.
+~
+End
+
+#COMMAND
+Name        removeshop~
+Code        do_removeshop
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: removeshop <mobvnum>
+ 
+Removes the shop from the specified mobile.
+~
+End
+
+#COMMAND
+Name        removerepairshop~
+Code        do_removerepairshop
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: removerepairshop <mobvnum>
+ 
+Removes a repair shop from the specified mobile.
+~
+End
+
+#COMMAND
+Name        rpcopy~
+Code        do_rpcopy
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: rpcopy <room1> <program> [number] <room2>
+Usage: rpcopy <room1> all <room2>
+Usage: rpcopy <room1> all <room2> <program>
+
+Program being one of:
+  act speech rand fight sleep rest leave
+  entry death time hour script
+
+This command allows all/specified program(s) to be copied from one room to
+another one.
+~
+End
+
+#COMMAND
+Name        rubiks~
+Code        do_rubiks
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Syntax:
+-------------------------------------------------------------------------------
+rubik       | Shows the current rubik's cube.
+rubik start | Starts the rubik's cube.
+rubik quit  | Quits the rubik's cube.
+rubik mix   | Mixes up the cube.
+rubik f     | Moves the front side of the rubik's cube clockwise.
+rubik fi    | Moves the front side of the rubik's cube counter-clockwise.
+rubik r     | Moves the right side of the rubik's cube clockwise.
+rubik ri    | Moves the right side of the rubik's cube counter-clockwise.
+rubik l     | Moves the left side of the rubik's cube clockwise.
+rubik li    | Moves the left side of the rubik's cube counter-clockwise.
+rubik d     | Moves the down side of the rubik's cube clockwise.
+rubik di    | Moves the down side of the rubik's cube counter-clockwise.
+rubik b     | Moves the back side of the rubik's cube clockwise.
+rubik bi    | Moves the back side of the rubik's cube counter-clockwise.
+rubik u     | Moves the up side of the rubik's cube clockwise.
+rubik ui    | Moves the up side of the rubik's cube counter-clockwise.
+rubik turn  | Allows you to turn the rubik's cube so a different side is front.
+            | "rubik turn left" will turn the cube so the right side is front.
+            | "rubik turn right" will turn the cube so the left side is front.
+            | "rubik turn up" will turn the cube so the down side is front.
+            | "rubik turn down" will turn the cube so the up side is front.
+            | "rubik turn back" will turn the cube so the back side is front.
+~
+End
+
+#COMMAND
+Name        run~
+Code        do_run
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: run <direction> [<#>]
+ 
+This allows you to run in the <direction>.
+Can specify how many rooms you want to run.
+It allows you to move around faster.
+Only see the room you end up in.
+ 
+Careful with using run in areas you don't know.
+You could run into aggressive mobiles, death traps, etc...
+~
+End
+
+#COMMAND
+Name        south~
+Code        do_south
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: south
+ 
+This command allows you to move south.
+~
+End
+
+#COMMAND
+Name        showphistory~
+Code        do_showphistory
+Position    dead~
+Perm        imp~
+Group       all~
+Log         0
+HText       Usage: showphistory <character> [<type>]
+ 
+Types: say, tell, yell, whisper, fchat
+ 
+This allows you to take a look at the specified characters phistory.
+If you specify the type it will only show that type.
+If you don't specify the type it will show all the specified characters
+phistory.
+~
+End
+
+#COMMAND
+Name        se~
+Code        do_southeast
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: southeast
+       se
+ 
+These commands allow you to move southeast.
+~
+End
+
+#COMMAND
+Name        sw~
+Code        do_southwest
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: southwest
+       sw
+ 
+These commands allow you to move southwest.
+~
+End
+
+#COMMAND
+Name        say~
+Code        do_say
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: say <message>
+ 
+This command allows you to send a message to everyone in the room you are in.
+~
+End
+
+#COMMAND
+Name        save~
+Code        do_save
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage:  Save
+ 
+SAVE saves your character.
+You must be at least level 2 to save.
+~
+End
+
+#COMMAND
+Name        skin~
+Code        do_skin
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: skin <corpse>
+ 
+This command allows you to skin a corpse.
+You need to be holding a slicing, piercing, slashing, or stabbing weapon.
+You can only skin player corpses.
+You have to be the one to get the final hit on the player.
+~
+End
+
+#COMMAND
+Name        setmpdamage~
+Code        do_setmpdamage
+Position    dead~
+Perm        imp~
+Group       all~
+Log         0
+HText       Usage: setmpdamage save
+Usage: setmpdamage create <keyword>
+Usage: setmpdamage <keyword> delete
+Usage: setmpdamage <keyword> resistant <resistant>
+Usage: setmpdamage <keyword> <msgtype> <new message>
+
+MsgTypes: charmsg roommsg victmsg immroom immchar immvict absroom abschar
+          absvict
+~
+End
+
+#COMMAND
+Name        sacrifice~
+Code        do_sacrifice
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: sacrifice all/<object>
+
+This command allows you to sacrifice an object or everything in the room to
+your deity or the gods.
+~
+End
+
+#COMMAND
+Name        score~
+Code        do_score
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: score
+ 
+This command shows you a sheet of your character's information.
+~
+End
+
+#COMMAND
+Name        sleep~
+Code        do_sleep
+Position    sleeping~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: sleep
+ 
+This command allows you to go to sleep.
+~
+End
+
+#COMMAND
+Name        stand~
+Code        do_stand
+Position    sleeping~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: stand
+ 
+This command allows you to stand.
+~
+End
+
+#COMMAND
+Name        stat~
+Code        do_stat
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: stat
+ 
+This command shows you your character's basic stats and attributes.
+~
+End
+
+#COMMAND
+Name        statreport~
+Code        do_statreport
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: statreport
+ 
+This command shows you and everyone in the room your character's basic stats
+and attributes.
+~
+End
+
+#COMMAND
+Name        savearea~
+Code        do_savearea
+Position    dead~
+Perm        builder~
+Group       all~
+Log         3
+HText       Usage: savearea [<area filename>]
+ 
+This command allows you to save a prototype area.
+~
+End
+
+#COMMAND
+Name        sell~
+Code        do_sell
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: sell <object> [<amount>]
+ 
+This command allows you to sell an object to a shop keeper.
+There are times when an item is worth more then the shop keeper
+has to give. For those times you may sell an item for less then
+what it is valued at.
+~
+End
+
+#COMMAND
+Name        sedit~
+Code        do_sedit
+Position    dead~
+Perm        leader~
+Group       all~
+Log         1
+HText       Usage: sedit <social> [field]
+       sedit save
+ 
+Use sedit <social> to view the current settings of an existing social.
+Use sedit <social> [field] to set one of the fields:
+  Create: Creates the social
+  Delete: Deletes the social
+    Name: Name of the social
+   Raise: Raises the position of the social in the list
+   Lower: Lowers the position of the social in the list
+    List: Shows the position of the social in the list
+  CNoArg: Response to character if no argument given
+  ONoArg: Response to room if no argument given
+  CFound: Response to character if target is someone else
+  OFound: Response to room if target is someone else
+  VFound: Response to target if target is someone else
+   CAuto: Response to character if target is self
+   OAuto: Response to room if target is self
+ 
+  User Variables:      Target Variables:
+  ---------------      -----------------
+  $n Name              $N Name
+  $m him/her/it        $M him/her/it
+  $s his/her/its       $S his/her/its
+  $e he/she/it         $E he/she/it
+ 
+Use sedit save to save the new social or changes to existing socials.
+~
+End
+
+#COMMAND
+Name        setclan~
+Code        do_setclan
+Position    dead~
+Perm        leader~
+Group       all~
+Log         1
+HText       Usage: setclan <clan> [create/delete]
+Usage: setclan <clan> [<field> <setting>]
+
+Field being one of:
+  *desc    *motto   number2  *filename
+  *name    leader   onerank   leadrank
+  *race    recall   storage
+  *type   number1   tworank
+
+* = Only Leaders and higher can set.
+~
+End
+
+#COMMAND
+Name        setcouncil~
+Code        do_setcouncil
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: setcouncil <council> [create/delete]
+Usage: setcouncil <council> <field> <value>
+
+Field being one of:
+  head  head2  members  name  filename  desc  powers
+
+This command allows you to create, see, and edit a council.
+~
+End
+
+#COMMAND
+Name        shops~
+Code        do_shops
+Position    dead~
+Perm        builder~
+Group       all~
+Log         3
+HText       Usage: shops
+
+Displays some statistics on all shops.
+~
+End
+
+#COMMAND
+Name        shopset~
+Code        do_shopset
+Position    dead~
+Perm        builder~
+Group       all~
+Log         1
+HText       Usage: shopset <mob vnum> <field> <value>
+
+ -----------------------------------------------
+| Fields   | Meaning                            |
+ -----------------------------------------------
+| buytype  | Type of items the keeper will buy  |
+| buy      | Profit on buying items             |
+| sell     | Profit on selling items            |
+| open     | Hour shop opens                    |
+| close    | Hour shop closes                   |
+| keeper   | Vnum of shop keeper                |
+ -----------------------------------------------
+~
+End
+
+#COMMAND
+Name        shopstat~
+Code        do_shopstat
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: shopstat <mobile vnum>
+
+Shows statistics on the specified shop.
+~
+End
+
+#COMMAND
+Name        shove~
+Code        do_shove
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: shove <target> <direction>
+ 
+This command allows you to shove someone in the specified direction.
+~
+End
+
+#COMMAND
+Name        shutdown~
+Code        do_shutdown
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: shutdown [mud now/nosave]
+ 
+This command allows you to shutdown the mud.
+~
+Flags       fullname~
+End
+
+#COMMAND
+Name        sit~
+Code        do_sit
+Position    sleeping~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: sit
+ 
+This command allows you to sit down.
+~
+End
+
+#COMMAND
+Name        silence~
+Code        do_silence
+Position    dead~
+Perm        imm~
+Group       all~
+Log         1
+HText       Usage: silence <target>
+ 
+This command allows you to silence someone so they can't use channels.
+~
+End
+
+#COMMAND
+Name        slay~
+Code        do_slay
+Position    dead~
+Perm        leader~
+Group       all~
+Log         1
+HText       Usage: slay <target> [inferno/shatter/demon/leap/slit/dogs]
+
+SLAY kills a character in cold blood, no saving throw.
+
+The optional parameters cause different messages to be sent to the actor,
+the target, and the room for a bit of variety.
+~
+Flags       fullname~
+End
+
+#COMMAND
+Name        slist~
+Code        do_slist
+Position    sleeping~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage:  slist [<low level> <high level>]
+ 
+Without an argument it will show you a complete list of the things available to
+you.
+
+If you specify a level range it will show all spells and skills available to
+you in that range.
+~
+End
+
+#COMMAND
+Name        slookup~
+Code        do_slookup
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: slookup <sn>/<skill/spell/weapon/tongue name>
+Usage: slookup all/slots
+
+This command allows you to see the information for the given
+spell/skill/weapon/tongue.
+
+If all is used it shows some basic information for all skills, spells, weapons,
+and tongues.
+
+If slots is used it will show all unused slots. 
+~
+End
+
+#COMMAND
+Name        smoke~
+Code        do_smoke
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: smoke <pipe>
+ 
+You may 'smoke' a pipe after filling it with a smokable herb.
+~
+End
+
+#COMMAND
+Name        snoop~
+Code        do_snoop
+Position    dead~
+Perm        leader~
+Group       all~
+Log         4
+HText       Usage: snoop <target>/self
+
+This command will make it so you see a copy of all the input and output going
+to the target.
+~
+End
+
+#COMMAND
+Name        sober~
+Code        do_sober
+Position    dead~
+Perm        builder~
+Group       all~
+Log         4
+HText       Usage: sober <target>
+ 
+This command can be used to make the target sober.
+~
+End
+
+#COMMAND
+Name        socials~
+Code        do_socials
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: socials [<string>]
+ 
+This command allows you to see all the socials or just ones that match the
+string argument.
+ 
+A social is a command that performs an emotion or action.
+Example:
+   smile testing
+ 
+... Displays:
+   (If in the same room as testing)
+      OTHERS: <Your character's name> smiles at testing.
+         YOU: You smile at testing.
+     TESTING: <Your character's name> smiles at you.
+
+   (If not in the same room as testing)
+      OTHERS: [From afar] <Your character's name> smiles at testing.
+         YOU: [From afar] You smile at testing.
+     TESTING: [From afar] <Your character's name> smiles at you.
+~
+End
+
+#COMMAND
+Name        southeast~
+Code        do_southeast
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: southeast
+       se
+ 
+These commands allow you to move southeast.
+~
+End
+
+#COMMAND
+Name        southwest~
+Code        do_southwest
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: southwest
+       sw
+ 
+These commands allow you to move southwest.
+~
+End
+
+#COMMAND
+Name        speak~
+Code        do_speak
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: speak [<language>/all]
+ 
+This command allows you to change what language you are currently speaking.
+If no language is specified you will speak your native tongue.
+Immortals may speak all languages at once.
+~
+End
+
+#COMMAND
+Name        split~
+Code        do_split
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: split <amount>
+ 
+This command allows you to split some gold between you and all members of the
+group that are in the same room.
+~
+End
+
+#COMMAND
+Name        sset~
+Code        do_sset
+Position    dead~
+Perm        leader~
+Group       all~
+Log         1
+HText       Usage: sset <victim> all/<skill> <value>
+Usage: sset save   <skill/herb> table
+Usage: sset create <skill/herb> <new <skill/herb> name>
+Usage: sset <sn> help
+Usage: sset <sn> <field> <value>
+
+Field being one of:
+  code    type   sector  diechar   immchar   missroom    components
+  dice   beats   target  dieroom   immroom   missvict    difficulty
+  flag   class  abschar  dievict   immvict   reqskill  participants
+  mana   value  absroom  hitchar   seffect   rmaffect
+  name  affect  absvict  hitdest   wearoff   teachers
+  race  dammsg  acttype  hitroom  misschar  classtype
+  slot  minpos  damtype  hitvict  minlevel  powertype
+ 
+Affect having the fields: <location> <modifier> [duration] [bitvector]
+(See AFFECTTYPES for location, and OBJECTAFFECTED for affects)
+Skill being any skill or spell.
+~
+End
+
+#COMMAND
+Name        setdeity~
+Code        do_setdeity
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: setdeity <deity> [create/delete]
+Usage: setdeity <deity> <field> <toggle>
+Field being one of:
+      sex    class    objvnum    alignment  description
+     name    race2    suscept    resistnum
+     race   resist   affected   susceptnum
+     type  mobvnum   filename  affectednum
+Field Favor adjustments:
+      aid     flee   backstab   dig_corpse
+      die     kill  aid_spell   kill_magic
+      sac    steal  spell_aid  bury_corpse
+Field Favor requirements for supplicate:
+  savatar  scorpse    srecall    sdeityobj
+ 
+This command allows you to create, see, and edit a deity.
+~
+End
+
+#COMMAND
+Name        supplicate~
+Code        do_supplicate
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: supplicate corpse/avatar/object/recall
+
+This command allows you to beg your deity (if you have one) for aid.
+Corpse - Deity will bring all of your corpses (possible) to you.
+Avatar - Deity will send you an avatar to help you.
+Object - Deity will send you an object with her blessings.
+Recall - Deity will recall you to your recall point.
+~
+End
+
+#COMMAND
+Name        setclass~
+Code        do_setclass
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: setclass <class> [create/save]
+Usage: setclass <class> skill <skill> <level> <adept>
+Usage: setclass <class> name <new name>
+ 
+This command allows you to create, see, and edit a class.
+~
+End
+
+#COMMAND
+Name        style~
+Code        do_style
+Position    berserk~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: style <evasive/defensive/standard/aggressive/berserk>
+ 
+Style offers a way for you to change your current style of combat.
+
+   Evasive <help evasive style>
+ Defensive <help defensive style>
+  Standard <help standard style>
+Aggressive <help aggressive style>
+   Berserk <help berserk style>
+~
+End
+
+#COMMAND
+Name        showweather~
+Code        do_showweather
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: showweather [<string>]
+ 
+This command will show you all areas and their current weather settings.
+ 
+If <string> is specified it will show only the areas that match the string.
+~
+End
+
+#COMMAND
+Name        setweather~
+Code        do_setweather
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: setweather [<parameter> <value>]
+
+Parameters:
+     random
+    climate
+   neighbor
+       unit
+  maxvector
+
+Resulting values:
+  Weather variables range from -60 to 60.
+  Weather vectors range from -15 to 15.
+  The maximum a vector can change in one update is 18.
+~
+End
+
+#COMMAND
+Name        strip~
+Code        do_strip
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: strip <target>
+ 
+This command allows you to take all the targets inventory and equipment at one
+time.
+~
+End
+
+#COMMAND
+Name        setrace~
+Code        do_setrace
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: setrace <race> [create/save]
+Usage: setrace <race> <field> <value>
+Usage: setrace <race> wherename <location> <string>
+Usage: setrace <race> skill <skill> <level> <adept>
+
+Field being one of:
+    ac      uses     wisdom   maxalign  maxweight
+   hit    hunger    classes   minalign  minheight
+  luck    recall    suscept   strength  minweight
+  mana    resist   affected  alignment  constitution
+  move    thirst   charisma  dexterity  intelligence
+  name  language  maxheight
+~
+End
+
+#COMMAND
+Name        sudoku~
+Code        do_sudoku
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: sudoku
+Usage: sudoku <new/stats>
+Usage: sudoku set <row[1-9]><col[1-9]><value[1-9]>
+
+With no argument it will display your current sudoku puzzle.
+Using 'new' will start a new puzzle.
+Using 'stats' will show your sudoku stats.
+Using the argument set with a valid row, column, and value will
+   allow you to set that block to the desired value.
+~
+End
+
+#COMMAND
+Name        situp~
+Code        do_situp
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: situp
+ 
+This command allows you to train your constitution.
+~
+End
+
+#COMMAND
+Name        speed~
+Code        do_speed
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: speed <value>
+ 
+This command allows you to set how fast data is sent to you.
+You may set speed from 1 to 32.
+<(<#> * 128) = how fast data is sent>
+Example = (32 * 128) = 4096 Bytes
+~
+End
+
+#COMMAND
+Name        setreward~
+Code        do_setreward
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: setreward create <vnum> <qpcost>
+Usage: setreward delete <vnum>
+Usage: setreward <vnum> <vnum/qpcost> <value>
+
+Setreward will allow you to create, edit, and delete rewards.
+~
+End
+
+#COMMAND
+Name        showrewards~
+Code        do_showrewards
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: showrewards
+ 
+This command will show all the rewards.
+Usage: showreward
+ 
+This command allows you to see all the rewards and their Quest Point cost.
+~
+End
+
+#COMMAND
+Name        setchannel~
+Code        do_setchannel
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: setchannel <channel>
+Usage: setchannel <channel> create/delete/clearhistory
+Usage: setchannel <channel> name/color/type/perm/maxhistory <setting>
+ 
+This allows dynamic channels to be created, viewed, edited, and deleted.
+~
+End
+
+#COMMAND
+Name        suicide~
+Code        do_suicide
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: suicide
+ 
+This command allows you to commit suicide instead of laying there waiting to
+die.
+ 
+There is also an auto suicide that will allow you to automatically commit
+suicide when your hitpoints drop to 0.
+~
+End
+
+#COMMAND
+Name        solo~
+Code        do_solo
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: solo
+ 
+This command allows you to stop others from following you around without you
+disbanding your group or having them all sit.
+~
+End
+
+#COMMAND
+Name        sethightable~
+Code        do_sethightable
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: sethightable <table> max/name <setting>
+ 
+This allows you to set the max and name for a highscore table.
+~
+End
+
+#COMMAND
+Name        skilltable~
+Code        do_skilltable
+Position    dead~
+Perm        leader~
+Group       all~
+Log         0
+HText       Usage: skilltable
+ 
+This command will display all used skills and how many times they have been
+used since startup.
+~
+End
+
+#COMMAND
+Name        setmssp~
+Code        do_setmssp
+Position    dead~
+Perm        imp~
+Group       all~
+Log         0
+HText       Usage: setmssp <field> [value]
+ 
+Field being one of:
+hostname          contact           icon              lanuage
+location          website           family            genre
+gameplay          game_system       intermud          status
+subgenre          created           min_age           worlds
+ansi              mccp              mcp               msp
+ssl               mxp               pueblo            vt100
+xterm256          pay2play          pay4perks         hiring_builders
+hiring_coders     adult_material    multiclassing     newbie_friendly
+player_cities     player_clans      player_crafting   player_guilds
+equipment_system  multiplaying      player_killing    quest_system
+roleplaying       training_system   world_originality
+~
+End
+
+#COMMAND
+Name        tell~
+Code        do_tell
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: tell off
+Usage: tell <target> <message>
+
+This command allows you to send a message to someone anywhere in the mud.
+If you use 'off' it will turn off tells.
+If tells are turned off and you send a tell it will turn tells back on.
+~
+Flags       allow_tilde~
+End
+
+#COMMAND
+Name        time~
+Code        do_time
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: time
+ 
+This command shows the current mud, start up, system, and next pfile cleanup
+time.
+~
+End
+
+#COMMAND
+Name        title~
+Code        do_title
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: title <string>
+ 
+This command allows you to set your title.
+~
+End
+
+#COMMAND
+Name        transfer~
+Code        do_transfer
+Position    dead~
+Perm        builder~
+Group       all~
+Log         1
+HText       Usage: transfer all/<target> [<location>]
+
+This command transfers all or the target to a specified location or your
+current location.
+~
+End
+
+#COMMAND
+Name        typo~
+Code        do_typo
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: typo <message>
+ 
+This command will record your typo for the mud implementers.
+~
+End
+
+#COMMAND
+Name        timecmd~
+Code        do_timecmd
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: timecmd <what you want to check time on>
+ 
+Example:
+timecmd cast heal
+Starting timer.
+A warm feeling fills your body.
+Timing complete.
+Timing took 0.000104 seconds.
+ 
+It starts the timer before doing what you want and stops after it's complete.
+~
+End
+
+#COMMAND
+Name        timeset~
+Code        do_timeset
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: timeset [day/month/stats]
+Usage: timeset [day/month] [create/delete] <name>
+Usage: timeset [day/month] place <#> <name of day/month to move>
+Usage: timeset [day/month] name <name of day/month to change> <name>
+Usage: timeset month days <#> <name of month to change>
+ 
+  DAY: (with no other argument) Shows all mud days.
+MONTH: (with no other argument) Shows all mud months.
+STATS: will show a quick overview of the mud time stats.
+ 
+EXAMPLES:
+   timeset day create Sunday        Creates a new day named Sunday
+   timeset day delete Sunday        Deletes the day named Sunday
+   timeset month create July        Creates a new month named July
+   timeset month delete July        Deletes the month named July
+   timeset day name Sunday Monday   Changes the day named Sunday to Monday
+   timeset month name July June     Changes the month of July to June
+   timeset day place 6 Sunday       Changes Sunday to the 6th day
+   timeset month days 30 July       Makes July have 30 days
+~
+End
+
+#COMMAND
+Name        transcheck~
+Code        do_check_transfer
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: transcheck [clear]
+ 
+This command will show you the current transfer data for the mud.
+If you use the clear option it will reset all the data.
+~
+End
+
+#COMMAND
+Name        throw~
+Code        do_throw
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: throw <weapon> <direction>
+Usage: throw <weapon> <target>
+Usage: throw <weapon> <direction> <target>
+ 
+This command allows you to throw a weapon at someone.
+
+*Note* Can only throw a weapon that is being held.
+~
+End
+
+#COMMAND
+Name        trivia~
+Code        do_trivia
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: trivia
+Usage: trivia add <question>
+Usage: trivia start/stop
+Usage: trivia <#> remove
+Usage: trivia <#> answer add <answer>
+Usage: trivia <#> answer <#> edit <answer>
+Usage: trivia <#> answer <#> remove
+Usage: trivia <#> edit <question>
+Usage: trivia <#> reward <#>
+~
+End
+
+#COMMAND
+Name        up~
+Code        do_up
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: up
+ 
+This command allows you to move up.
+~
+End
+
+#COMMAND
+Name        unmorph~
+Code        do_imm_unmorph
+Position    dead~
+Perm        imm~
+Group       all~
+Log         0
+HText       Usage: unmorph [<target>]
+ 
+This is a command that allows you to revert back to your original form.
+~
+End
+
+#COMMAND
+Name        unlock~
+Code        do_unlock
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: unlock <object/direction>
+ 
+This command allows you to unlock a locked object or door.
+You must have the correct key to unlock an object or door.
+~
+End
+
+#COMMAND
+Name        users~
+Code        do_users
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: users [<host ip>/<name>]
+
+With no argument this command will display all visible users connected to the
+server.
+
+If you specify a <host ip> or a <name> it will only show matching visible
+users.
+~
+End
+
+#COMMAND
+Name        unsilence~
+Code        do_unsilence
+Position    dead~
+Perm        imm~
+Group       all~
+Log         1
+HText       Usage: unsilence <target>
+ 
+This command allows you to remove silence from someone so they can use
+channels.
+~
+End
+
+#COMMAND
+Name        unbolt~
+Code        do_unbolt
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: unbolt <direction>
+ 
+This command allows you to unbolt a bolted door.
+You must be on the side of the door that has the bolt.
+~
+End
+
+#COMMAND
+Name        useglory~
+Code        do_useglory
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       50 Glory = useglory <object> armor
+    *&CIncreases your armor class by 1&D*
+50 Glory = useglory <object> hitroll
+    *&CIncreases your hitroll by 1&D*
+50 Glory = useglory <object> damroll
+    *&CIncreases your damroll by 1&D*
+100 Glory = useglory <object> weight
+    *&CWeight reduced to 1&D*
+400 Glory = useglory <object> affect <affect>
+&Y--------------------------&CAFFECTS&Y--------------------------&D
+     invisible,  detect_evil,  detect_invis,  detect_magic,
+ detect_hidden,     infrared,         sneak,          hide,
+        flying,    pass_door,      floating,  detect_traps,
+       scrying,  aqua_breath,  detect_sneak
+500 Glory = useglory <object> noscrap
+    *&CObject resist scrapping&D*
+500 Glory = useglory <object> resist <resistance>
+&Y------------------------&CRESISTANCES&Y------------------------&D
+        fire,    wind,   earth,   water,       ice,   cold,
+ electricity,  energy,   blunt,  pierce,     slash,   acid,
+      poison,   drain,   sleep,   charm,  nonmagic,  magic,
+   paralysis,    holy,  shadow
+~
+End
+
+#COMMAND
+Name        value~
+Code        do_value
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: value <object>
+ 
+This command allows you to find out how much the shop keeper will pay you for
+the object.
+~
+End
+
+#COMMAND
+Name        vassign~
+Code        do_vassign
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: vassign <target> <low vnum> <high vnum>
+ 
+This command allows you to set someone's assigned vnums.
+~
+End
+
+#COMMAND
+Name        version~
+Code        do_version
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: version
+ 
+This command shows the version info for the mud.
+~
+End
+
+#COMMAND
+Name        visible~
+Code        do_visible
+Position    sleeping~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: visible
+ 
+This skill will make you visible again (Removes invisible, sneak and hide).
+~
+End
+
+#COMMAND
+Name        vnums~
+Code        do_vnums
+Position    dead~
+Perm        builder~
+Group       all~
+Log         0
+HText       Usage: vnums [<low vnum>] [<high vnum>]
+ 
+This command will show prototype areas.
+If vnums are specified it will only show prototype areas that contain those
+vnums.
+~
+End
+
+#COMMAND
+Name        vsearch~
+Code        do_vsearch
+Position    dead~
+Perm        leader~
+Group       all~
+Log         0
+HText       Usage: vsearch <vnum>
+ 
+This command will list all instances of an object with the specified vnum that
+are currently in the game. 
+~
+End
+
+#COMMAND
+Name        victories~
+Code        do_victories
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: victories [<clan>] [clear]
+ 
+This command allows you to see the victories of the clan specified. If no clan
+is specified it will show the victories of the clan you are in if any.
+ 
+[Immortal] An immortal may use the clear argument to clear out the clan's
+victories.
+~
+End
+
+#COMMAND
+Name        vlist~
+Code        do_vlist
+Position    dead~
+Perm        head~
+Group       all~
+Log         0
+HText       Usage: vlist [free] [<start vnum>] [<end vnum>]
+ 
+If nothing is specified it will show all vnums in the area.
+If free is specified it will show all free vnums in the area.
+If <start vnum> is used it will show all vnums at and after that vnum.
+If <end vnum> is used it will show all vnums from the start to the end vnum.
+~
+End
+
+#COMMAND
+Name        west~
+Code        do_west
+Position    standing~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: west
+ 
+This command allows you to move west.
+~
+End
+
+#COMMAND
+Name        wake~
+Code        do_wake
+Position    sleeping~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: wake [<target>]
+ 
+This command allows you to wake up the target or if no target specified it will
+wake you.
+~
+End
+
+#COMMAND
+Name        who~
+Code        do_who
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: who
+       who [<leader>/<class>/<race>] [<low level>] [<high level>]
+       who [<council>/<deity>/<group>] [<low level>] [<high level>]
+       who [deadly/imm/<clan>/<nation>] [<low level>] [<high level>]
+
+This command allows you to see everyone (that you are able to see) online.
+Using the various arguments you can easily have it display just what you want.
+~
+End
+
+#COMMAND
+Name        wear~
+Code        do_wear
+Position    aggressive~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: wear <object/all>
+ 
+This command allows you to wear an object or everything.
+~
+End
+
+#COMMAND
+Name        whois~
+Code        do_whois
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: whois <character>
+ 
+This command shows you a bit of information about the character.
+~
+End
+
+#COMMAND
+Name        where~
+Code        do_where
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: where [<target>]
+ 
+If you don't specify a target you will see where all players, you can see, are
+in the area.
+ 
+If you specify a target you will see where the target is in the area.
+~
+End
+
+#COMMAND
+Name        weather~
+Code        do_weather
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: weather
+ 
+This command shows the current weather. Must be outdoors to see the weather.
+~
+End
+
+#COMMAND
+Name        wilderness~
+Code        do_wilderness
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: wilderness
+ 
+This will allow you to wander around a wilderness.
+If you are already in the wilderness it will bring you out of the wilderness.
+~
+End
+
+#COMMAND
+Name        wimpy~
+Code        do_wimpy
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: wimpy [<value>/max]
+ 
+This command allows you to see/set your wimpy value. If your hit points fall
+below your wimpy value you will attempt to flee.
+~
+End
+
+#COMMAND
+Name        wizlist~
+Code        do_wizlist
+Position    sleeping~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: wizlist
+ 
+Displays a list of the immortals on the mud.
+~
+End
+
+#COMMAND
+Name        wizlock~
+Code        do_wizlock
+Position    dead~
+Perm        head~
+Group       all~
+Log         1
+HText       Usage: wizlock
+ 
+This command allows you to make it so that only immortals may log in.
+~
+End
+
+#COMMAND
+Name        warn~
+Code        do_warn
+Position    dead~
+Perm        leader~
+Group       all~
+Log         0
+HText       Usage: warn site/race/class <address/race/class/#>
+ 
+This command allows you to set/remove/delete a warning ban.
+~
+End
+
+#COMMAND
+Name        worth~
+Code        do_worth
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: worth
+ 
+This command shows you a simple table of some of your character's information.
+~
+End
+
+#COMMAND
+Name        whisper~
+Code        do_whisper
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: whisper off
+Usage: whisper <target> <message>
+ 
+This allows you to whisper a message to a target in the same room as you.
+If you use 'off' it will turn off whispers.
+If whispers are turned off and you whisper to someone it turns whispers back on.
+~
+Flags       allow_tilde~
+End
+
+#COMMAND
+Name        wash~
+Code        do_wash
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: wash self
+Usage: wash <object>
+ 
+This allows you to wash blood off yourself or an object.
+If there are blood stains you have to have a cleaner in your inventory
+to get the stains removed.
+~
+End
+
+#COMMAND
+Name        yahoo~
+Code        do_yahoo
+Position    dead~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: yahoo <string>
+ 
+This allows you to set your yahoo contact info.
+~
+End
+
+#COMMAND
+Name        zap~
+Code        do_zap
+Position    resting~
+Perm        all~
+Group       all~
+Log         0
+HText       Usage: zap [room/inventory/worn] <target>
+ 
+This command allows you to use a wand to zap the target.
+Target can be a character or an object.
+If you have a wand in each hand both will be used.
+
+You may specify if the target (if it is an object) is in the room,
+in your inventory, or something that is being worn by you.
+~
+End
+
+#COMMAND
+Name        zones~
+Code        do_zones
+Position    dead~
+Perm        leader~
+Group       all~
+Log         0
+HText       Usage: zones [<low vnum>] [<high vnum>]
+ 
+This command will show non-prototype areas.
+If vnums are specified it will only show non-prototype areas that contain those
+vnums.
+~
+End
+
+#END

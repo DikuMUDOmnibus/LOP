@@ -1,0 +1,53 @@
+LOP 1.32 Readme
+====================
+
+A few quick notes about this version.
+
+Areas written for anything other than the later LOP code probably won't work considering the area format changes.
+
+Installing and using the code
+=============================
+
+It should be fairly a straightforward process to install the mud.
+Using either Cygwin or a *nix flavor, unpack the tgz file (which you probably already have if you're reading this).
+
+1. Compiling
+============
+
+On a Linux based system:
+------------------------
+Change to the lop/src directory.
+Open Makefile.
+Make sure the Cygwin definition is commented out and save the file if needed.
+Type: make
+
+On Cygwin:
+----------
+Change to the lop/src directory.
+Open the Makefile.
+Make sure the Cygwin definition is uncommented and save the file if needed.
+Type make
+
+On FreeBSD:
+-----------
+Change to the lop/src directory.
+Open Makefile.
+Make sure the Cygwin definition is commented out and save the file if needed.
+Type: gmake
+BSD compiling is probably not compatible with pmake.
+
+2. Starting up
+==============
+
+After the compile finishes, open the startup file and change the port number to the one you plan to use.
+Then type: nohup ./startup &
+
+This will launch the mud in the background, telling it to ignore when you disconnect from your session.
+
+3. First immortal
+=================
+
+Log in to the mud and create a character, after creating your character type firstimm
+this will advance your character and set it up to an Implementor.
+
+4. Start having some fun! :)

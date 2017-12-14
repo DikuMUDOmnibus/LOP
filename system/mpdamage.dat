@@ -1,0 +1,9 @@
+#MPDAMAGE
+Keyword   fire~
+CharMsg   $N gets hit by a massive fireball.~
+RoomMsg   $N gets hit by a massive fireball.~
+VictMsg   You get hit by a massive fireball.~
+Resistant 'fire'~
+End
+
+#END
